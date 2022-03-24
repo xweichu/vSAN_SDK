@@ -1,0 +1,105 @@
+# Task for disk management
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.label               = "在 vSAN 上创建磁盘组"
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.summary             = "在 vSAN 上创建磁盘组"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.label                   = "在 vSAN 上重建磁盘组"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.summary                 = "在 vSAN 上重建磁盘组"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.label                 = "在 vSAN 上卸载磁盘组"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.summary               = "在 vSAN 上卸载磁盘组"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.label                  = "在 vSAN 上移除磁盘组"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.summary                = "在 vSAN 上移除磁盘组"
+com.vmware.vsan.diskmgmt.tasks.removediskex.label                         = "在 vSAN 上移除磁盘"
+com.vmware.vsan.diskmgmt.tasks.removediskex.summary                       = "在 vSAN 上移除磁盘"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.label                 = "在 vSAN 上移除容量磁盘"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.summary               = "在 vSAN 上移除容量磁盘"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.label                   = "移除 vSAN Direct 磁盘"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.summary                 = "移除 vSAN Direct 磁盘"
+com.vmware.vsan.diskmgmt.tasks.adddisks.label                             = "在现有磁盘组中添加磁盘"
+com.vmware.vsan.diskmgmt.tasks.adddisks.summary                           = "在现有磁盘组中添加磁盘"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.label                  = "将磁盘添加到存储池"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.summary                = "将磁盘添加到存储池"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.label              = "将主机上的磁盘添加到存储池"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.summary            = "将主机上的磁盘添加到存储池"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.label                            = "剪裁指定的磁盘"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.summary                          = "剪裁指定的磁盘"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.label               = "移除 vSAN 上的存储池磁盘"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.summary             = "移除 vSAN 上的存储池磁盘"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.label            = "从 vSAN 上的主机中移除存储池磁盘"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.summary          = "从 vSAN 上的主机中移除存储池磁盘"
+
+# Tasks for stretched cluster
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.label               = "添加见证主机"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.summary             = "向延伸集群中添加见证主机"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.label           = "替换见证主机"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.summary         = "替换延伸集群的见证主机"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.label            = "移除见证主机"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.summary          = "从延伸集群中移除见证主机"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.label     = "转换为延伸集群"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.summary   = "将给定配置转换为延伸集群"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.label      = "设置首选故障域"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.summary    = "为延伸集群设置首选故障域"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.label   = "替换一批延伸集群的见证主机"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.summary = "替换一批延伸集群的见证主机"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.label    = "为一批集群配置见证主机"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.summary  = "为一批集群配置见证主机"
+
+# Task for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.label                     = "转换 vSAN 磁盘格式"
+com.vmware.vsan.diskconvertion.tasks.conversion.summary                   = "转换 vSAN 磁盘格式"
+# Task descripiton to be updated for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvm   = "正在等待在 {host} 上重新部署 FSVM"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsenabling = "正在等待启用/禁用文件服务"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvsmupgrading  = "正在等待升级 FSVM"
+
+# Task for cluster management
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.label                      = "声明 HCL 磁盘"
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.summary                    = "为添加到集群的新主机声明 HCL 磁盘"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.label                = "重新配置 vSAN 集群"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.summary              = "重新配置 vSAN 集群"
+com.vmware.vsan.clustermgmt.tasks.rekey.label                             = "为加密的 vSAN 集群重新生成新密钥"
+com.vmware.vsan.clustermgmt.tasks.rekey.summary                           = "为加密的 vSAN 集群重新生成新密钥"
+com.vmware.vsan.clustermgmt.tasks.precheck.label                          = "vSAN 操作预检查"
+com.vmware.vsan.clustermgmt.tasks.precheck.summary                        = "vSAN 操作预检查"
+
+# Task for new async VsanSystem
+com.vmware.vsan.vsansystem.tasks.update.label                             = "更新 vSAN 配置"
+com.vmware.vsan.vsansystem.tasks.update.summary                           = "更新此主机的 vSAN 配置"
+
+com.vmware.vsan.diskconvertion.tasks.precheck.label                       = "执行转换磁盘格式预检查"
+com.vmware.vsan.diskconvertion.tasks.precheck.summary                     = "执行转换磁盘格式预检查以发现可能遇到的问题"
+
+com.vmware.vsan.diskmgmt.tasks.objectscan.label                           = "扫描 vSAN 对象"
+com.vmware.vsan.diskmgmt.tasks.objectscan.summary                         = "扫描 vSAN 对象以发现问题"
+
+# Task for VsanPrecheckerSystem
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.label            = "执行合规性资源检查任务"
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.summary          = "执行合规性资源检查任务"
+
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.label           = "执行主机取消配置资源检查任务"
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.summary         = "执行主机取消配置资源检查任务"
+
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.label        = "执行磁盘数据撤出资源检查任务"
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.summary      = "执行磁盘数据撤出资源检查任务"
+
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.label         = "执行磁盘格式转换资源检查任务"
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.summary       = "执行磁盘格式转换资源检查任务"
+
+com.vmware.vsan.prechecker.tasks.resourcecheck.label                      = "执行 vSAN 资源检查任务"
+com.vmware.vsan.prechecker.tasks.resourcecheck.summary                    = "执行 vSAN 资源检查任务"
+
+com.vmware.vsan.prechecker.tasks.queryCompliance.label                    = "获取假设合规性详细信息"
+com.vmware.vsan.prechecker.tasks.queryCompliance.summary                  = "获取假设合规性详细信息"
+
+# Task for VsanVcObjectSystem
+com.vmware.vsan.objectsystem.tasks.deleteobjects.label                    = "执行删除 vSAN 对象任务"
+com.vmware.vsan.objectsystem.tasks.deleteobjects.summary                  = "执行删除 vSAN 对象任务"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.label                  = "执行 vSAN 对象策略规定检查任务"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.summary                = "执行 vSAN 对象策略规定检查任务"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.label                  = "对 vSAN 对象任务进行重新布局"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.summary                = "对 vSAN 对象任务进行重新布局"
+
+com.vmware.vsan.vum.tasks.remediate.label                                 = "更新建议的 vSAN 基准组"
+com.vmware.vsan.vum.tasks.remediate.summary                               = "更新建议的 vSAN 基准组"
+
+# Task for VsanSystemEx
+host.VsanSystemEx.unmountDiskMappingEx.label                              = "卸载 vSAN 磁盘组"
+host.VsanSystemEx.unmountDiskMappingEx.summary                            = "卸载 vSAN 磁盘组"

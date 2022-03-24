@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = VMware vSAN 기능
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = VMware vSAN에서 게시된 기능입니다.
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = vSAN VASA 제공자
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = VMware vSAN에서 게시된 VASA 제공자입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = 개체당 디스크 스트라이프 수
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = 스토리지 개체의 각 복제본이 스트라이핑되는 HDD 수입니다. 값이 1보다 크면 성능이 더 개선될 수 있습니다(예: 플래시에서 캐시 누락이 감지되어 HDD에서 처리되어야 하는 경우). 하지만 더 많은 시스템 리소스가 소모될 수 있습니다. 기본값은 1이고, 최대값은 12입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = PMem 데이터스토어 배치
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = 가상 디스크를 PMem 데이터스토어에 배치합니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = vSAN Direct 데이터스토어 배치
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = 클라우드 네이티브 볼륨을 vSAN Direct 데이터스토어에 배치합니다.
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = 배치 유형
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = 데이터를 배치할 위치를 정의합니다.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = vSAN Direct 데이터스토어 볼륨 할당
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = 볼륨 할당 유형.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = 완전히 초기화됨
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = 모든 블록이 할당되고 비워짐
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = 공간 예약
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = 모든 블록이 할당됩니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = 플래시 읽기 캐시 예약(%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = 스토리지 개체용 읽기 캐시로 예약된 플래시 용량입니다. 개체의 논리적 크기에 대한 백분율로 지정되며, 읽기 성능 문제를 해결할 목적으로만 사용됩니다. 예약된 플래시 용량은 다른 개체가 사용할 수 없으며, 예약되지 않은 플래시는 모든 개체 간에 균등하게 공유됩니다. 기본값은 0%이고, 최대값은 100%입니다.
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = 허용할 수 있는 장애의 기본 수준
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = 스토리지 개체가 허용할 수 있는 호스트, 디스크 또는 네트워크 장애 수를 정의합니다. 장애 허용 방법이 미러링인 경우: 장애를 "n"번 허용하려면 개체 복사본이 "n+1"개 생성되고 스토리지를 구성하는 호스트가 "2n+1"개 필요합니다. 장애 도메인이 구성된 경우에는 스토리지를 제공하는 호스트가 있는 장애 도메인이 "2n+1"개 필요합니다. 장애 허용 방법이 이레이저 코딩인 경우: 장애를 한 번 허용하려면 4개의 호스트(또는 장애 도메인)이 필요하며 장애를 두 번 허용하려면 6개의 호스트(또는 장애 도메인)이 필요합니다. 참고: 장애 도메인의 일부가 아닌 호스트는 자체 단일 호스트 장애 도메인으로 계산됩니다. 기본값은 1이고 최대값은 3입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = 허용할 수 있는 장애의 보조 수준
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = 스토리지 개체가 장애 도메인 내에서 허용할 수 있는 호스트, 디스크 또는 네트워크 장애 수를 정의합니다. Fault Tolerance 방법이 미러링인 경우: 장애를 "n"번 허용하려면 개체 복사본이 "n+1"개 생성되고 장애 도메인에서 스토리지를 구성하는 호스트가 "2n+1"개 필요합니다. Fault Tolerance 방법이 이레이저 코딩인 경우: 장애를 한 번 허용하려면 4개의 호스트가 필요하며 장애를 두 번 허용하려면 6개의 호스트가 필요합니다. 기본값은 1이고 최대값은 3입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = 클러스터 구성이 이중 호스트 미러링인 경우 허용되는 2차 장애 수준의 범위
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = 허용되는 2차 장애 수준이 충족되는 범위(호스트 또는 디스크)를 정의합니다. 클러스터 구성이 이중 호스트 미러링이고 이 특성이 "디스크"로 설정되는 경우, 허용되는 2차 장애 수준에 따라 디스크 그룹을 사용한 복제가 수행됩니다
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = 호스트 기반 두 번째 수준 보호
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = 두 번째 수준 보호는 허용되는 2차 장애 수준에 따라 호스트를 사용하는 복제가 됩니다
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = 이중 호스트 미러링 클러스터에 대한 디스크 기반 두 번째 수준 보호
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = 두 번째 수준 보호는 이중 호스트 미러링 클러스터에 대해 허용되는 2차 장애 수준에 따라 디스크 그룹을 사용하는 복제가 됩니다
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = 데이터 인접성
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = 데이터 위치를 설정하십시오. 확장된 클러스터 내의 기본 장애 도메인 또는 비기본 장애 도메인으로 지정하거나, VM의 폴더와 VMDK를 해당 항목이 생성된 호스트에 고정하려면 [로컬 호스트]로 설정합니다. 이 정책은 허용할 수 있는 장애의 기본 수준이 0인 개체에만 유효합니다. 기본값은 [없음]입니다.
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = 없음
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = 데이터 인접성이 없습니다.
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = 기본 장애 도메인(확장 클러스터)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = 기본 장애 도메인(확장 클러스터)입니다.
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = 비기본 장애 도메인(확장 클러스터)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = 비기본 장애 도메인(확장 클러스터)입니다.
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = 로컬 호스트
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = 로컬 호스트입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = 강제 프로비저닝
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = 이 옵션이 "예"이면 클러스터에서 현재 사용할 수 있는 리소스가 스토리지 정책에 지정된 정책을 충족하지 않더라도 개체가 프로비저닝됩니다. 리소스를 사용할 수 있게 되면 vSAN이 개체를 규정 준수 상태로 전환하려고 합니다. 기본값은 "아니요"입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = 개체 공간 예약(%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = VM 프로비저닝 시 씩 프로비지닝용으로 예약될 스토리지 개체의 논리적 크기 백분율입니다. 스토리지 개체의 나머지는 씬 프로비저닝됩니다. 기본값은 0%이고, 최대값은 100%입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = 개체의 IOPS 제한
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = 디스크의 IOPS 제한을 정의합니다. IOPS는 가중 크기를 사용하는 IO의 개수로 계산됩니다. 기본적으로 시스템에서 기본 크기인 32KB를 사용하며, 이 경우 64KB IO는 2 IO를 나타냅니다. 참고: IOPS 계산 시 읽기 및 쓰기는 동일하게 간주되며 캐시 적중률 또는 순차성은 고려되지 않습니다. 디스크의 IOPS가 제한을 초과하면 IO가 조절됩니다. 제한을 0으로 설정하면 IO 제한이 없음을 의미하며 기본값은 0입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = 개체 체크섬 사용 안 함
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = 이 옵션이 "예"이면 개체가 체크섬 정보를 계산하지 않습니다. 기본값: 아니요.
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = 장애 허용 방법
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = 장애를 허용할 방법을 지정합니다. RAID-1은 미러를 통해 장애 허용을 실현하여 성능을 개선합니다. RAID-5/6은 패리티 블록을 통해 장애 허용을 실현하여 공간 효율성을 높입니다. RAID-5/6은 플래시 전용 구성에서만 사용할 수 있으며, 허용되는 장애 수가 1 또는 2로 설정되면 값 1은 RAID-5 구성을 의미하고 값 2는 RAID-6 구성을 의미합니다. 기본값은 RAID-1입니다.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID-1(미러링) - 성능
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID-1(미러링) - 성능입니다.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID-5/6(이레이저 코딩) - 용량
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID-5/6(이레이저 코딩) - 용량입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = 기본 스토리지 지원 유형
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = vSAN 개체의 구성 요소를 배치하는 데 선택되는 스토리지 지원 유형을 지정합니다. vSAN 스토리지 지원 유형은 하이브리드 또는 플래시 전용일 수 있습니다. "하이브리드"를 지정하면 개체의 구성 요소가 하이브리드 디스크 그룹에만 배치되고, "플래시 전용"을 지정하면 개체의 구성 요소가 플래시 전용 디스크 그룹에만 배치됩니다. 기본값인 "모두"를 사용하면 vSAN이 배치 위치를 결정합니다.
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = 네이티브 스냅샷 사용
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = 네이티브 스냅샷을 생성하려면 이 제약 조건을 사용합니다. 정책에 데이터 보호 제약 조건이 있는 경우 이 값은 'true'로 재정의됩니다. 기본값은 'false'입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = 로컬 데이터 보호(기본 스토리지)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = 현재 정책을 사용하는 VM은 애플리케이션 수준 실패로부터 보호하기 위해 정기적으로 스냅샷을 생성합니다. 이러한 스냅샷은 신속하고 낮은 RTO 복구를 촉진하기 위해 vSAN 스토리지에 저장됩니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = 스냅샷 빈도(RPO)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = 스냅샷이 생성되는 빈도입니다. 값은 분 단위입니다. 기본값은 60분이고, 최대값은 30일입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = 'x'번째 스냅샷마다 애플리케이션 일치로 설정
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = 애플리케이션 일치 스냅샷은 데이터 보호를 위해 애플리케이션을 적절하게 준비합니다. 애플리케이션 일치 스냅샷을 생성할 때 추가 애플리케이션 리소스가 사용될 수 있습니다. 기본값은 0이고 범위는 0-30입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = 유지할 스냅샷의 수
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = vSAN 스토리지에서 로컬로 유지할 스냅샷의 총 수입니다. 새 스냅샷이 생성되면 유지하도록 지정한 값에 따라 가장 오래된 스냅샷이 삭제됩니다. 기본값은 10이고, 최대값은 100입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = 아카이브 보호
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = VM에 대한 아카이브 보호를 제공합니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = 중지된 스냅샷만 아카이브
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = 중지된 스냅샷만 아카이브합니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = 'M'번째 스냅샷마다 아카이브
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = 오직 'M'번째 스냅샷마다 아카이브됩니다. 사용자가 중지된 스냅샷만 아카이브하는 옵션을 선택하는 경우 'M'번째 중지된 스냅샷마다 아카이브됩니다. 기본값 0은 아카이브 저장소로 복사가 사용되지 않도록 설정됨을 나타냅니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = 유지할 마지막 'X' 복원 지점
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = 이 매개 변수는 유지할 최근 아카이브 스냅샷 개수와 함께 시간별(X시간), 일별(X일), 주별(X주) 및 월별(X개월)에 대한 보존 규칙을 정의합니다. 보존 정책은 (X + X시간 + X일 + X주 + X개월) <= 100에 의해 제약됩니다. 기본값은 1이고, 최대값은 100입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = 유지할 시간별 복원 지점(X시간)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = 유지할 시간별 복원 지점의 수입니다. 기본값 0은 시간별 스냅샷이 필요하지 않음을 나타냅니다. 시간별 스냅샷은 UTC 시간을 기준으로 상위 시간에 또는 상위 시간 이후의 첫 번째 스냅샷입니다. 기본값은 0이고, 최대값은 100입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = 유지할 일별 복원 지점(X일)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = 유지할 일별 복원 지점의 수입니다. 기본값 0은 일별 스냅샷이 필요하지 않음을 나타냅니다. 일별 스냅샷은 UTC 시간을 기준으로 자정 또는 자정 이후의 첫 번째 스냅샷입니다. 기본값은 0이고, 최대값은 100입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = 유지할 주별 복원 지점(X주)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = 유지할 주별 복원 지점의 수입니다. 기본값 0은 주별 스냅샷이 필요하지 않음을 나타냅니다. 주별 스냅샷은 UTC 시간을 기준으로 일요일 자정 또는 일요일 자정 이후의 첫 번째 스냅샷입니다. 기본값은 0이고, 최대값은 100입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = 유지할 월별 복원 지점(X개월)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = 유지할 월별 복원 지점의 수입니다. 기본값 0은 월별 스냅샷이 필요하지 않음을 나타냅니다. 월별 스냅샷은 UTC 시간을 기준으로 월말 자정 또는 월말 자정 이후의 첫 번째 스냅샷입니다. 기본값은 0이고, 최대값은 100입니다.
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = 원격 보호
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = VM에 대한 원격 복제 보호를 제공합니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = 원격 보호 RPO(분)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = 원격 보호 복구 지점 목표입니다. 값은 분 단위입니다. 기본값은 30이고, 최소값은 5이고, 최대값은 1440입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = 유지할 원격 인스턴스 수
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = 원격 사이트에서 유지할 스냅샷 인스턴스의 수입니다. 기본값은 1이고, 최소값은 1이고, 최대값은 100입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = 원격 정책 태그
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = 원격 복제 VM 스토리지 정책을 일치시키기 위한 태그입니다.
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = 데이터 서비스
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = VM에 대한 데이터 서비스 정책
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = 공간 효율성
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = vSAN 데이터스토어에 대한 공간 효율성 요구 사항
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = 저장된 데이터 암호화
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = vSAN 데이터스토어에 대한 저장된 데이터 암호화 요구 사항
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = 중복 제거 및 압축
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = 중복 제거 및 압축 vSAN 데이터스토어 필요
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = 압축 전용
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = 압축 전용 vSAN 데이터스토어 필요
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = 공간 효율성 없음
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = 압축 및 중복 제거를 사용하지 않도록 설정한 vSAN 데이터스토어 필요
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = 개체 압축 사용 안 함
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = 이 옵션이 "예"이면 스토리지 디바이스에서 개체가 압축되지 않습니다. 기본값: 아니요.

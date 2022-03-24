@@ -1,0 +1,7 @@
+#
+# Vsan VP Localizable Messages for faults
+#
+vsan.fault.alarm.invalid.id = Séquence d'alarme non valide {Id}.
+vsan.fault.alarm.lost.id = Alarme perdue {Id}
+vsan.fault.event.invalid.id = Séquence d'événement non valide {Id}
+vsan.fault.event.lost.id = Événement perdu {Id}.

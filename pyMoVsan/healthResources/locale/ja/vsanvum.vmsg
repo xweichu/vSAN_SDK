@@ -1,0 +1,113 @@
+#
+# vSAN Build Recommendation messages
+#
+com.vmware.vsan.vum.enum.supported = サポートされるハードウェア
+com.vmware.vsan.vum.enum.sameSupport = ハードウェアのサポート レベルは低下しません
+com.vmware.vsan.vum.enum.lessSupport = ハードウェアのサポート レベルは低下します
+com.vmware.vsan.vum.enum.incompleteSupport = ハードウェアは部分的にサポートされています
+com.vmware.vsan.vum.enum.noSupport = ハードウェアはサポートされていません
+com.vmware.vsan.vum.enum.vcNoSupport = vCenter Server はサポートされていません
+com.vmware.vsan.vum.enum.incompatibleBuildType = 互換性のないビルド タイプです
+com.vmware.vsan.vum.enum.missingBuild = リリース データベースにビルドがありません
+com.vmware.vsan.vum.enum.sameSupportNotOnHcl = 既存のリリースと推奨リリースは両方とも HCL でサポートされていません
+com.vmware.vsan.vum.enum.invalidEsxUpgradePath = アップグレード パスが公式にサポートされていません
+com.vmware.vsan.vum.enum.unknownCustomIsoVendor = vSAN クラスタにサポートされていないベンダーの ISO があります
+com.vmware.vsan.vum.enum.multipleCustomIsoVendor = vSAN クラスタに複数のベンダーの ISO があります
+com.vmware.vsan.vum.enum.preferenceNotMatch = 設定が一致していません
+com.vmware.vsan.vum.enum.customIsoNotAvailable = カスタム ISO を利用できません
+com.vmware.vsan.vum.enum.noRecommendation = 推奨なし
+com.vmware.vsan.vum.enum.latestPatch = 現在の ESXi バージョンのパッチとアップデートを含める
+com.vmware.vsan.vum.enum.latestRelease = 新しい ESXi バージョンへのアップグレードを含める
+com.vmware.vsan.vum.enum.incompatibleDiskGroupVersion = vSAN クラスタに古い vSAN ディスク グループがあります
+com.vmware.vsan.vum.enum.sourceReleaseInfoNotFound = リリースの詳細を使用できません
+
+com.vmware.vsan.vum.note.notRecommended = リリース {evalRelease} は推奨されません。現在インストールされているリリースよりも以前のバージョンのハードウェアがサポートされています。サポートされていないコントローラ: {controllerLostSupport}。
+com.vmware.vsan.vum.note.recommended = {existingRelease} とは異なり、{evalRelease} ではすべてのハードウェアがサポートされるため、推奨されます
+com.vmware.vsan.vum.note.vcNotSupported = リリース {evalRelease} は推奨されません。vCenter Server {vcVersion} は、このクラスタ内の一部のホストの {evalRelease} へのアップグレードをサポートしていないためです。
+com.vmware.vsan.vum.note.notFullySupport = 注: vSAN HCL によると、選択したリリース ({chosenRelease}) でこのハードウェアは (完全には) サポートされません。しかし、現在インストールされているリリースに比べて、サポート レベルが低下することはないため、選択されています。
+com.vmware.vsan.vum.note.fullySupport = 選択したリリース {chosenRelease} は、このハードウェアを完全にサポートしています。これは、推奨される最新の vSAN リリースです。
+com.vmware.vsan.vum.note.notSupported = vSAN HCL によると、最新のリリース ({chosenRelease}) と現在インストールされているリリースの両方で、このハードウェアはサポートされていません。サポートされていないコントローラ: {controllerLostSupport}。
+com.vmware.vsan.vum.note.incompatibleBuildType = ソース ビルド タイプ {srcType} に互換性がないため、{chosenRelease} は推奨されません。
+com.vmware.vsan.vum.note.mixVersionInstalled = クラスタには、次のリリースが混在してインストールされています: {releases}
+com.vmware.vsan.vum.note.mixBldTypeInstalled = クラスタには、次のビルド タイプが混在してインストールされています: {buildTypes}
+com.vmware.vsan.vum.note.upgradeToHclEnabledVersion = インストールされている ESXi バージョンが 6.0 U2 よりも古いため、vSAN ではハードウェアの HCL 互換性を評価できません。vSAN では、最新の ESXi リリースへのアップグレードを推奨していますが、これまでサポートされていたハードウェアが最新バージョンでサポートされなくなる場合があるので、手動で再確認する必要があります。
+com.vmware.vsan.vum.note.driverManualUpgradeNeeded = デバイス ({device}) のドライバ {driverName} には、vSAN HCL でサポートされるより新しいバージョン {version} があり、手動でアップグレードする必要があります。
+com.vmware.vsan.vum.note.noDriverUpgradeNeeded = この場合、ドライバのアップグレードまたはアップデートは必要ありません。
+com.vmware.vsan.vum.note.updateTime = 最終更新日は {updateTime} です。
+com.vmware.vsan.vum.note.invalidEsxUpgradePath = {existingRelease} から {evalRelease} へのアップグレード パスが公式にサポートされていません。
+com.vmware.vsan.vum.note.multipleCustomIsoVendor = vSAN クラスタに複数のベンダー {vendors} の ISO があります。
+com.vmware.vsan.vum.note.unknownCustomIsoVendor = vSAN クラスタにサポートされていないベンダー {vendors} の ISO があります。
+com.vmware.vsan.vum.note.customIsoNotAvailable = リリース {evalRelease} は推奨されません。これは、ベンダー {vendors} 向けのカスタム ISO が vSAN ビルドに関する推奨事項エンジンを介して利用できないためです。
+com.vmware.vsan.vum.note.preferenceNotMatch = リリース {evalRelease} は、クラスタ {cluster} の設定が {preference} のため、推奨されません。
+com.vmware.vsan.vum.note.incompatibleDiskGroupVersion = ホスト {hostsHasObsoleteDgStr} に古い vSAN ディスク グループがあるため、クラスタ {cluster} にリリース {evalRelease} は推奨されません。ディスク フォーマットの変換を先にトリガしてください。
+com.vmware.vsan.vum.note.failed = 推奨事項の生成に失敗しました。vSAN 健全性ページに移動して詳細を確認してください。
+com.vmware.vsan.vum.note.usage = 注: グループとして修正するには、システムのベースライン グループを推奨します。
+com.vmware.vsan.vum.note.sourceReleaseInfoNotFound = VUM に使用可能な {existingRelease} リリースの詳細がないため、推奨は生成されません。
+com.vmware.vsan.vum.note.upgradeWitnessFirst = このクラスタはストレッチ クラスタです。監視ホスト {witnessHost} を先にアップグレードしてください。
+
+com.vmware.vsan.vum.patchName = vSAN では、{chosenRelease} にパッチを適用することを推奨しています: {patchIds}
+com.vmware.vsan.vum.upgradeBaselineWithPatch = vSAN 推奨パッチ {patchIds} を適用した {upgradePatchName}
+
+com.vmware.vsan.vum.witnessBaselineGroupName = vSAN 監視ホスト {hostname} ({release})
+com.vmware.vsan.vum.witnessBaselineGroupDesc = このベースライン グループは、クラスタ: {clusterNames} の推奨に基づいて生成されています。
+
+#
+# vSAN Build Recommendation health check
+#
+com.vmware.vsan.health.test.vum = vSAN ビルドに関する推奨事項
+
+com.vmware.vsan.health.test.vum.vumconfig =  vSAN ビルドに関する推奨事項エンジンは、VMware 互換性ガイドと VMware リリースのメタデータに基づいて推奨事項を提供します。さらに、ビルドに関する推奨事項を提供するためには、VMware Update Manager サービスが利用可能であること、インターネット接続、および有効な my.vmware.com の認証情報の設定が必要です。この健全性チェックでは、これらの条件が揃っており、推奨事項エンジンが適切に機能していることを確認します。
+com.vmware.vsan.health.test.vum.vumconfig.short = ビルドに関する推奨事項エンジンについて、すべての条件が揃っており、適切に機能していることを確認します
+com.vmware.vsan.health.test.vum.vumconfig.testName = vSAN ビルドに関する推奨事項エンジンの健全性
+
+com.vmware.vsan.health.test.vum.vumconfig.testResult.label = 問題
+com.vmware.vsan.health.test.vum.vumconfig.testResult.columnIssue = 問題の情報
+
+com.vmware.vsan.health.test.vum.releasecataloguptodate = vSAN ビルド推奨に使用される vSAN リリース カタログの古さをチェックします。90 日または 180 日よりも古い場合には、それぞれ警告またはエラーが表示されます。vSAN リリース カタログは新しいリリースまたは重要なパッチがある場合に更新されるため、ローカル コピーを最新の状態に保つことが重要です。
+com.vmware.vsan.health.test.vum.releasecataloguptodate.short = vSAN リリース カタログのバージョンを確認します。
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testName = vSAN リリース カタログの更新状態
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.label = vSAN リリース カタログの情報
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.columnEntity = エンティティ
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.columnTime = UTC 時刻
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.rowCurrentTime = 現在時刻
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.rowCatalogReleaseTime = ローカル リリース DB コピーの最終更新日時
+
+com.vmware.vsan.health.test.vum.vumDisabled = VMware Update Manager (VUM) が無効か、またはインストールされていません。VUM がインストールされ、適切に機能していることを確認してください。
+com.vmware.vsan.health.test.vum.vumNotResponsive = VMware Update Manager (VUM) が応答しません。VUM サービスが利用可能であり、適切に機能していることを確認してください。
+com.vmware.vsan.health.test.vum.metadataOutdated = vSAN リリースのメタデータが古くなっています。インターネットに接続可能であり、vSAN が VMware の最新リリースのメタデータにアクセスできることを確認してください。
+com.vmware.vsan.health.test.vum.metadataNotFound = vSAN リリース メタデータは使用できません。インターネットに接続可能であることを確認するか、リリース カタログを手動でアップロードしてください。
+com.vmware.vsan.health.test.vum.isoDepotCookieNotSet = my.vmware.com のログイン認証情報が未設定か、期限切れになっています。ベースラインは、ログイン認証情報が検証されてから数分で生成されます。
+com.vmware.vsan.health.test.vum.isoDepotAuthenticationFailed = my.vmware.com の認証に失敗しました。ベースラインは、ログイン認証情報が検証されてから数分で生成されます。
+com.vmware.vsan.health.test.vum.createBaselineFailed = VMware Update Manager (VUM) のベースライン作成時に予期しない障害が発生しました。詳細については、vSAN および VUM のログを参照してください。
+com.vmware.vsan.health.test.vum.isoDepotIsDown = VMware ISO ダウンロード サイトがダウンしています。
+com.vmware.vsan.health.test.vum.ISONotAvailable = 必要な ISO ファイル {filename} が VUM サーバにアップロードされていません。
+com.vmware.vsan.health.test.vum.OfflineBundleNotAvailable = 必要なオフライン バンドル ファイル {filename} を VUM サーバにアップロードできません。
+com.vmware.vsan.health.test.vum.invalidReleaseCatalog = リリース カタログに {release} が含まれていないため、{cluster} の推奨されるベースラインを生成できません。リリース カタログを更新し、再試行してください。
+
+com.vmware.vsan.health.test.vum.vumrecommendation = vSAN ビルドに関する推奨事項。ハードウェア、VMware 互換性ガイドに基いた互換性、および利用可能な VMware リリースを考慮したうえで vSAN が推奨する最も適切な ESXi ビルドです。
+com.vmware.vsan.health.test.vum.vumrecommendation.short =  利用可能なリリースと VMware 互換性ガイドに基いた vSAN ビルドに関する推奨事項
+com.vmware.vsan.health.test.vum.vumrecommendation.testName = vSAN ビルドに関する推奨事項
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.label = vSAN ビルドに関する推奨事項
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.columnCluster = クラスタ
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.columnRecommendation = 推奨
+com.vmware.vsan.health.test.vum.vumrecommendation.recommendationAvailable = クラスタ {cluster} には推奨リリースがあります: {release}
+com.vmware.vsan.health.test.vum.vumrecommendation.patchRecommendationAvailable = クラスタ {cluster} には利用可能な推奨パッチがあります。
+com.vmware.vsan.health.test.vum.vumrecommendation.driverRecommendationAvailable = クラスタ {cluster} には利用可能な推奨ドライバがあります。
+
+com.vmware.vsan.vum.error.incorrectCredential = my.vmware.com のログイン認証情報が間違っています。ベースラインは、ログイン認証情報が検証されてから数分で生成されます。
+com.vmware.vsan.vum.error.isoDepotIsDown = VMware ISO ダウンロード サイトがダウンしています。後で再試行してください。
+com.vmware.vsan.vum.error.incorrectReleaseDb = リリース カタログの形式が不正です。JSON ファイルにする必要があります。
+com.vmware.vsan.vum.error.updateReleaseDbFailed = リリース カタログの更新に失敗しました。
+
+
+# FW checks
+com.vmware.vsan.health.test.hcl.fwrecommendation = vSAN ファームウェアに関する推奨事項。これは、現在のホスト上のソフトウェアのバージョン、ハードウェア ドライバのバージョン、および VMware 互換性ガイドによる互換性に基づいたファームウェアに関する提案です。
+com.vmware.vsan.health.test.hcl.fwrecommendation.short = VMware 互換性ガイドに基づいた vSAN ファームウェアに関する推奨事項。
+com.vmware.vsan.health.test.hcl.fwrecommendation.testName = vSAN ファームウェアのバージョンに関する推奨事項
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.label = vSAN ファームウェアのバージョンに関する推奨事項
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnHost = ホスト
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnESXi = 推奨される ESXi バージョン
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnRecommendation = 推奨されるファームウェア バージョン
+com.vmware.vsan.health.test.hcl.fwrecommendation.recommendationAvailable = ホスト {host} のファームウェアは更新する必要があります: {recommendations}
+
+com.vmware.vsan.fwUpgrade.error.fwBinaryNotFound = 必須のファームウェア バイナリ {url} が見つかりません。ダウンロードする必要があります。

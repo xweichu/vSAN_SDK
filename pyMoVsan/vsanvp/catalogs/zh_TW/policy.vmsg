@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = VMware vSAN 功能
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = VMware vSAN 發佈的功能
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = vSAN VASA 提供者
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = VMware vSAN 發佈的 VASA 提供者
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = 每個物件的磁碟等量區數目
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = 要等量處理儲存區物件之每個複本的 HDD 數目。如果值大於 1，則可能會提高效能 (例如，當 Flash 讀取快取遺漏需要從 HDD 取得服務時)，但也會導致使用更多的系統資源。預設值為 1，上限值為 12。
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = PMem 資料存放區放置
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = 將虛擬磁碟置於 PMem 資料存放區中。
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = vSAN Direct 資料存放區放置
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = 將雲端原生磁碟區放置在 vSAN Direct 資料存放區上。
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = 放置類型
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = 定義放置資料的位置。
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = vSAN Direct 資料存放區磁碟區配置
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = 磁碟區配置類型。
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = 已完全初始化
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = 所有區塊皆已配置並歸零
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = 保留空間
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = 所有區塊均已配置。
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = Flash Read Cache 保留區 (%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = 保留為儲存區物件之讀取快取的 Flash 容量。指定為物件的邏輯大小百分比。僅用於解決讀取效能問題。保留的 Flash 容量無法供其他物件使用。未保留的 Flash 會在所有物件之間公平共用。預設值為 0%，上限值為 100%。
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = 容許的主要層級故障
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = 定義儲存區物件可容許的主機、磁碟或網路故障次數。如果容錯方法是鏡像: 若要容許「n」次故障，則要建立「n+1」個物件複本，且需要「2n+1」個提供儲存區的主機 (如果已設定容錯網域，則需要「2n+1」個具有提供儲存區之主機的容錯網域)。如果容錯方法是清除編碼: 若要容許 1 次故障，需要 4 個主機 (或容錯網域)；若要容許 2 次故障，需要 6 個主機 (或容錯網域)。請注意: 不屬於容錯網域的主機會計入其自身的單一主機容錯網域。預設值為 1，上限值為 3。
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = 容許的次要層級故障
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = 定義儲存區物件在容錯網域內可容許的主機、磁碟或網路故障次數。如果容錯方法是鏡像: 若要容許「n」次故障，則要建立「n+1」個物件複本，且在容錯網域中需要「2n+1」個提供儲存區的主機。如果容錯方法是清除編碼: 若要容許 1 次故障，需要 4 個主機；若要容許 2 次故障，需要 6 個主機。預設值: 1，上限值: 3。
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = 當叢集組態為雙主機鏡像時，容許的次要層級故障範圍
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = 定義將滿足容許的次要層級故障的範圍 (主機或磁碟)。如果叢集組態為雙主機鏡像，且此屬性設定為「磁碟」，則使用磁碟群組的複寫，可根據容許的次要層級故障來完成
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = 主機型第二層級保護
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = 第二層級保護，將根據容許的次要層級故障使用主機進行複寫
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = 雙主機鏡像叢集的磁碟型第二層級保護
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = 第二層級保護將根據雙主機鏡像叢集的容許的次要層級故障，使用磁碟群組進行複寫
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = 資料位置
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = 指定資料位置。延伸叢集中的慣用容錯網域或非慣用容錯網域，或設定為 [主機本機] 以將虛擬機器的資料夾和 VMDK 固定到它建立所在的主機。此原則僅對容許的主要層級故障為 0 的物件有效。預設值: 無
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = 無
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = 無。
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = 慣用容錯網域 (延伸叢集)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = 慣用容錯網域 (延伸叢集)。
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = 非慣用容錯網域 (延伸叢集)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = 非慣用容錯網域 (延伸叢集)。
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = 主機本機
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = 主機本機。
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = 強制佈建
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = 如果此選項為「是」，則即使儲存區原則中指定的原則無法滿足叢集中目前可用的資源，系統也會佈建該物件。當資源可用時，vSAN 將嘗試使該物件符合標準。預設值為「否」。
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = 物件空間保留區 (%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = 在佈建虛擬機器時要保留的儲存區物件邏輯大小百分比 (完整佈建)。其餘的儲存區物件將採用精簡佈建。預設值為 0%，上限值為 100%。
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = 物件的 IOPS 限制
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = 定義磁碟的 IOPS 限制。IOPS 會使用加權大小計算為 IO 數目。依預設，系統使用基礎大小 32 KB，則 64 KB IO 代表的是 2 IO。請注意：計算 IOPS 時，讀取和寫入會視為相等，快取命中率或序列性不會列入考量。如果磁碟的 IOPS 超過限制，IO 將進行節流。如果限制設為 0，表示 IO 沒有限制。預設值為 0。
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = 停用物件總和檢查碼
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = 如果此選項為「是」，物件將不會計算總和檢查碼資訊。預設值為「否」。
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = 容錯方法
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = 定義用於容許故障的方法。RAID-1 使用鏡像來容錯，可提供較佳的效能。RAID-5/6 使用同位檢查區塊來容錯，可提供較佳的空間使用效率。僅當使用全快閃且容許的故障次數設為 1 或 2 時，RAID-5/6 才適用: 值 1 代表 RAID-5 組態，值 2 代表 RAID-6 組態。預設值為 RAID-1。
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID-1 (鏡像) - 效能
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID-1 (鏡像) - 效能。
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID-5/6 (清除編碼) - 容量
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID-5/6 (清除編碼) - 容量。
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = 慣用支援儲存區類型
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = 指定將選取哪種支援儲存區類型來放置 vSAN 物件的元件。vSAN 支援儲存區類型可以是「混合」或「全快閃」。如果指定「混合」，物件的元件只會放置在混合磁碟群組中。如果指定「全快閃」，則物件的元件只會放置在全快閃磁碟群組中。預設值「任何」將讓 vSAN 決定放置的位置。
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = 使用原生快照
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = 使用此限制建立原生快照。如果原則具有資料保護限制，此值將覆寫為「true」。預設值為「false」。
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = 本機資料保護 (主要儲存區)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = 具有目前原則的虛擬機器已定期建立快照來防止應用程式層級失敗。這些快照將儲存在 vSAN 儲存區中，以便於進行快速和較低的 RTO 復原。
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = 快照頻率 (RPO)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = 建立快照的頻率。該值以分鐘為單位。預設值 = 60 分鐘，最大值 = 30 天。
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = 將每第 x 個快照設為應用程式一致性快照
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = 應用程式一致性快照會正確準備應用程式進行資料保護。建立應用程式一致性快照時，可能會耗用其他應用程式資源。預設值 = 0，範圍 = 0 至 30。
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = 要保留的快照數目
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = 要在 vSAN 儲存區本機保留的快照總數。建立新快照時，會根據指定的保留值刪除最舊的快照。預設值 = 10，最大值 = 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = 封存保護
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = 為虛擬機器提供封存保護。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = 僅封存靜止快照
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = 僅封存靜止快照。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = 每 M 個快照執行一次封存
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = 將僅封存所有第 M 個快照。如果使用者選取僅封存靜止快照的選項，將封存所有第 M 個靜止快照。預設值 0 表示停用複製到封存檔存放區
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = 要保留的最近 X 個還原點
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = 此參數定義除了針對每小時 (Xh)、每日 (Xd)、每週 (Xw) 和每月 (Xm) 的保留規則以外，還要保留多少最新封存快照。保留原則受 (X + Xh + Xd + Xw + Xm) <= 100 限制。預設值: 1，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = 要保留的每小時還原點 (Xh)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = 要保留的每小時還原點的數目。預設值 0 表示不需要每小時快照。每小時快照是 UTC 時間整點或之後的第一個快照。預設值: 0，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = 要保留的每日還原點 (Xd)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = 要保留的每日還原點的數目。預設值 0 表示不需要每日快照。每日快照是 UTC 時間午夜或之後的第一個快照。預設值: 0，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = 要保留的每週還原點 (Xw)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = 要保留的每週還原點的數目。預設值 0 表示不需要每週快照。每週快照是 UTC 時間星期日午夜或之後的第一個快照。預設值: 0，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = 要保留的每月還原點 (Xm)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = 要保留的每月還原點的數目。預設值 0 表示不需要每月快照。每月快照是 UTC 時間當月最後一天午夜或之後的第一個快照。預設值: 0，最大值: 100。
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = 遠端保護
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = 為虛擬機器提供遠端複寫保護。
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = 遠端保護 RPO (分鐘)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = 遠端保護復原點目標。該值以分鐘為單位。預設值: 30，最小值: 5，最大值: 1440。
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = 要保留的遠端執行個體的數目
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = 要在遠端站台上保留的快照執行個體的數目。預設值: 1，最小值: 1，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = 遠端原則標記
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = 用於符合遠端複本虛擬機器儲存區原則的標記。
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = 資料服務
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = 虛擬機器的資料服務原則
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = 空間效率
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = vSAN 資料存放區的空間效率需求
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = 靜態資料加密
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = vSAN 資料存放區的靜態資料加密需求
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = 重複資料刪除和壓縮
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = 需要重複資料刪除和壓縮 vSAN 資料存放區
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = 僅壓縮
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = 需要僅壓縮 vSAN 資料存放區
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = 無空間效率
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = 需要將壓縮和重複資料刪除停用的 vSAN 資料存放區
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = 停用物件壓縮
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = 如果此選項為「是」，將不會在儲存裝置上壓縮物件。預設值: 否。

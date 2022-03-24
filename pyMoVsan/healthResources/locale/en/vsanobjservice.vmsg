@@ -1,0 +1,16 @@
+##############################################################
+# Copyright (C) 2021 VMware, Inc.  All rights reserved. -- VMware Confidential
+##############################################################
+#
+# VSAN object service related #
+com.vmware.vsan.object.type.other.desc = Unknown object type
+com.vmware.vsan.object.type.statsdb.desc = Performance management object
+com.vmware.vsan.object.type.iscsihome.desc = iSCSI home object
+com.vmware.vsan.object.type.iscsitarget.desc = iSCSI target object
+com.vmware.vsan.object.type.iscsilun.desc = iSCSI LUN
+com.vmware.vsan.object.type.fileshare.desc = File Share
+com.vmware.vsan.object.type.fsroot.desc = File service root file system
+com.vmware.vsan.object.type.haMetadataObject.desc = vSphere HA metadata object
+com.vmware.vsan.object.type.fcdNamespace.desc = Improved virtual disk namespace
+com.vmware.vsan.object.type.fcdCatalogNamespace.desc = Improved virtual disk catalog namespace
+com.vmware.vsan.object.type.fcdSnapshot.desc = {fcdName}-snapshot

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: h5-vsan-ui
+Bundle-SymbolicName: com.vmware.vsan.client.h5-vsan-ui
+Bundle-Version: 6.5.0
+Bundle-Vendor: VMware
+Web-ContextPath: ui/h5-vsan-ui

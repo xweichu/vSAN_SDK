@@ -1,0 +1,16 @@
+##############################################################
+# Copyright (C) 2021 VMware, Inc.  All rights reserved. -- VMware Confidential
+##############################################################
+#
+# VSAN object service related #
+com.vmware.vsan.object.type.other.desc = 不明物件類型
+com.vmware.vsan.object.type.statsdb.desc = 效能管理物件
+com.vmware.vsan.object.type.iscsihome.desc = iSCSI 常用物件
+com.vmware.vsan.object.type.iscsitarget.desc = iSCSI 目標物件
+com.vmware.vsan.object.type.iscsilun.desc = iSCSI LUN
+com.vmware.vsan.object.type.fileshare.desc = 檔案共用
+com.vmware.vsan.object.type.fsroot.desc = 檔案服務根檔案系統
+com.vmware.vsan.object.type.haMetadataObject.desc = vSphere HA 中繼資料物件
+com.vmware.vsan.object.type.fcdNamespace.desc = 已改進虛擬磁碟命名空間
+com.vmware.vsan.object.type.fcdCatalogNamespace.desc = 已改進虛擬磁碟目錄命名空間
+com.vmware.vsan.object.type.fcdSnapshot.desc = {fcdName} - 快照

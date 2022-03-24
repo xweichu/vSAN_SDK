@@ -1,0 +1,7 @@
+#
+# Vsan VP Localizable Messages for faults
+#
+vsan.fault.alarm.invalid.id = 경보 {Id}의 순서가 잘못되었습니다.
+vsan.fault.alarm.lost.id = 경보 {Id} 손실
+vsan.fault.event.invalid.id = 이벤트 {Id}의 순서가 잘못되었습니다.
+vsan.fault.event.lost.id = 이벤트 {Id}이(가) 손실되었습니다.

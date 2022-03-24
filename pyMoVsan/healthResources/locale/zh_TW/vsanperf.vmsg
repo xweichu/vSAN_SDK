@@ -1,0 +1,1496 @@
+# This message file defines all of labels, descriptions in vSAN performance test result showing in UI
+
+#
+# ClusterDomClient
+#
+com.vmware.vsan.perf.entity.cluster-domclient.description = 虛擬機器耗用量視角下的叢集相關度量。
+
+#
+# ClusterDomClientGraphs
+#
+cluster-domclient.iops.name = IOPS
+cluster-domclient.iops.description = 叢集中所有 vSAN 用戶端耗用的 IOPS，例如虛擬機器、統計資料物件等等。
+cluster-domclient.iops.metrics.iopsRead.name = 讀取 IOPS
+cluster-domclient.iops.metrics.iopsRead.description = 叢集中所有 vSAN 用戶端耗用的讀取 IOPS，例如虛擬機器、統計資料物件等等。
+cluster-domclient.iops.metrics.iopsWrite.name = 寫入 IOPS
+cluster-domclient.iops.metrics.iopsWrite.description = 叢集中所有 vSAN 用戶端耗用的寫入 IOPS，例如虛擬機器、統計資料物件等等。
+
+cluster-domclient.throughput.name = 輸送量
+cluster-domclient.throughput.description = 叢集中所有 vSAN 用戶端耗用的輸送量，例如虛擬機器、統計資料物件等等。
+cluster-domclient.throughput.metrics.throughputRead.name = 讀取輸送量
+cluster-domclient.throughput.metrics.throughputRead.description = 叢集中所有 vSAN 用戶端耗用的讀取輸送量，例如虛擬機器、統計資料物件等等。
+cluster-domclient.throughput.metrics.throughputWrite.name = 寫入輸送量
+cluster-domclient.throughput.metrics.throughputWrite.description = 叢集中所有 vSAN 用戶端耗用的寫入輸送量，例如虛擬機器、統計資料物件等等。
+
+cluster-domclient.latency.name = 延遲時間
+cluster-domclient.latency.description = 叢集中所有 vSAN 用戶端產生的平均 IO 延遲時間，例如虛擬機器、統計資料物件等等。
+cluster-domclient.latency.metrics.latencyAvgRead.name = 讀取延遲時間
+cluster-domclient.latency.metrics.latencyAvgRead.description = 叢集中所有 vSAN 用戶端產生的平均 IO 讀取延遲時間，例如虛擬機器、統計資料物件等等。
+cluster-domclient.latency.metrics.latencyAvgWrite.name = 寫入延遲時間
+cluster-domclient.latency.metrics.latencyAvgWrite.description = 叢集中所有 vSAN 用戶端產生的平均 IO 寫入延遲時間，例如虛擬機器、統計資料物件等等。
+
+cluster-domclient.congestion.name = 壅塞
+cluster-domclient.congestion.description = 叢集中所有 vSAN 用戶端產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+cluster-domclient.congestion.metrics.congestion.name = 壅塞
+cluster-domclient.congestion.metrics.congestion.description = 叢集中所有 vSAN 用戶端產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+
+cluster-domclient.oio.name = 未完成 IO
+cluster-domclient.oio.description = 叢集中所有 vSAN 用戶端的未完成 IO，例如虛擬機器、統計資料物件等等。
+cluster-domclient.oio.metrics.oio.name = 未完成 IO
+cluster-domclient.oio.metrics.oio.description = 叢集中所有 vSAN 用戶端的未完成 IO，例如虛擬機器、統計資料物件等等。
+
+#
+# ClusterDomCompMgr
+#
+com.vmware.vsan.perf.entity.cluster-domcompmgr.description = vSAN 後端視角下的叢集相關度量。
+
+#
+# ClusterDomCompMgrGraphs
+#
+
+cluster-domcompmgr.iops.name = IOPS
+cluster-domcompmgr.iops.description = vSAN 叢集後端 IOPS。
+cluster-domcompmgr.iops.metrics.iopsRead.name = 讀取 IOPS
+cluster-domcompmgr.iops.metrics.iopsRead.description = vSAN 後端檢視方塊中的 vSAN 叢集讀取 IOPS。
+cluster-domcompmgr.iops.metrics.iopsResyncRead.name = 重新同步讀取 IOPS
+cluster-domcompmgr.iops.metrics.iopsResyncRead.description = vSAN 後端檢視方塊中透過重新同步物件產生的重新同步流量的 vSAN 叢集讀取 IOPS，包括原則變更、修復、維護模式/撤除及重新平衡。
+cluster-domcompmgr.iops.metrics.iopsWrite.name = 寫入 IOPS
+cluster-domcompmgr.iops.metrics.iopsWrite.description = vSAN 後端檢視方塊中的 vSAN 叢集寫入 IOPS。
+cluster-domcompmgr.iops.metrics.iopsRecWrite.name = 復原寫入 IOPS
+cluster-domcompmgr.iops.metrics.iopsRecWrite.description = vSAN 後端檢視方塊中的 vSAN 叢集復原寫入 IOPS。
+
+cluster-domcompmgr.throughput.name = 輸送量
+cluster-domcompmgr.throughput.description = vSAN 叢集後端輸送量。
+cluster-domcompmgr.throughput.metrics.throughputRead.name = 讀取輸送量
+cluster-domcompmgr.throughput.metrics.throughputRead.description = vSAN 後端檢視方塊中的 vSAN 叢集讀取輸送量。
+cluster-domcompmgr.throughput.metrics.tputResyncRead.name = 重新同步讀取輸送量
+cluster-domcompmgr.throughput.metrics.tputResyncRead.description = vSAN 後端檢視方塊中透過重新同步物件產生的重新同步流量的 vSAN 叢集讀取輸送量，包括原則變更、修復、維護模式/撤除及重新平衡。
+cluster-domcompmgr.throughput.metrics.throughputWrite.name = 寫入輸送量
+cluster-domcompmgr.throughput.metrics.throughputWrite.description = vSAN 後端檢視方塊中的 vSAN 叢集寫入輸送量。
+cluster-domcompmgr.throughput.metrics.throughputRecWrite.name = 復原寫入輸送量
+cluster-domcompmgr.throughput.metrics.throughputRecWrite.description = vSAN 後端檢視方塊中的 vSAN 叢集復原寫入輸送量。
+
+cluster-domcompmgr.latency.name = 延遲時間
+cluster-domcompmgr.latency.description = vSAN 叢集後端延遲。
+cluster-domcompmgr.latency.metrics.latencyAvgRead.name = 讀取延遲時間
+cluster-domcompmgr.latency.metrics.latencyAvgRead.description = vSAN 後端檢視方塊中的 vSAN 叢集平均讀取延遲時間。
+cluster-domcompmgr.latency.metrics.latAvgResyncRead.name = 重新同步讀取延遲時間
+cluster-domcompmgr.latency.metrics.latAvgResyncRead.description = vSAN 後端檢視方塊中透過重新同步物件產生的重新同步流量的 vSAN 叢集讀取平均延遲時間，包括原則變更、修復、維護模式/撤除及重新平衡。
+cluster-domcompmgr.latency.metrics.latencyAvgWrite.name = 寫入延遲時間
+cluster-domcompmgr.latency.metrics.latencyAvgWrite.description = vSAN 後端檢視方塊中的 vSAN 叢集平均寫入延遲時間。
+cluster-domcompmgr.latency.metrics.latencyAvgRecWrite.name = 復原寫入延遲時間
+cluster-domcompmgr.latency.metrics.latencyAvgRecWrite.description = vSAN 後端檢視方塊中的 vSAN 叢集復原寫入平均延遲時間。
+
+cluster-domcompmgr.congestion.name = 壅塞
+cluster-domcompmgr.congestion.description = vSAN 叢集後端壅塞。
+cluster-domcompmgr.congestion.metrics.congestion.name = 壅塞
+cluster-domcompmgr.congestion.metrics.congestion.description = vSAN 後端檢視方塊中的 vSAN 叢集壅塞。
+
+cluster-domcompmgr.oio.name = 未完成 IO
+cluster-domcompmgr.oio.description = vSAN 叢集後端未完成 IO。
+cluster-domcompmgr.oio.metrics.oio.name = 未完成 IO
+cluster-domcompmgr.oio.metrics.oio.description = vSAN 後端檢視方塊中的 vSAN 叢集未完成 IO。
+
+#
+# HostDomClient
+#
+com.vmware.vsan.perf.entity.host-domclient.description = 虛擬機器耗用量檢視方塊中的主機相關度量。
+
+#
+# HostDomClientGraphs
+#
+host-domclient.iops.name = IOPS
+host-domclient.iops.description = 主機中所有 vSAN 用戶端耗用的 IOPS，例如虛擬機器、統計資料物件等等。
+host-domclient.iops.metrics.iopsRead.name = 讀取 IOPS
+host-domclient.iops.metrics.iopsRead.description = 主機中所有 vSAN 用戶端耗用的讀取 IOPS，例如虛擬機器、統計資料物件等等。
+host-domclient.iops.metrics.iopsWrite.name =  寫入 IOPS
+host-domclient.iops.metrics.iopsWrite.description = 主機中所有 vSAN 用戶端耗用的寫入 IOPS，例如虛擬機器、統計資料物件等等。
+host-domclient.iops.metrics.iopsUnmap.name = 取消對應 IOPS
+host-domclient.iops.metrics.iopsUnmap.description = 主機中所有 vSAN 用戶端耗用的修剪/取消對應命令的 vSAN 主機 IOPS，例如虛擬機器、統計資料物件等。
+
+host-domclient.throughput.name = 輸送量
+host-domclient.throughput.description = 主機中所有 vSAN 用戶端耗用的輸送量，例如虛擬機器、統計資料物件等等。
+host-domclient.throughput.metrics.throughputRead.name = 讀取輸送量
+host-domclient.throughput.metrics.throughputRead.description = 主機中所有 vSAN 用戶端耗用的讀取輸送量，例如虛擬機器、統計資料物件等等。
+host-domclient.throughput.metrics.throughputWrite.name = 寫入輸送量
+host-domclient.throughput.metrics.throughputWrite.description = 主機中所有 vSAN 用戶端耗用的寫入輸送量，例如虛擬機器、統計資料物件等等。
+
+host-domclient.throughputUnmap.name = 修剪/取消對應輸送量
+host-domclient.throughputUnmap.description = 主機中所有 vSAN 用戶端耗用的修剪/取消對應輸送量，例如虛擬機器、統計資料物件等。
+host-domclient.throughputUnmap.metrics.throughputUnmap.name = 取消對應輸送量
+host-domclient.throughputUnmap.metrics.throughputUnmap.description = 主機中所有 vSAN 用戶端耗用的修剪/取消對應命令的 vSAN 主機輸送量，例如虛擬機器、統計資料物件等。
+
+host-domclient.latency.name = 延遲時間
+host-domclient.latency.description = 主機中所有 vSAN 用戶端產生的平均 IO 延遲時間，例如虛擬機器、統計資料物件等等。
+host-domclient.latency.metrics.latencyAvgRead.name = 讀取延遲時間
+host-domclient.latency.metrics.latencyAvgRead.description = 主機中所有 vSAN 用戶端產生的平均 IO 讀取延遲時間，例如虛擬機器、統計資料物件等等。
+host-domclient.latency.metrics.latencyAvgWrite.name = 寫入延遲時間
+host-domclient.latency.metrics.latencyAvgWrite.description = 主機中所有 vSAN 用戶端產生的平均 IO 寫入延遲時間，例如虛擬機器、統計資料物件等等。
+host-domclient.latency.metrics.latencyAvgUnmap.name = 取消對應延遲
+host-domclient.latency.metrics.latencyAvgUnmap.description = 主機中所有 vSAN 用戶端產生的修剪/取消對應命令的 vSAN 主機平均延遲時間，例如虛擬機器、統計資料物件等。
+
+host-domclient.clientCacheHits.name = 本機用戶端快取命中 IOPS
+host-domclient.clientCacheHits.description = 本機用戶端平均快取讀取 IOPS。
+host-domclient.clientCacheHits.metrics.clientCacheHits.name = 本機用戶端快取命中 IOPS
+host-domclient.clientCacheHits.metrics.clientCacheHits.description = 本機用戶端平均快取讀取 IOPS。
+
+host-domclient.clientCacheHitRate.name = 本機用戶端快取命中率
+host-domclient.clientCacheHitRate.description = 本機用戶端快取可滿足的讀取 IO 百分比。
+host-domclient.clientCacheHitRate.metrics.clientCacheHitRate.name = 本機用戶端快取命中率
+host-domclient.clientCacheHitRate.metrics.clientCacheHitRate.description = 本機用戶端快取可滿足的讀取 IO 百分比。
+
+host-domclient.congestion.name = 壅塞
+host-domclient.congestion.description = 主機中所有 vSAN 用戶端產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+host-domclient.congestion.metrics.congestion.name = 壅塞
+host-domclient.congestion.metrics.congestion.description = 主機中所有 vSAN 用戶端產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+
+host-domclient.oio.name = 未完成 IO
+host-domclient.oio.description = 主機中所有 vSAN 用戶端的未完成 IO，例如虛擬機器、統計資料物件等等。
+host-domclient.oio.metrics.oio.name = 未完成 IO
+host-domclient.oio.metrics.oio.description = 主機中所有 vSAN 用戶端的未完成 IO，例如虛擬機器、統計資料物件等等。
+
+#
+# HostDomCompMgr
+#
+com.vmware.vsan.perf.entity.host-domcompmgr.description = vSAN 後端檢視方塊中的主機相關度量。
+#
+# HostDomCompMgrGraphs
+#
+host-domcompmgr.iops.name = IOPS
+host-domcompmgr.iops.description = vSAN 後端主機 IOPS。
+host-domcompmgr.iops.metrics.iopsRead.name = 讀取 IOPS
+host-domcompmgr.iops.metrics.iopsRead.description = vSAN 後端檢視方塊中的 vSAN 主機讀取 IOPS。
+host-domcompmgr.iops.metrics.iopsWrite.name = 寫入 IOPS
+host-domcompmgr.iops.metrics.iopsWrite.description = vSAN 後端檢視方塊中的 vSAN 主機寫入 IOPS。
+host-domcompmgr.iops.metrics.iopsResyncRead.name = 重新同步讀取 IOPS
+host-domcompmgr.iops.metrics.iopsResyncRead.description = vSAN 後端檢視方塊中透過重新同步物件產生的重新同步流量的 vSAN 主機讀取 IOPS，包括原則變更、修復、維護模式/撤除及重新平衡。
+host-domcompmgr.iops.metrics.iopsRecWrite.name = 復原寫入 IOPS
+host-domcompmgr.iops.metrics.iopsRecWrite.description = vSAN 後端檢視方塊中的 vSAN 主機復原寫入 IOPS。
+host-domcompmgr.iops.metrics.iopsUnmap.name = 取消對應 IOPS
+host-domcompmgr.iops.metrics.iopsUnmap.description = 此主機上磁碟群組的修剪/取消對應命令的 IOPS。
+host-domcompmgr.iops.metrics.iopsRecUnmap.name = 復原取消對應 IOPS
+host-domcompmgr.iops.metrics.iopsRecUnmap.description = 此主機上磁碟群組的復原修剪/取消對應命令的 IOPS。
+
+host-domcompmgr.throughput.name = 輸送量
+host-domcompmgr.throughput.description = vSAN 後端主機輸送量。
+host-domcompmgr.throughput.metrics.throughputRead.name = 讀取輸送量
+host-domcompmgr.throughput.metrics.throughputRead.description = vSAN 後端檢視方塊中的 vSAN 主機讀取輸送量。
+host-domcompmgr.throughput.metrics.throughputWrite.name = 寫入輸送量
+host-domcompmgr.throughput.metrics.throughputWrite.description = vSAN 後端檢視方塊中的 vSAN 主機寫入輸送量。
+host-domcompmgr.throughput.metrics.tputResyncRead.name = 重新同步讀取輸送量
+host-domcompmgr.throughput.metrics.tputResyncRead.description = vSAN 後端檢視方塊中透過重新同步物件產生的重新同步流量的 vSAN 主機讀取輸送量，包括原則變更、修復、維護模式/撤除及重新平衡。
+host-domcompmgr.throughput.metrics.throughputRecWrite.name = 復原寫入輸送量
+host-domcompmgr.throughput.metrics.throughputRecWrite.description = vSAN 後端檢視方塊中的 vSAN 主機復原寫入輸送量。
+
+host-domcompmgr.throughputUnmap.name = 修剪/取消對應輸送量
+host-domcompmgr.throughputUnmap.description = 此主機上磁碟群組的修剪/取消對應輸送量。
+host-domcompmgr.throughputUnmap.metrics.throughputUnmap.name = 取消對應輸送量
+host-domcompmgr.throughputUnmap.metrics.throughputUnmap.description = 此主機上磁碟群組的修剪/取消對應輸送量總計。
+host-domcompmgr.throughputUnmap.metrics.throughputRecUnmap.name = 復原取消對應輸送量
+host-domcompmgr.throughputUnmap.metrics.throughputRecUnmap.description = 此主機上磁碟群組的復原修剪/取消對應輸送量總計。
+
+host-domcompmgr.latency.name = 延遲時間
+host-domcompmgr.latency.description = vSAN 後端主機延遲。
+host-domcompmgr.latency.metrics.latencyAvgRead.name = 讀取延遲時間
+host-domcompmgr.latency.metrics.latencyAvgRead.description = vSAN 後端檢視方塊中的 vSAN 主機讀取 IO 平均延遲時間。
+host-domcompmgr.latency.metrics.latencyAvgWrite.name = 寫入延遲時間
+host-domcompmgr.latency.metrics.latencyAvgWrite.description = vSAN 後端檢視方塊中的 vSAN 主機寫入 IO 平均延遲時間。
+host-domcompmgr.latency.metrics.latAvgResyncRead.name = 重新同步讀取延遲時間
+host-domcompmgr.latency.metrics.latAvgResyncRead.description = vSAN 後端檢視方塊中透過重新同步物件產生的重新同步流量的 vSAN 主機讀取平均延遲時間，包括原則變更、修復、維護模式/撤除及重新平衡。
+host-domcompmgr.latency.metrics.latencyAvgRecWrite.name = 復原寫入延遲時間
+host-domcompmgr.latency.metrics.latencyAvgRecWrite.description = vSAN 後端檢視方塊中的 vSAN 主機復原寫入 IO 平均延遲時間。
+host-domcompmgr.latency.metrics.latencyAvgUnmap.name = 取消對應延遲
+host-domcompmgr.latency.metrics.latencyAvgUnmap.description = 此主機上磁碟群組的修剪/取消對應平均延遲時間。
+host-domcompmgr.latency.metrics.latencyAvgRecUnmap.name = 復原取消對應延遲
+host-domcompmgr.latency.metrics.latencyAvgRecUnmap.description = 此主機上磁碟群組的修剪/取消對應平均延遲時間。
+
+
+
+
+host-domcompmgr.congestion.name = 壅塞
+host-domcompmgr.congestion.description = vSAN 後端主機壅塞。
+host-domcompmgr.congestion.metrics.congestion.name = 壅塞
+host-domcompmgr.congestion.metrics.congestion.description = vSAN 後端檢視方塊中的 vSAN 主機壅塞。
+
+
+host-domcompmgr.oio.name = 未完成 IO
+host-domcompmgr.oio.description = vSAN 後端主機未完成 IO。
+host-domcompmgr.oio.metrics.oio.name = 未完成 IO
+host-domcompmgr.oio.metrics.oio.description = vSAN 後端檢視方塊中的 vSAN 主機未完成 IO。
+
+#
+# CacheDisk
+#
+com.vmware.vsan.perf.entity.cache-disk.description = 快取層磁碟的相關度量。
+
+#
+# CacheDiskGraphs
+#
+cache-disk.iopsDev.name = 實體/韌體層 IOPS
+cache-disk.iopsDev.description = vSAN 快取層磁碟實體/韌體層 IOPS。
+cache-disk.iopsDev.metrics.iopsDevRead.name = 實體層讀取 IOPS
+cache-disk.iopsDev.metrics.iopsDevRead.description = vSAN 磁碟實體/韌體層讀取 IOPS。
+cache-disk.iopsDev.metrics.iopsDevWrite.name = 實體層寫入 IOPS
+cache-disk.iopsDev.metrics.iopsDevWrite.description = vSAN 磁碟實體/韌體層寫入 IOPS。
+
+
+cache-disk.throughputDev.name = 實體/韌體層輸送量
+cache-disk.throughputDev.description = vSAN 快取層磁碟實體/韌體層輸送量。
+cache-disk.throughputDev.metrics.throughputDevRead.name = 實體層讀取輸送量
+cache-disk.throughputDev.metrics.throughputDevRead.description = vSAN 磁碟實體/韌體層讀取輸送量。
+cache-disk.throughputDev.metrics.throughputDevWrite.name = 實體層寫入輸送量
+cache-disk.throughputDev.metrics.throughputDevWrite.description = vSAN 磁碟實體/韌體層寫入輸送量。
+
+
+cache-disk.latencyDev.name = 實體/韌體層延遲時間
+cache-disk.latencyDev.description = vSAN 快取層磁碟實體/韌體層延遲時間。
+cache-disk.latencyDev.metrics.latencyDevRead.name = 實體層讀取延遲時間
+cache-disk.latencyDev.metrics.latencyDevRead.description = vSAN 磁碟實體/韌體層讀取延遲時間。
+cache-disk.latencyDev.metrics.latencyDevWrite.name = 實體層寫入延遲時間
+cache-disk.latencyDev.metrics.latencyDevWrite.description = vSAN 磁碟實體/韌體層寫入延遲時間。
+cache-disk.latencyDev.metrics.latencyDevGAvg.name = 客體平均延遲時間
+cache-disk.latencyDev.metrics.latencyDevGAvg.description = vSAN 磁碟客體 IO 延遲時間 (總延遲時間)。
+cache-disk.latencyDev.metrics.latencyDevDAvg.name = 裝置平均延遲時間
+cache-disk.latencyDev.metrics.latencyDevDAvg.description = vSAN 磁碟 IO 裝置延遲時間 (從 HBA 至後端儲存區)。
+
+#
+# CapacityDisk
+#
+com.vmware.vsan.perf.entity.capacity-disk.description = 容量層磁碟的相關度量。
+
+#
+# CapacityDiskGraphs
+#
+capacity-disk.iopsDev.name = 實體/韌體層 IOPS
+capacity-disk.iopsDev.description = vSAN 容量層磁碟實體/韌體層 IOPS。
+capacity-disk.iopsDev.metrics.iopsDevRead.name = 實體層讀取 IOPS
+capacity-disk.iopsDev.metrics.iopsDevRead.description = vSAN 磁碟實體/韌體層讀取 IOPS。
+capacity-disk.iopsDev.metrics.iopsDevWrite.name = 實體層寫入 IOPS
+capacity-disk.iopsDev.metrics.iopsDevWrite.description = vSAN 磁碟實體/韌體層寫入 IOPS。
+
+capacity-disk.throughputDev.name = 實體/韌體層輸送量
+capacity-disk.throughputDev.description = vSAN 容量層磁碟實體/韌體層輸送量。
+capacity-disk.throughputDev.metrics.throughputDevRead.name = 實體層讀取輸送量
+capacity-disk.throughputDev.metrics.throughputDevRead.description = vSAN 磁碟實體/韌體層讀取輸送量。
+capacity-disk.throughputDev.metrics.throughputDevWrite.name = 實體層寫入輸送量
+capacity-disk.throughputDev.metrics.throughputDevWrite.description = vSAN 磁碟實體/韌體層寫入輸送量。
+
+
+
+capacity-disk.latencyDev.name = 實體/韌體層延遲時間
+capacity-disk.latencyDev.description = vSAN 容量層磁碟實體/韌體層延遲時間。
+capacity-disk.latencyDev.metrics.latencyDevRead.name = 實體層讀取延遲時間
+capacity-disk.latencyDev.metrics.latencyDevRead.description = vSAN 磁碟實體/韌體層讀取延遲時間。
+capacity-disk.latencyDev.metrics.latencyDevWrite.name = 實體層寫入延遲時間
+capacity-disk.latencyDev.metrics.latencyDevWrite.description = vSAN 磁碟實體/韌體層寫入延遲時間。
+capacity-disk.latencyDev.metrics.latencyDevGAvg.name = 客體平均延遲時間
+capacity-disk.latencyDev.metrics.latencyDevGAvg.description = vSAN 磁碟客體 IO 延遲時間 (總延遲時間)。
+capacity-disk.latencyDev.metrics.latencyDevDAvg.name = 裝置平均延遲時間
+capacity-disk.latencyDev.metrics.latencyDevDAvg.description = vSAN 磁碟 IO 裝置延遲時間 (從 HBA 至後端儲存區)。
+
+
+capacity-disk.iops.name = vSAN 層 IOPS
+capacity-disk.iops.description = 容量層磁碟 vSAN 層 IOPS。
+capacity-disk.iops.metrics.iopsRead.name = vSAN 層讀取 IOPS
+capacity-disk.iops.metrics.iopsRead.description = 磁碟 vSAN 層讀取 IOPS。
+capacity-disk.iops.metrics.iopsWrite.name = vSAN 層寫入 IOPS
+capacity-disk.iops.metrics.iopsWrite.description = 磁碟 vSAN 層寫入 IOPS。
+
+
+capacity-disk.latency.name = vSAN 層延遲時間
+capacity-disk.latency.description = 容量層磁碟 vSAN 層延遲時間。
+capacity-disk.latency.metrics.latencyRead.name = vSAN 層讀取延遲時間
+capacity-disk.latency.metrics.latencyRead.description = 磁碟 vSAN 層讀取延遲時間。
+capacity-disk.latency.metrics.latencyWrite.name = vSAN 層寫入延遲時間
+capacity-disk.latency.metrics.latencyWrite.description = 磁碟 vSAN 層寫入延遲時間。
+
+#
+# DiskGroup
+#
+com.vmware.vsan.perf.entity.disk-group.description = 磁碟群組的相關度量。
+
+#
+# DiskGroupGraphs
+#
+disk-group.iopsFrontend.name = 前端 (客體) IOPS
+disk-group.iopsFrontend.description = vSAN 磁碟群組 (快取層磁碟) 前端 (客體) IOPS。
+disk-group.iopsFrontend.metrics.iopsRead.name = 前端讀取 IOPS
+disk-group.iopsFrontend.metrics.iopsRead.description = vSAN 磁碟群組 (快取層磁碟) 前端讀取 IOPS，包括 RC 讀取遺漏。
+disk-group.iopsFrontend.metrics.iopsWrite.name = 前端寫入 IOPS
+disk-group.iopsFrontend.metrics.iopsWrite.description = vSAN 磁碟群組 (快取層磁碟) 前端寫入 IOPS。
+disk-group.iopsFrontend.metrics.iopsRcRead.name = 讀取快取讀取 IOPS
+disk-group.iopsFrontend.metrics.iopsRcRead.description = vSAN 磁碟群組 (快取層磁碟) 讀取快取讀取 IOPS。
+disk-group.iopsFrontend.metrics.iopsWbWrite.name = 寫入緩衝區寫入 IOPS
+disk-group.iopsFrontend.metrics.iopsWbWrite.description = vSAN 磁碟群組 (快取層磁碟) 寫入緩衝區寫入 IOPS。
+
+
+disk-group.throughputFrontend.name = 前端 (客體) 輸送量
+disk-group.throughputFrontend.description = vSAN 磁碟群組 (快取層磁碟) 前端 (客體) 輸送量。
+disk-group.throughputFrontend.metrics.throughputRead.name = 前端讀取輸送量
+disk-group.throughputFrontend.metrics.throughputRead.description = vSAN 磁碟群組 (快取層磁碟) 前端讀取輸送量。
+disk-group.throughputFrontend.metrics.throughputWrite.name = 前端寫入輸送量
+disk-group.throughputFrontend.metrics.throughputWrite.description = vSAN 磁碟群組 (快取層磁碟) 前端寫入輸送量。
+
+
+disk-group.latencyFrontend.name = 前端 (客體) 延遲時間
+disk-group.latencyFrontend.description = vSAN 磁碟群組 (快取層磁碟) 前端 (客體) 延遲時間。
+disk-group.latencyFrontend.metrics.latencyAvgRead.name = 前端讀取延遲時間
+disk-group.latencyFrontend.metrics.latencyAvgRead.description = vSAN 磁碟群組 (快取層磁碟) 前端讀取延遲時間。
+disk-group.latencyFrontend.metrics.latencyAvgWrite.name = 前端寫入延遲時間
+disk-group.latencyFrontend.metrics.latencyAvgWrite.description = vSAN 磁碟群組 (快取層磁碟) 前端寫入延遲時間。
+disk-group.latencyFrontend.metrics.latencyRcRead.name = 讀取快取讀取延遲時間
+disk-group.latencyFrontend.metrics.latencyRcRead.description = vSAN 磁碟群組 (快取層磁碟) 讀取快取讀取延遲時間。
+disk-group.latencyFrontend.metrics.latencyWbWrite.name = 寫入緩衝區寫入延遲時間
+disk-group.latencyFrontend.metrics.latencyWbWrite.description = vSAN 磁碟群組 (快取層磁碟) 寫入緩衝區寫入延遲時間。
+
+
+disk-group.iopsOverhead.name = 額外負荷 IOPS
+disk-group.iopsOverhead.description = vSAN 磁碟群組 (快取層磁碟) 額外負荷 IOPS。
+disk-group.iopsOverhead.metrics.iopsRcWrite.name = 讀取快取寫入 IOPS
+disk-group.iopsOverhead.metrics.iopsRcWrite.description = vSAN 磁碟群組 (快取層磁碟) 讀取快取寫入 IOPS。
+disk-group.iopsOverhead.metrics.iopsWbRead.name = 寫入緩衝區讀取 IOPS
+disk-group.iopsOverhead.metrics.iopsWbRead.description = vSAN 磁碟群組 (快取層磁碟) 寫入緩衝區讀取 IOPS。
+
+
+disk-group.latencyOverhead.name = 額外負荷 IO 延遲時間
+disk-group.latencyOverhead.description = vSAN 磁碟群組 (快取層磁碟) 額外負荷 IO 延遲時間。
+disk-group.latencyOverhead.metrics.latencyRcWrite.name = 讀取快取寫入延遲時間
+disk-group.latencyOverhead.metrics.latencyRcWrite.description = vSAN 磁碟群組 (快取層磁碟) 讀取快取寫入延遲時間。
+disk-group.latencyOverhead.metrics.latencyWbRead.name = 寫入緩衝區讀取延遲時間
+disk-group.latencyOverhead.metrics.latencyWbRead.description = vSAN 磁碟群組 (快取層磁碟) 寫入緩衝區讀取延遲時間。
+
+
+disk-group.rcHitRate.name = 讀取快取命中率
+disk-group.rcHitRate.description = vSAN 磁碟群組 (快取層磁碟) 讀取快取命中率。
+disk-group.rcHitRate.metrics.rcHitRate.name = 讀取快取命中率
+disk-group.rcHitRate.metrics.rcHitRate.description = vSAN 磁碟群組 (快取層磁碟) 讀取快取命中率。
+
+
+disk-group.evictions.name = 移除
+disk-group.evictions.description = vSAN 磁碟群組 (快取層磁碟) 移除。
+disk-group.evictions.metrics.warEvictions.name = 快取無效判定
+disk-group.evictions.metrics.warEvictions.description = 因覆寫判定快取行無效。
+disk-group.evictions.metrics.quotaEvictions.name = 移除
+disk-group.evictions.metrics.quotaEvictions.description = 因讀取快取爭用而移除。
+
+
+disk-group.wbFreePct.name = 寫入緩衝區可用百分比
+disk-group.wbFreePct.description = vSAN 磁碟群組 (快取層磁碟) 寫入緩衝區可用百分比。
+disk-group.wbFreePct.metrics.wbFreePct.name = 寫入緩衝區可用百分比
+disk-group.wbFreePct.metrics.wbFreePct.description = vSAN 磁碟群組 (快取層磁碟) 寫入緩衝區可用百分比。
+
+disk-group.capacity.name = 容量與使用量
+disk-group.capacity.description = vSAN 磁碟群組容量與使用量。
+disk-group.capacity.metrics.capacity.name = 容量
+disk-group.capacity.metrics.capacity.description = vSAN 磁碟群組容量。
+disk-group.capacity.metrics.capacityUsed.name = 已用容量
+disk-group.capacity.metrics.capacityUsed.description = vSAN 磁碟群組已用容量。
+disk-group.capacity.metrics.capacityReserved.name = 保留的容量
+disk-group.capacity.metrics.capacityReserved.description = vSAN 磁碟群組保留的容量。
+disk-group.capacity.metrics.rcSize.name = 讀取快取大小
+disk-group.capacity.metrics.rcSize.description = vSAN 磁碟群組讀取快取大小。
+disk-group.capacity.metrics.wbSize.name = 寫入緩衝區大小
+disk-group.capacity.metrics.wbSize.description = vSAN 磁碟群組寫入緩衝區大小。
+
+
+disk-group.destage.name = 快取磁碟取消暫存率
+disk-group.destage.description = 從快取磁碟取消暫存至容量磁碟之資料的輸送量。
+disk-group.destage.metrics.ssdBytesDrained.name = 從 SSD 取消暫存的位元組
+disk-group.destage.metrics.ssdBytesDrained.description = 已從快取磁碟取消暫存至容量磁碟之 SSD 位元組的輸送量。
+disk-group.destage.metrics.zeroBytesDrained.name = 零位元組取消暫存
+disk-group.destage.metrics.zeroBytesDrained.description = 已取消暫存至容量磁碟之零位元組的輸送量。
+
+disk-group.congestions.name = 壅塞
+disk-group.congestions.description = vSAN 磁碟群組壅塞。
+disk-group.congestions.metrics.memCongestion.name = 記憶體壅塞
+disk-group.congestions.metrics.memCongestion.description = vSAN 磁碟群組記憶體壅塞。
+disk-group.congestions.metrics.slabCongestion.name = 碎片壅塞
+disk-group.congestions.metrics.slabCongestion.description = vSAN 磁碟群組碎片壅塞。
+disk-group.congestions.metrics.ssdCongestion.name = SSD 壅塞
+disk-group.congestions.metrics.ssdCongestion.description = vSAN 磁碟群組 SSD 壅塞。
+disk-group.congestions.metrics.iopsCongestion.name = IOPS 壅塞
+disk-group.congestions.metrics.iopsCongestion.description = vSAN 磁碟群組 IOPS 壅塞。
+disk-group.congestions.metrics.logCongestion.name = 記錄壅塞
+disk-group.congestions.metrics.logCongestion.description = vSAN 磁碟群組記錄壅塞。
+disk-group.congestions.metrics.compCongestion.name = Comp 壅塞
+disk-group.congestions.metrics.compCongestion.description = vSAN 磁碟群組 Comp 壅塞。
+
+disk-group.oobCongestion.name = 記錄雍塞下可用的頻寬。
+disk-group.oobCongestion.description = 當記錄累積超出上限時，取消暫存率所支援的頻寬。記錄累積受限於繫結記憶體使用量和掛接時間。4k 區塊大小 IO 具有最高的記錄累積。一旦記錄累積超出上限，我們便會將頻寬限制為目前取消暫存率所支援的頻寬。
+disk-group.oobCongestion.metrics.bytesPerSecondBandwidth.name = LogCongestionTput
+disk-group.oobCongestion.metrics.bytesPerSecondBandwidth.description = 目前取消暫存率所支援的頻寬，因為記錄累積超出上限。
+
+disk-group.oio.name = 未完成 IO
+disk-group.oio.description = 磁碟群組的未完成寫入 IO。
+disk-group.oio.metrics.oioWrite.name = 未完成寫入作業
+disk-group.oio.metrics.oioWrite.description = 磁碟群組的未完成寫入作業數目。
+disk-group.oio.metrics.oioRecWrite.name = 未完成復原寫入作業
+disk-group.oio.metrics.oioRecWrite.description = 磁碟群組的未完成復原寫入作業數目。
+
+
+disk-group.oioSize.name = 未完成 IO 大小
+disk-group.oioSize.description = 磁碟群組的未完成寫入 IO 大小。
+disk-group.oioSize.metrics.oioWriteSize.name = 未完成寫入 IO 大小
+disk-group.oioSize.metrics.oioWriteSize.description = 磁碟群組的未完成寫入 IO 大小。
+disk-group.oioSize.metrics.oioRecWriteSize.name = 未完成復原寫入 IO 大小
+disk-group.oioSize.metrics.oioRecWriteSize.description = 磁碟群組的未完成復原寫入 IO 大小。
+
+
+disk-group.schedulerIOPct.name = 延遲的 IO 百分比
+disk-group.schedulerIOPct.description = 通過 vSAN 內部佇列之 IO 的百分比。
+disk-group.schedulerIOPct.metrics.iopsDelayPctSched.name = 延遲的 IO 百分比
+disk-group.schedulerIOPct.metrics.iopsDelayPctSched.description = 通過 vSAN 內部佇列之 IO 的百分比。
+
+disk-group.schedulerLatency.name = 延遲的 IO 平均延遲時間
+disk-group.schedulerLatency.description = 通過 vSAN 內部佇列之 IO 的平均延遲時間。
+disk-group.schedulerLatency.metrics.latencyDelaySched.name = 延遲的 IO 平均延遲時間
+disk-group.schedulerLatency.metrics.latencyDelaySched.description = 通過 vSAN 內部佇列之總 IO 的平均延遲時間。
+disk-group.schedulerLatency.metrics.latencySchedQueueNS.name = 命名空間佇列的延遲時間
+disk-group.schedulerLatency.metrics.latencySchedQueueNS.description = vSAN 內部排程器中命名空間 IO 佇列的延遲時間。
+disk-group.schedulerLatency.metrics.latencySchedQueueRec.name = 復原佇列的延遲時間
+disk-group.schedulerLatency.metrics.latencySchedQueueRec.description = vSAN 內部排程器中復原 IO 佇列的延遲時間。
+disk-group.schedulerLatency.metrics.latencySchedQueueVM.name = 虛擬機器佇列的延遲時間
+disk-group.schedulerLatency.metrics.latencySchedQueueVM.description = vSAN 內部排程器中虛擬機器 IO 佇列的延遲時間。
+disk-group.schedulerLatency.metrics.latencySchedQueueMeta.name = 中繼佇列的延遲時間
+disk-group.schedulerLatency.metrics.latencySchedQueueMeta.description = vSAN 內部排程器中中繼 IO 佇列的延遲時間。
+
+
+disk-group.schedulerIOPS.name = 延遲的 IOPS
+disk-group.schedulerIOPS.description = 通過 vSAN 內部佇列之延遲的 IO 的 IOPS。
+disk-group.schedulerIOPS.metrics.iopsSched.name = 延遲的 IOPS 總計
+disk-group.schedulerIOPS.metrics.iopsSched.description = 通過 vSAN 內部佇列之總 IO 的 IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueNS.name = 命名空間佇列的 IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueNS.description = vSAN 內部排程器中命名空間 IO 佇列的 IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueRec.name = 復原佇列的 IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueRec.description = vSAN 內部排程器中的復原 IO 佇列的 IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueVM.name = 虛擬機器佇列的 IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueVM.description = vSAN 內部排程器中的虛擬機器 IO 佇列的 IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueMeta.name = 中繼佇列的 IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueMeta.description = vSAN 內部排程器中的中繼 IO 佇列的 IOPS。
+
+
+disk-group.schedulerTput.name = 延遲的 IO 輸送量
+disk-group.schedulerTput.description = 通過 vSAN 內部佇列之延遲的 IO 輸送量。
+disk-group.schedulerTput.metrics.throughputSched.name = 佇列輸送量總計
+disk-group.schedulerTput.metrics.throughputSched.description = vSAN 內部排程器中延遲的總 IO 的輸送量。
+disk-group.schedulerTput.metrics.throughputSchedQueueNS.name = 命名空間佇列的輸送量
+disk-group.schedulerTput.metrics.throughputSchedQueueNS.description = vSAN 內部排程器中命名空間 IO 佇列的輸送量。
+disk-group.schedulerTput.metrics.throughputSchedQueueRec.name = 復原佇列的輸送量
+disk-group.schedulerTput.metrics.throughputSchedQueueRec.description = vSAN 內部排程器中復原 IO 佇列的輸送量。
+disk-group.schedulerTput.metrics.throughputSchedQueueVM.name = 虛擬機器佇列的輸送量
+disk-group.schedulerTput.metrics.throughputSchedQueueVM.description = vSAN 內部排程器中虛擬機器 IO 佇列的輸送量。
+disk-group.schedulerTput.metrics.throughputSchedQueueMeta.name = 中繼佇列的輸送量
+disk-group.schedulerTput.metrics.throughputSchedQueueMeta.description = vSAN 內部排程器中中繼 IO 佇列的輸送量。
+
+
+disk-group.iopsResync.name = 重新同步 IOPS
+disk-group.iopsResync.description = 透過重新同步物件產生的重新同步流量的 vSAN 磁碟群組層級 IOPS，包括原則變更、修復、維護模式/撤除及重新平衡。
+disk-group.iopsResync.metrics.iopsResyncReadPolicy.name = 原則變更讀取
+disk-group.iopsResync.metrics.iopsResyncReadPolicy.description = 由於原則變更產生的重新同步流量的 vSAN 磁碟群組層級讀取 IOPS。
+disk-group.iopsResync.metrics.iopsResyncReadDecom.name = 撤除讀取
+disk-group.iopsResync.metrics.iopsResyncReadDecom.description = 由於維護模式和物件撤除產生的重新同步流量的 vSAN 磁碟群組層級讀取 IOPS。
+disk-group.iopsResync.metrics.iopsResyncReadRebalance.name = 重新平衡讀取
+disk-group.iopsResync.metrics.iopsResyncReadRebalance.description = 由於重新平衡物件產生的重新同步流量的 vSAN 磁碟群組層級讀取 IOPS。
+disk-group.iopsResync.metrics.iopsResyncReadFixComp.name = 修復讀取
+disk-group.iopsResync.metrics.iopsResyncReadFixComp.description = 由於物件修復產生的重新同步流量的 vSAN 磁碟群組層級讀取 IOPS。
+disk-group.iopsResync.metrics.iopsResyncWritePolicy.name = 原則變更寫入
+disk-group.iopsResync.metrics.iopsResyncWritePolicy.description = 由於原則變更產生的重新同步流量的 vSAN 磁碟群組層級寫入 IOPS。
+disk-group.iopsResync.metrics.iopsResyncWriteDecom.name = 撤除寫入
+disk-group.iopsResync.metrics.iopsResyncWriteDecom.description = 由於維護模式和物件撤除產生的重新同步流量的 vSAN 磁碟群組層級寫入 IOPS。
+disk-group.iopsResync.metrics.iopsResyncWriteRebalance.name = 重新平衡寫入
+disk-group.iopsResync.metrics.iopsResyncWriteRebalance.description = 由於重新平衡物件產生的重新同步流量的 vSAN 磁碟群組層級寫入 IOPS。
+disk-group.iopsResync.metrics.iopsResyncWriteFixComp.name = 修復寫入
+disk-group.iopsResync.metrics.iopsResyncWriteFixComp.description = 由於物件修復產生的重新同步流量的 vSAN 磁碟群組層級寫入 IOPS。
+
+disk-group.tputResync.name = 重新同步輸送量
+disk-group.tputResync.description = 透過重新同步物件產生的重新同步流量的 vSAN 磁碟群組層級輸送量，包括原則變更、修復、維護模式/撤除及重新平衡。
+disk-group.tputResync.metrics.tputResyncReadPolicy.name = 原則變更讀取
+disk-group.tputResync.metrics.tputResyncReadPolicy.description = 由於原則變更產生的重新同步流量的 vSAN 磁碟群組層級讀取輸送量。
+disk-group.tputResync.metrics.tputResyncReadDecom.name = 撤除讀取
+disk-group.tputResync.metrics.tputResyncReadDecom.description = 由於維護模式和物件撤除產生的重新同步流量的 vSAN 磁碟群組層級讀取輸送量。
+disk-group.tputResync.metrics.tputResyncReadRebalance.name = 重新平衡讀取
+disk-group.tputResync.metrics.tputResyncReadRebalance.description = 由於重新平衡物件產生的重新同步流量的 vSAN 磁碟群組層級讀取輸送量。
+disk-group.tputResync.metrics.tputResyncReadFixComp.name = 修復讀取
+disk-group.tputResync.metrics.tputResyncReadFixComp.description = 由於物件修復產生的重新同步流量的 vSAN 磁碟群組層級讀取輸送量。
+disk-group.tputResync.metrics.tputResyncWritePolicy.name = 原則變更寫入
+disk-group.tputResync.metrics.tputResyncWritePolicy.description = 由於原則變更產生的重新同步流量的 vSAN 磁碟群組層級寫入輸送量。
+disk-group.tputResync.metrics.tputResyncWriteDecom.name = 撤除寫入
+disk-group.tputResync.metrics.tputResyncWriteDecom.description = 由於維護模式和物件撤除產生的重新同步流量的 vSAN 磁碟群組層級寫入輸送量。
+disk-group.tputResync.metrics.tputResyncWriteRebalance.name = 重新平衡寫入
+disk-group.tputResync.metrics.tputResyncWriteRebalance.description = 由於重新平衡物件產生的重新同步流量的 vSAN 磁碟群組層級寫入輸送量。
+disk-group.tputResync.metrics.tputResyncWriteFixComp.name = 修復寫入
+disk-group.tputResync.metrics.tputResyncWriteFixComp.description = 由於物件修復產生的重新同步流量的 vSAN 磁碟群組層級寫入輸送量。
+
+disk-group.latResync.name = 重新同步延遲時間
+disk-group.latResync.description = 透過重新同步物件產生的重新同步流量的 vSAN 磁碟群組層級平均延遲時間，包括原則變更、修復、維護模式/撤除及重新平衡。
+disk-group.latResync.metrics.latResyncReadPolicy.name = 原則變更讀取
+disk-group.latResync.metrics.latResyncReadPolicy.description = 由於原則變更產生的重新同步流量的 vSAN 磁碟群組層級讀取延遲時間。
+disk-group.latResync.metrics.latResyncReadDecom.name = 撤除讀取
+disk-group.latResync.metrics.latResyncReadDecom.description = 由於維護模式和物件撤除產生的重新同步流量的 vSAN 磁碟群組層級讀取延遲時間。
+disk-group.latResync.metrics.latResyncReadRebalance.name = 重新平衡讀取
+disk-group.latResync.metrics.latResyncReadRebalance.description = 由於重新平衡物件產生的重新同步流量的 vSAN 磁碟群組層級讀取延遲時間。
+disk-group.latResync.metrics.latResyncReadFixComp.name = 修復讀取
+disk-group.latResync.metrics.latResyncReadFixComp.description = 由於物件修復產生的重新同步流量的 vSAN 磁碟群組層級讀取延遲時間。
+disk-group.latResync.metrics.latResyncWritePolicy.name = 原則變更寫入
+disk-group.latResync.metrics.latResyncWritePolicy.description = 由於原則變更產生的重新同步流量的 vSAN 磁碟群組層級寫入延遲時間。
+disk-group.latResync.metrics.latResyncWriteDecom.name = 撤除寫入
+disk-group.latResync.metrics.latResyncWriteDecom.description = 由於維護模式和物件撤除產生的重新同步流量的 vSAN 磁碟群組層級寫入延遲時間。
+disk-group.latResync.metrics.latResyncWriteRebalance.name = 重新平衡寫入
+disk-group.latResync.metrics.latResyncWriteRebalance.description = 由於重新平衡物件產生的重新同步流量的 vSAN 磁碟群組層級寫入延遲時間。
+disk-group.latResync.metrics.latResyncWriteFixComp.name = 修復寫入
+disk-group.latResync.metrics.latResyncWriteFixComp.description = 由於物件修復產生的重新同步流量的 vSAN 磁碟群組層級寫入延遲時間。
+
+#
+# VirtualSCSI
+#
+com.vmware.vsan.perf.entity.vscsi.description = 虛擬機器的虛擬 SCSI 的度量。
+
+#
+# VirtualSCSIGraphs
+#
+vscsi.iops.name = 虛擬 SCSI IOPS
+vscsi.iops.description = 虛擬機器 VSCSI IOPS。
+vscsi.iops.metrics.iopsRead.name = 讀取 IOPS
+vscsi.iops.metrics.iopsRead.description = 虛擬機器 VSCSI 讀取 IOPS。
+vscsi.iops.metrics.iopsWrite.name = 寫入 IOPS
+vscsi.iops.metrics.iopsWrite.description = 虛擬機器 VSCSI 寫入 IOPS。
+
+
+vscsi.throughput.name = 虛擬 SCSI 輸送量
+vscsi.throughput.description = 虛擬機器 VSCSI 輸送量。
+vscsi.throughput.metrics.throughputRead.name = 讀取輸送量
+vscsi.throughput.metrics.throughputRead.description = 虛擬機器 VSCSI 讀取輸送量。
+vscsi.throughput.metrics.throughputWrite.name = 寫入輸送量
+vscsi.throughput.metrics.throughputWrite.description = 虛擬機器 VSCSI 寫入輸送量。
+
+
+vscsi.latency.name = 虛擬 SCSI 延遲時間
+vscsi.latency.description = 虛擬機器 VSCSI 延遲時間。
+vscsi.latency.metrics.latencyRead.name = 讀取延遲時間
+vscsi.latency.metrics.latencyRead.description = 虛擬機器 VSCSI 讀取延遲時間。
+vscsi.latency.metrics.latencyWrite.name = 寫入延遲時間
+vscsi.latency.metrics.latencyWrite.description = 虛擬機器 VSCSI 寫入延遲時間。
+
+
+#
+# VirtualMachine
+#
+com.vmware.vsan.perf.entity.vm.description = 虛擬機器的度量。
+
+
+#
+# VirtualMachineGraphs
+#
+vm.iops.name = IOPS
+vm.iops.description = 虛擬機器 IOPS。
+vm.iops.metrics.iopsRead.name = 讀取 IOPS
+vm.iops.metrics.iopsRead.description = 虛擬機器讀取 IOPS。
+vm.iops.metrics.iopsWrite.name = 寫入 IOPS
+vm.iops.metrics.iopsWrite.description = 虛擬機器寫入 IOPS。
+
+
+vm.throughput.name = 輸送量
+vm.throughput.description = 虛擬機器輸送量。
+vm.throughput.metrics.throughputRead.name = 讀取輸送量
+vm.throughput.metrics.throughputRead.description = 虛擬機器讀取輸送量。
+vm.throughput.metrics.throughputWrite.name = 寫入輸送量
+vm.throughput.metrics.throughputWrite.description = 虛擬機器寫入輸送量。
+
+
+vm.latency.name = 延遲時間
+vm.latency.description = 虛擬機器延遲時間。
+vm.latency.metrics.latencyRead.name = 讀取延遲時間
+vm.latency.metrics.latencyRead.description = 虛擬機器讀取延遲時間。
+vm.latency.metrics.latencyWrite.name = 寫入延遲時間
+vm.latency.metrics.latencyWrite.description = 虛擬機器寫入延遲時間。
+
+
+#
+# VirtualDisk
+#
+com.vmware.vsan.perf.entity.virtual-disk.description = 虛擬磁碟的度量。
+
+
+#
+# VirtualDiskGraphs
+#
+virtual-disk.normalized-iops.name = IOPS 與 IOPS 限制
+virtual-disk.normalized-iops.description = 此圖顯示虛擬磁碟的標準化 IOPS。如果已在原則中指定 IOPS 限制，此圖還將顯示該限制。
+virtual-disk.normalized-iops.metrics.iopsLimit.name = 標準化 IOPS 限制
+virtual-disk.normalized-iops.metrics.iopsLimit.description = 套用的 IOPS 限制。
+virtual-disk.normalized-iops.metrics.NIOPS.name = 標準化 IOPS
+virtual-disk.normalized-iops.metrics.NIOPS.description = 此顯示預設為使用 32 KB 的加權大小來表示的 IOPS。這表示 64 KB 讀取或寫入作業表示 2 個標準化 IO。加權大小是可設定的參數。
+
+
+virtual-disk.delayed-normalized-iops.name = 延遲的標準化 IOPS
+virtual-disk.delayed-normalized-iops.description = 此圖顯示因應用 IOPS 限制而延遲之 IO 的標準化 IOPS。
+virtual-disk.delayed-normalized-iops.metrics.NIOPSDelayed.name = 延遲的標準化 IOPS
+virtual-disk.delayed-normalized-iops.metrics.NIOPSDelayed.description = 此為已延遲之標準化 IO 的 IOPS。
+
+#
+# VMKNICNetStats
+#
+com.vmware.vsan.perf.entity.vsan-vnic-net.description = vSAN VMkernel 網路介面卡的度量。
+
+#
+# VMKNICNetStatsGraphs
+#
+vsannic.network-bytes-metrics.name = VMkernel 網路介面卡輸送量
+vsannic.network-bytes-metrics.description = VMkernel 網路介面卡網路 I/O 輸送量。
+vsannic.network-bytes-metrics.metrics.rxThroughput.name = 輸送量輸入
+vsannic.network-bytes-metrics.metrics.rxThroughput.description = VMkernel 網路介面卡輸送量輸入。
+vsannic.network-bytes-metrics.metrics.txThroughput.name = 輸送量輸出
+vsannic.network-bytes-metrics.metrics.txThroughput.description = VMkernel 網路介面卡輸送量輸出。
+vsannic.packets-metrics.name = VMkernel 網路介面卡每秒封包數
+vsannic.packets-metrics.description = VMkernel 網路介面卡每秒封包數。
+vsannic.packets-metrics.metrics.rxPackets.name = 每秒輸入封包數
+vsannic.packets-metrics.metrics.rxPackets.description = VMkernel 網路介面卡每秒輸入封包數。
+vsannic.packets-metrics.metrics.txPackets.name = 每秒輸出封包數
+vsannic.packets-metrics.metrics.txPackets.description = VMkernel 網路介面卡每秒輸出封包數。
+vsannic.packets-loss-rate.name = VMkernel 網路介面卡封包捨棄率
+vsannic.packets-loss-rate.description = VMkernel 網路介面卡封包捨棄率百分比。
+vsannic.packets-loss-rate.metrics.rxPacketsLossRate.name = 輸入封包捨棄率
+vsannic.packets-loss-rate.metrics.rxPacketsLossRate.description = VMkernel 網路介面卡輸入封包捨棄率百分比。
+vsannic.packets-loss-rate.metrics.txPacketsLossRate.name = 輸出封包捨棄率
+vsannic.packets-loss-rate.metrics.txPacketsLossRate.description = VMkernel 網路介面卡輸出封包捨棄率百分比。
+vsannic.port-drop-rate.name = VMkernel 網路 vSwitch 連接埠捨棄率
+vsannic.port-drop-rate.description = VMkernel 網路 vSwitch 連接埠捨棄率的百分比。
+vsannic.port-drop-rate.metrics.portRxDrops.name = vSwitch 連接埠的輸入封包捨棄率
+vsannic.port-drop-rate.metrics.portRxDrops.description = VMkernel 網路 vSwitch 連接埠輸入封包捨棄率百分比。
+vsannic.port-drop-rate.metrics.portTxDrops.name = vSwitch 連接埠的輸出封包捨棄率
+vsannic.port-drop-rate.metrics.portTxDrops.description = VMkernel 網路 vSwitch 連接埠輸出封包捨棄率百分比。
+
+#
+# VsanHostNetStats
+#
+com.vmware.vsan.perf.entity.vsan-host-net.description = vSAN 主機網路的度量。
+
+#
+# VsanHostNetStatsGraphs
+#
+vsanhost.network-bytes-metrics.name = vSAN 主機網路 I/O 輸送量
+vsanhost.network-bytes-metrics.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機網路 I/O 輸送量。
+vsanhost.network-bytes-metrics.metrics.rxThroughput.name = 網路輸入輸送量
+vsanhost.network-bytes-metrics.metrics.rxThroughput.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機輸送量輸入。
+vsanhost.network-bytes-metrics.metrics.txThroughput.name = 網路輸出輸送量
+vsanhost.network-bytes-metrics.metrics.txThroughput.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機輸送量輸出。
+vsanhost.packets-metrics.name = vSAN 主機每秒封包數
+vsanhost.packets-metrics.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的 vSAN 主機每秒封包數。
+vsanhost.packets-metrics.metrics.rxPackets.name = 每秒網路輸入封包數
+vsanhost.packets-metrics.metrics.rxPackets.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機網路每秒輸入封包數。
+vsanhost.packets-metrics.metrics.txPackets.name = 每秒網路輸出封包數
+vsanhost.packets-metrics.metrics.txPackets.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機網路每秒輸出封包數。
+vsanhost.packets-loss-rate.name = vSAN 主機封包捨棄率
+vsanhost.packets-loss-rate.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機封包捨棄率百分比。
+vsanhost.packets-loss-rate.metrics.rxPacketsLossRate.name = 網路輸入封包捨棄率
+vsanhost.packets-loss-rate.metrics.rxPacketsLossRate.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機輸入封包捨棄率百分比。
+vsanhost.packets-loss-rate.metrics.txPacketsLossRate.name = 網路輸出封包捨棄率
+vsanhost.packets-loss-rate.metrics.txPacketsLossRate.description = 已啟用 vSAN 流量之所有 VMkernel 網路介面卡的主機輸出封包捨棄率百分比。
+vsanhost.port-drop-rate.name = vSAN 主機連接埠捨棄率
+vsanhost.port-drop-rate.description = 所有 vSAN VMkernel 網路 vSwitch 連接埠的 vSAN 主機連接埠捨棄率百分比。
+vsanhost.port-drop-rate.metrics.portRxDrops.name = vSAN 主機連接埠的輸入封包捨棄率
+vsanhost.port-drop-rate.metrics.portRxDrops.description = vSAN 主機連接埠輸入封包捨棄率百分比。
+vsanhost.port-drop-rate.metrics.portTxDrops.name = vSAN 主機連接埠的輸出封包捨棄率
+vsanhost.port-drop-rate.metrics.portTxDrops.description = vSAN 主機連接埠輸出封包捨棄率百分比。
+
+
+#
+# RdtNetStats
+#
+com.vmware.vsan.perf.entity.rdt-net.description = RDT 網路的度量。
+
+#
+## RdtNetStatsStatsGraphs
+#
+rdtnet.checksum.name = RDT 網路總和檢查碼
+rdtnet.checksum.description = RDT 網路總和檢查碼。
+rdtnet.checksum.metrics.checksumMismatchCount.name = RDT 網路總和檢查碼不符計數
+rdtnet.checksum.metrics.checksumMismatchCount.description = RDT 網路總和檢查碼不符計數。
+
+#
+# pNICNetStats
+#
+com.vmware.vsan.perf.entity.vsan-pnic-net.description = vSAN 實體 NIC 的度量。
+
+#
+# pNICNetStatsGraphs
+#
+vsanpnic.network-bytes-metrics.name = 實體 NIC 輸送量
+vsanpnic.network-bytes-metrics.description = 實體 NIC 網路 I/O 輸送量。
+vsanpnic.network-bytes-metrics.metrics.rxThroughput.name = 實體 NIC 輸送量輸入
+vsanpnic.network-bytes-metrics.metrics.rxThroughput.description = 實體 NIC 輸送量輸入。
+vsanpnic.network-bytes-metrics.metrics.txThroughput.name = 實體 NIC 輸送量輸出
+vsanpnic.network-bytes-metrics.metrics.txThroughput.description = 實體 NIC 輸送量輸出。
+vsanpnic.packets-metrics.name = 每秒實體 NIC 封包數
+vsanpnic.packets-metrics.description = 每秒實體 NIC 封包數。
+vsanpnic.packets-metrics.metrics.rxPackets.name = 每秒實體 NIC 輸入封包數
+vsanpnic.packets-metrics.metrics.rxPackets.description = 每秒實體 NIC 輸入封包數。
+vsanpnic.packets-metrics.metrics.txPackets.name = 每秒實體 NIC 輸出封包數
+vsanpnic.packets-metrics.metrics.txPackets.description = 每秒實體 NIC 輸出封包數。
+vsanpnic.packets-loss-rate.name = pNIC 封包錯誤率
+vsanpnic.packets-loss-rate.description = 實體 NIC 封包錯誤率百分比。
+vsanpnic.packets-loss-rate.metrics.rxPacketsLossRate.name = pNIC 輸入封包錯誤率
+vsanpnic.packets-loss-rate.metrics.rxPacketsLossRate.description = 實體 NIC 輸入封包錯誤率百分比。
+vsanpnic.packets-loss-rate.metrics.txPacketsLossRate.name = pNIC 輸出封包錯誤率
+vsanpnic.packets-loss-rate.metrics.txPacketsLossRate.description = 實體 NIC 輸出封包錯誤率百分比。
+vsanpnic.port-drop-rate.name = 實體 NIC vSwitch 連接埠捨棄率
+vsanpnic.port-drop-rate.description = 實體 NIC vSwitch 連接埠捨棄率的百分比。
+vsanpnic.port-drop-rate.metrics.portRxDrops.name = pNic vSwitch 連接埠的輸入封包捨棄率
+vsanpnic.port-drop-rate.metrics.portRxDrops.description = 實體 NIC 輸入 vSwitch 連接埠捨棄率的百分比。
+vsanpnic.port-drop-rate.metrics.portTxDrops.name = pNic vSwitch 連接埠的輸出封包捨棄率
+vsanpnic.port-drop-rate.metrics.portTxDrops.description = 實體 NIC 輸出 vSwitch 連接埠捨棄率的百分比。
+vsanpnic.pause-count.name = pNIC 流量控制
+vsanpnic.pause-count.description = 實體 NIC 802.3x 暫停率百分比。
+vsanpnic.pause-count.metrics.pauseCount.name = pNic 802.3x 暫停率
+vsanpnic.pause-count.metrics.pauseCount.description = 實體 NIC 802.3x 暫停率百分比。
+vsanpnic.rxCrcErr.name = pNIC RX CRC 錯誤
+vsanpnic.rxCrcErr.description = 實體 NIC RX CRC 錯誤的百分比。
+vsanpnic.rxCrcErr.metrics.rxCrcErr.name = pNIC RX CRC 錯誤
+vsanpnic.rxCrcErr.metrics.rxCrcErr.description = 實體 NIC RX CRC 錯誤的百分比。
+vsanpnic.txCarErr.name = pNIC TX 載波錯誤
+vsanpnic.txCarErr.description = 實體 NIC TX 載波錯誤的百分比。
+vsanpnic.txCarErr.metrics.txCarErr.name = pNIC TX 載波錯誤
+vsanpnic.txCarErr.metrics.txCarErr.description = 實體 NIC TX 載波錯誤的百分比。
+vsanpnic.rxErr.name = pNIC RX 一般錯誤
+vsanpnic.rxErr.description = 實體 NIC RX 一般錯誤的百分比。
+vsanpnic.rxErr.metrics.rxErr.name = pNIC RX 一般錯誤
+vsanpnic.rxErr.metrics.rxErr.description = 實體 NIC RX 一般錯誤的百分比。
+vsanpnic.txErr.name = pNIC TX 一般錯誤
+vsanpnic.txErr.description = 實體 NIC TX 一般錯誤的百分比。
+vsanpnic.txErr.metrics.txErr.name = pNIC TX 一般錯誤
+vsanpnic.txErr.metrics.txErr.description = 實體 NIC TX 一般錯誤的百分比。
+vsanpnic.rxMissErr.name = pNIC RX 遺失錯誤
+vsanpnic.rxMissErr.description = 實體 NIC RX 遺失錯誤的百分比。
+vsanpnic.rxMissErr.metrics.rxMissErr.name = pNIC RX 遺失錯誤
+vsanpnic.rxMissErr.metrics.rxMissErr.description = 實體 NIC RX 遺失錯誤的百分比。
+vsanpnic.rxOvErr.name = pNIC RX 緩衝區溢位錯誤
+vsanpnic.rxOvErr.description = 實體 NIC RX 緩衝溢位錯誤的百分比。
+vsanpnic.rxOvErr.metrics.rxOvErr.name = pNIC RX 緩衝區溢位錯誤
+vsanpnic.rxOvErr.metrics.rxOvErr.description = 實體 NIC RX 緩衝溢位錯誤的百分比。
+vsanpnic.rxFifoErr.name = pNIC RX FIFO 錯誤
+vsanpnic.rxFifoErr.description = 實體 NIC RX FIFO 錯誤的百分比。
+vsanpnic.rxFifoErr.metrics.rxFifoErr.name = pNIC RX FIFO 錯誤
+vsanpnic.rxFifoErr.metrics.rxFifoErr.description = 實體 NIC RX FIFO 錯誤的百分比。
+
+
+#
+# VsanIscsiHostStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-host.description = 此 ESXi 主機上所有 vSAN iSCSI 目標的度量。
+
+#
+## VsanIscsiHostStatsGraphs
+#
+vsaniscsihost.iops.name = IOPS
+vsaniscsihost.iops.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的 IOPS。
+vsaniscsihost.iops.metrics.iopsRead.name = 讀取 IOPS
+vsaniscsihost.iops.metrics.iopsRead.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的讀取 IOPS。
+vsaniscsihost.iops.metrics.iopsWrite.name = 寫入 IOPS
+vsaniscsihost.iops.metrics.iopsWrite.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的寫入 IOPS。
+vsaniscsihost.iops.metrics.iopsTotal.name = IOPS 總計
+vsaniscsihost.iops.metrics.iopsTotal.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的 IOPS 總計。
+
+vsaniscsihost.bandwidth.name = 頻寬
+vsaniscsihost.bandwidth.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的頻寬。
+vsaniscsihost.bandwidth.metrics.bandwidthRead.name = 讀取頻寬
+vsaniscsihost.bandwidth.metrics.bandwidthRead.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的讀取頻寬。
+vsaniscsihost.bandwidth.metrics.bandwidthWrite.name = 寫入頻寬
+vsaniscsihost.bandwidth.metrics.bandwidthWrite.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的寫入頻寬。
+vsaniscsihost.bandwidth.metrics.bandwidthTotal.name = 頻寬總計
+vsaniscsihost.bandwidth.metrics.bandwidthTotal.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標耗用的頻寬總計。
+
+vsaniscsihost.latency.name = 延遲時間
+vsaniscsihost.latency.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標產生的平均 IO 延遲時間。
+vsaniscsihost.latency.metrics.latencyRead.name = 讀取延遲時間
+vsaniscsihost.latency.metrics.latencyRead.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標產生的平均 IO 讀取延遲時間。
+vsaniscsihost.latency.metrics.latencyWrite.name = 寫入延遲時間
+vsaniscsihost.latency.metrics.latencyWrite.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標產生的平均 IO 寫入延遲時間。
+vsaniscsihost.latency.metrics.latencyTotal.name = 延遲時間總計
+vsaniscsihost.latency.metrics.latencyTotal.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標產生的平均 IO 延遲時間總計。
+
+vsaniscsihost.queue-depth.name = 未完成 IO
+vsaniscsihost.queue-depth.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標的未完成 IO。
+vsaniscsihost.queue-depth.metrics.queueDepth.name = 未完成 IO
+vsaniscsihost.queue-depth.metrics.queueDepth.description = 在此 ESXi 主機上所有 vSAN iSCSI 目標的未完成 IO。
+
+#
+# VsanIscsiTargetStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-target.description = vSAN iSCSI 目標上所有 LUN 的度量。
+
+#
+## VsanIscsiTargetStatsGraphs
+#
+vsaniscsitarget.iops.name = IOPS
+vsaniscsitarget.iops.description = 在此目標上所有 vSAN iSCSI LUN 耗用的 IOPS。
+vsaniscsitarget.iops.metrics.iopsRead.name = 讀取 IOPS
+vsaniscsitarget.iops.metrics.iopsRead.description = 在此目標上所有 vSAN iSCSI LUN 耗用的讀取 IOPS。
+vsaniscsitarget.iops.metrics.iopsWrite.name = 寫入 IOPS
+vsaniscsitarget.iops.metrics.iopsWrite.description = 在此目標上所有 vSAN iSCSI LUN 耗用的寫入 IOPS。
+vsaniscsitarget.iops.metrics.iopsTotal.name = IOPS 總計
+vsaniscsitarget.iops.metrics.iopsTotal.description = 在此目標上所有 vSAN iSCSI LUN 耗用的 IOPS 總計。
+
+vsaniscsitarget.bandwidth.name = 頻寬
+vsaniscsitarget.bandwidth.description = 在此目標上所有 vSAN iSCSI LUN 耗用的頻寬。
+vsaniscsitarget.bandwidth.metrics.bandwidthRead.name = 讀取頻寬
+vsaniscsitarget.bandwidth.metrics.bandwidthRead.description = 在此目標上所有 vSAN iSCSI LUN 耗用的讀取頻寬。
+vsaniscsitarget.bandwidth.metrics.bandwidthWrite.name = 寫入頻寬
+vsaniscsitarget.bandwidth.metrics.bandwidthWrite.description = 在此目標上所有 vSAN iSCSI LUN 耗用的寫入頻寬。
+vsaniscsitarget.bandwidth.metrics.bandwidthTotal.name = 頻寬總計
+vsaniscsitarget.bandwidth.metrics.bandwidthTotal.description = 在此目標上所有 vSAN iSCSI LUN 耗用的頻寬總計。
+
+vsaniscsitarget.latency.name = 延遲時間
+vsaniscsitarget.latency.description = 在此目標上所有 vSAN iSCSI LUN 產生的平均 IO 延遲時間。
+vsaniscsitarget.latency.metrics.latencyRead.name = 讀取延遲時間
+vsaniscsitarget.latency.metrics.latencyRead.description = 在此目標上所有 vSAN iSCSI LUN 產生的平均 IO 讀取延遲時間。
+vsaniscsitarget.latency.metrics.latencyWrite.name = 寫入延遲時間
+vsaniscsitarget.latency.metrics.latencyWrite.description = 在此目標上所有 vSAN iSCSI LUN 產生的平均 IO 寫入延遲時間。
+vsaniscsitarget.latency.metrics.latencyTotal.name = 延遲時間總計
+vsaniscsitarget.latency.metrics.latencyTotal.description = 在此目標上所有 vSAN iSCSI LUN 產生的平均 IO 延遲時間總計。
+
+vsaniscsitarget.queue-depth.name = 未完成 IO
+vsaniscsitarget.queue-depth.description = 在此目標上所有 vSAN iSCSI LUN 的未完成 IO。
+vsaniscsitarget.queue-depth.metrics.queueDepth.name = 未完成 IO
+vsaniscsitarget.queue-depth.metrics.queueDepth.description = 在此目標上所有 vSAN iSCSI LUN 的未完成 IO。
+
+#
+# VsanIscsiLunStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-lun.description = vSAN iSCSI LUN 的度量。
+
+#
+## VsanIscsiLunStatsGraphs
+#
+vsaniscsilun.iops.name = IOPS
+vsaniscsilun.iops.description = 此 vSAN iSCSI LUN 耗用的 IOPS。
+vsaniscsilun.iops.metrics.iopsRead.name = 讀取 IOPS
+vsaniscsilun.iops.metrics.iopsRead.description = 此 vSAN iSCSI LUN 耗用的讀取 IOPS。
+vsaniscsilun.iops.metrics.iopsWrite.name = 寫入 IOPS
+vsaniscsilun.iops.metrics.iopsWrite.description = 此 vSAN iSCSI LUN 耗用的寫入 IOPS。
+vsaniscsilun.iops.metrics.iopsTotal.name = IOPS 總計
+vsaniscsilun.iops.metrics.iopsTotal.description = 此 vSAN iSCSI LUN 耗用的 IOPS 總計。
+
+vsaniscsilun.bandwidth.name = 頻寬
+vsaniscsilun.bandwidth.description = 此 vSAN iSCSI LUN 耗用的頻寬。
+vsaniscsilun.bandwidth.metrics.bandwidthRead.name = 讀取頻寬
+vsaniscsilun.bandwidth.metrics.bandwidthRead.description = 此 vSAN iSCSI LUN 耗用的讀取頻寬。
+vsaniscsilun.bandwidth.metrics.bandwidthWrite.name = 寫入頻寬
+vsaniscsilun.bandwidth.metrics.bandwidthWrite.description = 此 vSAN iSCSI LUN 耗用的寫入頻寬。
+vsaniscsilun.bandwidth.metrics.bandwidthTotal.name = 頻寬總計
+vsaniscsilun.bandwidth.metrics.bandwidthTotal.description = 此 vSAN iSCSI LUN 耗用的頻寬總計。
+
+vsaniscsilun.latency.name = 延遲時間
+vsaniscsilun.latency.description = 此 vSAN iSCSI LUN 產生的平均 IO 延遲時間。
+vsaniscsilun.latency.metrics.latencyRead.name = 讀取延遲時間
+vsaniscsilun.latency.metrics.latencyRead.description = 此 vSAN iSCSI LUN 產生的平均 IO 讀取延遲時間。
+vsaniscsilun.latency.metrics.latencyWrite.name = 寫入延遲時間
+vsaniscsilun.latency.metrics.latencyWrite.description = 此 vSAN iSCSI LUN 產生的平均 IO 寫入延遲時間。
+vsaniscsilun.latency.metrics.latencyTotal.name = 延遲時間總計
+vsaniscsilun.latency.metrics.latencyTotal.description = 此 vSAN iSCSI LUN 產生的平均 IO 延遲時間總計。
+
+vsaniscsilun.queue-depth.name = 未完成 IO
+vsaniscsilun.queue-depth.description = 此 vSAN iSCSI LUN 的未完成 IO。
+vsaniscsilun.queue-depth.metrics.queueDepth.name = 未完成 IO
+vsaniscsilun.queue-depth.metrics.queueDepth.description = 此 vSAN iSCSI LUN 的未完成 IO。
+
+#
+### VsanClusterSpaceReportStats
+##
+com.vmware.vsan.perf.entity.vsan-cluster-capacity.description = vSAN 容量的度量。
+#
+##
+####VsanClusterCapacityStatsGraphs
+##
+vsanclustercapacity.overview.name = 概觀
+vsanclustercapacity.overview.description =
+vsanclustercapacity.overview.metrics.total.name = 容量總計
+vsanclustercapacity.overview.metrics.total.description = vSAN 叢集的容量總計。
+vsanclustercapacity.overview.metrics.free.name = 可用容量
+vsanclustercapacity.overview.metrics.free.description = vSAN 叢集中的可用容量。
+vsanclustercapacity.overview.metrics.used.name = 已用容量
+vsanclustercapacity.overview.metrics.used.description = vSAN 叢集中目前已耗用的容量。
+vsanclustercapacity.dedup.name = 空間效率
+vsanclustercapacity.dedup.description = 空間效率會減少您實體磁碟上儲存的資料，進而降低整體擁有成本。
+vsanclustercapacity.dedup.metrics.savedByDedup.name = 儲存的容量
+vsanclustercapacity.dedup.metrics.savedByDedup.description = 空間效率功能節省的實體容量大小。
+vsanclustercapacity.dedupRatio.name = 空間效率比率
+vsanclustercapacity.dedupRatio.description = 不使用空間效率時所需的空間/使用空間效率時所需的空間。
+vsanclustercapacity.dedupRatio.metrics.dedupRatio.name = 空間效率比率
+vsanclustercapacity.dedupRatio.metrics.dedupRatio.description = 空間效率比率係指示空間效率的效率度量。此百分比的計算方式為，啟用空間效率時所使用的容量除以不啟用空間效率時所使用的容量。
+
+
+#
+# VsanFileService
+#
+com.vmware.vsan.perf.entity.vsan-file-service.description = 關於 vSAN 檔案服務的度量。
+
+#
+# VsanFileServiceGraphs
+#
+vsan-file-service.throughput.name = 輸送量
+vsan-file-service.throughput.description = vSAN 檔案服務的輸送量。
+vsan-file-service.throughput.metrics.readRequested.name = 用於讀取的要求的位元組
+vsan-file-service.throughput.metrics.readRequested.description = 用於讀取的要求的位元組。
+vsan-file-service.throughput.metrics.readTransferred.name = 用於讀取的實際傳輸的位元組
+vsan-file-service.throughput.metrics.readTransferred.description = 用於讀取的實際傳輸的位元組。
+vsan-file-service.throughput.metrics.writeRequested.name = 用於寫入的要求的位元組
+vsan-file-service.throughput.metrics.writeRequested.description = 用於寫入的要求的位元組。
+vsan-file-service.throughput.metrics.writeTransferred.name = 用於寫入的實際傳輸的位元組
+vsan-file-service.throughput.metrics.writeTransferred.description = 用於寫入的實際傳輸的位元組。
+
+vsan-file-service.iops.name = IOPS
+vsan-file-service.iops.description = vSAN 檔案服務的 IOPS。
+vsan-file-service.iops.metrics.readOpTotal.name = 讀取作業的 IOPS
+vsan-file-service.iops.metrics.readOpTotal.description = 讀取作業的 IOPS。
+vsan-file-service.iops.metrics.writeOpTotal.name = 寫入作業的 IOPS
+vsan-file-service.iops.metrics.writeOpTotal.description = 寫入作業的 IOPS。
+
+vsan-file-service.latency.name = 延遲時間
+vsan-file-service.latency.description = vSAN 檔案服務的延遲時間。
+vsan-file-service.latency.metrics.readLatency.name = 讀取延遲時間
+vsan-file-service.latency.metrics.readLatency.description = 每個 IO 的平均讀取延遲時間。
+vsan-file-service.latency.metrics.writeLatency.name = 寫入延遲時間
+vsan-file-service.latency.metrics.writeLatency.description = 每個 IO 的平均寫入延遲時間。
+
+
+#
+# VsanIoInsightVmdk
+#
+com.vmware.vsan.perf.entity.vmdk-ioinsight.description = 有關 vSAN IOInsight 的度量。
+
+#
+# VsanIoInsightVmdkGraphs
+#
+vmdk-ioinsight.iosize-dist-histogram.name = IO 大小分佈
+vmdk-ioinsight.iosize-dist-histogram.description = VMDK IO 依大小的分佈。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz0_4k.name = ReadSize<4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz0_4k.description = 小於 4 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz0_4k.name = WriteSize<4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz0_4k.description = 小於 4 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k.name = ReadSize=4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k.description = 等於 4 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k.name = WriteSize=4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k.description = 等於 4 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k_8k.name = 4K<ReadSize<8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k_8k.description = 大於 4 K 且小於 8 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k_8k.name = 4K<WriteSize<8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k_8k.description = 大於 4 K 且小於 8 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k.name = ReadSize=8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k.description = 等於 8 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k.name = WriteSize=8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k.description = 等於 8 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k_16k.name = 8K<ReadSize<16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k_16k.description = 大於 8 K 且小於 16 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k_16k.name = 8K<WriteSize<16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k_16k.description = 大於 8 K 且小於 16 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k.name = ReadSize=16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k.description = 等於 16 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k.name = WriteSize=16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k.description = 等於 16 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k_32k.name = 16K<ReadSize<32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k_32k.description = 大於 16 K 且小於 32 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k_32k.name = 16K<WriteSize<32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k_32k.description = 大於 16 K 且小於 32 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k.name = ReadSize=32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k.description = 等於 32 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k.name = WriteSize=32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k.description = 等於 32 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k_64k.name = 32K<ReadSize<64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k_64k.description = 大於 32 K 且小於 64 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k_64k.name = 32K<WriteSize<64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k_64k.description = 大於 32 K 且小於 64 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k.name = ReadSize=64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k.description = 等於 64 K 的讀取大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k.name = WriteSize=64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k.description = 等於 64 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k_128k.name = 64K<ReadSize<128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k_128k.description = 大於 64 K 且小於 128 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k_128k.name = 64K<WriteSize<128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k_128k.description = 大於 64 K 且小於 128 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k.name = ReadSize=128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k.description = 等於 128 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k.name = WriteSize=128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k.description = 等於 128 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k_256k.name = 128K<ReadSize<256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k_256k.description = 大於 128 K 且小於 256 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k_256k.name = 128K<WriteSize<256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k_256k.description = 大於 128 K 且小於 256 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k.name = ReadSize=256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k.description = 等於 256 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k.name = WriteSize=256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k.description = 等於 256 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k_512k.name = 256K<ReadSize<512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k_512k.description = 大於 256 K 且小於 512 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k_512k.name = 256K<WriteSize<512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k_512k.description = 大於 256 K 且小於 512 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k.name = ReadSize=512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k.description = 等於 512 K 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k.name = WriteSize=512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k.description = 等於 512 K 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k_1m.name = 512K<ReadSize<1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k_1m.description = 大於 512 K 且小於 1 M 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k_1m.name = 512K<WriteSize<1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k_1m.description = 大於 512 K 且小於 1 M 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1m.name = ReadSize=1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1m.description = 等於 1 M 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1m.name = WriteSize=1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1m.description = 等於 1 M 的寫入 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1_m.name = ReadSize>1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1_m.description = 大於 1 M 的讀取 IO 大小。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1_m.name = WriteSize>1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1_m.description = 大於 1 M 的寫入 IO 大小。
+
+vmdk-ioinsight.io-latency-histogram.name = IO 延遲分佈
+vmdk-ioinsight.io-latency-histogram.description = VMDK IO 依延遲的分佈。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat0_1us.name = 0<ReadLatency<1(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat0_1us.description = 讀取 IO 延遲不超過 1 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat0_1us.name = 0<WriteLatency<1(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat0_1us.description = 寫入 IO 延遲不超過 1 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_10us.name = 1<ReadLatency<10(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_10us.description = 讀取 IO 延遲大於 1 微秒且不超過 10 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_10us.name = 1<WriteLatency<10(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_10us.description = 寫入 IO 延遲大於 1 微秒且不超過 10 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_100us.name = 10<ReadLatency<100(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_100us.description = 讀取 IO 延遲大於 10 微秒且不超過 100 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_100us.name = 10<WriteLatency<100(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_100us.description = 寫入 IO 延遲大於 10 微秒且不超過 100 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_500us.name = 100<ReadLatency<500(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_500us.description = 讀取 IO 延遲大於 100 微秒且不超過 500 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_500us.name = 100<WriteLatency<500(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_500us.description = 寫入 IO 延遲大於 100 微秒且不超過 500 微秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat500us_1ms.name = 500us<ReadLatency<1ms
+vmdk-ioinsight.io-latency-histogram.metrics.rlat500us_1ms.description = 讀取 IO 延遲大於 500 微秒 且不超過 1 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat500us_1ms.name = 500us<WriteLatency<1ms
+vmdk-ioinsight.io-latency-histogram.metrics.wlat500us_1ms.description = 寫入 IO 延遲大於 500 微秒 且不超過 1 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_5ms.name = 1<ReadLatency<5(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_5ms.description = 讀取 IO 延遲大於 1 毫秒且不超過 5 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_5ms.name = 1<WriteLatency<5(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_5ms.description = 寫入 IO 延遲大於 1 毫秒且不超過 5 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat5_10ms.name = 5<ReadLatency<10(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat5_10ms.description = 讀取 IO 延遲大於 5 毫秒且不超過 10 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat5_10ms.name = 5<WriteLatency<10(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat5_10ms.description = 寫入 IO 延遲大於 5 毫秒且不超過 10 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_25ms.name = 10<ReadLatency<25(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_25ms.description = 讀取 IO 延遲大於 10 毫秒且不超過 25 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_25ms.name = 10<WriteLatency<25(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_25ms.description = 寫入 IO 延遲大於 10 毫秒且不超過 25 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat25_50ms.name = 25<ReadLatency<50(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat25_50ms.description = 讀取 IO 延遲大於 25 毫秒且不超過 50 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat25_50ms.name = 25<WriteLatency<50(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat25_50ms.description = 寫入 IO 延遲大於 25 毫秒且不超過 50 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat50_100ms.name = 50<ReadLatency<100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat50_100ms.description = 讀取 IO 延遲大於 50 毫秒且不超過 100 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat50_100ms.name = 50<WriteLatency<100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat50_100ms.description = 寫入 IO 延遲大於 50 毫秒且不超過 100 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_ms.name = ReadLatency>100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_ms.description = 讀取 IO 延遲大於 100 毫秒。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_ms.name = WriteLatency>100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_ms.description = 寫入 IO 延遲大於 100 毫秒。
+
+vmdk-ioinsight.iops.name = IOPS
+vmdk-ioinsight.iops.description = VMDK 上的每秒 IO。
+vmdk-ioinsight.iops.metrics.iopsRead.name = 讀取 IOPS
+vmdk-ioinsight.iops.metrics.iopsRead.description = VMDK 上的每秒讀取 IO。
+vmdk-ioinsight.iops.metrics.iopsWrite.name = 寫入 IOPS
+vmdk-ioinsight.iops.metrics.iopsWrite.description = VMDK 上的每秒寫入 IO。
+vmdk-ioinsight.iops.metrics.iopsTotal.name = IOPS 總計
+vmdk-ioinsight.iops.metrics.iopsTotal.description = VMDK 上的每秒 IO 總計。
+
+vmdk-ioinsight.readThroughput.name = 輸送量
+vmdk-ioinsight.readThroughput.description = VMDK 上的 IO 輸送量。
+vmdk-ioinsight.readThroughput.metrics.throughputRead.name = 讀取輸送量
+vmdk-ioinsight.readThroughput.metrics.throughputRead.description = VMDK 上的讀取 IO 輸送量。
+vmdk-ioinsight.readThroughput.metrics.throughputWrite.name = 寫入輸送量
+vmdk-ioinsight.readThroughput.metrics.throughputWrite.description = VMDK 上的寫入 IO 輸送量。
+vmdk-ioinsight.readThroughput.metrics.throughputTotal.name = 輸送量總計
+vmdk-ioinsight.readThroughput.metrics.throughputTotal.description = VMDK 上的 IO 輸送量總計。
+
+vmdk-ioinsight.sequentialityThroughput.name = 循序與隨機輸送量
+vmdk-ioinsight.sequentialityThroughput.description = VMDK 上的循序與隨機 IO 輸送量。
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputSequential.name = 循序輸送量
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputSequential.description = VMDK 上的循序 IO 輸送量。
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputRandom.name = 隨機輸送量
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputRandom.description = VMDK 上的隨機 IO 輸送量。
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputTotal.name = 輸送量總計
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputTotal.description = VMDK 上的 IO 輸送量總計。
+
+vmdk-ioinsight.sequentialityRatio.name = 循序與隨機 IO 比率
+vmdk-ioinsight.sequentialityRatio.description = 循序與隨機 IO 的百分比。
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialReadRatio.name = 循序讀取 IO
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialReadRatio.description = 循序讀取 IO 的百分比。
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialWriteRatio.name = 循序寫入 IO
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialWriteRatio.description = 循序寫入 IO 的百分比。
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialRatio.name = 循序 IO
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialRatio.description = 循序 IO 的百分比。
+vmdk-ioinsight.sequentialityRatio.metrics.randomReadRatio.name = 隨機讀取 IO
+vmdk-ioinsight.sequentialityRatio.metrics.randomReadRatio.description = 隨機讀取 IO 的百分比。
+vmdk-ioinsight.sequentialityRatio.metrics.randomWriteRatio.name = 隨機寫入 IO
+vmdk-ioinsight.sequentialityRatio.metrics.randomWriteRatio.description = 隨機寫入 IO 的百分比。
+vmdk-ioinsight.sequentialityRatio.metrics.randomRatio.name = 隨機 IO
+vmdk-ioinsight.sequentialityRatio.metrics.randomRatio.description = 隨機 IO 的百分比。
+
+vmdk-ioinsight.4kbAlignmentRatio.name = 4K 對齊與未對齊 IO 比率
+vmdk-ioinsight.4kbAlignmentRatio.description = 4K 對齊與未對齊 IO 的百分比。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kReadRatio.name = 4K 對齊讀取 IO
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kReadRatio.description = 4K 對齊讀取 IO 的百分比。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kWriteRatio.name = 4K 對齊寫入 IO
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kWriteRatio.description = 4K 對齊寫入 IO 的百分比。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kRatio.name = 4K 對齊 IO
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kRatio.description = 4K 對齊 IO 的百分比。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kReadRatio.name = 4K 未對齊讀取 IO
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kReadRatio.description = 4K 未對齊讀取 IO 的百分比。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kWriteRatio.name = 4K 未對齊寫入 IO
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kWriteRatio.description = 4K 未對齊寫入 IO 的百分比。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kRatio.name = 4K 未對齊 IO
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kRatio.description = 4K 未對齊 IO 的百分比。
+
+vmdk-ioinsight.readRatio.name = 讀取與寫入 IO 比率
+vmdk-ioinsight.readRatio.description = 讀取與寫入 IO 的百分比。
+vmdk-ioinsight.readRatio.metrics.readRatio.name = 讀取 IO
+vmdk-ioinsight.readRatio.metrics.readRatio.description = 讀取 IO 的百分比。
+vmdk-ioinsight.readRatio.metrics.writeRatio.name = 寫入 IO
+vmdk-ioinsight.readRatio.metrics.writeRatio.description = 寫入 IO 的百分比。
+
+#
+# VsanPMemClusterStats
+#
+com.vmware.vsan.perf.entity.vsan-pmem-cluster.description = PMem 資料存放區上 VMDK 效能的度量。
+
+#
+# VsanPMemClusterStatsGraphs
+#
+vsan-pmem-cluster.iops.name = IOPS
+vsan-pmem-cluster.iops.description = PMem 資料存放區上所有虛擬機器耗用的 IOPS。
+vsan-pmem-cluster.iops.metrics.iopsRead.name = 讀取 IOPS
+vsan-pmem-cluster.iops.metrics.iopsRead.description = PMem 資料存放區上所有虛擬機器耗用的讀取 IOPS。
+vsan-pmem-cluster.iops.metrics.iopsWrite.name = 寫入 IOPS
+vsan-pmem-cluster.iops.metrics.iopsWrite.description = PMem 資料存放區上所有虛擬機器耗用的寫入 IOPS。
+vsan-pmem-cluster.iops.metrics.iopsTotal.name = IOPS 總計
+vsan-pmem-cluster.iops.metrics.iopsTotal.description = PMem 資料存放區上所有虛擬機器耗用的 IOPS 總計。
+
+vsan-pmem-cluster.throughput.name = 輸送量
+vsan-pmem-cluster.throughput.description = PMem 資料存放區上所有虛擬機器耗用的輸送量。
+vsan-pmem-cluster.throughput.metrics.throughputRead.name = 讀取輸送量
+vsan-pmem-cluster.throughput.metrics.throughputRead.description = PMem 資料存放區上所有虛擬機器耗用的讀取輸送量。
+vsan-pmem-cluster.throughput.metrics.throughputWrite.name = 寫入輸送量
+vsan-pmem-cluster.throughput.metrics.throughputWrite.description = PMem 資料存放區上所有虛擬機器耗用的寫入輸送量。
+vsan-pmem-cluster.throughput.metrics.throughputTotal.name = 輸送量總計
+vsan-pmem-cluster.throughput.metrics.throughputTotal.description = PMem 資料存放區上所有虛擬機器耗用的輸送量總計。
+
+vsan-pmem-cluster.latency.name = 延遲時間
+vsan-pmem-cluster.latency.description = PMem 資料存放區上所有虛擬機器耗用的 IO 所產生的平均延遲時間。
+vsan-pmem-cluster.latency.metrics.latencyRead.name = 讀取延遲時間
+vsan-pmem-cluster.latency.metrics.latencyRead.description = PMem 資料存放區上所有虛擬機器耗用的 IO 所產生的讀取延遲時間。
+vsan-pmem-cluster.latency.metrics.latencyWrite.name = 寫入延遲時間
+vsan-pmem-cluster.latency.metrics.latencyWrite.description = PMem 資料存放區上所有虛擬機器耗用的 IO 所產生的寫入延遲時間。
+
+vsan-pmem-cluster.oio.name = 未完成 IO
+vsan-pmem-cluster.oio.description = PMem 資料存放區上所有虛擬機器的未完成 IO。
+vsan-pmem-cluster.oio.metrics.oioRead.name = 讀取未完成 IO
+vsan-pmem-cluster.oio.metrics.oioRead.description = PMem 資料存放區上所有虛擬機器的讀取未完成 IO。
+vsan-pmem-cluster.oio.metrics.oioWrite.name = 寫入未完成 IO
+vsan-pmem-cluster.oio.metrics.oioWrite.description = PMem 資料存放區上所有虛擬機器的寫入未完成 IO。
+
+#
+# VsanPMemHostStats
+#
+com.vmware.vsan.perf.entity.vsan-pmem-host.description = PMem 資料存放區上 VMDK 效能的度量。
+
+#
+# VsanPMemHostStatsGraphs
+#
+vsan-pmem-host.iops.name = IOPS
+vsan-pmem-host.iops.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的 IOPS。
+vsan-pmem-host.iops.metrics.iopsRead.name = 讀取 IOPS
+vsan-pmem-host.iops.metrics.iopsRead.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的讀取 IOPS。
+vsan-pmem-host.iops.metrics.iopsWrite.name = 寫入 IOPS
+vsan-pmem-host.iops.metrics.iopsWrite.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的寫入 IOPS。
+vsan-pmem-host.iops.metrics.iopsTotal.name = IOPS 總計
+vsan-pmem-host.iops.metrics.iopsTotal.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的 IOPS 總計。
+
+vsan-pmem-host.throughput.name = 輸送量
+vsan-pmem-host.throughput.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的輸送量。
+vsan-pmem-host.throughput.metrics.throughputRead.name = 讀取輸送量
+vsan-pmem-host.throughput.metrics.throughputRead.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的讀取輸送量。
+vsan-pmem-host.throughput.metrics.throughputWrite.name = 寫入輸送量
+vsan-pmem-host.throughput.metrics.throughputWrite.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的寫入輸送量。
+vsan-pmem-host.throughput.metrics.throughputTotal.name = 輸送量總計
+vsan-pmem-host.throughput.metrics.throughputTotal.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的輸送量總計。
+
+vsan-pmem-host.latency.name = 延遲時間
+vsan-pmem-host.latency.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的 IO 所產生的平均延遲時間。
+vsan-pmem-host.latency.metrics.latencyRead.name = 讀取延遲時間
+vsan-pmem-host.latency.metrics.latencyRead.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的 IO 所產生的讀取延遲時間。
+vsan-pmem-host.latency.metrics.latencyWrite.name = 寫入延遲時間
+vsan-pmem-host.latency.metrics.latencyWrite.description = 此主機的 PMem 資料存放區上所有虛擬機器耗用的 IO 所產生的寫入延遲時間。
+
+vsan-pmem-host.oio.name = 未完成 IO
+vsan-pmem-host.oio.description = 此主機的 PMem 資料存放區上所有虛擬機器的未完成 IO。
+vsan-pmem-host.oio.metrics.oioRead.name = 讀取未完成 IO
+vsan-pmem-host.oio.metrics.oioRead.description = 此主機的 PMem 資料存放區上所有虛擬機器的讀取未完成 IO。
+vsan-pmem-host.oio.metrics.oioWrite.name = 寫入未完成 IO
+vsan-pmem-host.oio.metrics.oioWrite.description = 此主機的 PMem 資料存放區上所有虛擬機器的寫入未完成 IO。
+
+#
+# VsanDirectClusterStats
+#
+com.vmware.vsan.perf.entity.vsan-direct-cluster.description = vSAN Direct 資料存放區上 VMDK 效能的度量。
+
+#
+# VsanDirectClusterStatsGraphs
+#
+vsan-direct-cluster.iops.name = IOPS
+vsan-direct-cluster.iops.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IOPS。
+vsan-direct-cluster.iops.metrics.iopsDevRead.name = 讀取 IOPS
+vsan-direct-cluster.iops.metrics.iopsDevRead.description = vSAN Direct 資料存放區上所有 VMDK 耗用的讀取 IOPS。
+vsan-direct-cluster.iops.metrics.iopsDevWrite.name = 寫入 IOPS
+vsan-direct-cluster.iops.metrics.iopsDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 耗用的寫入 IOPS。
+
+vsan-direct-cluster.throughput.name = 輸送量
+vsan-direct-cluster.throughput.description = vSAN Direct 資料存放區上所有 VMDK 耗用的輸送量。
+vsan-direct-cluster.throughput.metrics.throughputDevRead.name = 讀取輸送量
+vsan-direct-cluster.throughput.metrics.throughputDevRead.description = vSAN Direct 資料存放區上所有 VMDK 耗用的讀取輸送量。
+vsan-direct-cluster.throughput.metrics.throughputDevWrite.name = 寫入輸送量
+vsan-direct-cluster.throughput.metrics.throughputDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 耗用的寫入輸送量。
+
+vsan-direct-cluster.latency.name = 延遲時間
+vsan-direct-cluster.latency.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IO 所產生的平均延遲時間。
+vsan-direct-cluster.latency.metrics.latencyDevRead.name = 讀取延遲時間
+vsan-direct-cluster.latency.metrics.latencyDevRead.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IO 所產生的讀取延遲時間。
+vsan-direct-cluster.latency.metrics.latencyDevWrite.name = 寫入延遲時間
+vsan-direct-cluster.latency.metrics.latencyDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IO 所產生的寫入延遲時間。
+
+vsan-direct-cluster.oio.name = 未完成 IO
+vsan-direct-cluster.oio.description = vSAN Direct 資料存放區上所有 VMDK 的未完成 IO。
+vsan-direct-cluster.oio.metrics.oioDevRead.name = 讀取未完成 IO
+vsan-direct-cluster.oio.metrics.oioDevRead.description = vSAN Direct 資料存放區上所有 VMDK 的讀取未完成 IO。
+vsan-direct-cluster.oio.metrics.oioDevWrite.name = 寫入未完成 IO
+vsan-direct-cluster.oio.metrics.oioDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 的寫入未完成 IO。
+
+#
+# VsanDirectHostStats
+#
+com.vmware.vsan.perf.entity.vsan-direct-host.description = vSAN Direct 資料存放區上 VMDK 效能的度量。
+
+#
+# VsanDirectHostStatsGraphs
+#
+vsan-direct-host.iops.name = IOPS
+vsan-direct-host.iops.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IOPS。
+vsan-direct-host.iops.metrics.iopsDevRead.name = 讀取 IOPS
+vsan-direct-host.iops.metrics.iopsDevRead.description = vSAN Direct 資料存放區上所有 VMDK 耗用的讀取 IOPS。
+vsan-direct-host.iops.metrics.iopsDevWrite.name = 寫入 IOPS
+vsan-direct-host.iops.metrics.iopsDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 耗用的寫入 IOPS。
+
+vsan-direct-host.throughput.name = 輸送量
+vsan-direct-host.throughput.description = vSAN Direct 資料存放區上所有 VMDK 耗用的輸送量。
+vsan-direct-host.throughput.metrics.throughputDevRead.name = 讀取輸送量
+vsan-direct-host.throughput.metrics.throughputDevRead.description = vSAN Direct 資料存放區上所有 VMDK 耗用的讀取輸送量。
+vsan-direct-host.throughput.metrics.throughputDevWrite.name = 寫入輸送量
+vsan-direct-host.throughput.metrics.throughputDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 耗用的寫入輸送量。
+
+vsan-direct-host.latency.name = 延遲時間
+vsan-direct-host.latency.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IO 所產生的平均延遲時間。
+vsan-direct-host.latency.metrics.latencyDevRead.name = 讀取延遲時間
+vsan-direct-host.latency.metrics.latencyDevRead.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IO 所產生的讀取延遲時間。
+vsan-direct-host.latency.metrics.latencyDevWrite.name = 寫入延遲時間
+vsan-direct-host.latency.metrics.latencyDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 耗用的 IO 所產生的寫入延遲時間。
+
+vsan-direct-host.oio.name = 未完成 IO
+vsan-direct-host.oio.description = vSAN Direct 資料存放區上所有 VMDK 的未完成 IO。
+vsan-direct-host.oio.metrics.oioDevRead.name = 讀取未完成 IO
+vsan-direct-host.oio.metrics.oioDevRead.description = vSAN Direct 資料存放區上所有 VMDK 的讀取未完成 IO。
+vsan-direct-host.oio.metrics.oioDevWrite.name = 寫入未完成 IO
+vsan-direct-host.oio.metrics.oioDevWrite.description = vSAN Direct 資料存放區上所有 VMDK 的寫入未完成 IO。
+
+
+#
+# VsanCpuStats
+#
+com.vmware.vsan.perf.entity.vsan-cpu.description = vSAN CPU 額外負荷的度量。
+
+#
+# VsanCpuStatsGraphs
+#
+vsan-cpu.utilization.name = vSAN CPU 使用量
+vsan-cpu.utilization.description = vSAN CPU 使用量。
+vsan-cpu.utilization.metrics.usedPct.name = 已使用 CPU 時間的百分比
+vsan-cpu.utilization.metrics.usedPct.description = 已使用 CPU 時間的百分比
+vsan-cpu.utilization.metrics.readyPct.name = 就緒 CPU 時間的百分比
+vsan-cpu.utilization.metrics.readyPct.description = 就緒 CPU 時間的百分比。
+vsan-cpu.utilization.metrics.runPct.name = 執行中 CPU 時間的百分比
+vsan-cpu.utilization.metrics.runPct.description = 執行中 CPU 時間的百分比。
+
+#
+# VsanMemStats
+#
+com.vmware.vsan.perf.entity.vsan-memory.description = vSAN 記憶體額外負荷的度量。
+
+#
+# VsanMemStatsGraphs
+#
+vsan-memory.usage.name = vSAN 記憶體使用量
+vsan-memory.usage.description = 記憶體使用量。
+vsan-memory.usage.metrics.kernelReservedSize.name = 核心保留的記憶體大小
+vsan-memory.usage.metrics.kernelReservedSize.description = 核心保留的記憶體大小。
+vsan-memory.usage.metrics.uwReservedSize.name = 使用者環境保留的記憶體大小
+vsan-memory.usage.metrics.uwReservedSize.description = 使用者環境保留的記憶體大小。
+
+#
+# HostCpuStats
+#
+com.vmware.vsan.perf.entity.host-cpu.description = 主機上 CPU 的度量。
+
+#
+# HostCpuStatsGraphs
+#
+host-cpu.utilization.name = CPU 百分比
+host-cpu.utilization.description = 主機 CPU 的百分比。
+host-cpu.utilization.metrics.coreUtilPct.name = CPU 核心使用量的百分比
+host-cpu.utilization.metrics.coreUtilPct.description = CPU 核心使用量的百分比。
+host-cpu.utilization.metrics.pcpuUsedPct.name = 已使用實體 CPU 時間的百分比
+host-cpu.utilization.metrics.pcpuUsedPct.description = 已使用實體 CPU 時間的百分比。
+host-cpu.utilization.metrics.pcpuUtilPct.name = 實體 CPU 使用量的百分比
+host-cpu.utilization.metrics.pcpuUtilPct.description = 實體 CPU 使用量的百分比。
+
+#
+# Vsan2DiskScsifw
+#
+com.vmware.vsan.perf.entity.vsan2-disk-scsifw.description = vSAN2 磁碟的實體/韌體層度量。
+
+#
+# Vsan2DiskScsifwGraphs
+#
+vsan2-disk-scsifw.iopsDev.name = vSAN2 磁碟實體/韌體層 IOPS
+vsan2-disk-scsifw.iopsDev.description = vSAN2 磁碟實體/韌體層 IOPS。
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevRead.name = vSAN2 磁碟實體/韌體層讀取 IOPS
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevRead.description = vSAN2 磁碟實體/韌體層讀取 IOPS。
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevWrite.name = vSAN2 磁碟實體/韌體層寫入 IOPS
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevWrite.description = vSAN2 磁碟實體/韌體層寫入 IOPS。
+
+vsan2-disk-scsifw.latencyDev.name = vSAN2 磁碟實體/韌體層延遲時間
+vsan2-disk-scsifw.latencyDev.description = vSAN2 磁碟實體/韌體層延遲時間。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevRead.name = vSAN2 磁碟實體/韌體層讀取延遲時間
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevRead.description = vSAN2 磁碟實體/韌體層讀取延遲時間。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevWrite.name = vSAN2 磁碟實體/韌體層寫入延遲時間
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevWrite.description = vSAN2 磁碟實體/韌體層寫入延遲時間。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevGAvg.name = vSAN2 磁碟實體/韌體層客體平均延遲時間
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevGAvg.description = vSAN2 磁碟實體/韌體層客體平均 IO 延遲時間 (延遲時間總計)。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevDAvg.name = vSAN2 磁碟實體/韌體層裝置平均延遲時間
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevDAvg.description = vSAN2 磁碟實體/韌體層裝置平均 IO 延遲時間 (從 HBA 到後端儲存區)。
+
+vsan2-disk-scsifw.throughputDev.name = vSAN2 磁碟實體/韌體層輸送量
+vsan2-disk-scsifw.throughputDev.description = vSAN2 磁碟實體/韌體層輸送量。
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevRead.name = vSAN2 磁碟實體/韌體層讀取輸送量
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevRead.description = vSAN2 磁碟實體/韌體層讀取輸送量。
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevWrite.name = vSAN2 磁碟實體/韌體層寫入輸送量
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevWrite.description = vSAN2 磁碟實體/韌體層寫入輸送量。
+
+
+#
+# Vsan2DiskLsom2
+#
+com.vmware.vsan.perf.entity.vsan2-disk-lsom2.description = vSAN2 磁碟的 vSAN 層度量。
+
+#
+# Vsan2DiskLsom2Graphs
+#
+vsan2-disk-lsom2.iopsCap.name = vSAN2 磁碟的 vSAN 層 IOPS
+vsan2-disk-lsom2.iopsCap.description = vSAN2 磁碟的 vSAN 層 IOPS。
+vsan2-disk-lsom2.iopsCap.metrics.iopsReadCapacity.name = vSAN2 磁碟的 vSAN 層讀取 IOPS
+vsan2-disk-lsom2.iopsCap.metrics.iopsReadCapacity.description = vSAN2 磁碟的 vSAN 層讀取 IOPS。
+vsan2-disk-lsom2.iopsCap.metrics.iopsWriteCapacity.name = vSAN2 磁碟的 vSAN 層寫入 IOPS
+vsan2-disk-lsom2.iopsCap.metrics.iopsWriteCapacity.description = vSAN2 磁碟的 vSAN 層寫入 IOPS。
+
+vsan2-disk-lsom2.throughputCap.name = vSAN2 磁碟的 vSAN 層輸送量
+vsan2-disk-lsom2.throughputCap.description = vSAN2 磁碟的 vSAN 層輸送量。
+vsan2-disk-lsom2.throughputCap.metrics.tputReadCapacity.name = vSAN2 磁碟的 vSAN 層讀取輸送量
+vsan2-disk-lsom2.throughputCap.metrics.tputReadCapacity.description = vSAN2 磁碟的 vSAN 層讀取輸送量。
+vsan2-disk-lsom2.throughputCap.metrics.tputWriteCapacity.name = vSAN2 磁碟的 vSAN 層寫入輸送量
+vsan2-disk-lsom2.throughputCap.metrics.tputWriteCapacity.description = vSAN2 磁碟的 vSAN 層寫入輸送量。
+
+vsan2-disk-lsom2.avgLatencyCap.name = vSAN2 磁碟的 vSAN 層平均延遲時間
+vsan2-disk-lsom2.avgLatencyCap.description = vSAN2 磁碟的 vSAN 層平均延遲時間。
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatReadCapacity.name = vSAN2 磁碟的 vSAN 層平均讀取延遲時間
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatReadCapacity.description = vSAN2 磁碟的 vSAN 層平均讀取延遲時間。
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatWriteCapacity.name = vSAN2 磁碟的 vSAN 層平均寫入延遲時間
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatWriteCapacity.description = vSAN2 磁碟的 vSAN 層平均寫入延遲時間。
+
+
+#
+# ClusterRemoteDomClient
+#
+com.vmware.vsan.perf.entity.cluster-remotedomclient.description = 遠端 vSAN 虛擬機器耗用量視角下的叢集相關度量。
+
+#
+# ClusterRemoteDomClientGraphs
+#
+cluster-remotedomclient.iops.name = IOPS
+cluster-remotedomclient.iops.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的 IOPS，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.iops.metrics.iopsRead.name = 讀取 IOPS
+cluster-remotedomclient.iops.metrics.iopsRead.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的讀取 IOPS，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.iops.metrics.iopsWrite.name = 寫入 IOPS
+cluster-remotedomclient.iops.metrics.iopsWrite.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的寫入 IOPS，例如虛擬機器、統計資料物件等等。
+
+cluster-remotedomclient.throughput.name = 輸送量
+cluster-remotedomclient.throughput.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的輸送量，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.throughput.metrics.throughputRead.name = 讀取輸送量
+cluster-remotedomclient.throughput.metrics.throughputRead.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的讀取輸送量，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.throughput.metrics.throughputWrite.name = 寫入輸送量
+cluster-remotedomclient.throughput.metrics.throughputWrite.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的寫入輸送量，例如虛擬機器、統計資料物件等等。
+
+cluster-remotedomclient.latency.name = 延遲時間
+cluster-remotedomclient.latency.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的平均 IO 延遲時間，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.latency.metrics.latencyAvgRead.name = 讀取延遲時間
+cluster-remotedomclient.latency.metrics.latencyAvgRead.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的平均 IO 讀取延遲時間，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.latency.metrics.latencyAvgWrite.name = 寫入延遲時間
+cluster-remotedomclient.latency.metrics.latencyAvgWrite.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的平均 IO 寫入延遲時間，例如虛擬機器、統計資料物件等等。
+
+cluster-remotedomclient.congestion.name = 壅塞
+cluster-remotedomclient.congestion.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.congestion.metrics.congestion.name = 壅塞
+cluster-remotedomclient.congestion.metrics.congestion.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+
+cluster-remotedomclient.oio.name = 未完成 IO
+cluster-remotedomclient.oio.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集的未完成 IO，例如虛擬機器、統計資料物件等等。
+cluster-remotedomclient.oio.metrics.oio.name = 未完成 IO
+cluster-remotedomclient.oio.metrics.oio.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集的未完成 IO，例如虛擬機器、統計資料物件等等。
+
+#
+# ComputeClusterRemoteDomClient
+#
+com.vmware.vsan.perf.entity.computeCluster-remotedomclient.description = 遠端 vSAN 虛擬機器耗用量視角下的叢集相關度量。
+
+#
+# ClusterRemoteDomClientGraphs
+#
+computeCluster-remotedomclient.iops.name = IOPS
+computeCluster-remotedomclient.iops.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的 IOPS，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.iops.metrics.iopsRead.name = 讀取 IOPS
+computeCluster-remotedomclient.iops.metrics.iopsRead.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的讀取 IOPS，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.iops.metrics.iopsWrite.name = 寫入 IOPS
+computeCluster-remotedomclient.iops.metrics.iopsWrite.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的寫入 IOPS，例如虛擬機器、統計資料物件等等。
+
+computeCluster-remotedomclient.throughput.name = 輸送量
+computeCluster-remotedomclient.throughput.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的輸送量，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.throughput.metrics.throughputRead.name = 讀取輸送量
+computeCluster-remotedomclient.throughput.metrics.throughputRead.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的讀取輸送量，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.throughput.metrics.throughputWrite.name = 寫入輸送量
+computeCluster-remotedomclient.throughput.metrics.throughputWrite.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所耗用的寫入輸送量，例如虛擬機器、統計資料物件等等。
+
+computeCluster-remotedomclient.latency.name = 延遲時間
+computeCluster-remotedomclient.latency.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的平均 IO 延遲時間，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.latency.metrics.latencyAvgRead.name = 讀取延遲時間
+computeCluster-remotedomclient.latency.metrics.latencyAvgRead.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的平均 IO 讀取延遲時間，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.latency.metrics.latencyAvgWrite.name = 寫入延遲時間
+computeCluster-remotedomclient.latency.metrics.latencyAvgWrite.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的平均 IO 寫入延遲時間，例如虛擬機器、統計資料物件等等。
+
+computeCluster-remotedomclient.congestion.name = 壅塞
+computeCluster-remotedomclient.congestion.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.congestion.metrics.congestion.name = 壅塞
+computeCluster-remotedomclient.congestion.metrics.congestion.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集所產生的 IO 壅塞，例如虛擬機器、統計資料物件等等。
+
+computeCluster-remotedomclient.oio.name = 未完成 IO
+computeCluster-remotedomclient.oio.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集的未完成 IO，例如虛擬機器、統計資料物件等等。
+computeCluster-remotedomclient.oio.metrics.oio.name = 未完成 IO
+computeCluster-remotedomclient.oio.metrics.oio.description = 所有遠端 vSAN 用戶端針對所選伺服器叢集的未完成 IO，例如虛擬機器、統計資料物件等等。

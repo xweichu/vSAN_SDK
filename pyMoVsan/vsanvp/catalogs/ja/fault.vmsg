@@ -1,0 +1,7 @@
+#
+# Vsan VP Localizable Messages for faults
+#
+vsan.fault.alarm.invalid.id = アラーム {Id} のシーケンスが無効です。
+vsan.fault.alarm.lost.id = アラーム {Id} が消失しています
+vsan.fault.event.invalid.id = イベント {Id} のシーケンスが無効です。
+vsan.fault.event.lost.id = イベント {Id} が消失しています。

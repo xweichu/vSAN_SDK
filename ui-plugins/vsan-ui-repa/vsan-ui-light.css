@@ -1,0 +1,106 @@
+/* Copyright 2020-2021 VMware, Inc. All rights reserved. -- VMware Confidential */
+
+:root {
+   --vsan-main-background-color:#fafafa;
+   --vsan-background-color: rgb(255, 255, 255);
+   --vsan-background-color-hover: #eee;
+   --vsan-background-color-button-hover: #e1f1f6;
+   --vsan-background-color-hover-fault-domains: #f9f9f9;
+   --vsan-background-color-selected: #d9e4ea;
+   --vsan-border-color: #ccc;
+   --vsan-busy-backdrop-background-color: rgba(255,255,255,.6);
+   --vsan-color: #565656;
+   --vsan-font-color-emphasize: #000;
+   --vsan-link-color: #0079b8;
+   --vsan-link-color-hover: #004a70;
+   --vsan-validation-text-color: rgb(255, 255, 255);
+   --vsan-validation-background-color: rgb(201, 33, 0);
+   --vsan-clarity-card-separator-color: #eee;
+   --vsan-status-success-bg-color: #A9DB1D;
+   --vsan-status-success-details-color: #DFF0D0;
+   --vsan-status-success-border-color: #2F8400;
+   --vsan-status-info-bg-color: #e1f1f6;
+   --vsan-status-info-details-color: #e1f1f6;
+   --vsan-status-info-border-color: #49afd9;
+   --vsan-status-info-inner-color: #004a70;
+   --vsan-status-warning-bg-color: #FFE860;
+   --vsan-status-warning-details-color: #FEF3B5;
+   --vsan-status-warning-border-color: #C47D00;
+   --vsan-status-error-bg-color: #F89997;
+   --vsan-status-error-details-color: #F5DBD9;
+   --vsan-status-error-border-color: #C82001;
+   --vsan-status-unknown-bg-color: #DDDDDD;
+   --vsan-status-unknown-bg-secondary-color: #737373;
+   --vsan-status-unknown-details-color: #EEEEEE;
+   --vsan-status-unknown-border-color: #737373;
+   --vsan-gray-color: #737373;
+   --vsan-status-details-color: #565656;
+   --vsan-table-row-border-color: #ededed;
+   --vsan-copy-to-clipboard-icon: url(data:image/svg+xml;base64,PHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaGFzLXNvbGlkIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgMzYgMzYiIHZlcnNpb249IjEuMSI+DQogICAgICAgICAgICA8dGl0bGU+Y29weTwvdGl0bGU+DQogICAgICAgICAgICA8cGF0aCBjbGFzcz0iY2xyLWktb3V0bGluZSBjbHItaS1vdXRsaW5lLXBhdGgtMSIgZD0iTTI5LjUsN2gtMTlBMS41LDEuNSwwLDAsMCw5LDguNXYyNEExLjUsMS41LDAsMCwwLDEwLjUsMzRoMTlBMS41LDEuNSwwLDAsMCwzMSwzMi41VjguNUExLjUsMS41LDAsMCwwLDI5LjUsN1pNMjksMzJIMTFWOUgyOVoiPjwvcGF0aD4NCiAgICAgICAgICAgIDxwYXRoIGNsYXNzPSJjbHItaS1vdXRsaW5lIGNsci1pLW91dGxpbmUtcGF0aC0yIiBkPSJNMjYsMy41QTEuNSwxLjUsMCwwLDAsMjQuNSwySDUuNUExLjUsMS41LDAsMCwwLDQsMy41djI0QTEuNSwxLjUsMCwwLDAsNS41LDI5SDZWNEgyNloiPjwvcGF0aD4NCiAgICAgICAgPC9zdmc+);
+
+   /* Clarity v4 colors in order to resolve some accessibility issues */
+   --clarity-v4-label-info-text-color: #00567a;
+   --clarity-v4-label-info-background-color: #e3f5fc;
+   --clarity-v4-label-info-border-color: #00567a;
+   --clarity-v4-label-success-text-color: #306b00;
+   --clarity-v4-label-success-background-color: #dff0d0;
+   --clarity-v4-label-success-border-color: #306b00;
+   --clarity-v4-label-warning-text-color: #333333;
+   --clarity-v4-label-warning-background-color: #fff4c7;
+   --clarity-v4-label-warning-border-color: #ad7600;
+   --clarity-v4-label-danger-text-color: #991700;
+   --clarity-v4-label-danger-background-color: #feddd7;
+   --clarity-v4-label-danger-border-color: #991700;
+   --clarity-v4-badge-info-text-color: #FFFFFF;
+   --clarity-v4-badge-info-background-color: #00567a;
+   --clarity-v4-badge-success-text-color: #FFFFFF;
+   --clarity-v4-badge-success-background-color: #306b00;
+   --clarity-v4-badge-warning-text-color: #FFFFFF; /* it is set to #000000 in clarity v.4 - looks like error */
+   --clarity-v4-badge-warning-background-color: #613200;
+   --clarity-v4-badge-danger-text-color: #FFFFFF;
+   --clarity-v4-badge-danger-background-color: #991700;
+   --vsan-focus-outline-color: #1487b8;
+   --vsan-focus-outline-selected-row-color: #49aeda;
+
+   /* CUSTOM PAGE COLORS */
+
+   /* Skyline health */
+    --health-test-category-color: #575757;
+    --health-historical-green-item-stroke: #2F8400;
+    --health-historical-green-item-fill: #A9DB1D;
+    --health-historical-green-item-hover-fill: #CEF06F;
+    --health-historical-green-item-active-fill: #9DCF10;
+    --health-historical-blue-item-stroke: #00567A;
+    --health-historical-blue-item-fill: #79C6E6;
+    --health-historical-blue-item-hover-fill: #C8EAF9;
+    --health-historical-blue-item-active-fill: #49AEDA;
+    --health-historical-yellow-item-stroke: #C25400;
+    --health-historical-yellow-item-fill: #EDB200;
+    --health-historical-yellow-item-hover-fill: #FAD666;
+    --health-historical-yellow-item-active-fill: #DDA600;
+    --health-historical-red-item-stroke: #C82001;
+    --health-historical-red-item-fill: #F89997;
+    --health-historical-red-item-hover-fill: #FFD3D2;
+    --health-historical-red-item-active-fill: #FB7A77;
+
+    /* IO Diagnostics */
+    --io-diagnostics-danger-color: #E62700;
+
+    /* Icon colors */
+   --icon-fill-color: #565656;
+
+   /* CUSTOM SVG */
+
+   --illustrated-message-missing-data: url('robot-no-data.7bc59d01d0a5b94d6bc4.svg');
+   --missing-selection-pointer: url('arrow-cursor.d3244b11b6c20c5e2f07.svg');
+   --illustrated-message-filter-no-result: url('filter-no-results.6bde71e02c1125648390.svg');
+   --transient-space-capacity-legend: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDMwMCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXR0ZXJuIGlkPSJkaWFnb25hbEhhdGNoIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KICAgICAgPHBhdGggc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEiIGQ9Ik0wLDAgbDQsNCBNMywtMSBsMiwyIE0tMSwzIGwyLDIiLz4KICAgIDwvcGF0dGVybj4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2RpYWdvbmFsSGF0Y2gpIi8+Cjwvc3ZnPg==);
+   --access-denied-robot: url('robot-access-denied-light.55f9e4365fe6d7834e8d.svg');
+   --file-service-introduction: url('file-service-architecture-light.6e702fcc42f709151885.svg');
+   --io-diagnostics-initial: url('io-diagnostics-initial.c50eb1551a07035bafeb.svg');
+
+   /* Custom PNG */
+   --not-responding-browser: url('not_responding_browser.3a4110a41f28999fe085.png');
+   --cns-volumes-about: url('cns-what-is-this-en.d4fd5a320d458a8684a5.svg');
+}
+

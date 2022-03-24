@@ -1,0 +1,391 @@
+signature = "sIgNaTuRe"
+
+#
+# Hardware compatibility Group 14
+#
+vsan.health.test.hcl.hcldbuptodate.label = "vSAN 하드웨어 호환성 경보 'vSAN HCL DB가 최신 상태임'"
+vsan.health.test.hcl.hcldbuptodate.summary = "HCL 검사에 사용된 VMware 하드웨어 호환성 가이드 데이터베이스의 사용 기간을 검사합니다. 90일보다 오래되면 주의를 표시하거나 아무 것도 표시하지 않습니다. 클러스터의 일부 ESXi 버전이 로컬 HCL 데이터베이스에 포함되어 있지 않습니다. 180일보다 오래되면 오류가 표시됩니다. VMware는 VCG를 자주 업데이트하므로 로컬 복사본을 최신 상태로 유지하는 것이 중요합니다."
+
+vsan.health.test.hcl.autohclupdate.label = "vSAN 하드웨어 호환성 경보 'vSAN HCL DB 자동 업데이트'"
+vsan.health.test.hcl.autohclupdate.summary = "vSAN HCL 데이터베이스가 VMware HCL 릴리스 웹 사이트에서 자동으로 다운로드되고 업데이트될 수 있는지 검사합니다. VMware 공용 웹 사이트에 대해 인터넷 액세스가 없거나 vSAN HCL 데이터베이스 자동 업데이트가 사용되도록 설정되어 있지 않은 경우 이 상태 검사는 사용자가 자동 목록에서 수동으로 제거하지 않는 한 기본적으로 자동 상태 검사 목록에 포함되어 건너뛴 상태가 표시됩니다. 그렇지 않으면 HCL 데이터베이스가 다른 이유(예: VMware HCL 릴리스 웹 사이트에 연결할 수 없음, 최신 HCL 데이터베이스를 다운로드하지 못함, 로컬 HCL 데이터베이스를 업데이트하지 못함)로 인해 자동으로 업데이트되지 못하는 경우 주의가 표시됩니다."
+
+vsan.health.test.hcl.controlleronhcl.label = "vSAN 하드웨어 호환성 경보 'SCSI 컨트롤러가 VMware 인증을 받음'"
+vsan.health.test.hcl.controlleronhcl.summary = "스토리지 I/O 컨트롤러에 대한 정보를 표시하고 PCI ID를 기반으로 하여 컨트롤러가 VMware 호환성 가이드에서 지원되는지 확인합니다. 일치하지 않으면 VMware 지원팀에 문의하십시오."
+
+vsan.health.test.hcl.nvmeidentifiable.label = "vSAN 하드웨어 호환성 경보 'NVMe 디바이스를 식별할 수 있음'"
+vsan.health.test.hcl.nvmeidentifiable.summary = "PCI ID가 vSAN 클러스터의 NVMe 디바이스 중 하나와 일치하는 vSAN VCG(VMware 호환성 가이드) 항목이 하나만 있어서 vSAN HCL 검사를 위해 이 NVMe 디바이스를 식별할 수 있는지 확인합니다."
+
+vsan.health.test.hcl.nvmeonhcl.label = "vSAN 하드웨어 호환성 경보 'NVMe 디바이스가 VMware에서 인증됨'"
+vsan.health.test.hcl.nvmeonhcl.summary = "NVMe 디바이스에 대한 정보를 표시하고 vSAN VCG(VMware 호환성 가이드)에서 디바이스가 인증되었는지 확인합니다. 불일치가 있는 경우 VMware 지원 서비스에 문의하십시오."
+
+vsan.health.test.hcl.controllerreleasesupport.label = "vSAN 하드웨어 호환성 경보 '컨트롤러가 ESXi 릴리스에 대해 VMware 인증을 받음'"
+vsan.health.test.hcl.controllerreleasesupport.summary = "스토리지 I/O 컨트롤러 드라이버에 대한 정보를 표시합니다. 설치된 드라이버가 현재 ESXi 릴리스에서 해당하는 컨트롤러에 대해 지원되는지 확인합니다. VMware 인증을 받은 컨트롤러만 테스트됩니다."
+
+vsan.health.test.hcl.controllerdriver.label = "vSAN 하드웨어 호환성 경보 '컨트롤러 드라이버가 VMware 인증을 받음'"
+vsan.health.test.hcl.controllerdriver.summary = "컨트롤러에 사용되는 드라이버가 VMware 호환성 가이드에서 인증을 받은 드라이버로 나열되는지 확인합니다. vSAN HCL에 있으며 현재 ESXi 릴리스에 대해 인증을 받은 컨트롤러만 테스트됩니다."
+
+vsan.health.test.hcl.hclhostbadstate.label = "vSAN 하드웨어 호환성 경보 '하드웨어 정보를 검색하는 중에 호스트 문제 발생'"
+vsan.health.test.hcl.hclhostbadstate.summary = "호스트가 연결이 끊어졌거나 응답하지 않거나 하드웨어 정보를 가져오는 시도에 응답하지 못하는지 확인합니다. 여기에 나열된 호스트의 하드웨어는 VMware 호환성 가이드를 기준으로 확인되지 않습니다."
+
+vsan.health.test.hcl.controllerfirmware.label = "vSAN 하드웨어 호환성 경보 '컨트롤러 펌웨어가 VMware 인증을 받음'"
+vsan.health.test.hcl.controllerfirmware.summary = "컨트롤러 펌웨어가 VMware 호환성 가이드에서 인증을 받았는지 확인합니다. vSAN HCL에 있으며 현재 ESXi 릴리스에 대해 인증을 받은 컨트롤러만 테스트됩니다."
+
+vsan.health.test.hcl.controllerdiskmode.label = "vSAN 하드웨어 호환성 경보 '컨트롤러 디스크 그룹 모드가 VMware 인증을 받음'"
+vsan.health.test.hcl.controllerdiskmode.summary = "vSAN 디스크 그룹 유형(플래시 전용 또는 하이브리드)이 VMware 호환성 가이드의 나열된 SCSI 컨트롤러에 대해 인증을 받았는지 확인합니다. vSAN HCL에 있으며 현재 ESXi 릴리스에 대해 인증을 받은 컨트롤러만 테스트됩니다."
+
+vsan.health.test.hcl.pniclinkspeed.label = "vSAN 하드웨어 호환성 경보 '물리적 NIC 링크 속도가 요구 사항을 충족함'"
+vsan.health.test.hcl.pniclinkspeed.summary = "vSAN 호스트에서 사용되는 NIC(네트워크 인터페이스 카드)는 특정 요구 사항을 충족해야 합니다. 이러한 NIC 요구 사항은 하이퍼 통합 환경에서 패킷 손실이 0.0001%를 넘지 않는다고 가정합니다. 최소 요구 사항을 충족할 수 있는 연결 속도 NIC를 사용하는 것이 좋습니다. 그렇지 않으면 vSAN 성능에 크게 영향을 줄 수 있습니다."
+
+vsan.health.test.hcl.fwrecommendation.label = "vSAN 하드웨어 호환성 경보 'vSAN 펌웨어 버전 권장 사항'"
+vsan.health.test.hcl.fwrecommendation.summary = "vSAN 펌웨어 권장 사항입니다. 이 펌웨어 제안은 현재 호스트 소프트웨어 버전, 하드웨어 드라이버 버전 및 VMware 호환성 가이드에 따른 호환성을 기준으로 합니다."
+
+vsan.health.test.physicaldisks.diskusage.label = "vSAN 하드웨어 호환성 경보 '스토리지 컨트롤러의 디스크 사용량'"
+vsan.health.test.physicaldisks.diskusage.summary = "vSAN은 비 vSAN 디스크가 VMFS 또는 RDM(원시 디바이스 매핑)에 사용되는 구성을 지원하지 않습니다. 업데이트 적용 단계에 대해서는 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.hcl.mixedmode.label = "vSAN 하드웨어 호환성 경보 '패스스루 및 RAID 디스크가 있는 컨트롤러'"
+vsan.health.test.hcl.mixedmode.summary = "컨트롤러 디스크 모드(패스스루/RAID)를 혼합하면 스토리지 컨트롤러에 의해 다양한 디스크가 서로 다른 방식으로 처리됩니다. 이렇게 하면 한 가지 구성에 영향을 미치는 문제가 다른 구성에도 영향을 미칠 가능성이 생기며 vSAN에 부정적인 결과가 발생할 수 있습니다. 업데이트 적용 단계를 보려면 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.hcl.h730.label = "vSAN 하드웨어 호환성 경보 'LSI-3108 기반 컨트롤러에 대한 vSAN 구성'"
+vsan.health.test.hcl.h730.summary = "LSI-3108 기반 컨트롤러에서 실행하는 경우 vSAN의 안정성 및 최적의 성능을 보장하려면 몇 가지 권장되는 구성 값을 설정해야 합니다. 업데이트 적용 단계를 보려면 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.hcl.mixedmodeh730.label = "vSAN 하드웨어 호환성 경보 'lsi_mr3 드라이버가 있는 Dell H730 컨트롤러의 vSAN 및 VMFS 데이터스토어'"
+vsan.health.test.hcl.mixedmodeh730.summary = "VMware는 lsi_mr3 드라이버를 사용하는 Dell H730 컨트롤러에 vSAN 디스크와 VMFS 볼륨이 공존하는 구성을 지원하지 않습니다. 이 문제를 해결하려면 vSAN 드라이브(ESXi 부팅 디스크 전용)가 있는 디스크에 ESXi를 설치한 다음 로컬 부팅 디바이스에서 VMFS 데이터스토어를 제거/삭제하십시오."
+
+vsan.health.test.hcl.controllercacheconfig.label = "vSAN 하드웨어 호환성 경보 'RAID 컨트롤러 구성'"
+vsan.health.test.hcl.controllercacheconfig.summary = "vSAN에서 vSAN 소프트웨어 수준 캐시의 작동을 최적화하려면 패스스루 또는 RAID 0 단일 드라이브(SSD/HDD)에 대해 몇 가지의 특정 컨트롤러 수준 구성이 필요합니다. 세부적인 캐시 구성 설정 및 컨트롤러를 올바로 구성하기 위한 단계를 보려면 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.hcl.vsanhpefwtest.label = "vSAN 상태 경보 'HPE NVMe Solid State Drive - 중요 펌웨어 업그레이드 필요'"
+vsan.health.test.hcl.vsanhpefwtest.summary = "상태 테스트 'HPE NVMe Solid State Drive - 중요 펌웨어 업그레이드 필요'의 변경 내용을 모니터링하기 위한 기본 경보"
+
+#
+# vSAN iSCSI target service Group 3
+#
+vsan.health.test.iscsi.iscsihomeobjectstatustest.label = "vSAN iSCSI 대상 서비스 경보 '홈 개체'"
+vsan.health.test.iscsi.iscsihomeobjectstatustest.summary = "홈 개체는 vSAN iSCSI 대상 서비스에서 사용된 메타데이터를 저장합니다. 이 경보는 다음 항목을 확인합니다. 홈 개체가 생성되었고 시스템에서 찾을 수 있습니다. 홈 개체가 정상 상태이며 스토리지 정책을 준수합니다. 홈 개체가 고유합니다. 여러 홈 개체가 있는 경우 클러스터의 일부 호스트가 다른 홈 개체에 액세스할 수 있습니다. 홈 개체의 메타데이터 파일이 있고 구문 분석할 수 있으며 모든 메타데이터가 올바로 저장되었습니다."
+
+vsan.health.test.iscsi.iscsiservicenetworktest.label = "vSAN iSCSI 대상 서비스 경보 '네트워크 구성'"
+vsan.health.test.iscsi.iscsiservicenetworktest.summary = "vSAN iSCSI 대상 서비스에서 사용된 모든 네트워크 인터페이스(기본 인터페이스 포함)는 클러스터의 모든 호스트에서 구성되어야 합니다. 이름이 동일한 모든 네트워크 인터페이스는 분산 포털을 구성합니다. 하나 이상의 호스트에 네트워크 인터페이스가 없으면 vSAN iSCSI 대상 서비스가 올바르게 작동할 수 없습니다."
+
+vsan.health.test.iscsi.iscsiservicerunningtest.label = "vSAN iSCSI 대상 서비스 경보 '서비스 런타임 상태'"
+vsan.health.test.iscsi.iscsiservicerunningtest.summary = "서비스가 클러스터의 모든 호스트에서 사용되도록 설정되었는지 확인합니다. 호스트에 서비스가 사용되도록 설정되어 있지 않으면 esxcli vsan iscsi status set --enabled=true 명령을 실행하십시오. 또는 [편집] 작업([관리] > [설정] > [일반] > [vSAN iSCSI 대상 서비스])을 사용하여 iSCSI 대상 서비스가 사용되도록 설정할 수 있습니다. 이 경보는 다음 프로세스의 상태도 확인합니다. vtid는 서비스를 제공하기 위해 사용되며 vitsafehd는 VMDK에 대해 열린 상태를 유지하기 위해 사용됩니다. vtid 프로세스가 실행 중이지 않은 경우 /etc/init.d/vitd start 명령을 사용하여 이 프로세스를 시작하십시오. vitsafehd 프로세스가 실행 중이지 않은 경우 /etc/init.d/vitd io_restart 명령을 사용하여 이 프로세스를 시작하십시오."
+
+#
+# Network Group 16
+#
+vsan.health.test.network.multicastsuspected.label = "vSAN 네트워크 경보 '다른 확인을 기반으로 하는 멀티캐스트 평가'"
+vsan.health.test.network.multicastsuspected.summary = "이 경보는 vSAN 구성 검사와 유니캐스트 연결 확인은 통과했지만 vSAN 클러스터 파티션이 있는 경우 멀티캐스트 문제가 있을 수 있음을 나타냅니다. 트리거되면 추가로 '활성 멀티캐스트 연결 확인'이 수행됩니다."
+
+vsan.health.test.network.multicastdeepdive.label = "vSAN 네트워크 경보 '활성 멀티캐스트 연결 확인'"
+vsan.health.test.network.multicastdeepdive.summary = "이 경보는 일정 기간 클러스터의 모든 호스트에서 멀티캐스트 패킷을 캡처합니다. 또한 CMMDS 기본 하트비트를 확인합니다. vSAN/CMMDS 기본(파티션당 하나)으로 선택된 호스트는 모두 1초에 한 번씩 이러한 하트비트를 보냅니다. 이러한 하트비트는 멀티캐스트를 통해 전송되며, 클러스터의 모든 호스트가 이 하트비트를 수신해야 클러스터가 제대로 작동합니다. 어떤 호스트가 하트비트를 전송했는데 다른 호스트가 수신하지 못한 경우, 이는 일반적으로 물리적 네트워크에서 멀티캐스트가 잘못 구성되었음을 나타냅니다."
+
+vsan.health.test.network.largeping.label = "vSAN 네트워크 경보 'vSAN: MTU 확인(큰 패킷 크기를 사용하는 ping)'"
+vsan.health.test.network.largeping.summary = "큰 패킷 크기를 사용하여 각 호스트에서 다른 모든 호스트로의 ping 테스트를 수행합니다. 기본 연결 검사 경보가 트리거되지 않은 동안 이 경보가 트리거되면 vSAN 네트워크 어딘가에 MTU가 잘못 구성되었음을 의미합니다. 잘못된 구성 소스를 추적해야 합니다. VMkernel 어댑터, 가상 스위치 또는 물리적 네트워크 스위치일 수 있습니다."
+
+vsan.health.test.network.smallping.label = "vSAN 네트워크 경보 'vSAN: 기본(유니캐스트) 연결 확인'"
+vsan.health.test.network.smallping.summary = "작은 패킷 크기를 사용하여 각 호스트에서 다른 모든 호스트로의 ping 테스트를 수행합니다. 이 경보가 트리거되면 네트워크 연결에 기본적인 문제가 있는 것입니다. vmknic, 업링크, VLAN, 물리적 스위치 및 관련 설정을 확인하십시오."
+
+vsan.health.test.network.hostconnectivity.label = "vSAN 네트워크 경보 '연결 문제가 있는 호스트'"
+vsan.health.test.network.hostconnectivity.summary = "이 경보는 vCenter Server가 호스트를 연결된 상태로 나열하지만, vCenter Server에서 호스트로의 API 호출이 실패함을 나타냅니다. 이 문제는 드물게 발생하지만 vCenter Server에서 호스트 연결이 끊기는 상황과 비슷한 문제를 야기할 수 있습니다."
+
+vsan.health.test.network.multicastsettings.label = "vSAN 네트워크 경보 '모든 호스트에 일치하는 멀티캐스트 설정이 있음'"
+vsan.health.test.network.multicastsettings.summary = "vSAN 클러스터에 참여하고 완전히 연결된 호스트의 단일 그룹을 형성하려면 vSAN 클러스터의 각 호스트가 동일한 IP 멀티캐스트 주소를 사용해야 합니다. 클러스터가 IPv4 또는 IPv6를 사용하는지에 따라 해당 멀티캐스트 구성이 확인됩니다. \nesxcli vsan network list\n 및 esxcli vsan network ip set을 사용하여 멀티캐스트 IP를 조정하십시오"
+
+vsan.health.test.network.vsanvmknic.label = "vSAN 네트워크 경보 '모든 호스트에 구성된 vSAN vmknic가 있음'"
+vsan.health.test.network.vsanvmknic.summary = "vSAN 클러스터에 참여하고 완전히 연결된 호스트의 단일 그룹을 형성하려면 vSAN 클러스터의 각 호스트에 vmknic(VMkernel 네트워크 인터페이스 또는 VMkernel 어댑터)가 vSAN 트래픽에 대해 구성되어 있어야 합니다."
+
+vsan.health.test.network.clusterpartition.label = "vSAN 네트워크 경보 'vSAN 클러스터 파티션'"
+vsan.health.test.network.clusterpartition.summary = "기능이 제대로 작동하려면 모든 vSAN 호스트가 멀티캐스트 및 유니캐스트 둘 다를 통해 통신할 수 있어야 합니다. 통신할 수 없는 경우 vSAN 클러스터가 여러 파티션, 즉 호스트의 하위 그룹으로 분할됩니다. 이들 하위 그룹은 통신할 수는 있지만 다른 하위 그룹과의 통신은 불가능합니다. 이러한 경우 네트워크의 잘못된 구성이 해결될 때까지 vSAN 개체를 사용할 수 없게 됩니다."
+
+vsan.health.test.network.hostdisconnected.label = "vSAN 네트워크 경보 '호스트가 VC에서 연결이 끊김'"
+vsan.health.test.network.hostdisconnected.summary = "이 경보는 vCenter Server에 클러스터의 모든 호스트에 대한 활성 연결이 있는지를 확인합니다. vCenter Server와 호스트의 연결이 끊어지면(또는 응답하지 않으면) 작동상의 문제가 발생할 수 있습니다. vCenter Server와 호스트가 연결되어 있지 않으면 vCenter에서 호스트의 상태를 알 수 없습니다. 호스트는 작동 중일 수도 있고, vSAN 클러스터에 참여하거나, 데이터를 제공하거나, 클러스터의 스토리지 기능에서 중요한 역할을 담당하고 있을 수도 있습니다. 아니면 호스트가 종료되어 사용할 수 없는 상태일 수도 있습니다. vCenter Server와 vSAN 상태 검사는 호스트의 연결이 끊어져 있는 한, 상황을 제대로 평가할 수 없습니다. 호스트가 vSAN 클러스터에 참여 중이면 해당 UUID를 확인할 수 없으므로 예기치 않은 vSAN 클러스터 멤버 검사에서 예기치 않은 상태로 표시됩니다. 상태 검사에서는 vSAN 클러스터에서 보이는 호스트가 연결이 끊어진 호스트인지 여부를 확인할 수 없습니다. 또한 vSAN 연결 확인 또는 디스크 상태 검사 같은 다른 상태 검사에서 연결이 끊어진 호스트를 고려할 수 없게 됩니다."
+
+vsan.health.test.network.vmotionpingsmall.label = "vSAN 네트워크 경보 'vMotion: 기본(유니캐스트) 연결 확인'"
+vsan.health.test.network.vmotionpingsmall.summary = "vMotion 트래픽을 사용하도록 설정한 모든 VMkernel 어댑터 간에 작은 패킷 크기로 ping 테스트를 수행합니다. 이 경보가 트리거되면 네트워크가 잘못 구성되었음을 나타냅니다. 이 테스트는 세 개의 ping을 전송합니다. 한 ping이 실패하면 주의를 표시하고, 두 개 이상의 ping이 실패하면 오류를 표시합니다. 이 오류는 여러 가지 요인으로 인해 발생할 수 있습니다. VMkernel 어댑터 또는 가상 스위치를 포함하여 가상 네트워크에 문제가 있을 수도 있습니다. 물리적 네트워크(예: 케이블, 물리적 NIC 또는 물리적 스위치)에 문제가 있을 수도 있습니다."
+
+vsan.health.test.network.vmotionpinglarge.label = "vSAN 네트워크 경보 'vMotion: MTU 확인(큰 패킷 크기를 사용하는 ping)'"
+vsan.health.test.network.vmotionpinglarge.summary = "vMotion 트래픽을 사용하도록 설정한 모든 VMkernel 어댑터 간에 큰 패킷 크기로 ping 테스트를 수행합니다. 소규모 ping 테스트가 성공할 경우 모든 VMkernel 어댑터, 가상 스위치 및 모든 물리적 스위치에서 MTU 크기가 일관되게 구성되면 대규모 ping 테스트가 성공적으로 수행됩니다. 경보가 트리거되면 vSAN 네트워크에서 구성 오류 소스를 식별합니다. VMkernel 어댑터, 가상 스위치 또는 물리적 네트워크 스위치를 확인하십시오."
+
+vsan.health.test.network.hostlatencycheck.label = "vSAN 네트워크 경보 '네트워크 지연 시간 검사'"
+vsan.health.test.network.hostlatencycheck.summary = "vSAN 호스트의 네트워크 지연 시간 확인을 수행합니다. 정상적인 클러스터의 네트워크 구성 지침에 따르면 RTT는 1밀리초 미만이어야 합니다. 이 상태 검사는 일시적인 변동을 감안하여 일반적인 임계값인 5밀리초를 기반으로 주의를 보고합니다. 이 경보가 트리거될 경우 vmknic, 업링크, VLAN, 물리적 스위치 및 관련 설정을 확인하여 네트워크 문제를 찾으십시오.\n참고: 호스트 쌍이 연결 확인에 실패한 경우에는 이 경고를 건너뜁니다."
+
+vsan.health.test.network.serverpartition.label = "vSAN 네트워크 경보 '서버 클러스터 파티션'"
+vsan.health.test.network.serverpartition.summary = "일반적으로 원격 vSAN 데이터스토어를 마운트하는 클라이언트 클러스터의 모든 호스트는 서버 클러스터의 모든 호스트와 통신할 수 있어야 합니다. 네트워크 파티션의 경우 클라이언트 호스트에는 서버 호스트의 일부만 표시될 수 있습니다. 다른 클라이언트 호스트에는 다른 서버 호스트가 표시될 수 있습니다. 개체 가용성은 파티션이 지속되는 동안 영향을 받습니다. 이 경보는 서버 클러스터에 파티션이 있는 경우 트리거됩니다. 자세한 내용은 상태 모니터를 참조하십시오."
+
+vsan.health.test.network.rdmaconfig.label = "vSAN 네트워크 경보 'RDMA 구성 상태'"
+vsan.health.test.network.rdmaconfig.summary = "vSAN RDMA 사용 물리적 NIC가 무손실 트래픽에 대해 구성되었는지 확인합니다. 무손실 레이어 2 환경을 보장하기 위해 DCB(데이터 센터 브리징) 모드를 IEEE로 구성하고 PFC(Priority Flow Control) 값을 3으로 설정해야 합니다."
+
+vsan.health.test.network.multiplevsanvmknic.label = "vSAN 네트워크 경보 '원격 vSAN에 여러 vSAN vmknic가 구성된 호스트가 없음'"
+vsan.health.test.network.multiplevsanvmknic.summary = "원격 vSAN 클라이언트 또는 서버 클러스터의 호스트에 둘 이상의 vSAN vmknic가 구성되어 있는지 확인합니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.network.pnicconsistent.label = "vSAN 네트워크 경보 '물리적 네트워크 어댑터 링크 속도 일관성'"
+vsan.health.test.network.pnicconsistent.summary = "각 호스트의 vSAN이 사용하는 물리적 네트워크 어댑터의 링크 속도가 일관되는지 확인합니다. 물리적 네트워크 어댑터의 일관되지 않은 링크 속도는 vSAN 성능 문제를 야기합니다. 업데이트 적용 단계에 대해서는 vSAN 상태 모니터의 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.network.duplicateip.label = "vSAN 네트워크 경보 '중복 IP 주소가 있는 호스트'"
+vsan.health.test.network.duplicateip.summary = "vmknic 인터페이스에 대해 중복 IP 주소가 구성되어 있는지 확인합니다."
+
+vsan.health.test.network.pnictso.label = "vSAN 네트워크 경보 '물리적 NIC TSO 문제가 있는 호스트'"
+vsan.health.test.network.pnictso.summary = "물리적 NIC에 대해 TSO가 사용하도록 설정했는지 확인합니다."
+
+vsan.health.test.network.lacpstatus.label = "vSAN 네트워크 경보 'LACP 문제가 있는 호스트'"
+vsan.health.test.network.lacpstatus.summary = "LACP가 제대로 작동하고 있는지 확인합니다."
+
+#
+# vSAN Build Recommendation Group 4
+#
+vsan.health.test.vum.releasecataloguptodate.label = "vSAN 빌드 권장 사항 경보 'vSAN 릴리스 카탈로그가 최신 상태임'"
+vsan.health.test.vum.releasecataloguptodate.summary = "vSAN 빌드 권장 사항에 사용되는 vSAN 릴리스 카탈로그의 사용 기간을 확인합니다. 90일 또는 180일보다 오래되면 이 경보가 트리거됩니다. vSAN 릴리스 카탈로그가 새로운 릴리스 또는 중요 패치가 있을 때 업데이트되며, 로컬 사본을 최신 상태로 유지하는 것이 중요합니다."
+
+vsan.health.test.vum.vumconfig.label = "vSAN 빌드 권장 사항 경보 'vSAN 빌드 권장 사항 엔진'"
+vsan.health.test.vum.vumconfig.summary = "vSAN 빌드 권장 사항 엔진은 VMware 호환성 가이드 및 VMware 릴리스 메타데이터를 기반으로 권장 사항을 제공합니다. 또한 VMware Update Manager 서비스를 사용하고 인터넷 연결 및 유효한 my.vmware.com 자격 증명을 설정해야 합니다. 이 경보는 이러한 종속성이 충족되지 않거나 권장 사항 엔진이 올바르게 작동하지 않으면 트리거됩니다."
+
+vsan.health.test.vum.vumrecommendation.label = "vSAN 빌드 권장 사항 경보 'vSAN 빌드 권장 사항'"
+vsan.health.test.vum.vumrecommendation.summary = "하드웨어, VMware 호환성 가이드 및 VMware의 사용 가능한 릴리스에 따른 호환성을 고려할 때 vSAN이 가장 적합한 것으로 권장하는 ESXi 빌드입니다."
+
+vsan.health.test.vum.patchalert.label = "vSAN 빌드 권장 사항 경보 '새 패치를 사용할 수 있는 vSAN 호스트'"
+vsan.health.test.vum.patchalert.summary = "새 중요 vSAN 패치를 사용할 수 있는지 확인합니다. 이 경보가 트리거되면 이 패치 릴리스로 즉시 업그레이드하십시오. vSAN 소프트웨어 업데이트 방법에 대한 지침은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+#
+# Physical Disk Group 9
+#
+vsan.health.test.physicaldisks.physdiskcomplimithealth.label = "vSAN 물리적 디스크 경보 '구성 요소 제한'"
+vsan.health.test.physicaldisks.physdiskcomplimithealth.summary = "물리 디스크의 구성 요소 수가 최대 제한에 도달했는지 검사합니다. 각 vSAN 개체는 VM 스토리지 정책에서 사용 중인 기능에 의해 결정되는 구성 요소 집합으로 구성되기 때문에, 구성 요소 제한에 도달할 경우 새 가상 시스템 배포가 실패하거나 재작성 작업이 허용되지 않을 수 있습니다. 호스트를 더 추가하거나 vSAN 개체 중 일부를 삭제해야 합니다. 그러나 구성 요소가 감시 노드에 가득 찬 경우 더 큰 용량을 제공해야 합니다."
+
+vsan.health.test.physicaldisks.componentmetadata.label = "vSAN 물리적 디스크 경보 '구성 요소 메타데이터'"
+vsan.health.test.physicaldisks.componentmetadata.summary = "이 경보는 vSAN에서 이 디스크에 있는 구성 요소의 메타데이터 무결성에 문제가 있으면 트리거됩니다. 이 문제는 결함 있는 드라이브, 결함 있는 컨트롤러 또는 잘못 동작하는 디바이스 드라이버 때문일 수 있습니다. vSAN 소프트웨어의 문제로 인해 야기될 수도 있습니다. VMware 지원 서비스에 문의하십시오."
+
+vsan.health.test.physicaldisks.physdiskcongestion.label = "vSAN 물리적 디스크 경보 '정체'"
+vsan.health.test.physicaldisks.physdiskcongestion.summary = "이 경보가 트리거되면 vSAN이 여전히 디스크를 사용 중이지만 성능이 저하된 상태입니다. 이 경우 이 디스크를 사용하는 vSAN 개체에 대해 낮은 처리량/IOPS 및 높은 지연 상태에 있음을 나타냅니다."
+
+vsan.health.test.physicaldisks.physdiskcapacity.label = "vSAN 물리적 디스크 경보 '디스크 용량'"
+vsan.health.test.physicaldisks.physdiskcapacity.summary = "특정 디스크에서 이 경보가 트리거되면 이 디스크에 사용 가능한 디스크 공간이 부족하다는 것을 나타냅니다. 이 경보는 용량 계층 드라이브에 대해서만 적용되며 캐시 디바이스에는 적용되지 않습니다."
+
+vsan.health.test.physicaldisks.physdiskoverall.label = "vSAN 물리적 디스크 경보 '작업'"
+vsan.health.test.physicaldisks.physdiskoverall.summary = "vSAN 클러스터의 호스트에 대해 vSAN 디스크 및 vSAN Direct 디스크 둘 다에 대한 물리 디스크 작업 상태를 확인합니다. 이 경보가 vSAN 디스크에서 트리거되면 vSAN에서 해당 디스크를 사용할 수 없습니다. 가능한 원인은 디스크 메타데이터 또는 vSAN 소프트웨어에 이 디스크를 사용하지 못하게 하는 문제가 있는 것입니다. vSAN Direct 디스크의 경우 디스크를 사용하지 못하게 하는 디스크 작동 상태 설명을 읽는 문제가 디스크를 사용할 수 없는 원인일 수 있습니다."
+
+vsan.health.test.physicaldisks.lsomheap.label = "vSAN 물리적 디스크 경보 '메모리 풀(힙)'"
+vsan.health.test.physicaldisks.lsomheap.summary = "이 경보는 vSAN에서 물리 디스크의 올바른 작동에 필요한 중요한 메모리 풀이 부족한 경우에 트리거됩니다. 또한 디스크는 잘못된 정체 상태를 보고하며 이로 인해 성능 문제가 발생할 수 있습니다. VMware 지원 서비스에 문의하십시오."
+
+vsan.health.test.physicaldisks.lsomslab.label = "vSAN 물리적 디스크 경보 '메모리 풀(슬래브)'"
+vsan.health.test.physicaldisks.lsomslab.summary = "이 경보는 vSAN 물리 디스크 작업에 필요한 중요한 메모리 풀이 부족한 경우에 트리거됩니다. 또한 디스크는 잘못된 정체 상태를 보고하며 이로 인해 성능 문제가 발생할 수 있습니다. VMware 지원 서비스에 문의하십시오."
+
+vsan.health.test.physicaldisks.smalldiskstest.label = "vSAN 물리적 디스크 경보 'vSAN 최대 구성 요소 크기'"
+vsan.health.test.physicaldisks.smalldiskstest.summary = "vSAN에 사용된 용량 디스크가 255GB(기본 최대 구성 요소 크기)보다 작은 경우 vSAN 데이터스토어에서 실행되는 가상 시스템에 디스크 공간 문제가 발생할 수 있습니다. 최대 구성 요소 크기를 변경하는 지침에 대해서는 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.physicaldisks.physdiskhostissues.label = "vSAN 물리적 디스크 경보 '물리적 디스크 상태 검색 문제'"
+vsan.health.test.physicaldisks.physdiskhostissues.summary = "이 경보가 트리거되면 vSAN 클러스터에 있는 하나 이상의 호스트에서 물리 디스크 정보를 검색하는 데 문제가 있음을 나타냅니다. 특정 원인에 대한 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+#
+# Cluster Group 12
+#
+vsan.health.test.cluster.clomdliveness.label = "vSAN 클러스터 경보 'vSAN 데몬 작동 여부'"
+vsan.health.test.cluster.clomdliveness.summary = "모든 vSAN 호스트에서 중요 호스트 데몬의 작동 여부를 확인합니다. 참고: CLOMD 상태는 감시 노드에서 확인되지 않습니다. EPD 상태는 감시 및 메타데이터 노드에서 확인되지 않습니다."
+
+vsan.health.test.cluster.advcfgsync.label = "vSAN 클러스터 경보 '고급 vSAN 구성이 동기화됨'"
+vsan.health.test.cluster.advcfgsync.summary = "vSAN에는 특정 배포의 특정한 요구 사항을 조정하거나 해결하기 위한 많은 고급 구성 옵션이 있습니다. 일반적으로 이러한 설정은 VMware 지원팀의 지침에 따라 VMware KB 문서의 절차를 통해 변경됩니다. 이러한 고급 옵션은 호스트별로 설정되므로 클러스터 내에서 일치하지 않는 구성이 생성되기 쉽습니다. 이 검사는 지정된 클러스터의 모든 호스트에서 중요한 vSAN 고급 구성 옵션이 동일한 값 또는 기본값을 갖는지 확인합니다."
+
+vsan.health.test.cluster.upgradesoftware.label = "vSAN 클러스터 경보 '소프트웨어 버전 호환성'"
+vsan.health.test.cluster.upgradesoftware.summary = "소프트웨어 업그레이드 후, vSAN 클러스터에서 새 온디스크 형식 버전을 사용하기 시작하면, 새 온디스크 형식을 지원하지 않는 이전 소프트웨어 버전이 호환되지 않게 됩니다. 이러한 이전 호스트 버전이 해당 클러스터에 도입된 경우, 해당 호스트는 네트워크 파티션에 있거나, 아주 제한된 데이터 집합만 액세스할 수 있습니다. 이러한 구성은 지원되지 않으며, 즉시 소프트웨어를 업그레이드하거나 이전 호스트 버전을 제거하는 것이 좋습니다."
+
+vsan.health.test.cluster.upgradelowerhosts.label = "vSAN 클러스터 경보 '디스크 형식 버전'"
+vsan.health.test.cluster.upgradelowerhosts.summary = "vSAN 클러스터에 필요한 형식 버전은 13이며, 이 버전은 해당 클러스터 내의 모든 호스트에 의해 지원되는 최고의 형식 버전입니다. 필요한 버전보다 낮은 형식 버전을 가진 디스크의 경우, 최신 vSAN 기능을 지원하도록 vSAN 온디스크 형식 업그레이드를 수행하는 것이 좋습니다."
+
+vsan.health.test.cluster.diskbalance.label = "vSAN 클러스터 경보 'vSAN 디스크 균형'"
+vsan.health.test.cluster.diskbalance.summary = "이 경보는 사용자가 디스크 간의 균형 상태를 모니터링하는 데 도움이 됩니다. [자동 재조정]의 기본 설정은 사용되지 않도록 설정되어 있으며 불균형이 시스템에서 결정된 임계값을 초과하면 이 경보의 상태가 트리거됩니다. [자동 재조정]이 사용되도록 설정된 경우 vSAN은 상태가 녹색으로 유지되도록 자동으로 재조정합니다. 재조정은 시작되기까지 최대 30분을 기다려 EMM, 복구 등과 같이 우선 순위가 높은 작업이 재조정 전에 리소스를 사용할 수 있는 시간을 제공합니다."
+
+vsan.health.test.cluster.clustermembership.label = "vSAN 클러스터 경보 'vSphere 클러스터 멤버가 vSAN 클러스터 멤버와 일치함'"
+vsan.health.test.cluster.clustermembership.summary = "vSphere 클러스터 멤버가 vSAN 클러스터 멤버와 일치하는지 확인합니다. 이 경보가 트리거되면 vSphere 클러스터 멤버가 vSAN 클러스터 멤버와 동일하지 않음을 의미합니다. 이 문제는 vSAN을 특정 vSphere 클러스터 멤버에서 사용하도록 설정하지 않았거나 vSphere 클러스터에서 특정 vSAN 클러스터 멤버를 관리하지 않을 때 발생할 수 있습니다. 클러스터 멤버 자격이 일치하지 않는 호스트가 클러스터 멤버 자격 테이블에 표시됩니다. 잘못된 멤버 자격을 수정하여 호스트를 적절한 클러스터에 다시 가입시킬 수 있습니다. vSAN 구성이 자동으로 수행됩니다."
+
+vsan.health.test.cluster.consistentconfig.label = "vSAN 클러스터 경보 'vSAN 클러스터 구성 일관성'"
+vsan.health.test.cluster.consistentconfig.summary = "이 경보가 트리거되면 호스트 또는 디스크에 클러스터와 일관되지 않은 구성(예: 중복 제거/압축, 암호화) 설정이 있는 것입니다. 이 경보가 트리거되면 호스트 또는 디스크에 클러스터와 일관되지 않은 구성(예: 중복 제거/압축, 암호화) 설정이 있는 것입니다. 해당 상태 점검 페이지로 이동하여 자세한 정보 및 업데이트 적용 단계를 확인할 수 있습니다."
+
+vsan.health.test.cluster.vsandconfigconsistency.label = "vSAN 클러스터 경보 'vSAN Direct 동종 디스크 할당'"
+vsan.health.test.cluster.vsandconfigconsistency.summary = "vSAN Direct 디스크가 클러스터의 호스트에 같은 종류끼리 할당되어 있는지 확인합니다. 이 경보가 트리거되면 클러스터의 호스트에 일관되지 않은 구성 설정(예: 디스크 용량, 모드 및 번호)이 있는 것입니다. 해당 상태 점검 페이지로 이동하여 자세한 정보를 확인하고 그에 따라 다시 구성할 수 있습니다."
+
+vsan.health.test.cluster.timedrift.label = "vSAN 클러스터 경보 '호스트와 VC 전체에서 시간이 동기화됨'"
+vsan.health.test.cluster.timedrift.summary = "vCenter Server와 호스트 간의 시간 차이를 검사합니다. 60초가 넘게 차이 나면 이 경보가 트리거됩니다. 이 경보가 트리거되면 NTP 서버 구성을 확인하십시오."
+
+vsan.health.test.cluster.resynclimit.label = "vSAN 클러스터 경보 '다시 동기화 작업 임계치 조절'"
+vsan.health.test.cluster.resynclimit.summary = "다시 동기화 작업이 호스트에서 조절되는지 확인합니다. 다시 동기화 대역폭 제한이 구성된 경우 주의를 표시하고 값이 20MBps 미만인 경우 오류를 표시합니다. 높은 VM 지연 시간을 초래하는 상당한 다시 동기화 트래픽과 같은 특정 경우에 필요한 경우가 아니면 제한을 지우십시오. 이러한 제한을 설정하면 정책 변경 또는 유지 보수 모드와 같은 다시 동기화 기반 작업이 느려질 수 있습니다."
+
+vsan.health.test.cluster.vcauthoritative.label = "vSAN 클러스터 경보 'vCenter가 신뢰할 수 있는 상태임'"
+vsan.health.test.cluster.vcauthoritative.summary = "정상 작업 중에 vCenter Server 상태가 트루스의 소스로 간주되고 ESXi 호스트가 최신 호스트 멤버 자격 목록으로 업데이트됩니다. vCenter Server가 교체되거나 백업에서 복구되는 경우 vCenter Server의 호스트 멤버 자격 목록이 동기화되지 않을 수 있습니다. 이 상태 점검은 이런 경우를 감지하고 vCenter Server가 동기화되지 않음으로 인해 vCenter Server 상태가 ESXi에 푸시되지 않으면 경고를 보냅니다. 이런 경우, 먼저 vCenter Server의 멤버 자격 목록을 완전히 복원한 다음, 필요에 따라 ESXi 구성 업데이트 작업을 수행합니다."
+
+vsan.health.test.cluster.extendedconfig.label = "vSAN 클러스터 경보 'vSAN 확장된 구성이 동기화됨'"
+vsan.health.test.cluster.extendedconfig.summary = "vSAN 클러스터 확장된 구성 기본값은 다음과 같습니다. 개체 복구 타이머: 60분, 사이트 읽기 위치: 사용, 사용자 지정된 스왑 개체: 사용, 대규모 클러스터 지원: 사용 안 함, 자동 재조정: 해제, 자동 재조정 임계값: 30. 호스트에 일관되지 않은 확장된 구성이 있는 경우 vSAN 클러스터 업데이트 적용이 권장되며, 호스트가 확장된 구성을 지원하지 않는 경우 ESXi 소프트웨어를 업그레이드하십시오. 클러스터 확장성 구성을 적용하려면 호스트 재부팅이 필요할 수도 있습니다."
+
+vsan.health.test.cluster.mmdecominsync.label = "vSAN 클러스터 경보 '호스트 유지 보수 모드'"
+vsan.health.test.cluster.mmdecominsync.summary = "호스트의 유지 보수 모드가 vSAN 노드 서비스 해제 상태와 동기화되었는지 확인합니다. 호스트가 유지 보수 모드에 있는 경우 vSAN 노드가 서비스 해제 상태에 있어야 합니다. 노드가 서비스 해제되었지만 호스트가 유지 보수 모드에 있지 않은 경우 vSAN 옵션을 사용하여 호스트를 유지 보수 모드로 전환한 다음 유지 보수 모드에서 제거하여 vSAN 서비스 해제 상태를 재설정하고 vSphere 유지 보수 모드 상태와 일관되게 만드십시오."
+
+vsan.health.test.cluster.rdmanodes.label = "vSAN 클러스터 경보 'RDMA를 통한 vSAN의 최대 호스트 수'"
+vsan.health.test.cluster.rdmanodes.summary = "RDMA가 지원되는 vSAN에서는 최대 32개의 호스트를 지원합니다."
+
+vsan.health.test.cluster.hostmemcheck.label = "vSAN 클러스터 경보 '호스트 물리적 메모리 규정 준수 검사'"
+vsan.health.test.cluster.hostmemcheck.summary = "호스트 물리적 메모리가 최소 vSAN 메모리 요구 사항보다 큰지 확인하십시오."
+
+#
+# Capacity utilization Group (AKA Limits Group) 4
+#
+vsan.health.test.limits.nodecomponentlimit.label = "vSAN 용량 활용률 경보 '구성 요소'"
+vsan.health.test.limits.nodecomponentlimit.summary = "클러스터 및 각 호스트에 대한 구성 요소 활용률을 확인합니다. 이 경보는 사용률이 모든 호스트에서 80% 또는 90%를 초과하는 경우 경고 또는 오류로 트리거됩니다. 이러한 제한에 도달하면 새 가상 시스템의 배포가 실패하거나 재구축 작업이 허용되지 않을 수 있습니다. 호스트를 추가하거나 일부 vSAN 개체를 삭제합니다. 그러나 감시 노드에서 구성 요소 제한에 도달하면 더 큰 용량으로 교체해야 합니다."
+
+# Deco in future as pr 2518894
+vsan.health.test.limits.rcreservation.label = "vSAN 용량 활용률 경보 '캐시 읽기 예약'"
+vsan.health.test.limits.rcreservation.summary = "클러스터에서 캐시 읽기 예약을 확인합니다. 이 경보는 사용 가능한 예약이 30%이거나 총 캐시 읽기 예약의 10%보다 작은 경우 이 경보가 주의 또는 오류로 트리거됩니다. 이러한 경우 가상 시스템의 성능에 영향을 줄 수 있습니다."
+
+vsan.health.test.limits.diskspace.label = "vSAN 용량 활용률 경보 '스토리지 공간'"
+vsan.health.test.limits.diskspace.summary = "vSAN 클러스터 용량 계층 디스크 및 클러스터의 vSAN 관리 데이터스토어 사용량이 임계값을 초과하는지 확인하십시오. 사용 가능한 용량 계층 디스크 공간이 충분하지 않으면 새 가상 시스템 배포가 실패하거나 구성 요소 재구축 작업이 허용되지 않을 수 있습니다. 실행 중인 가상 시스템에는 영향을 받는 각 가상 시스템에 보류 중인 질문이 있을 수 있습니다. vSAN 상태 모니터 UI에서 Ask VMware KB를 참조하여 가상 시스템 및 vSAN 클러스터를 복구하십시오."
+
+vsan.health.test.limits.limit1hf.label = "vSAN 용량 활용률 경보 '가장 많이 사용되는 호스트에 장애가 발생한 경우'"
+vsan.health.test.limits.limit1hf.summary = "이 경보는 가장 많이 사용되는 리소스가 있는 호스트에 장애가 발생하는 경우를 시뮬레이션합니다. 해당 호스트의 리소스를 더 이상 사용할 수 없습니다. vSAN이 현재 이중화 부족 상태로 실행되고 있는 모든 개체를 다시 보호하려고 합니다. 이 경보는 활용률이 100%보다 높을 때 모든 개체의 재보호가 불가능한 경우에 트리거됩니다."
+
+#
+# Performance service Group 8
+#
+vsan.health.test.perfsvc.perfsvcstatus.label = "vSAN 성능 서비스 경보 '성능 서비스 상태'"
+vsan.health.test.perfsvc.perfsvcstatus.summary = "vSAN 성능 서비스의 상태를 확인합니다. 이 경보의 주의는 vSAN 성능 서비스를 사용하도록 설정하여 해결할 수 있습니다."
+
+vsan.health.test.perfsvc.statsdb.label = "vSAN 성능 서비스 경보 '통계 DB 개체'"
+vsan.health.test.perfsvc.statsdb.summary = "vSAN 성능 서비스 통계 데이터베이스 개체의 상태 검사합니다. 통계 DB 개체가 존재하지 않거나, 통계 DB 개체가 100% 정상이 아니거나, 개체를 사용할 수 없거나, vSAN 통계 DB 개체에서 사용 가능한 논리 디스크 공간이 부족하면 경보가 트리거됩니다."
+
+vsan.health.test.perfsvc.masterexist.label = "vSAN 성능 서비스 경보 '통계 기본 선택'"
+vsan.health.test.perfsvc.masterexist.summary = "vSAN 성능 서비스의 통계 기본 노드를 확인합니다. 이 경보는 통계 기본 노드가 없는 경우에 트리거됩니다. vSAN 데이터스토어 및 통계 DB 개체의 상태, 특히 네트워크 상태를 확인하십시오. 이러한 모든 확인 결과, 정상 상태로 확인되면 VMware 지원 서비스에 연락하고 지원 요청을 제출하십시오."
+
+vsan.health.test.perfsvc.collection.label = "vSAN 성능 서비스 경보 '성능 데이터 수집'"
+vsan.health.test.perfsvc.collection.summary = "vSAN 성능 서비스의 통계 수집 검사합니다. 통계는 정기적인 간격(예: 5분 간격)으로 수집됩니다. 통계 수집 또는 스토리지에 대한 쓰기 작업이 3번의 연속 간격 동안 실패한 경우 이 경보가 트리거됩니다. vSAN 데이터스토어의 상태, 특히 모든 물리 디스크의 상태, 네트워크 상태 및 vSAN 통계 DB 개체의 상태를 확인하십시오. 이러한 모든 항목이 정상이면 VMware 지원 서비스에 연락하고 지원 요청을 제출하십시오."
+
+vsan.health.test.perfsvc.hostsmissing.label = "vSAN 성능 서비스 경보 '통계를 제공하는 모든 호스트'"
+vsan.health.test.perfsvc.hostsmissing.summary = "모든 호스트가 성능 통계를 제공하고 있는지 확인합니다. 이 경보가 트리거되면 일부 호스트가 성능 통계를 제공하지 않는 것을 의미합니다. 이 경보에 대해 알려진 이유는 없습니다. 일관되게 트리거되면 VMware 지원 서비스에 문의하고 지원 요청을 제출하십시오. vCenter Server 및 모든 호스트를 포함하여 전체 클러스터에 대한 지원 번들을 제공하십시오."
+
+vsan.health.test.perfsvc.renameddirs.label = "vSAN 성능 서비스 경보 '통계 DB 개체 충돌'"
+vsan.health.test.perfsvc.renameddirs.summary = "통계 DB 개체가 충돌하는지 확인합니다. 다른 통계 DB 개체가 유용한 경우 데이터스토어 브라우저를 통해 파일을 백업하거나 데이터스토어에서 이름을 변경한 후 보관할 수 있습니다. 여러 통계 DB 개체의 병합은 지원되지 않습니다."
+
+vsan.health.test.perfsvc.verbosemode.label = "vSAN 성능 서비스 경보 '세부 정보 표시 모드'"
+vsan.health.test.perfsvc.verbosemode.summary = "vSAN 성능 서비스 세부 정보 표시 모드가 사용하도록 설정되어 있는지 확인합니다. 이 경보는 세부 정보 표시 모드를 5일 넘게 사용하도록 설정하면 트리거됩니다."
+
+vsan.health.test.perfsvc.diagmode.label = "vSAN 성능 서비스 경보 '네트워크 진단 모드'"
+vsan.health.test.perfsvc.diagmode.summary = "vSAN 성능 서비스 네트워크 진단 모드가 사용하도록 설정되어 있는지 확인합니다. 이 경보는 네트워크 진단 모드가 24시간 넘게 활성화되면 트리거됩니다."
+
+#
+# Hyperconverged cluster configuration compliance 2
+#
+vsan.health.test.hcicluster.hosthciconfig.label = "vSAN 하이퍼 통합 클러스터 구성 경보 '하이퍼 통합 클러스터 구성을 위한 호스트 규정 준수 검사'"
+vsan.health.test.hcicluster.hosthciconfig.summary = "각 호스트의 구성이 하이퍼 통합 클러스터 구성을 준수하는지 확인합니다. 호스트는 모두 동일한 어댑터를 사용하여 vSphere Distributed Switch에 연결되어야 하며, 어댑터는 올바른 분산 포트 그룹에 있어야 하고, NTP 서버 및 잠금 모드는 규격에 따라 구성되어야 합니다."
+
+vsan.health.test.hcicluster.dvshciconfig.label = "vSAN 하이퍼 통합 클러스터 구성 경보 '하이퍼 통합 클러스터 구성을 위한 VDS 규정 준수 검사'"
+vsan.health.test.hcicluster.dvshciconfig.summary = "vSphere Distributed Switch가 활성이고 분산 포트 그룹 구성이 하이퍼 통합 클러스터 구성을 준수하는지 확인."
+
+#
+# Stretched cluster Group 15
+#
+vsan.health.test.stretchedcluster.siteconnectivity.label = "'사이트 지연 시간' 상태에 대한 vSAN 확장 클러스터 경보"
+vsan.health.test.stretchedcluster.siteconnectivity.summary = "이 경보는 데이터 사이트 및 감시의 임의 두 호스트 간의 가장 나쁜 지연 시간이 특정 제한을 초과하면 트리거됩니다. 주의 임계값: 데이터 사이트 간/내 5ms, 비ROBO 클러스터의 데이터 사이트와 감시 간 200ms, ROBO 클러스터의 데이터 사이트와 감시 간 500ms. 실패한 호스트 쌍 간의 네트워크를 검사하여 네트워크 설정이 최소 요구 사항을 충족하는지 확인합니다. 참고: vSAN 기본 연결(소형 ping) 테스트에서 실패하는 호스트 쌍을 건너뜁니다."
+
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.label = "vSAN 확장 클러스터 경보 '감시 호스트를 찾을 수 없음'"
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.summary = "확장된 클러스터에 올바른 감시 호스트가 없습니다. 이 경보가 트리거되면 vSAN 확장 클러스터에 해당 작업에 영향을 미치는 구성 오류가 있는 것습니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.label = "vSAN 확장 클러스터 경보 '잘못된 유니캐스트 에이전트'"
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.summary = "이 경보는 클러스터에 잘못된 유니캐스트 에이전트가 있는 호스트가 포함된 경우에 트리거됩니다. 호스트의 유니캐스트 에이전트가 잘못되면 감시 호스트와의 통신 오작동을 유발할 수 있습니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.label = "vSAN 확장 클러스터 경보 '유니캐스트 에이전트 구성 불일치'"
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.summary = "확장된 클러스터에 다중 유니캐스트 에이전트가 있습니다. 이것은 다중 유니캐스트 에이전트가 비감시 호스트에 설정되었음을 의미합니다. 이 경보가 트리거되면 vSAN 확장 클러스터에 해당 작업에 영향을 미치는 구성 오류가 있는 것입니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.label = "vSAN 확장 클러스터 경보 '예기치 않은 장애 도메인 수'"
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.summary = "확장된 클러스터에 2개의 올바른 장애 도메인이 없습니다. 각 데이터 사이트는 서로 다른 장애 도메인에 상주해야 합니다. 데이터 사이트의 총 장애 도메인 수는 2여야 합니다. 이 경보가 트리거되면 vSAN 확장 클러스터에 해당 작업에 영향을 미치는 구성 오류가 있는 것입니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.label = "vSAN 확장 클러스터 경보 '감시 호스트의 잘못된 기본 장애 도메인'"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.summary = "다음 (감시) 호스트에 잘못된 기본 장애 도메인이 있습니다. 기본 장애 도메인은 감시 호스트에서 사용되며 확장 클러스터 vSAN에 있는 두 데이터 사이트의 장애 도메인이어야 합니다. 이 도메인은 비워 둘 수 없습니다. 이 경보가 트리거되면 vSAN 확장 클러스터에 해당 작업에 영향을 미치는 구성 오류가 있습니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.hostunicastagentunset.label = "vSAN 확장 클러스터 경보 '유니캐스트 에이전트가 구성되지 않음'"
+vsan.health.test.stretchedcluster.hostunicastagentunset.summary = "호스트가 감시 노드와 통신할 수 있도록 하려면 유니캐스트 에이전트를 설정해야 합니다. 이 경보가 트리거되면 vSAN 확장 클러스터에 해당 작업에 영향을 미치는 구성 오류가 있는 것입니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.label = "vSAN 확장 클러스터 경보 '기본 장애 도메인이 설정되지 않음'"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.summary = "기본 장애 도메인이 해당 감시 호스트에 대한 클러스터에 설정되지 않았습니다. 기본 장애 도메인은 감시 호스트에서 사용되며 확장 클러스터 vSAN에 있는 두 데이터 사이트의 장애 도메인이어야 합니다. 이 도메인은 비워 둘 수 없습니다. 이 경보가 트리거되면 vSAN 확장 클러스터에 해당 작업에 영향을 미치는 구성 오류가 있습니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.label = "vSAN 확장 클러스터 경보 '감시 호스트에 할당된 디스크가 없음'"
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.summary = "확장 클러스터 감시 호스트에 유효한 디스크 그룹이 할당되지 않았습니다. 감시 호스트에 할당된 디스크가 없는 경우 해당 장애 도메인을 사용할 수 없으며 vSAN은 허용 장애 수가 1로 설정된(FTT = 1) 개체를 프로비저닝할 수 없습니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.label = "vSAN 확장 클러스터 경보 '감시 호스트 장애 도메인이 잘못 구성됨'"
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.summary = "다음 감시 노드는 데이터 장애 도메인 중 하나에 있습니다. 이 경보가 트리거되면 vSAN 확장 클러스터에 해당 작업에 영향을 미치는 구성 오류가 있는 것입니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.witnessinsidevccluster.label = "vSAN 확장 클러스터 경보 'vCenter 클러스터 내의 감시 호스트'"
+vsan.health.test.stretchedcluster.witnessinsidevccluster.summary = "해당 감시 호스트는 확장된 클러스터를 형성하는 vCenter 클러스터에 속하지 말아야 합니다. 감시 호스트가 vSAN 지원 클러스터 내에 있는 경우 vSphere DRS, HA 및 VMware Enhanced vMotion Compatibility에 문제가 발생합니다. 자세한 내용은 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.label = "vSAN 확장 클러스터 경보 '지원되지 않는 호스트 버전'"
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.summary = "클러스터에 확장된 클러스터를 지원하지 않는 ESXi 버전을 가진 호스트가 있습니다."
+
+vsan.health.test.stretchedcluster.witnessupgrade.label = "vSAN 확장 클러스터 경보 '감시 장치를 vSphere 7.0 이상으로 업그레이드(주의)'"
+vsan.health.test.stretchedcluster.witnessupgrade.summary = "현재 감시 장치 버전이 vSphere 7.0보다 이전 버전입니다. 감시 장치를 vSphere 7.0 이상으로 직접 업그레이드하면 문제가 발생합니다. 업그레이드 워크플로를 시작하기 전에 Ask VMware 기술 자료 문서를 참조하여 감시 장치를 재구성한 후 재부팅하십시오. 또는 vSphere 7.0 이상인 새 감시 장치를 배포하고 클러스터를 재구성하십시오."
+
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.label = "vSAN 확장 클러스터 경보 '공유 감시 클러스터의 데이터 노드 개수가 예상과 다름'"
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.summary = "공유 감시 클러스터의 데이터 노드 수가 2를 초과하는지 확인합니다. 공유 감시를 사용하는 모든 확장 클러스터의 데이터 호스트 수는 2를 초과할 수 없습니다."
+
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.label = "vSAN 확장 클러스터 경보 '클러스터당 공유 감시 구성 요소 제한이 축소됨'"
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.summary = "메모리 부족으로 인해 클러스터별 구성 요소 제한이 공유 감시 노드 아래로 감소되었는지 확인합니다."
+
+vsan.health.test.stretchedcluster.witnessupgissue.label = "vSAN 확장된 클러스터 경보 '감시 장치에 대한 하드웨어 호환성 문제'"
+vsan.health.test.stretchedcluster.witnessupgissue.summary = "감시 장치 업그레이드에 문제가 발생할 수 있습니다. 업그레이드 워크플로를 시작하기 전에 문제를 해결하는 것이 좋습니다. 자세한 내용은 vSAN Skyline 상태를 확인하십시오."
+
+#
+# File Service Group 3
+#
+vsan.health.test.fileservice.host.label = "vSAN 파일 서비스 경보 '인프라 상태'"
+vsan.health.test.fileservice.host.summary = "각 ESXi 호스트에 대한 파일 서비스 인프라 상태를 확인합니다. 문제가 감지된 후 자동으로 업데이트가 적용될 수 있습니다. 자동 업데이트 적용을 강제로 적용하려면 vSAN 상태 모니터에서 [파일 서비스 업데이트 적용] 또는 [불균형 수정]을 클릭합니다. 호스트가 유지 보수 모드일 경우 이 경보를 건너뜁니다. vSAN 상태 모니터에서 자세한 내용을 확인합니다."
+
+vsan.health.test.fileservice.fileserver.label = "vSAN 파일 서비스 경보 '파일 서버'"
+vsan.health.test.fileservice.fileserver.summary = "파일 서버가 정상 상태인지 확인합니다. 문제가 감지되면 대부분의 경우 파일 서버가 다른 에이전트 VM으로 자동 페일오버됩니다. vSAN 상태 모니터에서 추가 세부 정보를 확인합니다."
+
+vsan.health.test.fileservice.sharehealth.label = "vSAN 파일 서비스 경보 '공유 상태'"
+vsan.health.test.fileservice.sharehealth.summary = "파일 서비스 공유가 정상 상태인지 확인합니다. vSAN 상태 모니터에서 자세한 내용을 확인합니다."
+
+#
+# Data Group 2
+#
+vsan.health.test.data.objecthealth.label = "vSAN 데이터 경보 'vSAN 개체'"
+vsan.health.test.data.objecthealth.summary = "이 경보는 클러스터의 일부 개체가 정상 상태가 아닐 경우 트리거됩니다. 자세한 내용은 상태 모니터를 확인하십시오."
+
+vsan.health.test.data.objectformat.label = "vSAN 데이터 경보 'vSAN 개체 형식'"
+vsan.health.test.data.objectformat.summary = "이 경보는 개체 형식을 변경해야 하는 개체가 있는 경우 트리거됩니다. 개체 형식을 변경할 때 개체의 물리 디스크가 재구성될 수 있으며, 이로 인해 클러스터에서 데이터가 이동될 수 있습니다. 이전 형식의 개체가 일부 새 기능을 사용하지 못할 수 있습니다. 자세한 내용은 상태 모니터를 확인하십시오."
+
+#
+# Data-at-rest encryption Group (Encryption) 3
+#
+vsan.health.test.encryption.kmsconnection.label = "vSAN 미사용 데이터 암호화 경보 'vCenter 및 모든 호스트가 키 관리 서버에 연결됨'"
+vsan.health.test.encryption.kmsconnection.summary = "이 경보가 트리거되면 vCenter Server 또는 호스트에 키 관리 서버에 대한 연결 문제가 있음을 의미합니다. vCenter Server KMS 연결에 문제가 있는 경우 [vCenter Server 구성] 페이지에서 KMS 설정 및 상태를 확인하십시오. 클러스터의 호스트에 연결 문제가 있는 경우 상태 결과에서 구체적인 이유를 확인합니다. 호스트의 KMS 구성이 클러스터의 나머지 부분과 일관되지 않으면 클러스터 구성 업데이트 적용을 실행하여 호스트의 KMS 구성을 업데이트합니다."
+
+vsan.health.test.encryption.hostcpuaesni.label = "vSAN 미사용 데이터 암호화 경보 '호스트에서 CPU AES-NI가 사용하도록 설정됨'"
+vsan.health.test.encryption.hostcpuaesni.summary = "이 경보가 트리거되면 CPU AES-NI가 지원되지 않거나 사용하지 않도록 설정된 호스트가 있는 것입니다. AES-NI보다 훨씬 더 느린 소프트웨어 암호화가 사용됩니다. 자세한 내용은 vSAN 상태 모니터의 Ask VMware KB를 참조하십시오."
+
+vsan.health.test.encryption.dualencryption.label = "vSAN 미사용 데이터 암호화 경보 'vSAN의 VM에 이중 암호화가 적용됨'"
+vsan.health.test.encryption.dualencryption.summary = "이 경보는 vSAN인 VM 암호화 및 vSAN 데이터스토어 암호화가 둘 다 사용하도록 설정되었음을 감지했을 때 트리거됩니다. 원래 이렇게 설정할 의도였으면 경보를 무시하고, 그렇지 않으면 암호화 유형 중 하나를 해제하십시오. 암호화 모범 사례를 보려면 vSAN 상태 모니터에서 Ask VMware KB를 참조하십시오."
+
+#
+# Data-in-transient encryption 1
+#
+vsan.health.test.ditencryption.ditconfig.label = "vSAN 전송 중 데이터 암호화 경보 '구성 확인'"
+vsan.health.test.ditencryption.ditconfig.summary = "전송 중 데이터 암호화가 클러스터에 대해 적절하게 구성되었는지 확인합니다. 이 경보는 클러스터에서 전송 중 데이터 암호화를 사용하도록 설정한 경우 트리거됩니다. 모든 호스트에서 전송 중 데이터 암호화가 사용하도록 설정되고 예상된 상태에서 미사용이어야 하며, 그러지 않으면 네트워크 트래픽이 제대로 암호화되지 않을 수 있습니다."
+
+#
+# Remain unchanged
+#
+vsan.health.test.hciskip.label = "vSAN 상태 경보가 표시되지 않음"
+vsan.health.test.hciskip.summary = "클러스터가 완전히 구성되거나 이 빠른 시작 워크플로를 건너뛸 때까지 vSAN 상태 경보가 표시되지 않습니다."
+
+vsan.health.test.vsanhardwarecert.label = "vSAN 하드웨어 호환성 문제"
+vsan.health.test.vsanhardwarecert.summary = "이 경보는 클러스터에서 일부 하드웨어 호환성 문제를 발견한 경우 트리거됩니다. 자세한 문제는 vSAN 상태 모니터 UI를 참조하십시오."
+
+vsan.health.test.cloudhealth.vsanenablesupportinsight.label = "vSAN 지원 인사이트"
+vsan.health.test.cloudhealth.vsanenablesupportinsight.summary = "vSAN 지원 인사이트의 상태를 모니터링하기 위한 기본 경보"
+vsan.health.test.cloudhealth.advisor.label = "vSAN 상태 경보 'Advisor'"
+vsan.health.test.cloudhealth.advisor.summary = "상태 테스트 'Advisor'에 대한 변경 내용을 모니터링하기 위한 기본 경보"
+
+vsan.health.test.diagnostics.pnic.label = "높은 물리적 NIC 오류율이 감지되었습니다. 자세한 내용은 호스트의 vSAN 성능 보기를 확인하십시오"
+vsan.health.test.diagnostics.pnic.summary = "'물리적 NIC 오류율'을 모니터링하는 기본 경보"
+
+vsan.health.test.diagnostics.rdt.label = "높은 RDT 네트워크 오류가 감지되었습니다. 자세한 내용은 호스트의 vSAN 성능 보기를 확인하십시오"
+vsan.health.test.diagnostics.rdt.summary = "'RDT 네트워크 오류'를 모니터링하기 위한 기본 경보"
+
+#
+# Overall summary alarm is reactivate from VSANCORE-6413
+#
+vsan.health.test.overallsummary.label = "전체 상태 요약에 대한 vSAN Health Service 경보"
+vsan.health.test.overallsummary.summary = "전체 상태 요약에 대한 변경 내용을 모니터링하기 위한 기본 경보"

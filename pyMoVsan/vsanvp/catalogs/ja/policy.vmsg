@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = VMware vSAN の機能
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = VMware vSAN によって発行される機能
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = vSAN VASA プロバイダ
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = VMware vSAN で公開されている VASA プロバイダ
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = オブジェクトあたりのディスク ストライプの数
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = ストレージ オブジェクトの各レプリカがストライピングされる対象の HDD の数。値が 1 より大きい場合、パフォーマンスが向上することがありますが (たとえば、フラッシュでキャッシュ ミスが検出され、HDD から提供する必要がある場合)、システム リソースの使用量も増加します。デフォルト値: 1、最大値: 12。
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = PMem データストアの配置
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = 仮想ディスクを PMem データストアに配置します。
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = vSAN Direct データストアの配置
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = vSAN Direct データストアにクラウド ネイティブ ボリュームを配置します。
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = 配置タイプ
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = データを配置する場所を定義します。
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = vSAN Direct データストア ボリュームの割り当て
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = ボリューム割り当てタイプ。
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = 完全に初期化されました
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = すべてのブロックが割り当てられ、ゼロクリアされました
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = 容量の予約
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = すべてのブロックが割り当てられました。
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = フラッシュ読み取りキャッシュの予約 (%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = ストレージ オブジェクトの読み取りキャッシュとして予約されているフラッシュ容量。オブジェクトの論理サイズの割合として指定されます。読み取りのパフォーマンスの問題の解決にのみ使用されます。予約済みのフラッシュ容量を他のオブジェクトが使用することはできません。予約されていないフラッシュはすべてのオブジェクトで適正に共有されます。デフォルト値: 0%、最大値: 100%。
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = 許容されるプライマリ レベルの障害数
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = ストレージ オブジェクトが許容できるホスト、ディスク、ネットワークのいずれかの障害の回数を定義します。障害の許容方法がミラーリング:「n」回の障害を許容する場合、「n+1」個のオブジェクトのコピーが作成され、ストレージを提供する「2n+1」台のホストが必要です (フォルト ドメインを構成する場合は、ストレージを提供するホストを含む「2n+1」個のフォルト ドメインが必要です)。障害の許容方法がイレイジャ コーディング: 1 回の障害を許容する場合、4 台のホスト (またはフォルト ドメイン) が必要です。2 回の障害を許容する場合、6 台のホスト (またはフォルト ドメイン) が必要です。注: フォルト ドメインに含まれないホストは、それ自体のシングルホスト フォルト ドメインとしてカウントされます。デフォルト値: 1、最大値: 3。
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = 許容されるセカンダリ レベルの障害数
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = フォルト ドメイン内でストレージ オブジェクトが許容できるホスト、ディスク、ネットワークのいずれかの障害の回数を定義します。障害の許容方法がミラーリング:「n」回の障害を許容する場合、フォルト ドメイン内で「n+1」個のオブジェクトのコピーが作成され、ストレージを提供する「2n+1」台のホストが必要です。障害の許容方法がイレイジャ コーディング: 1 回の障害を許容する場合、4 台のホストが必要です。2 回の障害を許容する場合、6 台のホストが必要です。デフォルト値: 1、最大値: 3。
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = クラスタ構成がデュアル ホスト ミラーリングの場合に許容されるセカンダリ レベルの障害の範囲
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = 許容されるセカンダリ レベルの障害の範囲 (ホストまたはディスク) を定義します。クラスタ構成がデュアル ホスト ミラーリングで、この属性が「ディスク」に設定されている場合、ディスク グループを使用した複製は、許容されるセカンダリ レベルの障害に応じて実行されます
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = ホストベースの第 2 レベル保護
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = 第 2 レベル保護は、許容されるセカンダリ レベルの障害に応じてホストを使用する複製です
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = デュアル ホスト ミラーリング クラスタのディスクベースの第 2 レベル保護
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = 第 2 レベル保護は、デュアル ホスト ミラーリング クラスタで許容されるセカンダリ レベルの障害に応じてディスク グループを使用する複製です
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = データのローカリティ
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = データの場所を指定します。ストレッチ クラスタの場合は優先フォルト ドメインまたは非優先フォルト ドメインのいずれかです。または、[ホストに限定] に設定して、仮想マシンのフォルダと VMDK を仮想マシンを作成したホストに固定します。このポリシーは許容されるプライマリ レベルの障害数が 0 に設定されたオブジェクトに対してのみ有効です。デフォルト値: なし
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = なし
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = なし。
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = 優先フォルト ドメイン (ストレッチ クラスタ)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = 優先フォルト ドメイン (ストレッチ クラスタ)。
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = 非優先フォルト ドメイン (ストレッチ クラスタ)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = 非優先フォルト ドメイン (ストレッチ クラスタ)。
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = ホストに限定
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = ホストに限定。
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = 強制プロビジョニング
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = このオプションが「はい」の場合、クラスタ内で現在使用可能なリソースでストレージ ポリシーで指定されたポリシーを満たすことができない場合でもオブジェクトがプロビジョニングされます。リソースが使用可能になった場合、vSAN はオブジェクトが準拠状態になるように試行します。デフォルト値: いいえ。
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = オブジェクト スペースの予約 (%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = 仮想マシンのプロビジョニング時に予約されるストレージ オブジェクトの論理サイズの割合 (シック プロビジョニング)。残りのストレージ オブジェクトはシン プロビジョニングされます。デフォルト値: 0%、最大値: 100%。
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = オブジェクトの IOPS 制限
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = ディスクの IOPS 制限を定義します。IOPS は重み付けされたサイズを使用して I/O の数として計算されます。デフォルトでは、システムは基本サイズである 32KB を使用し、64KB I/O は 2 I/O を意味します。注: IOPS の計算では読み取りと書き込みは同等であるとみなされ、キャッシュ ヒット率またはシーケンスは考慮されません。ディスクの IOPS が制限値を超えると I/O が調整されます。制限値を 0 にした場合、I/O に上限は設定されません。デフォルト値: 0。
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = オブジェクト チェックサムの無効化
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = このオプションが「はい」の場合、オブジェクトでチェックサム情報が計算されません。デフォルト値: いいえ。
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = 障害の許容方法
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = 障害を許容する方法を定義します。RAID-1 はミラーを使用して障害の許容を達成します。これはパフォーマンスの点ですぐれています。RAID-5/6 はパリティ ブロックを使用して障害の許容を達成します。これは容量の効率の点ですぐれています。RAID-5/6 はオールフラッシュでのみ利用可能で、許容する障害の数が 1 または 2 に設定されている場合のみ有効です。1 の値は RAID-5 構成を意味し、2 の値は RAID-6 構成を意味します。デフォルト値: RAID-1。
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID-1 (ミラーリング) - パフォーマンス
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID-1 (ミラーリング) - パフォーマンス。
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID-5/6 (イレージャ コーディング) - 容量
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID-5/6 (イレージャ コーディング) - 容量。
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = 優先されるバッキング ストレージのタイプ
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = vSAN オブジェクトのコンポーネントを配置するためにどのタイプのバッキング ストレージを選択するかを指定します。vSAN のバッキング ストレージのタイプにはハイブリッドとオールフラッシュがあります。「ハイブリッド」を指定すると、オブジェクトのコンポーネントはハイブリッド ディスク グループにのみ配置されます。「オールフラッシュ」を指定すると、オブジェクトのコンポーネントはオールフラッシュ ディスク グループにのみ配置されます。デフォルト値は「任意」で、配置する場所は vSAN が決定します。
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = ネイティブ スナップショットを使用
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = ネイティブ スナップショットを作成する場合は、この制約を使用します。ポリシーにデータ保護に関する制約がある場合、この値は「true」にオーバーライドされます。デフォルト値: false。
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = ローカル データ保護 (プライマリ ストレージ)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = 現在のポリシーを持つ仮想マシンは、アプリケーション レベルの障害から保護するために定期的にスナップショットを作成します。これらのスナップショットは vSAN ストレージに保存され、目標復旧時間 (RTO) リカバリの迅速化および短縮を促進します。
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = スナップショットの頻度 (目標復旧ポイント)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = スナップショットを作成する頻度。値の単位は分です。デフォルト値: 60 分、最大値: 30 日。
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = 一定回数のスナップショットのアプリケーションに一貫性を持たせる
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = アプリケーションの一貫したスナップショットがあると、アプリケーションにデータ保護を適切に実行できます。アプリケーションの一貫したスナップショットを取得すると、追加のアプリケーション リソースが使用される可能性があります。デフォルトは 0 で、範囲は 0 ～ 30 です。
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = 保持するスナップショットの数
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = vSAN ストレージにローカルで保持するスナップショットの合計数。新しいスナップショットが作成されると、最も古いものから指定の保持数に基づいて削除されます。デフォルト値: 10、最大値: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = アーカイブ保護
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = 仮想マシンにアーカイブ保護を行います。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = 静止スナップショットのみをアーカイブ
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = 静止スナップショットのみをアーカイブします。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = 「M 番目」のスナップショットごとにアーカイブ
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = 「M」番目のスナップショットのみをアーカイブします。ユーザーが静止スナップショットのみをアーカイブするオプションを選択した場合、「M」番目の静止スナップショットごとにアーカイブされます。デフォルト値の 0 は、アーカイブ ストアへのコピーが無効なことを示します。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = 保持する直近のリストア ポイントの数 (X)
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = このパラメータは、1 時間おき (Xh)、毎日 (Xd), 毎週 (Xw)、および毎月 (Xm) の保持ルールに加えて、最近のアーカイブ スナップショットを保持する数を定義します。保持ポリシーは (X + Xh + Xd + Xw + Xm) <= 100 によって制限されます。デフォルト値: 1、最大値: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = 1 時間おきに保持するリストア ポイントの数 (Xh)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = 1 時間おきに保持するリストア ポイントの数。デフォルト値の 0 は、1 時間おきのスナップショットが不要なことを示します。1 時間おきのスナップショットは、各時間の 00 分 (UTC) 以降の最初のスナップショットです。デフォルト値: 0、最大値: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = 毎日保持するリストア ポイントの数 (Xd)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = 毎日保持するリストア ポイントの数。デフォルト値の 0 は、毎日のスナップショットが不要なことを示します。毎日のスナップショットは、深夜 0 時 (UTC) 以降の最初のスナップショットです。デフォルト値: 0、最大値: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = 毎週保持するリストア ポイントの数 (Xw)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = 毎週保持するリストア ポイントの数。デフォルト値の 0 は、毎週のスナップショットが不要なことを示します。毎週のスナップショットは、日曜日深夜 0 時 (UTC) 以降の最初のスナップショットです。デフォルト値: 0、最大値: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = 毎月保持するリストア ポイントの数 (Xm)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = 毎月保持するリストア ポイントの数。デフォルト値の 0 は、毎月のスナップショットが不要なことを示します。毎月のスナップショットは、月末の深夜 0 時 (UTC) 以降の最初のスナップショットです。デフォルト値: 0、最大値: 100。
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = リモート保護
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = 仮想マシンにリモート レプリケーション保護を行います。
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = リモート保護の目標復旧ポイント (分)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = リモート保護の目標復旧ポイント。値は分単位です。デフォルト値: 30、最小値: 5、最大値: 1440。
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = 保持するリモート インスタンスの数
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = リモート サイトに保持するスナップショット インスタンスの数。デフォルト値: 1、最小値 1、最大値: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = リモート ポリシー タグ
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = リモート レプリカ仮想マシン ストレージ ポリシーとの一致用タグです。
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = データ サービス
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = 仮想マシンのデータ サービス ポリシー
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = 容量効率
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = vSAN データストアの容量効率の要件
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = 保存データの暗号化
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = vSAN データストアの保存データの暗号化の要件
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = デデュープと圧縮
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = デデュープと圧縮の vSAN データストアにが必要です
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = 圧縮のみ
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = 圧縮のみの vSAN データストアが必要です
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = 容量効率なし
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = 圧縮と重複排除の両方を無効にした vSAN データストアが必要です
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = オブジェクト圧縮の無効化
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = このオプションを「はい」に設定すると、ストレージ デバイスでオブジェクトは圧縮されません。デフォルト値は「いいえ」です。

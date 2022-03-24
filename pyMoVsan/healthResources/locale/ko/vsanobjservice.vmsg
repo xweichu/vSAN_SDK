@@ -1,0 +1,16 @@
+##############################################################
+# Copyright (C) 2021 VMware, Inc.  All rights reserved. -- VMware Confidential
+##############################################################
+#
+# VSAN object service related #
+com.vmware.vsan.object.type.other.desc = 알 수 없는 개체 유형
+com.vmware.vsan.object.type.statsdb.desc = 성능 관리 개체
+com.vmware.vsan.object.type.iscsihome.desc = iSCSI 홈 개체
+com.vmware.vsan.object.type.iscsitarget.desc = iSCSI 대상 개체
+com.vmware.vsan.object.type.iscsilun.desc = iSCSI LUN
+com.vmware.vsan.object.type.fileshare.desc = 파일 공유
+com.vmware.vsan.object.type.fsroot.desc = 파일 서비스 루트 파일 시스템
+com.vmware.vsan.object.type.haMetadataObject.desc = vSphere HA 메타데이터 개체
+com.vmware.vsan.object.type.fcdNamespace.desc = 향상된 가상 디스크 네임스페이스
+com.vmware.vsan.object.type.fcdCatalogNamespace.desc = 향상된 가상 디스크 카탈로그 네임스페이스
+com.vmware.vsan.object.type.fcdSnapshot.desc = {fcdName}-스냅샷

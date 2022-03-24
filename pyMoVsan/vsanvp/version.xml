@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vasa-provider>
+   <supported-versions>
+      <version id="4" serviceLocation="/vsanHealth/" vmomiServerVersion="newest"/>
+   </supported-versions>
+</vasa-provider>
+

@@ -1,0 +1,115 @@
+/* Copyright 2020-2021 VMware, Inc. All rights reserved. -- VMware Confidential */
+
+:root {
+   --vsan-main-background-color: rgb(27, 42, 50);
+   --vsan-background-color: rgb(34, 52, 60);
+   --vsan-background-color-hover: #29414e;
+   --vsan-background-color-button-hover: #384850;
+   --vsan-background-color-hover-fault-domains: #29414e;
+   --vsan-background-color-selected: #324f61;
+   --vsan-border-color: #485764;
+   --vsan-busy-backdrop-background-color: rgba(0, 0, 0, .5);
+   --vsan-color: #adbbc4;
+   --vsan-font-color-emphasize: #adbbc4;
+   --vsan-link-color: #89cbdf;
+   --vsan-link-color-hover: #57c7ea;
+   --vsan-validation-text-color: rgb(0, 0, 0);
+   --vsan-validation-background-color: rgb(245, 79, 71);
+   --vsan-clarity-card-separator-color: #0e161b;
+   --vsan-status-success-bg-color: #48960C;
+   --vsan-status-success-details-color: #85C81A;
+   --vsan-status-success-border-color: #DFF0D0;
+   --vsan-status-info-bg-color: #49afd9;
+   --vsan-status-info-details-color: #49afd9;
+   --vsan-status-info-border-color: #e1f1f6;
+   --vsan-status-info-inner-color: #e1f1f6;
+   --vsan-status-warning-bg-color: #EDB200;
+   --vsan-status-warning-details-color: #FDD006;
+   --vsan-status-warning-border-color: #FFFCE8;
+   --vsan-status-error-bg-color: #F52F22;
+   --vsan-status-error-details-color: #F89997;
+   --vsan-status-error-border-color: #FFF0EE;
+   --vsan-status-unknown-bg-color: #CCCCCC;
+   --vsan-status-unknown-bg-secondary-color: #565656;
+   --vsan-status-unknown-details-color: #DDDDDD;
+   --vsan-status-unknown-border-color: #FAFAFA;
+   --vsan-gray-color: #FAFAFA;
+   --vsan-status-details-color: #19242B;
+   --vsan-status-info-border-color: #eaedf0;
+   --vsan-table-row-border-color: #495865;
+   --vsan-copy-to-clipboard-icon: url(data:image/svg+xml;base64,PHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaGFzLXNvbGlkIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgMzYgMzYiIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgIDx0aXRsZT5jb3B5PC90aXRsZT4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI2ZmZiIgY2xhc3M9ImNsci1pLW91dGxpbmUgY2xyLWktb3V0bGluZS1wYXRoLTEiIGQ9Ik0yOS41LDdoLTE5QTEuNSwxLjUsMCwwLDAsOSw4LjV2MjRBMS41LDEuNSwwLDAsMCwxMC41LDM0aDE5QTEuNSwxLjUsMCwwLDAsMzEsMzIuNVY4LjVBMS41LDEuNSwwLDAsMCwyOS41LDdaTTI5LDMySDExVjlIMjlaIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNmZmYiIGNsYXNzPSJjbHItaS1vdXRsaW5lIGNsci1pLW91dGxpbmUtcGF0aC0yIiBkPSJNMjYsMy41QTEuNSwxLjUsMCwwLDAsMjQuNSwySDUuNUExLjUsMS41LDAsMCwwLDQsMy41djI0QTEuNSwxLjUsMCwwLDAsNS41LDI5SDZWNEgyNloiPjwvcGF0aD4KICAgICAgICA8L3N2Zz4=);
+
+   /* Clarity v4 colors in order to resolve some accessibility issues */
+   --clarity-v4-label-info-text-color: #ffffff;
+   --clarity-v4-label-info-background-color: #0f5e80;
+   --clarity-v4-label-info-border-color: #0f5e80;
+   --clarity-v4-label-success-text-color: #ffffff;
+   --clarity-v4-label-success-background-color: #205522;
+   --clarity-v4-label-success-border-color: #205522;
+   --clarity-v4-label-warning-text-color: #ffffff;
+   --clarity-v4-label-warning-background-color: #816709;
+   --clarity-v4-label-warning-border-color: #816709;
+   --clarity-v4-label-danger-text-color: #ffffff;
+   --clarity-v4-label-danger-background-color: #862d31;
+   --clarity-v4-label-danger-border-color: #862d31;
+   --clarity-v4-badge-info-text-color: #000000;
+   --clarity-v4-badge-info-background-color: #4aaed9;
+   --clarity-v4-badge-success-text-color: #000000;
+   --clarity-v4-badge-success-background-color: #61a220;
+   --clarity-v4-badge-warning-text-color: #000000;
+   --clarity-v4-badge-warning-background-color: #ff9c33;
+   --clarity-v4-badge-danger-text-color: #000000;
+   --clarity-v4-badge-danger-background-color: #862d31;
+   --vsan-focus-outline-color: #49aeda;
+   --vsan-focus-outline-selected-row-color: #1487b8;
+
+   /* CUSTOM PAGE COLORS */
+
+   /* Skyline health */
+   --health-test-category-color: #FFFFFF;
+   --health-historical-green-item-stroke: #DFF0D0;
+   --health-historical-green-item-fill: #A9DB1D;
+   --health-historical-green-item-hover-fill: #CEF06F;
+   --health-historical-green-item-active-fill: #9DCF10;
+   --health-historical-blue-item-stroke: #FFFFFF;
+   --health-historical-blue-item-fill: #79C6E6;
+   --health-historical-blue-item-hover-fill: #C8EAF8;
+   --health-historical-blue-item-active-fill: #49AEDA;
+   --health-historical-yellow-item-stroke: #FFFAE5;
+   --health-historical-yellow-item-fill: #EDB200;
+   --health-historical-yellow-item-hover-fill: #FAD666;
+   --health-historical-yellow-item-active-fill: #DDA600;
+   --health-historical-red-item-stroke: #FFF2F0;
+   --health-historical-red-item-fill: #F89997;
+   --health-historical-red-item-hover-fill: #FFD3D2;
+   --health-historical-red-item-active-fill: #FB7A77;
+
+    /* IO Diagnostics */
+    --io-diagnostics-danger-color: #F54F47;
+
+   /* Icon colors */
+   --icon-fill-color: #FAFAFA;
+
+   /* CUSTOM SVG */
+
+   --illustrated-message-missing-data: url('robot-no-data-dark.d9198519798750839ae3.svg');
+   --missing-selection-pointer: url('arrow-cursor-dk.0db9693aa6bc73edf653.svg');
+   --illustrated-message-filter-no-result: url('filter-no-results-dk.4ea3989dc89ade6f443f.svg');
+   --transient-space-capacity-legend: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDMwMCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXR0ZXJuIGlkPSJkaWFnb25hbEhhdGNoIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KICAgICAgPHBhdGggc3Ryb2tlPSIjNDlhZmQ5IiBzdHJva2Utd2lkdGg9IjEiIGQ9Ik0wLDAgbDQsNCBNMywtMSBsMiwyIE0tMSwzIGwyLDIiLz4KICAgIDwvcGF0dGVybj4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2RpYWdvbmFsSGF0Y2gpIi8+Cjwvc3ZnPg==);
+   --access-denied-robot: url('robot-access-denied-dark.139ea0dd033847c99bec.svg');
+   --file-service-introduction: url('file-service-architecture-dark.707171737910e3798766.svg');
+   --io-diagnostics-initial: url('io-diagnostics-initial-dark.104afb75bd0bd38cf7b5.svg');
+
+   /* Custom PNG */
+   --not-responding-browser: url('not_responding_browser.3a4110a41f28999fe085.png');
+   --cns-volumes-about: url('cns-what-is-this-en.d4fd5a320d458a8684a5.svg');
+}
+
+::-webkit-scrollbar {
+   background: var(--vsan-background-color-selected);
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--vsan-background-color-hover);
+}
+

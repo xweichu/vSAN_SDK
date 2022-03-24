@@ -1,0 +1,28 @@
+# en_US resources
+signature= "sIgNaTuRe"
+
+# vSAN DP is also sharing same root category, need to make them consistent:
+#   <VMTREE>/bora/vsan/dp/common/L10N/extLocale/en/auth.vmsg
+privilege.Vsan.label = "vSAN"
+privilege.Vsan.summary = "VMware vSAN"
+
+privilege.Vsan.Cluster.label = "叢集"
+privilege.Vsan.Cluster.summary = "vSphere 叢集"
+
+privilege.Vsan.Cluster.ShallowRekey.label = "ShallowRekey"
+privilege.Vsan.Cluster.ShallowRekey.summary = "輪替 vSAN 叢集的金鑰加密金鑰，而無需重新加密所有資料"
+
+privilege.Cns.label = "CNS"
+privilege.Cns.summary = "VMware CNS"
+
+privilege.Cns.Searchable.label = "可搜尋"
+privilege.Cns.Searchable.summary = "可以使用所有 CNS 可搜尋的 API"
+
+privilege.vSphereDataProtection.label = "vSphere Data Protection"
+privilege.vSphereDataProtection.summary = "vSphere Data Protection"
+
+privilege.vSphereDataProtection.Recovery.label = "復原"
+privilege.vSphereDataProtection.Recovery.summary = "可以復原受到保護的實體 (例如虛擬機器)"
+
+privilege.vSphereDataProtection.Protection.label = "保護"
+privilege.vSphereDataProtection.Protection.summary = "可以保護受到保護的實體 (例如虛擬機器)"

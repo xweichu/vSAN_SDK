@@ -1,0 +1,113 @@
+#
+# vSAN Build Recommendation messages
+#
+com.vmware.vsan.vum.enum.supported = Hardware unterstützt
+com.vmware.vsan.vum.enum.sameSupport = Hardwareunterstützung nicht schlechter
+com.vmware.vsan.vum.enum.lessSupport = Hardwareunterstützung schlechter
+com.vmware.vsan.vum.enum.incompleteSupport = Hardware teilweise unterstützt
+com.vmware.vsan.vum.enum.noSupport = Hardware nicht unterstützt
+com.vmware.vsan.vum.enum.vcNoSupport = vCenter nicht unterstützt
+com.vmware.vsan.vum.enum.incompatibleBuildType = Inkompatibler Buildtyp
+com.vmware.vsan.vum.enum.missingBuild = Build fehlt in Versionsdatenbank
+com.vmware.vsan.vum.enum.sameSupportNotOnHcl = Die vorhandene Version und die empfohlene Version werden beide nicht von HCL unterstützt
+com.vmware.vsan.vum.enum.invalidEsxUpgradePath = Kein offiziell unterstützter Upgrade-Pfad
+com.vmware.vsan.vum.enum.unknownCustomIsoVendor = vSAN-Cluster weist ISO(s) von nicht unterstütztem Anbieter auf
+com.vmware.vsan.vum.enum.multipleCustomIsoVendor = vSAN-Cluster weist ISO(s) von mehreren Anbietern auf
+com.vmware.vsan.vum.enum.preferenceNotMatch = Nicht übereinstimmende Voreinstellungen
+com.vmware.vsan.vum.enum.customIsoNotAvailable = Benutzerdefinierte ISO-Datei nicht verfügbar
+com.vmware.vsan.vum.enum.noRecommendation = Keine Empfehlung
+com.vmware.vsan.vum.enum.latestPatch = Patches und Aktualisierungen für aktuelle ESXi-Version einschließen
+com.vmware.vsan.vum.enum.latestRelease = Beinhaltet Upgrades auf neue ESXi-Versionen
+com.vmware.vsan.vum.enum.incompatibleDiskGroupVersion = vSAN-Cluster verfügt über veraltete vSAN-Festplattengruppen
+com.vmware.vsan.vum.enum.sourceReleaseInfoNotFound = Versionsdetails nicht verfügbar
+
+com.vmware.vsan.vum.note.notRecommended = Die Version(en) {evalRelease} wird bzw. werden nicht empfohlen, da Hardware in geringerem Umfang unterstützt wird als bei der aktuell installierten Version. Nicht unterstützte(r) Controller: {controllerLostSupport}.
+com.vmware.vsan.vum.note.recommended = {evalRelease} wird empfohlen, da im Gegensatz zu {existingRelease} die gesamte Hardware unterstützt wird
+com.vmware.vsan.vum.note.vcNotSupported = Die Version(en) {evalRelease} wird bzw. werden nicht empfohlen, da vCenter {vcVersion} ein Upgrade einiger Hosts in diesem Cluster auf {evalRelease} nicht unterstützt.
+com.vmware.vsan.vum.note.notFullySupport = HINWEIS: Gemäß vSAN HCL wird die Hardware nicht (vollständig) in der ausgewählten Version ({chosenRelease}) unterstützt. Sie wurde dennoch ausgewählt, da die Unterstützung nicht schlechter als mit der derzeit installierten Version ist.
+com.vmware.vsan.vum.note.fullySupport = Die ausgewählte Version {chosenRelease} wird auf der Hardware vollständig unterstützt. Es handelt sich um die neueste empfohlene vSAN-Version.
+com.vmware.vsan.vum.note.notSupported = Gemäß vSAN HCL wird die Hardware in der neuesten Version ({chosenRelease}) und in der derzeit installierten Version nicht unterstützt. Nicht unterstützte(r) Controller: {controllerLostSupport}.
+com.vmware.vsan.vum.note.incompatibleBuildType = {chosenRelease} wird nicht empfohlen, da Quellbuildtyp {srcType} inkompatibel ist.
+com.vmware.vsan.vum.note.mixVersionInstalled = Cluster weist eine Mischung installierter Versionen auf: {releases}
+com.vmware.vsan.vum.note.mixBldTypeInstalled = Cluster weist eine Mischung installierter Buildtypen auf: {buildTypes}
+com.vmware.vsan.vum.note.upgradeToHclEnabledVersion = vSAN kann die HCL-Kompatibilität der Hardware nicht bewerten, da die installierte ESXi-Version älter als 6.0 U2 ist. vSAN schlägt ein Upgrade auf die neueste ESXi-Version vor, Benutzer sollten jedoch manuell prüfen, ob vorher unterstützte Hardware in der neuesten Version weiterhin unterstützt wird.
+com.vmware.vsan.vum.note.driverManualUpgradeNeeded = Treiber {driverName} für Gerät ({device}) weist die neuere vSAN HCL-unterstützte Version {version} auf, für die ein manuelles Upgrade durchgeführt werden muss.
+com.vmware.vsan.vum.note.noDriverUpgradeNeeded = In diesem Fall ist kein Treiber-Upgrade/keine Treiberaktualisierung beteiligt.
+com.vmware.vsan.vum.note.updateTime = Letzte Aktualisierung: {updateTime}.
+com.vmware.vsan.vum.note.invalidEsxUpgradePath = Upgrade-Pfad von {existingRelease} bis {evalRelease} wird offiziell nicht unterstützt.
+com.vmware.vsan.vum.note.multipleCustomIsoVendor = vSAN-Cluster weist ISO(s) von mehreren Anbietern {vendors} auf.
+com.vmware.vsan.vum.note.unknownCustomIsoVendor = vSAN-Cluster weist ISO(s) von nicht unterstützten {vendors} auf.
+com.vmware.vsan.vum.note.customIsoNotAvailable = Die Version(en) {evalRelease} wird bzw. werden nicht empfohlen, weil die benutzerdefinierte ISO-Datei für den Anbieter {vendors} über die vSAN-Build-Empfehlungs-Engine nicht verfügbar ist.
+com.vmware.vsan.vum.note.preferenceNotMatch = Version(en) {evalRelease} nicht empfohlen, da die für Cluster {cluster} festgelegte Voreinstellung {preference} ist.
+com.vmware.vsan.vum.note.incompatibleDiskGroupVersion = Die Version(en) {evalRelease} wird bzw. werden für Cluster {cluster} nicht empfohlen, da der Host {hostsHasObsoleteDgStr} über veraltete vSAN-Festplattengruppe(n) verfügt. Lösen Sie zuerst eine Konvertierung des Festplattenformats aus.
+com.vmware.vsan.vum.note.failed = Generieren von Empfehlungen fehlgeschlagen. Navigieren Sie zur Seite „vSAN-Integrität“, um weitere Informationen zu erhalten.
+com.vmware.vsan.vum.note.usage = Hinweis: Es wird empfohlen, die System-Baselinegruppe als Gruppe zu standardisieren.
+com.vmware.vsan.vum.note.sourceReleaseInfoNotFound = Es wird keine Empfehlung generiert, da keine {existingRelease}-Versionsdetails für VUM verfügbar sind.
+com.vmware.vsan.vum.note.upgradeWitnessFirst = Bei diesem Cluster handelt es sich um einen ausgeweiteten Cluster. Bitte führen Sie zuerst ein Upgrade des Zeugenhosts {witnessHost} durch.
+
+com.vmware.vsan.vum.patchName = Von vSAN empfohlener Patch für die Anwendung über {chosenRelease}: {patchIds}
+com.vmware.vsan.vum.upgradeBaselineWithPatch = {upgradePatchName} mit von vSAN empfohlenen Patches {patchIds}
+
+com.vmware.vsan.vum.witnessBaselineGroupName = vSAN-Zeugenhost {hostname} ({release})
+com.vmware.vsan.vum.witnessBaselineGroupDesc = Diese Baselinegruppe wird gemäß der Empfehlung folgender Cluster generiert: {clusterNames}.
+
+#
+# vSAN Build Recommendation health check
+#
+com.vmware.vsan.health.test.vum = vSAN-Build-Empfehlung
+
+com.vmware.vsan.health.test.vum.vumconfig =  Die Empfehlung der vSAN-Build-Empfehlungs-Engine basiert auf dem VMware-Kompatibilitätshandbuch und VMware-Versionsmetadaten. Für Build-Empfehlungen muss außerdem der VMware Update Manager-Dienst verfügbar sein, und es sind eine Internetverbindung und gültige my.vmware.com-Anmeldedaten erforderlich. Diese Integritätsprüfung stellt sicher, dass diese Abhängigkeiten erfüllt sind und die Empfehlungs-Engine ordnungsgemäß funktioniert.
+com.vmware.vsan.health.test.vum.vumconfig.short = Prüft, ob die Build-Empfehlungs-Engine alle Abhängigkeiten erfüllt und erwartungsgemäß funktioniert
+com.vmware.vsan.health.test.vum.vumconfig.testName = Integrität der vSAN-Build-Empfehlungs-Engine
+
+com.vmware.vsan.health.test.vum.vumconfig.testResult.label = Probleme
+com.vmware.vsan.health.test.vum.vumconfig.testResult.columnIssue = Informationen zu den Problemen
+
+com.vmware.vsan.health.test.vum.releasecataloguptodate = Überprüft das Alter des vSAN-Versionskatalogs, der für die vSAN-Build-Empfehlung verwendet wird. Zeigt eine Warnung oder einen Fehler an, wenn er älter als 90 bzw. 180 Tage ist. Der vSAN-Versionskatalog wird aktualisiert, wenn neue Versionen oder kritische Patches vorliegen. Aus diesem Grund sollten Sie darauf achten, dass die lokale Kopie auf dem aktuellen Stand ist.
+com.vmware.vsan.health.test.vum.releasecataloguptodate.short = Überprüft das Alter des vSAN-Versionskatalogs.
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testName = vSAN-Versionskatalog aktuell
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.label = Informationen zum vSAN-Versionskatalog
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.columnEntity = Element
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.columnTime = Zeit in UTC
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.rowCurrentTime = Aktuelle Uhrzeit
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.rowCatalogReleaseTime = Zuletzt aktualisierte lokale Kopie der Versionsdatenbank
+
+com.vmware.vsan.health.test.vum.vumDisabled = VMware Update Manager (VUM) ist deaktiviert oder nicht installiert. Stellen Sie sicher, dass VUM installiert ist und ordnungsgemäß funktioniert.
+com.vmware.vsan.health.test.vum.vumNotResponsive = VMware Update Manager (VUM) reagiert nicht. Stellen Sie sicher, dass der VUM-Dienst verfügbar ist und ordnungsgemäß funktioniert.
+com.vmware.vsan.health.test.vum.metadataOutdated = vSAN-Versionsmetadaten sind veraltet. Stellen Sie sicher, dass eine Internetverbindung besteht und vSAN Zugriff auf die neuesten Versionsmetadaten von VMware hat.
+com.vmware.vsan.health.test.vum.metadataNotFound = vSAN-Versionsmetadaten sind nicht verfügbar. Vergewissern Sie sich, dass eine Internetverbindung besteht, oder laden Sie den Versionskatalog manuell hoch.
+com.vmware.vsan.health.test.vum.isoDepotCookieNotSet = my.vmware.com-Anmeldedaten sind abgelaufen oder nicht festgelegt. Baselines sollten innerhalb von Minuten nach dem Validieren der Anmeldedaten generiert werden.
+com.vmware.vsan.health.test.vum.isoDepotAuthenticationFailed = my.vmware.com-Authentifizierung fehlgeschlagen. Baselines sollten innerhalb von Minuten nach dem Validieren der Anmeldedaten generiert werden.
+com.vmware.vsan.health.test.vum.createBaselineFailed = Unerwarteter VMware Update Manager (VUM)-Baseline-Erstellungsfehler. Detaillierte Informationen finden Sie in den vSAN- und VUM-Protokollen.
+com.vmware.vsan.health.test.vum.isoDepotIsDown = VMware-ISO-Download-Site ist nicht bereit.
+com.vmware.vsan.health.test.vum.ISONotAvailable = Erforderliche ISO-Datei {filename} wurde nicht auf den VUM-Server hochgeladen.
+com.vmware.vsan.health.test.vum.OfflineBundleNotAvailable = Erforderliche Offline-Paketdatei {filename} kann nicht auf den VUM-Server hochgeladen werden.
+com.vmware.vsan.health.test.vum.invalidReleaseCatalog = Die empfohlene Baseline für {cluster} konnte nicht generiert werden, da der Versionskatalog {release} nicht enthält. Aktualisieren Sie den Versionskatalog und versuchen Sie es erneut.
+
+com.vmware.vsan.health.test.vum.vumrecommendation = vSAN-Build-Empfehlung. Dieser ESXi-Build wird von vSAN als am besten geeignet empfohlen. Berücksichtigt wurden die Hardware, ihre Kompatibilität gemäß dem VMware-Kompatibilitätshandbuch und die verfügbaren Versionen von VMware.
+com.vmware.vsan.health.test.vum.vumrecommendation.short =  vSAN-Build-Empfehlung basierend auf den verfügbaren Versionen und dem VCG-Kompatibilitätshandbuch
+com.vmware.vsan.health.test.vum.vumrecommendation.testName = vSAN-Build-Empfehlung
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.label = vSAN-Build-Empfehlung
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.columnCluster = Cluster
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.columnRecommendation = Empfehlung
+com.vmware.vsan.health.test.vum.vumrecommendation.recommendationAvailable = Für Cluster {cluster} gibt es eine empfohlene Version: {release}
+com.vmware.vsan.health.test.vum.vumrecommendation.patchRecommendationAvailable = Für Cluster {cluster} steht ein empfohlenes Patch zur Verfügung.
+com.vmware.vsan.health.test.vum.vumrecommendation.driverRecommendationAvailable = Für Cluster {cluster} steht ein empfohlener Treiber zur Verfügung.
+
+com.vmware.vsan.vum.error.incorrectCredential = Falsche my.vmware.com-Anmeldedaten. Baselines sollten innerhalb von Minuten nach dem Validieren der Anmeldedaten generiert werden.
+com.vmware.vsan.vum.error.isoDepotIsDown = Die VMware-ISO-Download-Site ist nicht bereit, versuchen Sie es später erneut.
+com.vmware.vsan.vum.error.incorrectReleaseDb = Falsches Versionskatalogformat, JSON-Datei erwartet.
+com.vmware.vsan.vum.error.updateReleaseDbFailed = Versionskatalog konnte nicht aktualisiert werden.
+
+
+# FW checks
+com.vmware.vsan.health.test.hcl.fwrecommendation = vSAN-Firmware-Empfehlung. Dieser Firmware-Vorschlag basiert auf der aktuell auf dem Host installierten Softwareversion, der Hardwaretreiberversion und seiner Kompatibilität gemäß dem VMware-Kompatibilitätshandbuch.
+com.vmware.vsan.health.test.hcl.fwrecommendation.short = vSAN-Firmware-Empfehlung auf Basis·des VCG.
+com.vmware.vsan.health.test.hcl.fwrecommendation.testName = vSAN-Firmware-Versionsempfehlung
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.label = vSAN-Firmware-Versionsempfehlung
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnHost = Host
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnESXi = empfohlene ESXi-Version
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnRecommendation = empfohlene Firmware-Version
+com.vmware.vsan.health.test.hcl.fwrecommendation.recommendationAvailable = Host {host} benötigt Firmware-Update: {recommendations}
+
+com.vmware.vsan.fwUpgrade.error.fwBinaryNotFound = Erforderliche Firmware-Binärdatei {url} ist nicht vorhanden. Download erforderlich.

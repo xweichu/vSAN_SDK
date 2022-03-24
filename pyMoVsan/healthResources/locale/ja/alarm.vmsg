@@ -1,0 +1,391 @@
+signature = "sIgNaTuRe"
+
+#
+# Hardware compatibility Group 14
+#
+vsan.health.test.hcl.hcldbuptodate.label = "vSAN ハードウェア互換性アラーム「vSAN HCL DB の更新状態」"
+vsan.health.test.hcl.hcldbuptodate.summary = "HCL チェックに使用された VMware ハードウェア互換性ガイド データベースの古さをチェックします。90 日よりも古い場合やローカル HCL データベースにクラスタの ESXi バージョンが含まれていない場合は、警告が表示されます。180 日よりも古い場合には、エラーが表示されます。VMware 互換性ガイドは随時更新されているため、ローカル コピーを最新の状態に保つことが重要です。"
+
+vsan.health.test.hcl.autohclupdate.label = "vSAN ハードウェア互換性アラーム「vSAN HCL DB の自動更新」"
+vsan.health.test.hcl.autohclupdate.summary = "vSAN HCL データベースが VMware HCL リリース Web サイトから自動的にダウンロードおよび更新できることを確認します。VMware の公式 Web サイトへのインターネット アクセスを使用できない場合や、vSAN HCL データベース自動更新が有効になっていない場合、この健全性チェックは、サイレント健全性チェックのリストにデフォルトで記載され、スキップされたステータスを示します (ユーザーが手動でサイレント リストから削除した場合を除く)。それ以外の場合は、たとえば、VMware HCL リリースの Web サイトに接続できない、最新の HCL データベースをダウンロードできない、あるいはローカルの HCL データベースを更新できないといった他の原因で、HCL データベースを自動更新できない場合は、警告が表示されます。"
+
+vsan.health.test.hcl.controlleronhcl.label = "vSAN ハードウェア互換性アラーム「SCSI コントローラが VMware により認定済み」"
+vsan.health.test.hcl.controlleronhcl.summary = "ストレージの I/O コントローラについての情報が表示され、「VMware 互換性ガイド」でコントローラがサポートされていることを PCI ID に基づいて検証します。不一致がある場合は、VMware サポートにお問い合わせください。"
+
+vsan.health.test.hcl.nvmeidentifiable.label = "vSAN ハードウェア互換性アラーム「NVMe デバイスが識別可能」"
+vsan.health.test.hcl.nvmeidentifiable.summary = "PCI ID が vSAN クラスタ内の NVMe デバイスの 1 つと一致している vSAN VCG (VMware 互換性ガイド) のエントリが 1 つだけかどうか確認します。1 つだけの場合、vSAN HCL チェックで NVMe デバイスを識別できます。"
+
+vsan.health.test.hcl.nvmeonhcl.label = "vSAN ハードウェア互換性アラーム「VMware によって認定された NVMe デバイス」"
+vsan.health.test.hcl.nvmeonhcl.summary = "NVMe デバイスに関する情報を表示し、デバイスが vSAN VCG (VMware 互換性ガイド) で認定されているかどうか検証します。不一致がある場合は、VMware サポートにお問い合わせください。"
+
+vsan.health.test.hcl.controllerreleasesupport.label = "vSAN ハードウェア互換性アラーム「コントローラが ESXi リリースに対して VMware により認定済み」"
+vsan.health.test.hcl.controllerreleasesupport.summary = "ストレージの I/O コントローラ ドライバについての情報が表示されます。インストールされているドライバが、現行リリースの ESXi で対応するコントローラをサポートしているかどうかをチェックします。VMware 認定のコントローラのみがテスト対象です。"
+
+vsan.health.test.hcl.controllerdriver.label = "vSAN ハードウェア互換性アラーム「コントローラ ドライバが VMware により認定済み」"
+vsan.health.test.hcl.controllerdriver.summary = "コントローラが使用するドライバが VMware 互換性ガイドで認定済みとしてリストされているかどうかをチェックします。vSAN HCL 上の、現行リリースの ESXi に対して認定されているコントローラのみがテスト対象です。"
+
+vsan.health.test.hcl.hclhostbadstate.label = "vSAN ハードウェア互換性アラーム「ハードウェア情報取得中のホストの問題」"
+vsan.health.test.hcl.hclhostbadstate.summary = "ハードウェア情報の取得の試みに対し、ホストが切断されているか、無応答か、または応答に失敗したかどうかを確認します。ここでリストされたホストには、「VMware 互換性ガイド」を参照したチェックは実行されません。"
+
+vsan.health.test.hcl.controllerfirmware.label = "vSAN ハードウェア互換性アラーム「コントローラ ファームウェアが VMware により認定済み」"
+vsan.health.test.hcl.controllerfirmware.summary = "コントローラ ファームウェアが VMware 互換性ガイドで認定されているかどうかをチェックします。vSAN HCL 上の、現行リリースの ESXi に対して認定されているコントローラのみがテスト対象です。"
+
+vsan.health.test.hcl.controllerdiskmode.label = "vSAN ハードウェア互換性アラーム「コントローラ ディスク グループのモードが VMware により認定済み」"
+vsan.health.test.hcl.controllerdiskmode.summary = "vSAN ディスク グループのタイプ (オールフラッシュまたはハイブリッド) が、VMware 互換性ガイドに記載されている SCSI コントローラに対して認定済みかどうかを確認します。vSAN HCL 上の、現行リリースの ESXi に対して認定されているコントローラのみがテスト対象です。"
+
+vsan.health.test.hcl.pniclinkspeed.label = "vSAN ハードウェア互換性アラーム「物理 NIC のリンク速度が要件を満たしています」"
+vsan.health.test.hcl.pniclinkspeed.summary = "vSAN ホストで使用されるネットワーク インターフェイス カード (NIC) は、特定の要件を満たす必要があります。これらの NIC 要件では、ハイパーコンバージド環境でパケット ロスが 0.0001% を超えないことを前提としています。リンク速度が最小要件を満たすことができる NIC を使用することをお勧めします。そうしないと、vSAN パフォーマンスに大きな影響を及ぼすことがあります。"
+
+vsan.health.test.hcl.fwrecommendation.label = "vSAN ハードウェア互換性アラーム「vSAN ファームウェアのバージョンに関する推奨事項」"
+vsan.health.test.hcl.fwrecommendation.summary = "vSAN ファームウェアに関する推奨事項。これは、現在のホスト上のソフトウェアのバージョン、ハードウェア ドライバのバージョン、および VMware 互換性ガイドによる互換性に基づいたファームウェアに関する提案です。"
+
+vsan.health.test.physicaldisks.diskusage.label = "vSAN ハードウェア互換性アラーム「ストレージ コントローラのディスク使用率」"
+vsan.health.test.physicaldisks.diskusage.summary = "vSAN では、vSAN 以外のディスクが VMFS または Raw デバイス マッピング (RDM) に使用されている構成はサポートしていません。vSAN 健全性モニターで AskVMware KB を参照して、修正手順を確認してください。"
+
+vsan.health.test.hcl.mixedmode.label = "vSAN ハードウェア互換性アラーム「パススルーおよび RAID ディスクを使用するコントローラ」"
+vsan.health.test.hcl.mixedmode.summary = "コントローラ ディスク モード (パススルー/RAID) が混在している場合、ストレージ コントローラによって異なる方法でディスクが処理されます。これにより、特定の構成に影響する問題が別の構成にも影響を与えて、vSAN に悪影響をもたらす可能性があります。vSAN 健全性モニターで AskVMware KB を参照して、修正手順を確認してください。"
+
+vsan.health.test.hcl.h730.label = "vSAN ハードウェア互換性アラーム「LSI-3108 ベースのコントローラの vSAN 構成」"
+vsan.health.test.hcl.h730.summary = "LSI-3108 ベースのコントローラで vSAN を実行する場合の安定性を確保し、パフォーマンスを最適化するには、推奨される構成値をいくつか設定する必要があります。vSAN 健全性モニターで AskVMware KB を参照して、修正手順を確認してください。"
+
+vsan.health.test.hcl.mixedmodeh730.label = "vSAN ハードウェア互換性アラーム「lsi_mr3 ドライバを使用した Dell H730 コントローラ上の vSAN および VMFS データストア」"
+vsan.health.test.hcl.mixedmodeh730.summary = "VMware では、lsi_mr3 ドライバを使用して、vSAN ディスクと VMFS ボリュームが Dell H730 コントローラ上に共存している構成はサポートしていません。この問題を修正するには、vSAN ドライブを使用して、ESXi をディスクにインストールした後 (ESXi 起動ディスクのみ)、ローカルの起動デバイスから VMFS データストアを削除します。"
+
+vsan.health.test.hcl.controllercacheconfig.label = "vSAN ハードウェア互換性アラーム「RAID コントローラの構成」"
+vsan.health.test.hcl.controllercacheconfig.summary = "パススルーまたは RAID0 シングル ドライブ (SSD/HDD) を vSAN のソフトウェアレベルのキャッシュと最適に併用するには、vSAN に特定のコントローラレベルの設定が必要になります。vSAN 健全性モニターで AskVMware KB を参照して、コントローラを適切に設定するための詳細なキャッシュ設定と手順を確認してください。"
+
+vsan.health.test.hcl.vsanhpefwtest.label = "vSAN 健全性アラーム「HPE NVMe ソリッド ステート ドライブ - 緊急のファームウェア アップグレードが必要」"
+vsan.health.test.hcl.vsanhpefwtest.summary = "健全性テスト「HPE NVMe ソリッド ステート ドライブ - 緊急のファームウェア アップグレードが必要」の変更を監視するデフォルト アラーム"
+
+#
+# vSAN iSCSI target service Group 3
+#
+vsan.health.test.iscsi.iscsihomeobjectstatustest.label = "vSAN iSCSI ターゲット サービス アラーム「ホーム オブジェクト」"
+vsan.health.test.iscsi.iscsihomeobjectstatustest.summary = "ホーム オブジェクトは、vSAN iSCSI ターゲット サービスによって使用されるメタデータを保存します。このアラームでは以下の項目を検証します。ホーム オブジェクトが作成されており、システムに配置されている。ホーム オブジェクトが健全な状態で、ストレージ ポリシーに準拠している。ホーム オブジェクトが一意である。複数のホーム オブジェクトが存在する場合、クラスタのホストの一部が異なるホーム オブジェクトにアクセスする場合がある。ホーム オブジェクトのメタデータ ファイルが存在し、解析可能で、すべてのメタデータが適切に保存されている。"
+
+vsan.health.test.iscsi.iscsiservicenetworktest.label = "vSAN iSCSI ターゲット サービス アラーム「ネットワーク構成」"
+vsan.health.test.iscsi.iscsiservicenetworktest.summary = "クラスタ内のすべてのホストに、vSAN iSCSI ターゲット サービスで使用されるすべてのネットワーク インターフェイス (デフォルト インターフェイスを含む) が構成されている必要があります。同じ名前を持つすべてのネットワーク インターフェイスによって分散ポータルが形成されます。1 つまたは複数のホストにネットワーク インターフェイスが見つからない場合、vSAN iSCSI ターゲット サービスは正しく動作できません。"
+
+vsan.health.test.iscsi.iscsiservicerunningtest.label = "vSAN iSCSI ターゲット サービス アラーム「サービス ランタイム ステータス」"
+vsan.health.test.iscsi.iscsiservicerunningtest.summary = "クラスタのすべてのホストでサービスが有効になっているかどうかをチェックします。サービスがホストで有効になっていない場合は、esxcli vsan iscsi status set --enabled=true コマンドを実行します。または、編集アクション ([管理] > [設定] > [全般] > [vSAN iSCSI ターゲット サービス]) を使用して iSCSI ターゲット サービスを有効にすることができます。このアラームでは、以下のプロセスの健全性をチェックすることもできます。vitd はサービスを提供するために使用され、vitsafehd は VMDK のオープン状態を保持するために使用されます。vitd プロセスが実行されていない場合は、/etc/init.d/vitd start コマンドでプロセスを起動します。vitsafehd プロセスが起動していない場合は、/etc/init.d/vitd io_restart コマンドでプロセスを起動します。"
+
+#
+# Network Group 16
+#
+vsan.health.test.network.multicastsuspected.label = "vSAN ネットワーク アラーム「その他のチェックに基づくマルチキャスト評価」"
+vsan.health.test.network.multicastsuspected.summary = "このアラームは、vSAN の構成チェックとユニキャスト接続チェックにパスしても vSAN クラスタのパーティションが存在する場合に、マルチキャストの問題が発生する可能性を示します。アラームがトリガされると、さらに「アクティブなマルチキャスト接続のチェック」が実行されます。"
+
+vsan.health.test.network.multicastdeepdive.label = "vSAN ネットワーク アラーム「アクティブなマルチキャスト接続のチェック」"
+vsan.health.test.network.multicastdeepdive.summary = "このアラームでは、ある期間のクラスタ内のすべてのホストにあるマルチキャスト パケットを把握します。CMMDS プライマリ ハートビートを検出します。(パーティションごとの) vSAN/CMMDS プライマリに選択されたすべてのホストは、そのハートビートを毎秒 1 回送信します。このようなハートビートはマルチキャスト経由で送信され、正常な動作のためにクラスタ内のすべてのホストが受信する必要があります。ハートビートを送信しているホストと受信していないホストがある場合には、マルチキャストの構成に誤り (通常は物理ネットワーク) があることを示しています。"
+
+vsan.health.test.network.largeping.label = "vSAN ネットワーク アラーム「vSAN: MTU チェック (パケット サイズの大きい ping)」"
+vsan.health.test.network.largeping.summary = "各ホストから他のすべてのホストに、パケット サイズの大きい ping テストを実行します。基本的な接続チェックのアラームがトリガされていないときにこのアラームがトリガされた場合、vSAN ネットワークに MTU 構成エラーがあります。構成エラーの原因を追跡する必要があります。VMkernel アダプタ、仮想スイッチ、物理ネットワーク スイッチに原因がある可能性があります。"
+
+vsan.health.test.network.smallping.label = "vSAN ネットワーク アラーム「vSAN: 基本 (ユニキャスト) 接続チェック」"
+vsan.health.test.network.smallping.summary = "各ホストから他のすべてのホストに、パケット サイズの小さい ping テストを実行します。このアラームがトリガされた場合は、ネットワーク接続に基本的な問題があります。vmknic、アップリンク、VLAN、物理スイッチおよび関連する設定をチェックしてください。"
+
+vsan.health.test.network.hostconnectivity.label = "vSAN ネットワーク アラーム「接続に問題のあるホスト」"
+vsan.health.test.network.hostconnectivity.summary = "このアラームは、vCenter Server のリストにホストが接続中と表示されていても、vCenter Server からホストへの API 呼び出しが失敗した状況について確認します。この問題が発生するのはまれですが、発生した場合には「vCenter Server から切断されたホスト」の状況に類似する問題が発生する可能性があります。"
+
+vsan.health.test.network.multicastsettings.label = "vSAN ネットワーク アラーム「すべてのホストでマルチキャスト設定が一致」"
+vsan.health.test.network.multicastsettings.summary = "vSAN クラスタに参加し、完全に接続されたホストの単一グループを形成するには、vSAN クラスタ内の各ホストが同一の IP マルチキャスト アドレスを使用する必要があります。クラスタが IPv4 と IPv6 のいずれを使用するのかに応じて、対応するマルチキャスト構成が検証されます。次のコマンドを使用して、マルチキャストの IP を調整します。\nesxcli vsan network list\n esxcli vsan network ip set"
+
+vsan.health.test.network.vsanvmknic.label = "vSAN ネットワーク アラーム「すべてのホストで vSAN vmknic が構成済み」"
+vsan.health.test.network.vsanvmknic.summary = "vSAN クラスタに参加し、完全に接続されたホストの単一グループを形成するには、vSAN クラスタの各ホストに vSAN トラフィック用に構成された vmknic (VMkernel ネットワーク インターフェイスまたは VMkernel アダプタ) がある必要があります。"
+
+vsan.health.test.network.clusterpartition.label = "vSAN ネットワーク アラーム「vSAN クラスタ パーティション」"
+vsan.health.test.network.clusterpartition.summary = "正常に動作するためには、すべての vSAN ホストをマルチキャストとユニキャストの両方で通信できるようにする必要があります。通信できない場合には、vSAN クラスタは複数のホストのサブグループである「パーティション」に分割され、別のサブグループとは通信ができなくなります。この問題が発生すると、ネットワークの誤った構成が解決されるまで vSAN オブジェクトが使用できなくなる可能性があります。"
+
+vsan.health.test.network.hostdisconnected.label = "vSAN ネットワーク アラーム「vCenter Server から切断されたホスト」"
+vsan.health.test.network.hostdisconnected.summary = "このアラームは、クラスタ内のすべてのホストに対してアクティブな接続が vCenter Server にあるかどうかについて確認します。vCenter Server から切断された (または応答がない) ホストがある場合は、動作上の問題が発生する可能性があります。vCenter Server がホストに接続されていない場合、vCenter Server から見てその状態は不明となります。ホストの状態は、起動されているか、vSAN クラスタに参加しているか、データを処理しているか、クラスタのストレージ機能で重要な役割を果たしているか、そのいずれの可能性もあります。あるいは、ホストがダウンまたは使用できない可能性もあります。vCenter Server は (つまり vSAN 健全性チェックでは) ホストが切断されていると、状況を完全に評価することはできません。ホストが vSAN クラスタに参加している場合、ホストの UUID を特定できないため、クラスタには「予期しない vSAN クラスタ メンバー」チェックで予期しないものとして表示されます。健全性チェックでは vSAN クラスタに表示されたホストが切断されているかどうかを判断できません。vSAN 接続チェックやディスク健全性チェックなどの健全性チェックでは、切断されたホストは検査の対象になりません。"
+
+vsan.health.test.network.vmotionpingsmall.label = "vSAN ネットワーク アラーム「vMotion: 基本 (ユニキャスト) 接続チェック」"
+vsan.health.test.network.vmotionpingsmall.summary = "vMotion トラフィックを有効にしたすべての VMkernel アダプタでパケット サイズの小さい ping テストを実行します。このアラームがトリガされた場合、ネットワークが正しく構成されていません。テストでは 3 つの ping が送信されます。1 つの ping が失敗した場合は警告が表示され、2 つ以上の ping が失敗した場合はエラーが表示されます。この問題については、さまざまな要因が考えられます。VMkernel アダプタや仮想スイッチなどの仮想ネットワークに問題がある可能性もあれば、ケーブル、物理 NIC、物理スイッチなどの物理ネットワークに問題がある可能性もあります。"
+
+vsan.health.test.network.vmotionpinglarge.label = "vSAN ネットワーク アラーム「vMotion: MTU チェック (パケット サイズの大きい ping)」"
+vsan.health.test.network.vmotionpinglarge.summary = "vMotion トラフィックを有効にしたすべての VMkernel アダプタでパケット サイズの大きい ping テストを実行します。パケット サイズの小さい ping が成功している場合、すべての VMkernel アダプタ、仮想スイッチ、物理スイッチで MTU サイズが一致していれば、サイズの大きい ping が成功します。アラームがトリガされた場合は、vSAN ネットワーク上の構成エラーの原因を特定する必要があります。VMkernel アダプタ、仮想スイッチ、または物理ネットワーク スイッチを確認してください。"
+
+vsan.health.test.network.hostlatencycheck.label = "vSAN ネットワーク アラーム「ネットワーク遅延チェック」"
+vsan.health.test.network.hostlatencycheck.summary = "vSAN ホストのネットワーク遅延チェックを実行します。通常のクラスタのネットワーク構成ガイダンスの場合、必要な RTT は 1 ミリ秒未満です。一時的な変動を許容するために、この健全性チェックの警告は比較的長い 5 ミリ秒のしきい値に基づいて実行されます。このアラートがトリガされた場合は、vmknic、アップリンク、VLAN、物理スイッチおよび関連した設定をチェックしてネットワークの問題を特定してください。\n注: このアラームは、ホストのペアが接続チェックに失敗した場合にはスキップされます。"
+
+vsan.health.test.network.serverpartition.label = "vSAN ネットワーク アラーム「サーバ クラスタ パーティション」"
+vsan.health.test.network.serverpartition.summary = "通常、リモート vSAN データストアをマウントしているクライアント クラスタ内のすべてのホストは、サーバ クラスタ内のすべてのホストと通信できます。ただし、ネットワーク パーティションの場合、クライアント ホストがサーバ ホストの一部しか参照できないことがあります。クライアント ホストごとに参照しているサーバ ホストが異なる場合もあります。パーティションが持続している間、オブジェクトの可用性に影響が生じます。このアラームは、サーバ クラスタにパーティションがある場合にトリガされます。健全性モニターで詳細を確認してください。"
+
+vsan.health.test.network.rdmaconfig.label = "vSAN ネットワーク アラーム「RDMA 構成の健全性」"
+vsan.health.test.network.rdmaconfig.summary = "vSAN RDMA 対応の物理 NIC がロスレス トラフィック用に構成されているかどうかを確認します。ロスレス レイヤー 2 環境を確保するには、データセンター ブリッジ (DCB) モードを IEEE として設定し、優先順位フロー制御 (PFC) の値を 3 に設定する必要があります。"
+
+vsan.health.test.network.multiplevsanvmknic.label = "vSAN ネットワーク アラーム「リモート vSAN のホストに複数の vSAN vmknic が構成されていない」"
+vsan.health.test.network.multiplevsanvmknic.summary = "リモート vSAN クライアントまたはサーバ クラスタのホストに複数の vSAN vmknic が構成されているかどうかをチェックします。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.network.pnicconsistent.label = "vSAN ネットワーク アラーム「物理ネットワーク アダプタ リンク速度の一貫性」"
+vsan.health.test.network.pnicconsistent.summary = "各ホストの vSAN が使用している物理ネットワーク アダプタのリンク速度に一貫性があるかどうかを確認します。物理ネットワーク アダプタのリンク速度に一貫性がない場合、vSAN のパフォーマンスの問題が生じる可能性があります。vSAN 健全性モニターで AskVMware KB を参照して、修正手順を確認してください。"
+
+vsan.health.test.network.duplicateip.label = "vSAN ネットワーク アラーム「重複する IP アドレスを持つホスト」"
+vsan.health.test.network.duplicateip.summary = "vmknic インターフェイスに重複する IP アドレスが構成されているかどうかを確認します。"
+
+vsan.health.test.network.pnictso.label = "vSAN ネットワーク アラーム「物理 NIC の TSO に問題があるホスト」"
+vsan.health.test.network.pnictso.summary = "TSO が物理 NIC に対して有効になっているかどうかを確認します。"
+
+vsan.health.test.network.lacpstatus.label = "vSAN ネットワーク アラーム「LACP に問題があるホスト」"
+vsan.health.test.network.lacpstatus.summary = "LACP が正常に機能しているかどうかを確認します。"
+
+#
+# vSAN Build Recommendation Group 4
+#
+vsan.health.test.vum.releasecataloguptodate.label = "vSAN ビルド推奨アラーム「vSAN リリース カタログの更新状態」"
+vsan.health.test.vum.releasecataloguptodate.summary = "vSAN ビルド推奨に使用される vSAN リリース カタログの古さをチェックします。90 日または 180 日よりも古い場合には、このアラームがトリガされます。vSAN リリース カタログは新しいリリースまたは重要なパッチがある場合に更新されるため、ローカル コピーを最新の状態に保つことが重要です。"
+
+vsan.health.test.vum.vumconfig.label = "vSAN ビルド推奨アラーム「vSAN ビルド推奨事項エンジン」"
+vsan.health.test.vum.vumconfig.summary = "vSAN ビルドに関する推奨事項エンジンは、VMware 互換性ガイドと VMware リリースのメタデータに基づいて推奨事項を提供します。VMware Update Manager サービスが利用可能であること、インターネット接続、および有効な my.vmware.com の認証情報の設定が必要です。このアラームは、これらの条件が揃っていないか、推奨事項エンジンが適切に機能していない場合にトリガされます。"
+
+vsan.health.test.vum.vumrecommendation.label = "vSAN ビルド推奨アラーム「vSAN ビルドの推奨事項」"
+vsan.health.test.vum.vumrecommendation.summary = "ハードウェア、VMware 互換性ガイドに基いた互換性、および利用可能な VMware リリースを考慮したうえで vSAN が推奨する最も適切な ESXi ビルドです。"
+
+vsan.health.test.vum.patchalert.label = "vSAN ビルド推奨アラーム「新しいパッチが利用可能な vSAN ホスト」"
+vsan.health.test.vum.patchalert.summary = "新しい重要な vSAN パッチが利用可能かどうかをチェックします。このアラームがトリガされた場合、このパッチ リリースにすぐにアップグレードする必要があります。vSAN 健全性モニターで AskVMware KB を参照して、vSAN ソフトウェアの更新手順を確認してください。"
+
+#
+# Physical Disk Group 9
+#
+vsan.health.test.physicaldisks.physdiskcomplimithealth.label = "vSAN 物理ディスク アラーム「コンポーネント数の上限」"
+vsan.health.test.physicaldisks.physdiskcomplimithealth.summary = "物理ディスクのコンポーネント数が上限に達しているかどうかをチェックします。各 vSAN オブジェクトは、仮想マシン ストレージ ポリシーで使用されている機能によって決まる一連のコンポーネントで構成されているため、新しい仮想マシンの展開に失敗する可能性があります。また、コンポーネントの制限に達した場合は、再構築処理が許可されない可能性があります。これにより、ホストを追加したり、vSAN オブジェクトの一部を削除したりする必要が生じますが、監視ノードでコンポーネントの使用率がいっぱいになっている場合は、より大きい容量を提供する必要があります。"
+
+vsan.health.test.physicaldisks.componentmetadata.label = "vSAN 物理ディスク アラーム「コンポーネント メタデータ」"
+vsan.health.test.physicaldisks.componentmetadata.summary = "このアラームは、vSAN でこのディスクのコンポーネントのメタデータの整合性に問題が発生している場合にトリガされます。これは障害のあるドライブ、障害のあるコントローラ、デバイス ドライバの動作不良が原因の可能性がありますが、vSAN ソフトウェアの問題に由来する可能性もあります。VMware のサポートにお問い合わせください。"
+
+vsan.health.test.physicaldisks.physdiskcongestion.label = "vSAN 物理ディスク アラーム「輻輳」"
+vsan.health.test.physicaldisks.physdiskcongestion.summary = "このアラームがトリガされた場合、vSAN が使用しているディスクのパフォーマンスが低下し、このディスクを使用している vSAN オブジェクトのスループット/IOPS の低下と遅延が顕著になります。"
+
+vsan.health.test.physicaldisks.physdiskcapacity.label = "vSAN 物理ディスク アラーム「ディスクの容量」"
+vsan.health.test.physicaldisks.physdiskcapacity.summary = "このアラームが特定のディスクでトリガされた場合、そのディスクの空き容量が不足していることを示しています。このアラームはキャパシティ層のドライブにのみ適用可能で、キャッシュ デバイスには適用できません。"
+
+vsan.health.test.physicaldisks.physdiskoverall.label = "vSAN 物理ディスク アラーム「操作」"
+vsan.health.test.physicaldisks.physdiskoverall.summary = "vSAN クラスタ内のすべてのホストに対して、vSAN ディスクと vSAN Direct ディスクの物理ディスク操作の健全性をチェックします。このアラームが vSAN ディスクでトリガされた場合、そのディスクは vSAN で使用できません。ディスク メタデータの読み取りで問題が発生したか、vSAN ソフトウェアの問題が原因で、このディスクを使用できない可能性があります。vSAN Direct ディスクで失敗した場合、そのディスクは使用できません。ディスクの操作状態の説明を読み取れず、ディスクを使用できない可能性があります。"
+
+vsan.health.test.physicaldisks.lsomheap.label = "vSAN 物理ディスク アラーム「メモリ プール (ヒープ)」"
+vsan.health.test.physicaldisks.lsomheap.summary = "vSAN で、物理ディスクを正常に操作するために必要なメモリ プールが不足すると、このアラームがトリガされます。ディスクで「輻輳の健全性」が不良状態であると報告される場合がありますが、これはパフォーマンスの問題につながります。VMware のサポートに連絡してください。"
+
+vsan.health.test.physicaldisks.lsomslab.label = "vSAN 物理ディスク アラーム「メモリ プール (スラブ)」"
+vsan.health.test.physicaldisks.lsomslab.summary = "vSAN で、物理ディスクを操作するために必要なメモリ プールが不足すると、このアラームがトリガされます。ディスクで「輻輳の健全性」が不良状態であると報告される場合がありますが、これはパフォーマンスの問題につながります。VMware のサポートに連絡してください。"
+
+vsan.health.test.physicaldisks.smalldiskstest.label = "vSAN 物理ディスク アラーム「vSAN の最大コンポーネント サイズ」"
+vsan.health.test.physicaldisks.smalldiskstest.summary = "vSAN に使用されるキャパシティ ディスクのサイズが 255 GB (デフォルトの最大コンポーネント サイズ) より小さい場合、vSAN データストアで実行されている仮想マシンにディスク容量の問題が発生することがあります。vSAN 健全性モニターで AskVMware KB を参照して、最大コンポーネント サイズの変更手順を確認してください。"
+
+vsan.health.test.physicaldisks.physdiskhostissues.label = "vSAN 物理ディスク アラーム「物理ディスク健全性の取得中の問題」"
+vsan.health.test.physicaldisks.physdiskhostissues.summary = "このアラームがトリガされた場合、vSAN クラスタ内の 1 台以上のホストから物理ディスク情報を取得するときに問題が発生しています。vSAN 健全性モニターで AskVMware KB を参照して、特定の原因の詳細を確認してください。"
+
+#
+# Cluster Group 12
+#
+vsan.health.test.cluster.clomdliveness.label = "vSAN クラスタ アラーム「vSAN デーモンの稼動状態」"
+vsan.health.test.cluster.clomdliveness.summary = "すべての vSAN ホスト上のクリティカル ホスト デーモンの稼動状態を確認します。注: CLOMD ステータスは監視ノードでチェックされません。監視およびメタデータ ノードの EPD ステータスはチェックされません。"
+
+vsan.health.test.cluster.advcfgsync.label = "vSAN クラスタ アラーム「vSAN 詳細構成の同期状態」"
+vsan.health.test.cluster.advcfgsync.summary = "vSAN には、調整に使用したり、特定の環境の特別な要件に対応したりできる詳細構成オプションが多数あります。通常、このようなオプションは VMware KB の記事の手順を使用して、VMware のサポートの指示に従って変更します。これらの詳細オプションはホストごとに設定され、不整合のある構成がクラスタ内で作成される可能性があります。このチェックでは、vSAN の詳細オプションの中で重要なオプションが、指定したクラスタ内のすべてのホストで同じ値またはデフォルト値を持つようにします。"
+
+vsan.health.test.cluster.upgradesoftware.label = "vSAN クラスタ アラーム「ソフトウェア バージョンの互換性」"
+vsan.health.test.cluster.upgradesoftware.summary = "vSAN クラスタで新しいオンディスク フォーマットのバージョンが使用されるようになると (ソフトウェアのアップグレード後)、新しいオンディスク フォーマットをサポートしない古いソフトウェア バージョンのホストと互換性がなくなります。クラスタにこのような古いホスト バージョンを導入した場合、このホストはネットワーク パーティションに配置されるか、クラスタ内の非常に限られたデータ セットしかアクセスできなくなります。このような構成はサポートされていないため、ただちにソフトウェアをアップグレードするか、古いホスト バージョンを削除することをお勧めします。"
+
+vsan.health.test.cluster.upgradelowerhosts.label = "vSAN クラスタ アラーム「ディスク フォーマットのバージョン」"
+vsan.health.test.cluster.upgradelowerhosts.summary = "vSAN クラスタで必要とされるフォーマット バージョンは 13 で、これはクラスタ内のどのホストでもサポートされる最新のフォーマット バージョンです。ディスクのフォーマット バージョンが、想定されるバージョンより古い場合は、最新の vSAN 機能をサポートするために vSAN のオンディスク フォーマットのアップグレードを行うことをお勧めします。"
+
+vsan.health.test.cluster.diskbalance.label = "vSAN クラスタ アラーム「vSAN ディスク バランス」"
+vsan.health.test.cluster.diskbalance.summary = "このアラームは、ユーザーがディスク間の負荷分散の状態を監視するのに役立ちます。自動リバランスのデフォルト設定は「無効」で、不均衡がシステムによって指定されたしきい値を超えると、このアラームがトリガされます。「自動リバランス」が有効な場合は、vSAN は自動的にリバランスを行い、ステータスは緑色に保たれます。リバランスは開始までに最大 30 分待機することができ、リバランスの前に EMM、修復などの優先順位の高いタスクにリソースを使用する時間を確保します。"
+
+vsan.health.test.cluster.clustermembership.label = "vSAN クラスタ アラーム「vSphere クラスタ メンバーと vSAN クラスタ メンバーが一致」"
+vsan.health.test.cluster.clustermembership.summary = "vSphere クラスタ メンバーが vSAN クラスタ メンバーと一致しているかどうか確認します。このアラームがトリガされた場合、vSphere クラスタ メンバーが vSAN クラスタ メンバーと一致していません。この問題は、特定の vSphere クラスタ メンバーで vSAN が有効になっていない場合、または特定の vSAN クラスタ メンバーが vSphere クラスタで管理されていない場合に発生することがあります。クラスタ メンバーシップ テーブルに、クラスタ メンバーシップが一致していないホストが表示されます。誤ったメンバーシップを変更すると、ホストが適切なクラスタに参加できるようになります。vSAN の構成は自動的に実行されます。"
+
+vsan.health.test.cluster.consistentconfig.label = "vSAN クラスタ アラーム「vSAN クラスタ構成の一貫性」"
+vsan.health.test.cluster.consistentconfig.summary = "このアラームは、クラスタのホストまたはディスクに一貫性のない構成 (重複解除/圧縮、暗号化など) が設定されている場合にトリガされます。このアラームがトリガされた場合、クラスタのホストまたはディスクに一貫性のない構成 (重複解除/圧縮、暗号化など) が設定されていることを意味します。対応する健全性チェックのページに移動すると、詳細な情報と修正方法を確認できます。"
+
+vsan.health.test.cluster.vsandconfigconsistency.label = "vSAN クラスタ アラーム「vSAN Direct 同種ディスクの要求」"
+vsan.health.test.cluster.vsandconfigconsistency.summary = "クラスタ内のホストで同種の vSAN Direct ディスクが要求されているかどうかを確認します。このアラームがトリガされた場合は、クラスタ内のホスト間で構成設定 (ディスク容量、モード、数など) が一致していないことを意味します。対応する健全性チェックのページに移動すると、詳細情報を確認し、それに応じて再構成することができます。"
+
+vsan.health.test.cluster.timedrift.label = "vSAN クラスタ アラーム「ホストと vCenter Server 全体で時刻が同期済み」"
+vsan.health.test.cluster.timedrift.summary = "vCenter Server とホストの時刻の差をチェックします。60 秒を超える差があると、このアラートがトリガされます。このアラームがトリガされた場合は、NTP サーバの構成を確認してください。"
+
+vsan.health.test.cluster.resynclimit.label = "vSAN クラスタ アラーム「再同期操作の調整」"
+vsan.health.test.cluster.resynclimit.summary = "いずれかのホストで再同期操作が調整されているかを確認します。再同期のバンド幅制限が設定されている場合は警告が表示され、値が 20 MBps 未満の場合はエラーが表示されます。大量の再同期トラフィックによって仮想マシンで長い遅延が発生するような特定の場合を除き、制限をクリアしてください。この制限を設定すると、ポリシー変更やメンテナンス モードなど、再同期に基づく操作が遅くなる場合があります。"
+
+vsan.health.test.cluster.vcauthoritative.label = "vSAN クラスタ アラーム「vCenter Server の状態は信頼できます」"
+vsan.health.test.cluster.vcauthoritative.summary = "通常動作時は、vCenter Server の状態は信頼できるソースとみなされ、最新のホスト メンバーシップ リストを使用して ESXi ホストが更新されます。vCenter Server がバックアップから置換またはリカバリされた場合、vCenter Server ホストのメンバーシップ リストが古くなることがあります。この健全性チェックではこのような状況を検出し、vCenter Server が同期されていないことが原因で vCenter Server の状態が ESXi にプッシュされなかった場合に警告します。このような場合は、まず vCenter Server 内のメンバーシップ リストを完全にリストアしてから、必要に応じて「ESXi 構成の更新」アクションを実行してください。"
+
+vsan.health.test.cluster.extendedconfig.label = "vSAN クラスタ アラーム「vSAN 拡張構成の同期状態」"
+vsan.health.test.cluster.extendedconfig.summary = "vSAN クラスタの拡張構成のデフォルトは次のように設定されています。オブジェクト修復タイマーは 60 分、サイト読み取りのローカリティは「有効」、カスタマイズされたスワップ オブジェクトは「有効」、大規模クラスタのサポートは「無効」、自動リバランスは「オフ」、自動リバランスのしきい値は 30 です。ホストの拡張構成に一貫性がない場合は、vSAN クラスタの修正をお勧めします。ホストが拡張構成をサポートしていない場合は、ESXi ソフトウェアをアップグレードしてください。クラスタのスケーラビリティ構成を有効にするには、ホストの再起動が必要な場合があります。"
+
+vsan.health.test.cluster.mmdecominsync.label = "vSAN クラスタ アラーム「ホストのメンテナンス モード」"
+vsan.health.test.cluster.mmdecominsync.summary = "ホストのメンテナンス モードと vSAN ノードの廃止状態が同期していることを確認します。ホストがメンテナンス モードの場合、vSAN ノードは廃止状態の必要があります。ノードが廃止されているにもかかわらず、ホストがメンテナンス モードでない場合は、いずれかの vSAN オプションを使用してホストをメンテナンス モードにしてから、メンテナンス モードを終了して vSAN の廃止ステータスをリセットし、vSphere メンテナンス モードの状態と一貫性が維持されるようにします。"
+
+vsan.health.test.cluster.rdmanodes.label = "vSAN クラスタ アラーム「vSAN over RDMA でのホストの最大数」"
+vsan.health.test.cluster.rdmanodes.summary = "vSAN で RDMA を使用する場合、最大 32 台のホストがサポートされます。"
+
+vsan.health.test.cluster.hostmemcheck.label = "vSAN クラスタ アラーム「ホストの物理メモリのコンプライアンス チェック」"
+vsan.health.test.cluster.hostmemcheck.summary = "ホストの物理メモリが vSAN メモリの最小要件よりも大きいかどうかをチェックします。"
+
+#
+# Capacity utilization Group (AKA Limits Group) 4
+#
+vsan.health.test.limits.nodecomponentlimit.label = "vSAN キャパシティ使用率アラーム「コンポーネント」"
+vsan.health.test.limits.nodecomponentlimit.summary = "クラスタおよびクラスタ内の各ホストのコンポーネント使用率を確認します。このアラームは、いずれかのホストで使用率が 80% または 90% を超えると、警告またはエラーとしてトリガされます。これらの制限に達した場合、新しい仮想マシンの展開に失敗したり、再構築処理が許可されない可能性があります。これにより、ホストを追加したり、vSAN オブジェクトの一部を削除したりする必要が生じますが、監視ノードでコンポーネントの上限に達している場合は、容量の大きいものに置き換える必要があります。"
+
+# Deco in future as pr 2518894
+vsan.health.test.limits.rcreservation.label = "vSAN キャパシティ使用率アラーム「読み取りキャッシュの予約」"
+vsan.health.test.limits.rcreservation.summary = "クラスタの読み取りキャッシュの予約をチェックします。空き予約が読み取りキャッシュ予約の合計の 30% または 10% 未満になると、このアラームが警告またはエラーとしてトリガされます。これは、仮想マシンのパフォーマンスに影響します。"
+
+vsan.health.test.limits.diskspace.label = "vSAN キャパシティ使用率アラーム「ストレージ容量」"
+vsan.health.test.limits.diskspace.summary = "vSAN クラスタ キャパシティ層のディスクとクラスタの vSAN 管理対象データストアの使用量がしきい値を超えているかどうかチェックします。キャパシティ層の空きディスク容量が不足していると、新しい仮想マシンのデプロイに失敗したり、コンポーネントの再構築処理が許可されない可能性があります。実行中の仮想マシンに、影響を受けた各仮想マシンで保留中の質問がある可能性があります。vSAN 健全性モニターで AskVMware KB を参照して、仮想マシンと vSAN クラスタのリカバリを行ってください。"
+
+vsan.health.test.limits.limit1hf.label = "vSAN キャパシティ使用率アラーム「最も使用率の高いホストが停止した場合」"
+vsan.health.test.limits.limit1hf.summary = "このアラームは、多くのリソースを消費するホストでの障害をシミュレートします。このホストのリソースが使用できなくなります。vSAN は、冗長性を低下させて実行していたすべてのオブジェクトの再保護を試みます。使用率が 100% を超えたときに、すべてのオブジェクトの再保護ができない場合、このアラームがトリガされます。"
+
+#
+# Performance service Group 8
+#
+vsan.health.test.perfsvc.perfsvcstatus.label = "vSAN パフォーマンス サービス アラーム「パフォーマンス サービスのステータス」"
+vsan.health.test.perfsvc.perfsvcstatus.summary = "vSAN パフォーマンス サービスのステータスをチェックします。このアラームの警告の内容は、vSAN パフォーマンス サービスを有効にすることによって修正できます。"
+
+vsan.health.test.perfsvc.statsdb.label = "vSAN パフォーマンス サービス アラーム「統計 DB オブジェクト」"
+vsan.health.test.perfsvc.statsdb.summary = "vSAN パフォーマンス サービス統計データベース オブジェクトの健全性をチェックします。このアラームは、統計 DB オブジェクトが存在しない場合、統計 DB オブジェクトが完全に良好な状態でない場合、オブジェクトが使用できない場合、または vSAN 統計 DB オブジェクトが使用できる空き論理ディスク容量が不足している場合にトリガされます。"
+
+vsan.health.test.perfsvc.masterexist.label = "vSAN パフォーマンス サービス アラーム「統計プライマリの選択」"
+vsan.health.test.perfsvc.masterexist.summary = "vSAN パフォーマンス サービスの統計プライマリ ノードをチェックします。このアラームは、統計プライマリ ノードが存在しない場合にトリガされます。vSAN データストアと統計 DB オブジェクトの健全性 (特にネットワークの健全性) を確認してください。これらのチェックですべてが正常に機能していることを確認した場合は、VMware のサポートに連絡して、サポート リクエストを作成してください。"
+
+vsan.health.test.perfsvc.collection.label = "vSAN パフォーマンス サービス アラーム「パフォーマンス サービスの収集」"
+vsan.health.test.perfsvc.collection.summary = "vSAN パフォーマンス サービスの統計収集をチェックします。統計情報は定期的に収集されます (たとえば 5 分ごと)。統計情報の収集またはストレージへの書き込みが 3 回連続で失敗すると、このアラームがトリガされます。vSAN データストアの健全性 (特にすべての物理ディスクの健全性)、ネットワークの健全性、vSAN 統計 DB オブジェクトの健全性を確認してください。これらの項目がすべて良好な場合は、VMware のサポートに連絡して、サポート リクエストを作成してください。"
+
+vsan.health.test.perfsvc.hostsmissing.label = "vSAN パフォーマンス サービス アラーム「統計情報に影響するすべてのホスト」"
+vsan.health.test.perfsvc.hostsmissing.summary = "すべてのホストがパフォーマンス統計に反映されていることを確認します。このアラームがトリガされた場合、一部のホストがパフォーマンス統計情報を提供していません。このアラームに既知の原因はありません。アラームが繰り返しトリガされる場合は、VMware のサポートに連絡して、サポート リクエストを作成してください。その際、vCenter Server とすべてのホストを含むクラスタ全体のサポート バンドルを提供してください。"
+
+vsan.health.test.perfsvc.renameddirs.label = "vSAN パフォーマンス サービス アラーム「統計 DB オブジェクトの競合」"
+vsan.health.test.perfsvc.renameddirs.summary = "統計 DB オブジェクトの競合をチェックします。有益な統計 DB オブジェクトが他にもある場合は、これらのオブジェクトをデータストア ブラウザでファイルとしてバックアップすることも、名前を変更してデータストアに保存することもできます。複数の統計 DB オブジェクトをマージすることはできません。"
+
+vsan.health.test.perfsvc.verbosemode.label = "vSAN パフォーマンス サービス アラーム「詳細モード」"
+vsan.health.test.perfsvc.verbosemode.summary = "vSAN パフォーマンス サービスの詳細モードが有効になっているかどうかを確認します。詳細モードが 5 日以上有効になっていると、このアラームがトリガされます。"
+
+vsan.health.test.perfsvc.diagmode.label = "vSAN パフォーマンス サービス アラーム「ネットワーク診断モード」"
+vsan.health.test.perfsvc.diagmode.summary = 「vSAN パフォーマンス サービスのネットワーク診断モードが有効になっているかどうかを確認します。ネットワーク診断モードが 24 時間以上有効になっていると、このアラームがトリガされます。」
+
+#
+# Hyperconverged cluster configuration compliance 2
+#
+vsan.health.test.hcicluster.hosthciconfig.label = "vSAN ハイパーコンバージド クラスタ構成アラーム「ハイパーコンバージド クラスタ構成に対するホストのコンプライアンス チェック」"
+vsan.health.test.hcicluster.hosthciconfig.summary = "各ホストの構成がハイパーコンバージド クラスタ構成に準拠しているかどうかを確認します。ホストはすべて同一のアダプタを使用して vSphere Distributed Switch に接続され、アダプタが適切な分散ポート グループに配置されている必要があります。また、NTP サーバとロックダウン モードが仕様に基づいて設定されている必要があります。"
+
+vsan.health.test.hcicluster.dvshciconfig.label = "vSAN ハイパーコンバージド クラスタ構成アラーム「ハイパーコンバージド クラスタ構成に対する VDS のコンプライアンス チェック」"
+vsan.health.test.hcicluster.dvshciconfig.summary = "vSphere Distributed Switch が実行状態で、分散ポート グループの構成がハイパーコンバージド クラスタ構成に準拠しているかどうかを確認します。"
+
+#
+# Stretched cluster Group 15
+#
+vsan.health.test.stretchedcluster.siteconnectivity.label = "vSAN ストレッチ クラスタ アラーム「サイト遅延の健全性」"
+vsan.health.test.stretchedcluster.siteconnectivity.summary = "このアラームは、データ サイトと監視ホストの任意の 2 台のホスト間の最大遅延が特定の制限を超えるとトリガされます。警告しきい値: データ サイト間またはデータ サイト内の場合、5 ミリ秒。非 ROBO クラスタ内のデータ サイトと監視ホスト間の場合、200 ミリ秒。ROBO クラスタ内のデータ サイトと監視ホスト間の場合、500 ミリ秒。失敗したホスト ペア間のネットワークをチェックし、ネットワーク設定が最小要件を満たしていることを確認します。注: vSAN 基本接続 (小規模な ping) テストで失敗したホスト ペアはスキップされます。"
+
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.label = "vSAN ストレッチ クラスタ アラーム「監視ホストが見つかりません」"
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.summary = "ストレッチ クラスタに有効な監視ホストがありません。このアラームがトリガされた場合、vSAN ストレッチ クラスタに、操作に影響を及ぼす構成エラーがあります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.label = "vSAN ストレッチ クラスタ アラーム「無効なユニキャスト エージェント」"
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.summary = "ユニキャスト エージェントが無効なホストがクラスタに存在すると、このアラームがトリガされます。ホストの無効なユニキャス トエージェントにより、監視ホストとの通信に障害が発生する可能性があります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.label = "vSAN ストレッチ クラスタ アラーム「ユニキャスト エージェントの構成に一貫性がありません」"
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.summary = "ストレッチ クラスタに複数のユニキャスト エージェントが存在します。非監視ホストで複数のユニキャスト エージェントが設定されています。このアラームがトリガされた場合、vSAN ストレッチ クラスタに、操作に影響を及ぼす構成エラーがあります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.label = "vSAN ストレッチ クラスタ アラーム「予期しないフォルト ドメイン数」"
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.summary = "ストレッチ クラスタに 2 つの有効なフォルト ドメインがありません。各データ サイトは、それぞれ別のフォルト ドメインに配置する必要があります。データ サイトのフォルト ドメインの合計数は 2 にする必要があります。このアラームがトリガされた場合、vSAN ストレッチ クラスタに、操作に影響を及ぼす構成エラーがあります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.label = "vSAN ストレッチ クラスタ アラーム「監視ホスト上の無効な優先フォルト ドメイン」"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.summary = "次の (監視) ホストに無効な優先フォルト ドメインがあります。優先フォルト ドメインは、監視ホストによって使用されていますが、これは vSAN ストレッチ クラスタのいずれかのデータ サイトのフォルト ドメインにする必要があり、空にすることはできません。このアラームがトリガされた場合、vSAN ストレッチ クラスタに、操作に影響を及ぼす構成エラーがあります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.hostunicastagentunset.label = "vSAN ストレッチ クラスタ アラーム「ユニキャスト エージェントが構成されていません」"
+vsan.health.test.stretchedcluster.hostunicastagentunset.summary = "ホストでは、監視ノードと通信できるようにユニキャスト エージェントをセットアップする必要があります。このアラームがトリガされた場合、vSAN ストレッチ クラスタに、操作に影響を及ぼす構成エラーがあります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.label = "vSAN ストレッチ クラスタ アラーム「優先フォルト ドメインが設定されていません」"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.summary = "クラスタで、監視ホストに対する優先フォルト ドメインが設定されていません。優先フォルト ドメインは、監視ホストによって使用されていますが、これは vSAN ストレッチ クラスタのいずれかのデータ サイトのフォルト ドメインにする必要があり、空にすることはできません。このアラームがトリガされた場合、vSAN ストレッチ クラスタに、操作に影響を及ぼす構成エラーがあります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.label = "vSAN ストレッチ クラスタ アラーム「監視ホスト上でディスクが要求されていません」"
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.summary = "ストレッチ クラスタ監視ホストに、要求された有効なディスク グループがありません。監視ホストにディスクが要求されていない場合、フォルト ドメインは使用できません。vSAN は、許容される障害数が 1 (FTT = 1) に設定されているオブジェクトをプロビジョニングできません。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.label = "vSAN ストレッチ クラスタ アラーム「監視ホストのフォルト ドメインの構成に誤りがあります」"
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.summary = "次の監視ノードはデータ フォルト ドメインの 1 つに存在します。このアラームがトリガされた場合、vSAN ストレッチ クラスタに、操作に影響を及ぼす構成エラーがあります。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.witnessinsidevccluster.label = "vSAN ストレッチ クラスタ アラーム「vCenter クラスタ内の監視ホスト」"
+vsan.health.test.stretchedcluster.witnessinsidevccluster.summary = "ストレッチ クラスタを形成する vCenter クラスタに監視ホストを含めることはできません。vSAN 対応のクラスタ内に監視ホストが存在する場合、vSphere DRS、HA、EVC に問題が発生します。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.label = "vSAN ストレッチ クラスタ アラーム「サポートされていないホスト バージョンです」"
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.summary = "クラスタに、ストレッチ クラスタをサポートしない ESXi バージョンのホストがあります。"
+
+vsan.health.test.stretchedcluster.witnessupgrade.label = "vSAN ストレッチ クラスタ アラーム「監視アプライアンスの vSphere 7.0 以降へのアップグレード (注意付き)」"
+vsan.health.test.stretchedcluster.witnessupgrade.summary = "現在の監視アプライアンスのバージョンは vSphere 7.0 より前のバージョンです。監視アプライアンスを直接 vSphere 7.0 以降にアップグレードすると、問題が発生します。Ask VMware のナレッジベースの記事を参照して監視アプライアンスを再構成してから再起動し、アップグレード ワークフローに進んでください。vSphere 7.0 以降の新しい監視アプライアンスを展開してからクラスタを再構成することもできます。"
+
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.label = "vSAN ストレッチ クラスタ アラーム「共有監視クラスタに、予期しない数のデータノードが存在します」"
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.summary = "共有監視クラスタのデータ ノードが 3 台以上かどうかを確認します。共有監視のストレッチ クラスタのデータ ホストの数は 2 台以下にする必要があります。"
+
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.label = "vSAN ストレッチ クラスタ アラーム「クラスタ コンポーネントあたりの共有監視の制限がスケールダウンされている」"
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.summary = "メモリ不足のため、共有監視ノードでクラスタ コンポーネントあたりの制限がスケールダウンされているかどうかを確認します。"
+
+vsan.health.test.stretchedcluster.witnessupgissue.label = "vSAN ストレッチ クラスタ アラーム「監視アプライアンスのハードウェア互換性の問題」"
+vsan.health.test.stretchedcluster.witnessupgissue.summary = "監視アプライアンスのアップグレードで問題が発生します。アップグレード ワークフローを開始する前に、問題に対処してください。詳細については、vSAN Skyline の健全性を確認してください。"
+
+#
+# File Service Group 3
+#
+vsan.health.test.fileservice.host.label = "vSAN ファイル サービス アラーム「インフラストラクチャの健全性」"
+vsan.health.test.fileservice.host.summary = "各 ESXi ホストのファイル サービス インフラストラクチャの健全性をチェックします。通常、検出された問題は自動的に修正されます。強制的に自動修正を開始するには、vSAN 健全性モニターで [ファイル サービスの修正] または [不均衡の修正] をクリックします。ホストがメンテナンス モードの場合、アラームはスキップされます。vSAN 健全性モニターで詳細を確認してください。"
+
+vsan.health.test.fileservice.fileserver.label = "vSAN ファイル サービス アラーム「ファイル サーバ」"
+vsan.health.test.fileservice.fileserver.summary = "ファイル サーバの状態が良好かどうかを確認します。ほとんどの場合、ファイル サーバが自動的に別のエージェント仮想マシンにフェイルオーバーします。vSAN 健全性モニターで詳細を確認してください。"
+
+vsan.health.test.fileservice.sharehealth.label = "vSAN ファイル サービス アラーム「共有の健全性」"
+vsan.health.test.fileservice.sharehealth.summary = "ファイル サービスの共有が良好な状態かどうかを確認します。vSAN 健全性モニターで詳細を確認してください。"
+
+#
+# Data Group 2
+#
+vsan.health.test.data.objecthealth.label = "vSAN データ アラーム「vSAN オブジェクト」"
+vsan.health.test.data.objecthealth.summary = "クラスタ内の一部のオブジェクトが良好な状態でないと、このアラームがトリガされます。健全性モニターで詳細を確認してください。"
+
+vsan.health.test.data.objectformat.label = "vSAN データ アラーム「vSAN オブジェクト フォーマット」"
+vsan.health.test.data.objectformat.summary = "フォーマットの変更が必要なオブジェクトが存在すると、このアラームがトリガされます。オブジェクト フォーマットの変更で、オブジェクトの物理ディスクの再レイアウトが行われ、クラスタ内でデータの移動が発生する場合があります。古いフォーマットのオブジェクトでは、一部の新機能を使用できない可能性があります。健全性モニターで詳細を確認してください。"
+
+#
+# Data-at-rest encryption Group (Encryption) 3
+#
+vsan.health.test.encryption.kmsconnection.label = "vSAN による保存データの暗号化アラーム「vCenter とすべてのホストがキー管理サーバに接続済み」"
+vsan.health.test.encryption.kmsconnection.summary = "このアラームがトリガされた場合、vCenter Server またはホストとキー管理サーバとの接続に問題があります。vCenter Server と KMS の接続で問題が発生している場合は、vCenter Server の構成ページで KMS の設定とステータスを確認してください。クラスタ内のいずれかのホストで接続の問題が発生している場合は、健全性の結果で原因を確認してください。ホストの KMS 構成がクラスタの残りのホストと一致していない場合は、クラスタ構成の修正を行い、ホストの KMS 構成を更新してください。"
+
+vsan.health.test.encryption.hostcpuaesni.label = "vSAN による保存データの暗号化アラーム「ホストで CPU AES-NI が有効」"
+vsan.health.test.encryption.hostcpuaesni.summary = "このアラームがトリガされた場合、ホストで CPU AES-NI がサポートされていないか、無効になっています。この場合、ソフトウェア暗号化が使用されますが、AES-NI に比べて処理速度が大幅に低下します。vSAN 健全性モニターで AskVMware KB を参照して、詳細を確認してください。"
+
+vsan.health.test.encryption.dualencryption.label = "vSAN による保存データの暗号化アラーム「vSAN 上の仮想マシンに適用されたデュアル暗号化」"
+vsan.health.test.encryption.dualencryption.summary = "vSAN により、仮想マシン暗号化と vSAN データストア暗号化が両方とも有効であることが検出されると、このアラームがトリガされます。この設定が意図したものである場合は、アラームを無視してください。そうでない場合は、いずれかの暗号化タイプを無効にしてください。vSAN 健全性モニターで AskVMware KB を参照して、暗号化設定のベスト プラクティスを確認してください。"
+
+#
+# Data-in-transient encryption 1
+#
+vsan.health.test.ditencryption.ditconfig.label = "vSAN による転送中データの暗号化アラーム「構成チェック」"
+vsan.health.test.ditencryption.ditconfig.summary = "クラスタで転送中データの暗号化が正しく構成されているかどうかを確認します。このアラームは、クラスタで転送中データの暗号化が有効になっている場合にトリガされます。すべてのホストで転送中データの暗号化が有効になっており、すべてのホストが予期された状態になっている必要があります。それ以外の場合、ネットワーク トラフィックの暗号化が正常に行われない可能性があります。"
+
+#
+# Remain unchanged
+#
+vsan.health.test.hciskip.label = "vSAN 健全性アラームは抑止されます"
+vsan.health.test.hciskip.summary = "vSAN 健全性アラームは、クラスタが完全に構成されるか、このクイックスタートのワークフローがスキップされるまで抑止されます。"
+
+vsan.health.test.vsanhardwarecert.label = "vSAN のハードウェア互換性の問題"
+vsan.health.test.vsanhardwarecert.summary = "クラスタでハードウェアの互換性の問題が検出されると、このアラームがトリガされます。vSAN 健全性モニター UI で問題の詳細を確認してください。"
+
+vsan.health.test.cloudhealth.vsanenablesupportinsight.label = "vSAN Support Insight"
+vsan.health.test.cloudhealth.vsanenablesupportinsight.summary = "vSAN Support Insight のステータスを監視するデフォルト アラーム"
+vsan.health.test.cloudhealth.advisor.label = "vSAN 健全性アラーム「Advisor」"
+vsan.health.test.cloudhealth.advisor.summary = "健全性アラーム「Advisor」の変更を監視するデフォルト アラーム"
+
+vsan.health.test.diagnostics.pnic.label = "物理 NIC エラー率が高くなっています。ホストの vSAN パフォーマンス ビューで詳細を確認してください"
+vsan.health.test.diagnostics.pnic.summary = "「物理 NIC エラー率」を監視するデフォルト アラーム"
+
+vsan.health.test.diagnostics.rdt.label = "多くの RDT ネット エラーが検出されました。ホストの vSAN パフォーマンス ビューで詳細を確認してください"
+vsan.health.test.diagnostics.rdt.summary = "「RDT ネット エラー」を監視するデフォルト アラーム"
+
+#
+# Overall summary alarm is reactivate from VSANCORE-6413
+#
+vsan.health.test.overallsummary.label = "vSAN 健全性サービスアラーム「全体的な健全性サマリ」"
+vsan.health.test.overallsummary.summary = "「全体的な健全性サマリ」の変更を監視するデフォルト アラーム"

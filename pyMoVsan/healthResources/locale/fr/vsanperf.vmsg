@@ -1,0 +1,1496 @@
+# This message file defines all of labels, descriptions in vSAN performance test result showing in UI
+
+#
+# ClusterDomClient
+#
+com.vmware.vsan.perf.entity.cluster-domclient.description = Mesures sur les clusters du point de vue de la consommation des VM.
+
+#
+# ClusterDomClientGraphs
+#
+cluster-domclient.iops.name = IOPS
+cluster-domclient.iops.description = IOPS consommées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.iops.metrics.iopsRead.name = IOPS de lecture
+cluster-domclient.iops.metrics.iopsRead.description = IOPS de lecture consommées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.iops.metrics.iopsWrite.name = IOPS d'écriture
+cluster-domclient.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-domclient.throughput.name = Débit
+cluster-domclient.throughput.description = Débit consommé par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.throughput.metrics.throughputRead.name = Débit de lecture
+cluster-domclient.throughput.metrics.throughputRead.description = Débit de lecture consommé par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.throughput.metrics.throughputWrite.name = Débit d'écriture
+cluster-domclient.throughput.metrics.throughputWrite.description = Débit d'écriture consommé par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-domclient.latency.name = Latence
+cluster-domclient.latency.description = Latence moyenne des E/S générées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.latency.metrics.latencyAvgRead.name = Latence de lecture
+cluster-domclient.latency.metrics.latencyAvgRead.description = Latence de lecture moyenne des E/S générées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.latency.metrics.latencyAvgWrite.name = Latence d'écriture
+cluster-domclient.latency.metrics.latencyAvgWrite.description = Latence d'écriture moyenne des E/S générées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-domclient.congestion.name = Encombrements
+cluster-domclient.congestion.description = Encombrements des E/S générées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.congestion.metrics.congestion.name = Encombrements
+cluster-domclient.congestion.metrics.congestion.description = Encombrements des E/S générées par tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-domclient.oio.name = E/S en attente
+cluster-domclient.oio.description = E/S en attente dans tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-domclient.oio.metrics.oio.name = E/S en attente
+cluster-domclient.oio.metrics.oio.description = E/S en attente dans tous les clients vSAN du cluster, tels que les machines virtuelles, l'objet statistiques, etc.
+
+#
+# ClusterDomCompMgr
+#
+com.vmware.vsan.perf.entity.cluster-domcompmgr.description = Mesures sur les clusters du point de vue du serveur principal vSAN.
+
+#
+# ClusterDomCompMgrGraphs
+#
+
+cluster-domcompmgr.iops.name = IOPS
+cluster-domcompmgr.iops.description = IOPS du serveur principal du cluster vSAN.
+cluster-domcompmgr.iops.metrics.iopsRead.name = IOPS de lecture
+cluster-domcompmgr.iops.metrics.iopsRead.description = IOPS de lecture du cluster vSAN du point de vue du serveur principal vSAN.
+cluster-domcompmgr.iops.metrics.iopsResyncRead.name = IOPS en resynchronisation de lecture
+cluster-domcompmgr.iops.metrics.iopsResyncRead.description = IOPS de lecture de resynchronisation de trafic du cluster vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation du point de vue du serveur principal vSAN.
+cluster-domcompmgr.iops.metrics.iopsWrite.name = IOPS d'écriture
+cluster-domcompmgr.iops.metrics.iopsWrite.description = IOPS d'écriture du cluster vSAN du point de vue du serveur principal vSAN.
+cluster-domcompmgr.iops.metrics.iopsRecWrite.name = IOPS en récupération d'écriture
+cluster-domcompmgr.iops.metrics.iopsRecWrite.description = IOPS en récupération d'écriture du cluster vSAN du point de vue du serveur principal vSAN.
+
+cluster-domcompmgr.throughput.name = Débit
+cluster-domcompmgr.throughput.description = Débit du serveur principal du cluster vSAN.
+cluster-domcompmgr.throughput.metrics.throughputRead.name = Débit de lecture
+cluster-domcompmgr.throughput.metrics.throughputRead.description = Débit de lecture du cluster vSAN du point de vue du serveur principal vSAN.
+cluster-domcompmgr.throughput.metrics.tputResyncRead.name = Débit de resynchronisation en lecture
+cluster-domcompmgr.throughput.metrics.tputResyncRead.description = Débit de resynchronisation de trafic en lecture du cluster vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation du point de vue du serveur principal vSAN.
+cluster-domcompmgr.throughput.metrics.throughputWrite.name = Débit d'écriture
+cluster-domcompmgr.throughput.metrics.throughputWrite.description = Débit d'écriture du cluster vSAN du point de vue du serveur principal vSAN.
+cluster-domcompmgr.throughput.metrics.throughputRecWrite.name = Débit de récupération d'écriture
+cluster-domcompmgr.throughput.metrics.throughputRecWrite.description = Débit de récupération d'écriture du cluster vSAN du point de vue du serveur principal vSAN.
+
+cluster-domcompmgr.latency.name = Latence
+cluster-domcompmgr.latency.description = Latence du serveur principal du cluster vSAN.
+cluster-domcompmgr.latency.metrics.latencyAvgRead.name = Latence de lecture
+cluster-domcompmgr.latency.metrics.latencyAvgRead.description = Latence de lecture moyenne du cluster vSAN du point de vue du serveur principal vSAN.
+cluster-domcompmgr.latency.metrics.latAvgResyncRead.name = Latence de resynchronisation en lecture
+cluster-domcompmgr.latency.metrics.latAvgResyncRead.description = Latence de lecture moyenne du trafic de resynchronisation du cluster vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation du point de vue du serveur principal vSAN.
+cluster-domcompmgr.latency.metrics.latencyAvgWrite.name = Latence d'écriture
+cluster-domcompmgr.latency.metrics.latencyAvgWrite.description = Latence d'écriture moyenne du cluster vSAN du point de vue du serveur principal vSAN.
+cluster-domcompmgr.latency.metrics.latencyAvgRecWrite.name = Latence de récupération d'écriture
+cluster-domcompmgr.latency.metrics.latencyAvgRecWrite.description = Latence de récupération d'écriture moyenne du cluster vSAN du point de vue du serveur principal vSAN.
+
+cluster-domcompmgr.congestion.name = Encombrements
+cluster-domcompmgr.congestion.description = Encombrement du serveur principal du cluster vSAN.
+cluster-domcompmgr.congestion.metrics.congestion.name = Encombrements
+cluster-domcompmgr.congestion.metrics.congestion.description = Encombrement du cluster vSAN du point de vue du serveur principal vSAN.
+
+cluster-domcompmgr.oio.name = E/S en attente
+cluster-domcompmgr.oio.description = E/S en attente du serveur principal du cluster vSAN.
+cluster-domcompmgr.oio.metrics.oio.name = E/S en attente
+cluster-domcompmgr.oio.metrics.oio.description = E/S en attente du cluster vSAN du point de vue du serveur principal vSAN.
+
+#
+# HostDomClient
+#
+com.vmware.vsan.perf.entity.host-domclient.description = Mesures sur les hôtes du point de vue de la consommation des VM.
+
+#
+# HostDomClientGraphs
+#
+host-domclient.iops.name = IOPS
+host-domclient.iops.description = IOPS consommées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.iops.metrics.iopsRead.name = IOPS de lecture
+host-domclient.iops.metrics.iopsRead.description = IOPS de lecture consommées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.iops.metrics.iopsWrite.name =  IOPS d'écriture
+host-domclient.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.iops.metrics.iopsUnmap.name = IOPS de démappage
+host-domclient.iops.metrics.iopsUnmap.description = IOPS de l'hôte vSAN des commandes de découpage/démappage consommées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+
+host-domclient.throughput.name = Débit
+host-domclient.throughput.description = Débit consommé par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.throughput.metrics.throughputRead.name = Débit de lecture
+host-domclient.throughput.metrics.throughputRead.description = Débit de lecture consommé par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.throughput.metrics.throughputWrite.name = Débit d'écriture
+host-domclient.throughput.metrics.throughputWrite.description = Débit d'écriture consommé par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+
+host-domclient.throughputUnmap.name = Débit de découpage/démappage
+host-domclient.throughputUnmap.description = Débit de découpage/démappage consommé par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.throughputUnmap.metrics.throughputUnmap.name = Débit de démappage
+host-domclient.throughputUnmap.metrics.throughputUnmap.description = Débit de l'hôte vSAN des commandes de découpage/démappage consommé par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+
+host-domclient.latency.name = Latence
+host-domclient.latency.description = Latence moyenne des E/S générées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.latency.metrics.latencyAvgRead.name = Latence de lecture
+host-domclient.latency.metrics.latencyAvgRead.description = Latence de lecture moyenne des E/S générées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.latency.metrics.latencyAvgWrite.name = Latence d'écriture
+host-domclient.latency.metrics.latencyAvgWrite.description = Latence d'écriture moyenne des E/S générées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.latency.metrics.latencyAvgUnmap.name = Latence de démappage
+host-domclient.latency.metrics.latencyAvgUnmap.description = Latence moyenne de l'hôte vSAN des commandes de découpage/démappage générée par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+
+host-domclient.clientCacheHits.name = IOPS de réussite du cache de client local
+host-domclient.clientCacheHits.description = IOPS moyennes de lecture du cache de client local.
+host-domclient.clientCacheHits.metrics.clientCacheHits.name = IOPS de réussite du cache de client local
+host-domclient.clientCacheHits.metrics.clientCacheHits.description = IOPS moyennes de lecture du cache de client local.
+
+host-domclient.clientCacheHitRate.name = Taux de réussite du cache de client local
+host-domclient.clientCacheHitRate.description = Pourcentage d'E/S de lecture pouvant être satisfait par le cache de client local.
+host-domclient.clientCacheHitRate.metrics.clientCacheHitRate.name = Taux de réussite du cache de client local
+host-domclient.clientCacheHitRate.metrics.clientCacheHitRate.description = Pourcentage d'E/S de lecture pouvant être satisfait par le cache de client local.
+
+host-domclient.congestion.name = Encombrements
+host-domclient.congestion.description = Encombrements des E/S générées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.congestion.metrics.congestion.name = Encombrements
+host-domclient.congestion.metrics.congestion.description = Encombrements des E/S générées par tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+
+host-domclient.oio.name = E/S en attente
+host-domclient.oio.description = E/S en attente dans tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+host-domclient.oio.metrics.oio.name = E/S en attente
+host-domclient.oio.metrics.oio.description = E/S en attente dans tous les clients vSAN de l'hôte, tels que les machines virtuelles, l'objet statistiques, etc.
+
+#
+# HostDomCompMgr
+#
+com.vmware.vsan.perf.entity.host-domcompmgr.description = Mesures sur les hôtes du point de vue du serveur principal vSAN.
+#
+# HostDomCompMgrGraphs
+#
+host-domcompmgr.iops.name = IOPS
+host-domcompmgr.iops.description = IOPS de l'hôte du serveur principal vSAN.
+host-domcompmgr.iops.metrics.iopsRead.name = IOPS de lecture
+host-domcompmgr.iops.metrics.iopsRead.description = IOPS de lecture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.iops.metrics.iopsWrite.name = IOPS d'écriture
+host-domcompmgr.iops.metrics.iopsWrite.description = IOPS d'écriture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.iops.metrics.iopsResyncRead.name = IOPS en resynchronisation de lecture
+host-domcompmgr.iops.metrics.iopsResyncRead.description = IOPS de resynchronisation de trafic de lecture de l'hôte vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir d'objets de resynchronisation du point de vue du serveur principal vSAN.
+host-domcompmgr.iops.metrics.iopsRecWrite.name = IOPS en récupération d'écriture
+host-domcompmgr.iops.metrics.iopsRecWrite.description = IOPS en récupération d'écriture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.iops.metrics.iopsUnmap.name = IOPS de démappage
+host-domcompmgr.iops.metrics.iopsUnmap.description = IOPS de la commande de découpage/démappage à destination des groupes de disques sur cet hôte.
+host-domcompmgr.iops.metrics.iopsRecUnmap.name = IOPS en récupération de démappage
+host-domcompmgr.iops.metrics.iopsRecUnmap.description = IOPS en récupération de commande de découpage/démappage à destination des groupes de disques sur cet hôte.
+
+host-domcompmgr.throughput.name = Débit
+host-domcompmgr.throughput.description = Débit de l'hôte du serveur principal vSAN.
+host-domcompmgr.throughput.metrics.throughputRead.name = Débit de lecture
+host-domcompmgr.throughput.metrics.throughputRead.description = Débit de lecture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.throughput.metrics.throughputWrite.name = Débit d'écriture
+host-domcompmgr.throughput.metrics.throughputWrite.description = Débit d'écriture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.throughput.metrics.tputResyncRead.name = Débit de resynchronisation en lecture
+host-domcompmgr.throughput.metrics.tputResyncRead.description = Débit de resynchronisation de trafic en lecture de l'hôte vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation du point de vue du serveur principal vSAN.
+host-domcompmgr.throughput.metrics.throughputRecWrite.name = Débit de récupération d'écriture
+host-domcompmgr.throughput.metrics.throughputRecWrite.description = Débit de récupération d'écriture de l'hôte vSAN du point de vue du serveur principal vSAN.
+
+host-domcompmgr.throughputUnmap.name = Débit de découpage/démappage
+host-domcompmgr.throughputUnmap.description = Débit de découpage/démappage à destination des groupes de disques sur cet hôte.
+host-domcompmgr.throughputUnmap.metrics.throughputUnmap.name = Débit de démappage
+host-domcompmgr.throughputUnmap.metrics.throughputUnmap.description = Débit total de découpage/démappage à destination des groupes de disques sur cet hôte.
+host-domcompmgr.throughputUnmap.metrics.throughputRecUnmap.name = Débit en récupération de démappage
+host-domcompmgr.throughputUnmap.metrics.throughputRecUnmap.description = Débit total en récupération de découpage/démappage à destination des groupes de disques sur cet hôte.
+
+host-domcompmgr.latency.name = Latence
+host-domcompmgr.latency.description = Latence de l'hôte du serveur principal vSAN.
+host-domcompmgr.latency.metrics.latencyAvgRead.name = Latence de lecture
+host-domcompmgr.latency.metrics.latencyAvgRead.description = Latence moyenne des E/S de lecture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.latency.metrics.latencyAvgWrite.name = Latence d'écriture
+host-domcompmgr.latency.metrics.latencyAvgWrite.description = Latence moyenne d'E/S en d'écriture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.latency.metrics.latAvgResyncRead.name = Latence de resynchronisation en lecture
+host-domcompmgr.latency.metrics.latAvgResyncRead.description = Latence de lecture moyenne du trafic de resynchronisation de l'hôte vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation du point de vue du serveur principal vSAN.
+host-domcompmgr.latency.metrics.latencyAvgRecWrite.name = Latence de récupération d'écriture
+host-domcompmgr.latency.metrics.latencyAvgRecWrite.description = Latence moyenne d'E/S en récupération d'écriture de l'hôte vSAN du point de vue du serveur principal vSAN.
+host-domcompmgr.latency.metrics.latencyAvgUnmap.name = Latence de démappage
+host-domcompmgr.latency.metrics.latencyAvgUnmap.description = Latence moyenne de découpage/démappage à destination des groupes de disques sur cet hôte.
+host-domcompmgr.latency.metrics.latencyAvgRecUnmap.name = Latence en récupération de démappage
+host-domcompmgr.latency.metrics.latencyAvgRecUnmap.description = Latence moyenne de découpage/démappage à destination des groupes de disques sur cet hôte.
+
+
+
+
+host-domcompmgr.congestion.name = Encombrements
+host-domcompmgr.congestion.description = Encombrement de l'hôte du serveur principal vSAN.
+host-domcompmgr.congestion.metrics.congestion.name = Encombrements
+host-domcompmgr.congestion.metrics.congestion.description = Encombrements de l'hôte vSAN du point de vue du serveur principal vSAN.
+
+
+host-domcompmgr.oio.name = E/S en attente
+host-domcompmgr.oio.description = E/S en attente de l'hôte du serveur principal vSAN.
+host-domcompmgr.oio.metrics.oio.name = E/S en attente
+host-domcompmgr.oio.metrics.oio.description = E/S en attente de l'hôte vSAN du point de vue du serveur principal vSAN.
+
+#
+# CacheDisk
+#
+com.vmware.vsan.perf.entity.cache-disk.description = Mesures sur les disques au niveau du cache.
+
+#
+# CacheDiskGraphs
+#
+cache-disk.iopsDev.name = IOPS de la couche physique/microprogramme
+cache-disk.iopsDev.description = IOPS de la couche physique/microprogramme du disque de niveau du cache vSAN.
+cache-disk.iopsDev.metrics.iopsDevRead.name = IOPS de lecture de la couche physique
+cache-disk.iopsDev.metrics.iopsDevRead.description = IOPS de lecture de la couche physique/microprogramme des disques vSAN.
+cache-disk.iopsDev.metrics.iopsDevWrite.name = IOPS d'écriture de la couche physique
+cache-disk.iopsDev.metrics.iopsDevWrite.description = IOPS d'écriture de la couche physique/microprogramme des disques vSAN.
+
+
+cache-disk.throughputDev.name = Débit de la couche physique/microprogramme
+cache-disk.throughputDev.description = Débit de la couche physique/microprogramme du disque de niveau du cache vSAN.
+cache-disk.throughputDev.metrics.throughputDevRead.name = Débit de lecture de la couche physique
+cache-disk.throughputDev.metrics.throughputDevRead.description = Débit de lecture de la couche physique/microprogramme des disques vSAN.
+cache-disk.throughputDev.metrics.throughputDevWrite.name = Débit d'écriture de la couche physique
+cache-disk.throughputDev.metrics.throughputDevWrite.description = Débit d'écriture de la couche physique/microprogramme des disques vSAN.
+
+
+cache-disk.latencyDev.name = Latence de la couche physique/microprogramme
+cache-disk.latencyDev.description = Latence de la couche physique/microprogramme du disque de niveau du cache vSAN.
+cache-disk.latencyDev.metrics.latencyDevRead.name = Latence de lecture de la couche physique
+cache-disk.latencyDev.metrics.latencyDevRead.description = Latence de lecture de la couche physique/microprogramme des disques vSAN.
+cache-disk.latencyDev.metrics.latencyDevWrite.name = Latence d'écriture de la couche physique
+cache-disk.latencyDev.metrics.latencyDevWrite.description = Latence d'écriture de la couche physique/microprogramme des disques vSAN.
+cache-disk.latencyDev.metrics.latencyDevGAvg.name = Latence moyenne d'invité
+cache-disk.latencyDev.metrics.latencyDevGAvg.description = Latence d'E/S d'invité des disques vSAN (latence totale).
+cache-disk.latencyDev.metrics.latencyDevDAvg.name = Latence moyenne de périphérique
+cache-disk.latencyDev.metrics.latencyDevDAvg.description = Latence de périphérique d'E/S des disques vSAN (du HBA au stockage principal).
+
+#
+# CapacityDisk
+#
+com.vmware.vsan.perf.entity.capacity-disk.description = Mesures sur les disques au niveau de la capacité.
+
+#
+# CapacityDiskGraphs
+#
+capacity-disk.iopsDev.name = IOPS de la couche physique/microprogramme
+capacity-disk.iopsDev.description = IOPS de la couche physique/microprogramme des disques au niveau de la capacité vSAN.
+capacity-disk.iopsDev.metrics.iopsDevRead.name = IOPS de lecture de la couche physique
+capacity-disk.iopsDev.metrics.iopsDevRead.description = IOPS de lecture de la couche physique/microprogramme des disques vSAN.
+capacity-disk.iopsDev.metrics.iopsDevWrite.name = IOPS d'écriture de la couche physique
+capacity-disk.iopsDev.metrics.iopsDevWrite.description = IOPS d'écriture de la couche physique/microprogramme des disques vSAN.
+
+capacity-disk.throughputDev.name = Débit de la couche physique/microprogramme
+capacity-disk.throughputDev.description = Débit de la couche physique/microprogramme des disques au niveau de la capacité vSAN.
+capacity-disk.throughputDev.metrics.throughputDevRead.name = Débit de lecture de la couche physique
+capacity-disk.throughputDev.metrics.throughputDevRead.description = Débit de lecture de la couche physique/microprogramme des disques vSAN.
+capacity-disk.throughputDev.metrics.throughputDevWrite.name = Débit d'écriture de la couche physique
+capacity-disk.throughputDev.metrics.throughputDevWrite.description = Débit d'écriture de la couche physique/microprogramme des disques vSAN.
+
+
+
+capacity-disk.latencyDev.name = Latence de la couche physique/microprogramme
+capacity-disk.latencyDev.description = Latence de la couche physique/microprogramme des disques au niveau de la capacité vSAN.
+capacity-disk.latencyDev.metrics.latencyDevRead.name = Latence de lecture de la couche physique
+capacity-disk.latencyDev.metrics.latencyDevRead.description = Latence de lecture de la couche physique/microprogramme des disques vSAN.
+capacity-disk.latencyDev.metrics.latencyDevWrite.name = Latence d'écriture de la couche physique
+capacity-disk.latencyDev.metrics.latencyDevWrite.description = Latence d'écriture de la couche physique/microprogramme des disques vSAN.
+capacity-disk.latencyDev.metrics.latencyDevGAvg.name = Latence moyenne d'invité
+capacity-disk.latencyDev.metrics.latencyDevGAvg.description = Latence d'E/S d'invité des disques vSAN (latence totale).
+capacity-disk.latencyDev.metrics.latencyDevDAvg.name = Latence moyenne de périphérique
+capacity-disk.latencyDev.metrics.latencyDevDAvg.description = Latence de périphérique d'E/S des disques vSAN (du HBA au stockage principal).
+
+
+capacity-disk.iops.name = IOPS de la couche vSAN
+capacity-disk.iops.description = IOPS de la couche vSAN des disques au niveau de la capacité.
+capacity-disk.iops.metrics.iopsRead.name = IOPS de lecture de la couche vSAN
+capacity-disk.iops.metrics.iopsRead.description = IOPS de lecture de la couche vSAN des disques.
+capacity-disk.iops.metrics.iopsWrite.name = IOPS d'écriture de la couche vSAN
+capacity-disk.iops.metrics.iopsWrite.description = IOPS d'écriture de la couche vSAN des disques.
+
+
+capacity-disk.latency.name = Latence de la couche vSAN
+capacity-disk.latency.description = Latence de la couche vSAN des disques au niveau de la capacité.
+capacity-disk.latency.metrics.latencyRead.name = Latence de lecture de la couche vSAN
+capacity-disk.latency.metrics.latencyRead.description = Latence de lecture de la couche vSAN des disques.
+capacity-disk.latency.metrics.latencyWrite.name = Latence d'écriture de la couche vSAN
+capacity-disk.latency.metrics.latencyWrite.description = Latence d'écriture de la couche vSAN des disques.
+
+#
+# DiskGroup
+#
+com.vmware.vsan.perf.entity.disk-group.description = Mesures sur les groupes de disques.
+
+#
+# DiskGroupGraphs
+#
+disk-group.iopsFrontend.name = IOPS du serveur frontal (invité)
+disk-group.iopsFrontend.description = IOPS du serveur frontal (invité) du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.iopsFrontend.metrics.iopsRead.name = IOPS de lecture du serveur frontal
+disk-group.iopsFrontend.metrics.iopsRead.description = IOPS de lecture du serveur frontal y compris les échecs de l'accès en lecture RC du groupe de disques vSAN (disque au niveau du cache).
+disk-group.iopsFrontend.metrics.iopsWrite.name = IOPS d'écriture du serveur frontal
+disk-group.iopsFrontend.metrics.iopsWrite.description = IOPS d'écriture du serveur frontal du groupe de disques vSAN (disque au niveau du cache).
+disk-group.iopsFrontend.metrics.iopsRcRead.name = IOPS de lecture du cache de lecture
+disk-group.iopsFrontend.metrics.iopsRcRead.description = IOPS de lecture du cache de lecture du groupe de disques vSAN (disque au niveau du cache).
+disk-group.iopsFrontend.metrics.iopsWbWrite.name = IOPS d'écriture du tampon d'écriture
+disk-group.iopsFrontend.metrics.iopsWbWrite.description = IOPS d'écriture du tampon d'écriture du groupe de disques (disque au niveau du cache) vSAN.
+
+
+disk-group.throughputFrontend.name = Débit du serveur frontal (invité)
+disk-group.throughputFrontend.description = Débit du serveur frontal (invité) du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.throughputFrontend.metrics.throughputRead.name = Débit de lecture du serveur frontal
+disk-group.throughputFrontend.metrics.throughputRead.description = Débit de lecture du serveur frontal du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.throughputFrontend.metrics.throughputWrite.name = Débit d'écriture du serveur frontal
+disk-group.throughputFrontend.metrics.throughputWrite.description = Débit d'écriture du serveur frontal du groupe de disques (disque au niveau du cache) vSAN.
+
+
+disk-group.latencyFrontend.name = Latence du serveur frontal (invité)
+disk-group.latencyFrontend.description = Latence du serveur frontal (invité) du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.latencyFrontend.metrics.latencyAvgRead.name = Latence de lecture du serveur frontal
+disk-group.latencyFrontend.metrics.latencyAvgRead.description = Latence de lecture du serveur frontal du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.latencyFrontend.metrics.latencyAvgWrite.name = Latence d'écriture du serveur frontal
+disk-group.latencyFrontend.metrics.latencyAvgWrite.description = Latence d'écriture du serveur frontal du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.latencyFrontend.metrics.latencyRcRead.name = Latence de lecture du cache de lecture
+disk-group.latencyFrontend.metrics.latencyRcRead.description = Latence de lecture du cache de lecture du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.latencyFrontend.metrics.latencyWbWrite.name = Latence d'écriture du tampon d'écriture
+disk-group.latencyFrontend.metrics.latencyWbWrite.description = Latence d'écriture du tampon d'écriture du groupe de disques (disque au niveau du cache) vSAN.
+
+
+disk-group.iopsOverhead.name = IOPS de la surcharge
+disk-group.iopsOverhead.description = IOPS de la surcharge du groupe de disques (disque au niveau du cache) de vSAN.
+disk-group.iopsOverhead.metrics.iopsRcWrite.name = IOPS d'écriture du cache de lecture
+disk-group.iopsOverhead.metrics.iopsRcWrite.description = IOPS d'écriture du cache de lecture du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.iopsOverhead.metrics.iopsWbRead.name = IOPS de lecture du tampon d'écriture
+disk-group.iopsOverhead.metrics.iopsWbRead.description = IOPS de lecture du tampon d'écriture du groupe de disques (disque au niveau du cache) vSAN.
+
+
+disk-group.latencyOverhead.name = Latence d'E/S de la surcharge
+disk-group.latencyOverhead.description = Latence d'E/S de la surcharge du groupe de disques (disque au niveau du cache) de vSAN.
+disk-group.latencyOverhead.metrics.latencyRcWrite.name = Latence d'écriture du cache de lecture
+disk-group.latencyOverhead.metrics.latencyRcWrite.description = Latence d'écriture du cache de lecture du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.latencyOverhead.metrics.latencyWbRead.name = Latence de lecture du tampon d'écriture
+disk-group.latencyOverhead.metrics.latencyWbRead.description = Latence de lecture du tampon d'écriture du groupe de disques (disque au niveau du cache) vSAN.
+
+
+disk-group.rcHitRate.name = Taux de réussite du cache de lecture
+disk-group.rcHitRate.description = Taux de réussite du cache de lecture du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.rcHitRate.metrics.rcHitRate.name = Taux de réussite du cache de lecture
+disk-group.rcHitRate.metrics.rcHitRate.description = Taux de réussite du cache de lecture du groupe de disques (disque au niveau du cache) vSAN.
+
+
+disk-group.evictions.name = Suppressions
+disk-group.evictions.description = Suppressions du groupe de disques (disque au niveau du cache) vSAN.
+disk-group.evictions.metrics.warEvictions.name = Invalidations du cache
+disk-group.evictions.metrics.warEvictions.description = Lignes du cache invalidées en raison d'écrasements.
+disk-group.evictions.metrics.quotaEvictions.name = Suppressions
+disk-group.evictions.metrics.quotaEvictions.description = Suppressions en raison d'un conflit du cache de lecture.
+
+
+disk-group.wbFreePct.name = Pourcentage de tampon d'écriture disponible
+disk-group.wbFreePct.description = Pourcentage de tampon d'écriture disponible du groupe de disques (disque de niveau du cache) vSAN.
+disk-group.wbFreePct.metrics.wbFreePct.name = Pourcentage de tampon d'écriture disponible
+disk-group.wbFreePct.metrics.wbFreePct.description = Pourcentage de tampon d'écriture disponible du groupe de disques (disque de niveau du cache) vSAN.
+
+disk-group.capacity.name = Capacité et utilisation
+disk-group.capacity.description = Capacité et utilisation du groupe de disques vSAN.
+disk-group.capacity.metrics.capacity.name = Capacité
+disk-group.capacity.metrics.capacity.description = Capacité du groupe de disques vSAN.
+disk-group.capacity.metrics.capacityUsed.name = Capacité utilisée
+disk-group.capacity.metrics.capacityUsed.description = Capacité utilisée du groupe de disques vSAN.
+disk-group.capacity.metrics.capacityReserved.name = Capacité réservée
+disk-group.capacity.metrics.capacityReserved.description = Capacité réservée du groupe de disques vSAN.
+disk-group.capacity.metrics.rcSize.name = Taille du cache de lecture
+disk-group.capacity.metrics.rcSize.description = Taille du cache de lecture du groupe de disques vSAN.
+disk-group.capacity.metrics.wbSize.name = Taille du tampon d'écriture
+disk-group.capacity.metrics.wbSize.description = Taille du tampon d'écriture du groupe de disques vSAN.
+
+
+disk-group.destage.name = Débit de transfert des disques de cache
+disk-group.destage.description = Débit du transfert de données du disque de cache vers les disques de capacité.
+disk-group.destage.metrics.ssdBytesDrained.name = Transfert d'octets du SSD
+disk-group.destage.metrics.ssdBytesDrained.description = Débit du transfert d'octets SSD du disque de cache vers les disques de capacité.
+disk-group.destage.metrics.zeroBytesDrained.name = Transfert de zéro octet
+disk-group.destage.metrics.zeroBytesDrained.description = Débit du transfert de zéro octet vers les disques de la capacité.
+
+disk-group.congestions.name = Encombrements
+disk-group.congestions.description = Encombrements du groupe de disques vSAN.
+disk-group.congestions.metrics.memCongestion.name = Encombrement de la mémoire
+disk-group.congestions.metrics.memCongestion.description = Encombrements de la mémoire du groupe de disques vSAN.
+disk-group.congestions.metrics.slabCongestion.name = Encombrement de section
+disk-group.congestions.metrics.slabCongestion.description = Encombrements de section du groupe de disques vSAN.
+disk-group.congestions.metrics.ssdCongestion.name = Encombrement SSD
+disk-group.congestions.metrics.ssdCongestion.description = Encombrements de SSD du groupe de disques vSAN.
+disk-group.congestions.metrics.iopsCongestion.name = Encombrement IOPS
+disk-group.congestions.metrics.iopsCongestion.description = Encombrements d'IOPS du groupe de disques vSAN.
+disk-group.congestions.metrics.logCongestion.name = Encombrement journal
+disk-group.congestions.metrics.logCongestion.description = Encombrements de journal du groupe de disques vSAN.
+disk-group.congestions.metrics.compCongestion.name = Encombrement calcul
+disk-group.congestions.metrics.compCongestion.description = Encombrement de calcul du groupe de disques vSAN.
+
+disk-group.oobCongestion.name = Bande passante disponible en cas d'encombrement de journaux.
+disk-group.oobCongestion.description = Bande passante prise en charge par le taux de transfert de données lorsque le cumul de journaux dépasse la limite supérieure. Le cumul de journaux est limité à l'utilisation de la mémoire et au temps de montage. Les E/S d'une taille de bloc de 4 Ko entraînent le cumul de journaux le plus élevé. Lorsque le cumul de journaux dépasse la limite supérieure, nous limitons la bande passante à celle pouvant être prise en charge par le taux de transfert de données actuel.
+disk-group.oobCongestion.metrics.bytesPerSecondBandwidth.name = LogCongestionTput
+disk-group.oobCongestion.metrics.bytesPerSecondBandwidth.description = Bande passante prise en charge par le taux de transfert de données actuel, car le cumul de journaux dépasse la limite supérieure.
+
+disk-group.oio.name = E/S en attente
+disk-group.oio.description = E/S d'écriture en attente des groupes de disques.
+disk-group.oio.metrics.oioWrite.name = Opérations d'écriture en attente
+disk-group.oio.metrics.oioWrite.description = Nombre d'opérations d'écriture en attente du groupe de disques.
+disk-group.oio.metrics.oioRecWrite.name = Opérations de récupération d'écriture en attente
+disk-group.oio.metrics.oioRecWrite.description = Nombre d'opérations de récupération d'écriture en attente du groupe de disques.
+
+
+disk-group.oioSize.name = Taille d'E/S en attente
+disk-group.oioSize.description = Taille d'E/S d'écriture en attente des groupes de disques
+disk-group.oioSize.metrics.oioWriteSize.name = Taille d'E/S d'écriture en attente
+disk-group.oioSize.metrics.oioWriteSize.description = Taille d'E/S d'écriture en attente du groupe de disques.
+disk-group.oioSize.metrics.oioRecWriteSize.name = Taille d'E/S en récupération d'écriture en attente
+disk-group.oioSize.metrics.oioRecWriteSize.description = Taille d'E/S en récupération d'écriture en attente du groupe de disques.
+
+
+disk-group.schedulerIOPct.name = Pourcentage d'E/S différées
+disk-group.schedulerIOPct.description = Pourcentage d'E/S passant par les files d'attente internes vSAN.
+disk-group.schedulerIOPct.metrics.iopsDelayPctSched.name = Pourcentage d'E/S différées
+disk-group.schedulerIOPct.metrics.iopsDelayPctSched.description = Pourcentage d'E/S passant par les files d'attente internes vSAN.
+
+disk-group.schedulerLatency.name = Latence moyenne d'E/S différées
+disk-group.schedulerLatency.description = Latence moyenne des E/S passant par les files d'attente internes vSAN.
+disk-group.schedulerLatency.metrics.latencyDelaySched.name = Latence moyenne d'E/S différées
+disk-group.schedulerLatency.metrics.latencyDelaySched.description = Latence moyenne du total d'E/S passant par les files d'attente internes vSAN.
+disk-group.schedulerLatency.metrics.latencySchedQueueNS.name = Latence de la file d'attente d'espace de noms
+disk-group.schedulerLatency.metrics.latencySchedQueueNS.description = Latence de la file d'attente d'E/S d'espace de noms dans le programmateur interne vSAN.
+disk-group.schedulerLatency.metrics.latencySchedQueueRec.name = Latence de la file d'attente de récupération
+disk-group.schedulerLatency.metrics.latencySchedQueueRec.description = Latence de la file d'attente d'E/S de récupération dans le programmateur interne vSAN.
+disk-group.schedulerLatency.metrics.latencySchedQueueVM.name = Latence de la file d'attente de VM
+disk-group.schedulerLatency.metrics.latencySchedQueueVM.description = Latence de la file d'attente d'E/S de VM dans le programmateur interne vSAN.
+disk-group.schedulerLatency.metrics.latencySchedQueueMeta.name = Latence de la file d'attente méta
+disk-group.schedulerLatency.metrics.latencySchedQueueMeta.description = Latence de la file d'attente d'E/S méta dans le programmateur interne vSAN.
+
+
+disk-group.schedulerIOPS.name = IOPS différées
+disk-group.schedulerIOPS.description = IOPS d'E/S différées passant par les files d'attente internes vSAN.
+disk-group.schedulerIOPS.metrics.iopsSched.name = Total d'IOPS différées
+disk-group.schedulerIOPS.metrics.iopsSched.description = IOPS du total d'E/S passant par les files d'attente internes vSAN.
+disk-group.schedulerIOPS.metrics.iopsSchedQueueNS.name = IOPS de la file d'attente d'espace de noms
+disk-group.schedulerIOPS.metrics.iopsSchedQueueNS.description = IOPS de la file d'attente d'E/S d'espace de noms dans le programmateur interne vSAN.
+disk-group.schedulerIOPS.metrics.iopsSchedQueueRec.name = IOPS de la file d'attente de récupération
+disk-group.schedulerIOPS.metrics.iopsSchedQueueRec.description = IOPS de la file d'attente d'E/S de récupération dans le programmateur interne vSAN.
+disk-group.schedulerIOPS.metrics.iopsSchedQueueVM.name = IOPS de la file d'attente de VM
+disk-group.schedulerIOPS.metrics.iopsSchedQueueVM.description = IOPS de la file d'attente d'E/S de VM dans le programmateur interne vSAN.
+disk-group.schedulerIOPS.metrics.iopsSchedQueueMeta.name = IOPS de la file d'attente méta
+disk-group.schedulerIOPS.metrics.iopsSchedQueueMeta.description = IOPS de la file d'attente d'E/S méta dans le programmateur interne vSAN.
+
+
+disk-group.schedulerTput.name = Débit d'E/S différées
+disk-group.schedulerTput.description = Débit d'E/S différées passant par les files d'attente internes vSAN.
+disk-group.schedulerTput.metrics.throughputSched.name = Débit du total des files d'attente
+disk-group.schedulerTput.metrics.throughputSched.description = Débit du total d'E/S différées dans le programmateur interne vSAN.
+disk-group.schedulerTput.metrics.throughputSchedQueueNS.name = Débit de la file d'attente d'espace de noms
+disk-group.schedulerTput.metrics.throughputSchedQueueNS.description = Débit de la file d'attente d'E/S d'espace de noms dans le programmateur interne vSAN.
+disk-group.schedulerTput.metrics.throughputSchedQueueRec.name = Débit de file d'attente de récupération
+disk-group.schedulerTput.metrics.throughputSchedQueueRec.description = Débit de la file d'attente d'E/S de récupération dans le programmateur interne vSAN.
+disk-group.schedulerTput.metrics.throughputSchedQueueVM.name = Débit de la file d'attente de VM
+disk-group.schedulerTput.metrics.throughputSchedQueueVM.description = Débit de la file d'attente d'E/S de VM dans le programmateur interne vSAN.
+disk-group.schedulerTput.metrics.throughputSchedQueueMeta.name = Débit de la file d'attente méta
+disk-group.schedulerTput.metrics.throughputSchedQueueMeta.description = Débit de la file d'attente d'E/S méta dans le programmateur interne vSAN.
+
+
+disk-group.iopsResync.name = IOPS de resynchronisation
+disk-group.iopsResync.description = IOPS de resynchronisation de trafic au niveau du groupe de disques vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation.
+disk-group.iopsResync.metrics.iopsResyncReadPolicy.name = Modification de stratégie en lecture
+disk-group.iopsResync.metrics.iopsResyncReadPolicy.description = IOPS de resynchronisation de trafic de lecture au niveau du groupe de disques vSAN causé par la modification d'une stratégie.
+disk-group.iopsResync.metrics.iopsResyncReadDecom.name = Évacuation en lecture
+disk-group.iopsResync.metrics.iopsResyncReadDecom.description = IOPS de resynchronisation de trafic de lecture au niveau du groupe de disques vSAN causé par le mode maintenance et l'évacuation d'un objet.
+disk-group.iopsResync.metrics.iopsResyncReadRebalance.name = Rééquilibrage en lecture
+disk-group.iopsResync.metrics.iopsResyncReadRebalance.description = IOPS de resynchronisation de trafic de lecture au niveau du groupe de disques vSAN causé par le rééquilibrage d'objets.
+disk-group.iopsResync.metrics.iopsResyncReadFixComp.name = Réparation en lecture
+disk-group.iopsResync.metrics.iopsResyncReadFixComp.description = IOPS de resynchronisation de trafic de lecture au niveau du groupe de disques vSAN causé par la réparation d'un objet.
+disk-group.iopsResync.metrics.iopsResyncWritePolicy.name = Modification de stratégie en écriture
+disk-group.iopsResync.metrics.iopsResyncWritePolicy.description = IOPS de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par la modification d'une stratégie.
+disk-group.iopsResync.metrics.iopsResyncWriteDecom.name = Évacuation en écriture
+disk-group.iopsResync.metrics.iopsResyncWriteDecom.description = IOPS de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par le mode maintenance et l'évacuation d'un objet.
+disk-group.iopsResync.metrics.iopsResyncWriteRebalance.name = Rééquilibrage en écriture
+disk-group.iopsResync.metrics.iopsResyncWriteRebalance.description = IOPS de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par le rééquilibrage d'objets.
+disk-group.iopsResync.metrics.iopsResyncWriteFixComp.name = Réparation en écriture
+disk-group.iopsResync.metrics.iopsResyncWriteFixComp.description = IOPS de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par la réparation d'un objet.
+
+disk-group.tputResync.name = Débit de resynchronisation
+disk-group.tputResync.description = Débit de resynchronisation de trafic au niveau du groupe de disques vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation.
+disk-group.tputResync.metrics.tputResyncReadPolicy.name = Modification de stratégie en lecture
+disk-group.tputResync.metrics.tputResyncReadPolicy.description = Débit de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par la modification d'une stratégie.
+disk-group.tputResync.metrics.tputResyncReadDecom.name = Évacuation en lecture
+disk-group.tputResync.metrics.tputResyncReadDecom.description = Débit de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par le mode maintenance et l'évacuation d'un objet.
+disk-group.tputResync.metrics.tputResyncReadRebalance.name = Rééquilibrage en lecture
+disk-group.tputResync.metrics.tputResyncReadRebalance.description = Débit de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par le rééquilibrage d'objets.
+disk-group.tputResync.metrics.tputResyncReadFixComp.name = Réparation en lecture
+disk-group.tputResync.metrics.tputResyncReadFixComp.description = Débit de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par la réparation d'un objet.
+disk-group.tputResync.metrics.tputResyncWritePolicy.name = Modification de stratégie en écriture
+disk-group.tputResync.metrics.tputResyncWritePolicy.description = Débit de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par la modification d'une stratégie.
+disk-group.tputResync.metrics.tputResyncWriteDecom.name = Évacuation en écriture
+disk-group.tputResync.metrics.tputResyncWriteDecom.description = Débit de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par le mode maintenance et l'évacuation d'un objet.
+disk-group.tputResync.metrics.tputResyncWriteRebalance.name = Rééquilibrage en écriture
+disk-group.tputResync.metrics.tputResyncWriteRebalance.description = Débit de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par le rééquilibrage d'objets.
+disk-group.tputResync.metrics.tputResyncWriteFixComp.name = Réparation en écriture
+disk-group.tputResync.metrics.tputResyncWriteFixComp.description = Débit de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par la réparation d'un objet.
+
+disk-group.latResync.name = Latence de resynchronisation
+disk-group.latResync.description = Latence moyenne de resynchronisation de trafic au niveau du groupe de disques vSAN, y compris les opérations de modification de stratégie, de réparation, d'entrée en mode de maintenance ou d'évacuation, et de rééquilibrage à partir des objets de resynchronisation.
+disk-group.latResync.metrics.latResyncReadPolicy.name = Modification de stratégie en lecture
+disk-group.latResync.metrics.latResyncReadPolicy.description = Latence de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par la modification d'une stratégie.
+disk-group.latResync.metrics.latResyncReadDecom.name = Évacuation en lecture
+disk-group.latResync.metrics.latResyncReadDecom.description = Latence de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par le mode maintenance et l'évacuation d'un objet.
+disk-group.latResync.metrics.latResyncReadRebalance.name = Rééquilibrage en lecture
+disk-group.latResync.metrics.latResyncReadRebalance.description = Latence de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par le rééquilibrage d'objets.
+disk-group.latResync.metrics.latResyncReadFixComp.name = Réparation en lecture
+disk-group.latResync.metrics.latResyncReadFixComp.description = Latence de resynchronisation de trafic en lecture au niveau du groupe de disques vSAN causé par la réparation d'un objet.
+disk-group.latResync.metrics.latResyncWritePolicy.name = Modification de stratégie en écriture
+disk-group.latResync.metrics.latResyncWritePolicy.description = Latence de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par la modification d'une stratégie.
+disk-group.latResync.metrics.latResyncWriteDecom.name = Évacuation en écriture
+disk-group.latResync.metrics.latResyncWriteDecom.description = Latence de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par le mode maintenance et l'évacuation d'un objet.
+disk-group.latResync.metrics.latResyncWriteRebalance.name = Rééquilibrage en écriture
+disk-group.latResync.metrics.latResyncWriteRebalance.description = Latence de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par le rééquilibrage d'objets.
+disk-group.latResync.metrics.latResyncWriteFixComp.name = Réparation en écriture
+disk-group.latResync.metrics.latResyncWriteFixComp.description = Latence de resynchronisation de trafic en écriture au niveau du groupe de disques vSAN causé par la réparation d'un objet.
+
+#
+# VirtualSCSI
+#
+com.vmware.vsan.perf.entity.vscsi.description = Mesures pour le SCSI virtuel des machines virtuelles.
+
+#
+# VirtualSCSIGraphs
+#
+vscsi.iops.name = IOPS SCSI virtuel
+vscsi.iops.description = IOPS VSCSI des machines virtuelles
+vscsi.iops.metrics.iopsRead.name = IOPS de lecture
+vscsi.iops.metrics.iopsRead.description = IOPS de lecture du VSCSI des machines virtuelles.
+vscsi.iops.metrics.iopsWrite.name = IOPS d'écriture
+vscsi.iops.metrics.iopsWrite.description = IOPS d'écriture du VSCSI des machines virtuelles.
+
+
+vscsi.throughput.name = Débit SCSI virtuel
+vscsi.throughput.description = Débit du VSCSI des machines virtuelles.
+vscsi.throughput.metrics.throughputRead.name = Débit de lecture
+vscsi.throughput.metrics.throughputRead.description = Débit de lecture du VSCSI des machines virtuelles.
+vscsi.throughput.metrics.throughputWrite.name = Débit d'écriture
+vscsi.throughput.metrics.throughputWrite.description = Débit d'écriture du VSCSI des machines virtuelles.
+
+
+vscsi.latency.name = Latence SCSI virtuel
+vscsi.latency.description = Latence du VSCSI des machines virtuelles.
+vscsi.latency.metrics.latencyRead.name = Latence de lecture
+vscsi.latency.metrics.latencyRead.description = Latence de lecture du VSCSI des machines virtuelles.
+vscsi.latency.metrics.latencyWrite.name = Latence d'écriture
+vscsi.latency.metrics.latencyWrite.description = Latence d'écriture du VSCSI des machines virtuelles.
+
+
+#
+# VirtualMachine
+#
+com.vmware.vsan.perf.entity.vm.description = Mesures pour les machines virtuelles.
+
+
+#
+# VirtualMachineGraphs
+#
+vm.iops.name = IOPS
+vm.iops.description = IOPS des machines virtuelles.
+vm.iops.metrics.iopsRead.name = IOPS de lecture
+vm.iops.metrics.iopsRead.description = IOPS de lecture des machines virtuelles.
+vm.iops.metrics.iopsWrite.name = IOPS d'écriture
+vm.iops.metrics.iopsWrite.description = IOPS d'écriture des machines virtuelles.
+
+
+vm.throughput.name = Débit
+vm.throughput.description = Débit des machines virtuelles.
+vm.throughput.metrics.throughputRead.name = Débit de lecture
+vm.throughput.metrics.throughputRead.description = Débit de lecture des machines virtuelles.
+vm.throughput.metrics.throughputWrite.name = Débit d'écriture
+vm.throughput.metrics.throughputWrite.description = Débit d'écriture des machines virtuelles.
+
+
+vm.latency.name = Latence
+vm.latency.description = Latence des machines virtuelles.
+vm.latency.metrics.latencyRead.name = Latence de lecture
+vm.latency.metrics.latencyRead.description = Latence de lecture des machines virtuelles.
+vm.latency.metrics.latencyWrite.name = Latence d'écriture
+vm.latency.metrics.latencyWrite.description = Latence d'écriture des machines virtuelles.
+
+
+#
+# VirtualDisk
+#
+com.vmware.vsan.perf.entity.virtual-disk.description = Mesures pour les disques virtuels.
+
+
+#
+# VirtualDiskGraphs
+#
+virtual-disk.normalized-iops.name = IOPS et limite d'IOPS
+virtual-disk.normalized-iops.description = Ce graphique affiche les IOPS normalisées pour un disque virtuel. Si une limite d'IOPS a été spécifiée dans la stratégie, le graphique l'affichera également.
+virtual-disk.normalized-iops.metrics.iopsLimit.name = Limite d'IOPS normalisées
+virtual-disk.normalized-iops.metrics.iopsLimit.description = Limite d'IOPS appliquée.
+virtual-disk.normalized-iops.metrics.NIOPS.name = IOPS normalisées
+virtual-disk.normalized-iops.metrics.NIOPS.description = Affiche les IOPS qui sont présentées en utilisant une taille pondérée de 32 Ko par défaut. Cela signifie qu'une opération de lecture ou d'écriture de 64 Ko représente 2 E/S normalisées. La taille pondérée est un paramètre configurable.
+
+
+virtual-disk.delayed-normalized-iops.name = IOPS normalisées différées
+virtual-disk.delayed-normalized-iops.description = Ce graphique affiche les IOPS normalisées pour les E/S différées en raison de l'application de la limite d'IOPS.
+virtual-disk.delayed-normalized-iops.metrics.NIOPSDelayed.name = IOPS normalisées différées
+virtual-disk.delayed-normalized-iops.metrics.NIOPSDelayed.description = IOPS pour les E/S normalisées qui sont différées.
+
+#
+# VMKNICNetStats
+#
+com.vmware.vsan.perf.entity.vsan-vnic-net.description = Mesures de l'adaptateur réseau vSAN VMkernel.
+
+#
+# VMKNICNetStatsGraphs
+#
+vsannic.network-bytes-metrics.name = Débit de l'adaptateur réseau VMkernel
+vsannic.network-bytes-metrics.description = Débit d'E/S réseau de l'adaptateur réseau VMkernel.
+vsannic.network-bytes-metrics.metrics.rxThroughput.name = Débit entrant
+vsannic.network-bytes-metrics.metrics.rxThroughput.description = Débit entrant de l'adaptateur réseau VMkernel.
+vsannic.network-bytes-metrics.metrics.txThroughput.name = Débit sortant
+vsannic.network-bytes-metrics.metrics.txThroughput.description = Débit sortant de l'adaptateur réseau VMkernel.
+vsannic.packets-metrics.name = Paquets par seconde de l'adaptateur réseau VMkernel
+vsannic.packets-metrics.description = Paquets par seconde de l'adaptateur réseau VMkernel.
+vsannic.packets-metrics.metrics.rxPackets.name = Paquets entrants par seconde
+vsannic.packets-metrics.metrics.rxPackets.description = Paquets entrants par seconde de l'adaptateur réseau VMkernel.
+vsannic.packets-metrics.metrics.txPackets.name = Paquets sortants par seconde
+vsannic.packets-metrics.metrics.txPackets.description = Paquets sortants par seconde de l'adaptateur réseau VMkernel.
+vsannic.packets-loss-rate.name = Taux de rejet de paquets de l'adaptateur réseau VMkernel
+vsannic.packets-loss-rate.description = Pourcentage de rejet de paquets de l'adaptateur réseau VMkernel.
+vsannic.packets-loss-rate.metrics.rxPacketsLossRate.name = Taux de rejet de paquets entrants
+vsannic.packets-loss-rate.metrics.rxPacketsLossRate.description = Pourcentage de rejet de paquets entrants de l'adaptateur réseau VMkernel.
+vsannic.packets-loss-rate.metrics.txPacketsLossRate.name = Taux de rejet de paquets sortants
+vsannic.packets-loss-rate.metrics.txPacketsLossRate.description = Pourcentage de rejet de paquets sortants de l'adaptateur réseau VMkernel.
+vsannic.port-drop-rate.name = Taux d'abandon du port du vSwitch réseau VMkernel
+vsannic.port-drop-rate.description = Pourcentage d'abandon du port du vSwitch réseau VMkernel.
+vsannic.port-drop-rate.metrics.portRxDrops.name = Taux d'abandon de paquets entrants du port du vSwitch
+vsannic.port-drop-rate.metrics.portRxDrops.description = Pourcentage d'abandon de paquets entrants du port du vSwitch réseau VMkernel.
+vsannic.port-drop-rate.metrics.portTxDrops.name = Taux d'abandon de paquets sortants du port du vSwitch
+vsannic.port-drop-rate.metrics.portTxDrops.description = Pourcentage d'abandon de paquets sortants du port du vSwitch réseau VMkernel.
+
+#
+# VsanHostNetStats
+#
+com.vmware.vsan.perf.entity.vsan-host-net.description = Mesures du réseau de l'hôte vSAN.
+
+#
+# VsanHostNetStatsGraphs
+#
+vsanhost.network-bytes-metrics.name = Débit d'E/S réseau de l'hôte vSAN
+vsanhost.network-bytes-metrics.description = Débit d'E/S réseau de l'hôte du trafic vSAN sur lequel tous les adaptateurs réseau VMkernel sont activés.
+vsanhost.network-bytes-metrics.metrics.rxThroughput.name = Débit entrant réseau
+vsanhost.network-bytes-metrics.metrics.rxThroughput.description = Débit entrant hôte du trafic vSAN sur lequel tous les adaptateurs réseau VMkernel sont activés.
+vsanhost.network-bytes-metrics.metrics.txThroughput.name = Débit sortant réseau
+vsanhost.network-bytes-metrics.metrics.txThroughput.description = Débit sortant hôte du trafic vSAN sur lequel tous les adaptateurs réseau VMkernel sont activés.
+vsanhost.packets-metrics.name = Paquets par seconde de l'hôte vSAN
+vsanhost.packets-metrics.description = Paquets par seconde de l'hôte vSAN du trafic vSAN sur lequel tous les adaptateurs réseau VMkernel sont activés.
+vsanhost.packets-metrics.metrics.rxPackets.name = Paquets entrants par seconde du réseau
+vsanhost.packets-metrics.metrics.rxPackets.description = Paquets entrants par seconde réseau hôte du trafic vSAN sur lequel tous les adaptateurs réseau VMkernel sont activés.
+vsanhost.packets-metrics.metrics.txPackets.name = Paquets sortants par seconde du réseau
+vsanhost.packets-metrics.metrics.txPackets.description = Paquets sortants par seconde réseau hôte du trafic vSAN sur lequel tous les adaptateurs réseau VMkernel sont activés.
+vsanhost.packets-loss-rate.name = Taux de rejet de paquets d'hôte vSAN
+vsanhost.packets-loss-rate.description = Pourcentage de rejet de paquets d'hôte de tous les adaptateurs réseau VMkernel sur lesquels le trafic vSAN est activé.
+vsanhost.packets-loss-rate.metrics.rxPacketsLossRate.name = Taux de rejet de paquets entrants du réseau
+vsanhost.packets-loss-rate.metrics.rxPacketsLossRate.description = Pourcentage de rejet de paquets entrants d'hôte de tous les adaptateurs réseau VMkernel sur lesquels le trafic vSAN est activé.
+vsanhost.packets-loss-rate.metrics.txPacketsLossRate.name = Taux de rejet de paquets sortants du réseau
+vsanhost.packets-loss-rate.metrics.txPacketsLossRate.description = Pourcentage de rejet de paquets sortants d'hôte de tous les adaptateurs réseau VMkernel sur lesquels le trafic vSAN est activé.
+vsanhost.port-drop-rate.name = Taux d'abandon du port d'hôte vSAN
+vsanhost.port-drop-rate.description = Pourcentage d'abandon du port d'hôte vSAN de tous les ports du vSwitch réseau VMkernel vSAN.
+vsanhost.port-drop-rate.metrics.portRxDrops.name = Taux d'abandon de paquets entrants du port d'hôte vSAN
+vsanhost.port-drop-rate.metrics.portRxDrops.description = Pourcentage d'abandon de paquets entrants du port d'hôte vSAN.
+vsanhost.port-drop-rate.metrics.portTxDrops.name = Taux d'abandon de paquets sortants du port d'hôte vSAN
+vsanhost.port-drop-rate.metrics.portTxDrops.description = Pourcentage d'abandon de paquets sortants du port d'hôte vSAN.
+
+
+#
+# RdtNetStats
+#
+com.vmware.vsan.perf.entity.rdt-net.description = Mesures pour le réseau RDT.
+
+#
+## RdtNetStatsStatsGraphs
+#
+rdtnet.checksum.name = Total de contrôle du réseau RDT
+rdtnet.checksum.description = Total de contrôle du réseau RDT.
+rdtnet.checksum.metrics.checksumMismatchCount.name = Nombre d'incompatibilités du total de contrôle réseau RDT
+rdtnet.checksum.metrics.checksumMismatchCount.description = Nombre d'incompatibilités du total de contrôle réseau RDT.
+
+#
+# pNICNetStats
+#
+com.vmware.vsan.perf.entity.vsan-pnic-net.description = Mesures de la carte réseau physique (pNIC) de vSAN.
+
+#
+# pNICNetStatsGraphs
+#
+vsanpnic.network-bytes-metrics.name = Débit de la pNIC
+vsanpnic.network-bytes-metrics.description = Débit d'E/S réseau de la carte réseau physique.
+vsanpnic.network-bytes-metrics.metrics.rxThroughput.name = Débit entrant de la pNIC
+vsanpnic.network-bytes-metrics.metrics.rxThroughput.description = Débit entrant de la carte réseau physique.
+vsanpnic.network-bytes-metrics.metrics.txThroughput.name = Débit sortant de la pNIC
+vsanpnic.network-bytes-metrics.metrics.txThroughput.description = Débit sortant de la carte réseau physique.
+vsanpnic.packets-metrics.name = Paquets par seconde de la pNIC
+vsanpnic.packets-metrics.description = Paquets par seconde de la carte réseau physique.
+vsanpnic.packets-metrics.metrics.rxPackets.name = Paquets entrants par seconde de la pNIC
+vsanpnic.packets-metrics.metrics.rxPackets.description = Paquets entrants par seconde de la carte réseau physique.
+vsanpnic.packets-metrics.metrics.txPackets.name = Paquets sortants par seconde de la pNIC
+vsanpnic.packets-metrics.metrics.txPackets.description = Paquets sortants par seconde de la carte réseau physique.
+vsanpnic.packets-loss-rate.name = Taux d'erreur de paquets de pNIC
+vsanpnic.packets-loss-rate.description = Pourcentage d'erreur de paquets de carte réseau physique.
+vsanpnic.packets-loss-rate.metrics.rxPacketsLossRate.name = Taux d'erreur de paquets entrants de pNIC
+vsanpnic.packets-loss-rate.metrics.rxPacketsLossRate.description = Pourcentage d'erreur de paquets entrants de carte réseau physique.
+vsanpnic.packets-loss-rate.metrics.txPacketsLossRate.name = Taux d'erreur de paquets sortants de pNIC
+vsanpnic.packets-loss-rate.metrics.txPacketsLossRate.description = Pourcentage d'erreur de paquets sortants de carte réseau physique.
+vsanpnic.port-drop-rate.name = Taux d'abandon du port du vSwitch de la pNIC
+vsanpnic.port-drop-rate.description = Pourcentage d'abandon du port du vSwitch pour la carte réseau physique.
+vsanpnic.port-drop-rate.metrics.portRxDrops.name = Taux d'abandon de paquets entrants du port du vSwitch de pNIC
+vsanpnic.port-drop-rate.metrics.portRxDrops.description = Pourcentage d'abandon des paquets entrants du port du vSwitch pour la carte réseau physique.
+vsanpnic.port-drop-rate.metrics.portTxDrops.name = Taux d'abandon de paquets sortants du port du vSwitch de pNIC
+vsanpnic.port-drop-rate.metrics.portTxDrops.description = Pourcentage d'abandon des paquets sortants du port du vSwitch pour la carte réseau physique.
+vsanpnic.pause-count.name = Contrôle de flux de pNIC
+vsanpnic.pause-count.description = Pourcentage de suspension 802.3x de carte réseau physique.
+vsanpnic.pause-count.metrics.pauseCount.name = Taux de suspension 802.3x de pNIC
+vsanpnic.pause-count.metrics.pauseCount.description = Pourcentage de suspension 802.3x de carte réseau physique.
+vsanpnic.rxCrcErr.name = Erreur CRC RX de la carte réseau physique
+vsanpnic.rxCrcErr.description = Pourcentage d'erreurs CRC RX de la carte réseau physique.
+vsanpnic.rxCrcErr.metrics.rxCrcErr.name = Erreur CRC RX de la carte réseau physique
+vsanpnic.rxCrcErr.metrics.rxCrcErr.description = Pourcentage d'erreurs CRC RX de la carte réseau physique.
+vsanpnic.txCarErr.name = Erreur de support TX de la carte réseau physique
+vsanpnic.txCarErr.description = Pourcentage d'erreurs du support TX de la carte réseau physique.
+vsanpnic.txCarErr.metrics.txCarErr.name = Erreur de support TX de la carte réseau physique
+vsanpnic.txCarErr.metrics.txCarErr.description = Pourcentage d'erreurs du support TX de la carte réseau physique.
+vsanpnic.rxErr.name = Erreur générique RX de la carte réseau physique
+vsanpnic.rxErr.description = Pourcentage d'erreurs génériques RX de la carte réseau physique.
+vsanpnic.rxErr.metrics.rxErr.name = Erreur générique RX de la carte réseau physique
+vsanpnic.rxErr.metrics.rxErr.description = Pourcentage d'erreurs génériques RX de la carte réseau physique.
+vsanpnic.txErr.name = Erreur générique TX de la carte réseau physique
+vsanpnic.txErr.description = Pourcentage d'erreurs génériques TX de la carte réseau physique.
+vsanpnic.txErr.metrics.txErr.name = Erreur générique TX de la carte réseau physique
+vsanpnic.txErr.metrics.txErr.description = Pourcentage d'erreurs génériques TX de la carte réseau physique.
+vsanpnic.rxMissErr.name = Erreur manquée RX de la carte réseau physique
+vsanpnic.rxMissErr.description = Pourcentage d'erreurs manquées RX de la carte réseau physique.
+vsanpnic.rxMissErr.metrics.rxMissErr.name = Erreur manquée RX de la carte réseau physique
+vsanpnic.rxMissErr.metrics.rxMissErr.description = Pourcentage d'erreurs manquées RX de la carte réseau physique.
+vsanpnic.rxOvErr.name = Erreur de dépassement de la mémoire tampon RX de la carte réseau physique
+vsanpnic.rxOvErr.description = Pourcentage d'erreurs de dépassement de la mémoire tampon RX de la carte réseau physique.
+vsanpnic.rxOvErr.metrics.rxOvErr.name = Erreur de dépassement de la mémoire tampon RX de la carte réseau physique
+vsanpnic.rxOvErr.metrics.rxOvErr.description = Pourcentage d'erreurs de dépassement de la mémoire tampon RX de la carte réseau physique.
+vsanpnic.rxFifoErr.name = Erreur FIFO RX de la carte réseau physique
+vsanpnic.rxFifoErr.description = Pourcentage d'erreurs FIFO RX de la carte réseau physique.
+vsanpnic.rxFifoErr.metrics.rxFifoErr.name = Erreur FIFO RX de la carte réseau physique
+vsanpnic.rxFifoErr.metrics.rxFifoErr.description = Pourcentage d'erreurs FIFO RX de la carte réseau physique.
+
+
+#
+# VsanIscsiHostStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-host.description = Mesures de toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+
+#
+## VsanIscsiHostStatsGraphs
+#
+vsaniscsihost.iops.name = IOPS
+vsaniscsihost.iops.description = IOPS consommées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.iops.metrics.iopsRead.name = IOPS de lecture
+vsaniscsihost.iops.metrics.iopsRead.description = IOPS de lecture consommées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.iops.metrics.iopsWrite.name = IOPS d'écriture
+vsaniscsihost.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.iops.metrics.iopsTotal.name = Total des IOPS
+vsaniscsihost.iops.metrics.iopsTotal.description = Total des IOPS consommées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+
+vsaniscsihost.bandwidth.name = Bande passante
+vsaniscsihost.bandwidth.description = Bande passante consommée par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.bandwidth.metrics.bandwidthRead.name = Bande passante en lecture
+vsaniscsihost.bandwidth.metrics.bandwidthRead.description = Bande passante en lecture consommée par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.bandwidth.metrics.bandwidthWrite.name = Bande passante en écriture
+vsaniscsihost.bandwidth.metrics.bandwidthWrite.description = Bande passante en écriture consommée par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.bandwidth.metrics.bandwidthTotal.name = Bande passante totale
+vsaniscsihost.bandwidth.metrics.bandwidthTotal.description = Bande passante totale consommée par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+
+vsaniscsihost.latency.name = Latence
+vsaniscsihost.latency.description = Latence moyenne des E/S générées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.latency.metrics.latencyRead.name = Latence de lecture
+vsaniscsihost.latency.metrics.latencyRead.description = Latence de lecture moyenne des E/S générées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.latency.metrics.latencyWrite.name = Latence d'écriture
+vsaniscsihost.latency.metrics.latencyWrite.description = Latence d'écriture moyenne des E/S générées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.latency.metrics.latencyTotal.name = Latence totale
+vsaniscsihost.latency.metrics.latencyTotal.description = Latence totale moyenne des E/S générées par toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+
+vsaniscsihost.queue-depth.name = E/S en attente
+vsaniscsihost.queue-depth.description = E/S en attente dans toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+vsaniscsihost.queue-depth.metrics.queueDepth.name = E/S en attente
+vsaniscsihost.queue-depth.metrics.queueDepth.description = E/S en attente dans toutes les cibles iSCSI vSAN sur cet hôte ESXi.
+
+#
+# VsanIscsiTargetStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-target.description = Mesures de tous les LUN sur une cible iSCSI vSAN.
+
+#
+## VsanIscsiTargetStatsGraphs
+#
+vsaniscsitarget.iops.name = IOPS
+vsaniscsitarget.iops.description = IOPS consommées par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.iops.metrics.iopsRead.name = IOPS de lecture
+vsaniscsitarget.iops.metrics.iopsRead.description = IOPS de lecture consommées par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.iops.metrics.iopsWrite.name = IOPS d'écriture
+vsaniscsitarget.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.iops.metrics.iopsTotal.name = Total des IOPS
+vsaniscsitarget.iops.metrics.iopsTotal.description = Total des IOPS consommées par tous les LUN iSCSI vSAN sur cette cible.
+
+vsaniscsitarget.bandwidth.name = Bande passante
+vsaniscsitarget.bandwidth.description = Bande passante consommée par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.bandwidth.metrics.bandwidthRead.name = Bande passante en lecture
+vsaniscsitarget.bandwidth.metrics.bandwidthRead.description = Bande passante en lecture consommée par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.bandwidth.metrics.bandwidthWrite.name = Bande passante en écriture
+vsaniscsitarget.bandwidth.metrics.bandwidthWrite.description = Bande passante en écriture consommée par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.bandwidth.metrics.bandwidthTotal.name = Bande passante totale
+vsaniscsitarget.bandwidth.metrics.bandwidthTotal.description = Bande passante totale en écriture consommée par tous les LUN iSCSI vSAN sur cette cible.
+
+vsaniscsitarget.latency.name = Latence
+vsaniscsitarget.latency.description = Latence moyenne des E/S générées par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.latency.metrics.latencyRead.name = Latence de lecture
+vsaniscsitarget.latency.metrics.latencyRead.description = Latence de lecture moyenne des E/S générées par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.latency.metrics.latencyWrite.name = Latence d'écriture
+vsaniscsitarget.latency.metrics.latencyWrite.description = Latence d'écriture moyenne des E/S générées par tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.latency.metrics.latencyTotal.name = Latence totale
+vsaniscsitarget.latency.metrics.latencyTotal.description = Latence totale moyenne des E/S générées par tous les LUN iSCSI vSAN sur cette cible.
+
+vsaniscsitarget.queue-depth.name = E/S en attente
+vsaniscsitarget.queue-depth.description = E/S en attente dans tous les LUN iSCSI vSAN sur cette cible.
+vsaniscsitarget.queue-depth.metrics.queueDepth.name = E/S en attente
+vsaniscsitarget.queue-depth.metrics.queueDepth.description = E/S en attente dans tous les LUN iSCSI vSAN sur cette cible.
+
+#
+# VsanIscsiLunStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-lun.description = Mesures d'un LUN iSCSI de vSAN.
+
+#
+## VsanIscsiLunStatsGraphs
+#
+vsaniscsilun.iops.name = IOPS
+vsaniscsilun.iops.description = IOPS consommées par ce LUN iSCSI vSAN.
+vsaniscsilun.iops.metrics.iopsRead.name = IOPS de lecture
+vsaniscsilun.iops.metrics.iopsRead.description = IOPS de lecture consommées par ce LUN iSCSI vSAN.
+vsaniscsilun.iops.metrics.iopsWrite.name = IOPS d'écriture
+vsaniscsilun.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par ce LUN iSCSI vSAN.
+vsaniscsilun.iops.metrics.iopsTotal.name = Total des IOPS
+vsaniscsilun.iops.metrics.iopsTotal.description = Total des IOPS consommées par ce LUN iSCSI vSAN.
+
+vsaniscsilun.bandwidth.name = Bande passante
+vsaniscsilun.bandwidth.description = Bande passante consommée par ce LUN iSCSI vSAN.
+vsaniscsilun.bandwidth.metrics.bandwidthRead.name = Bande passante en lecture
+vsaniscsilun.bandwidth.metrics.bandwidthRead.description = Bande passante en lecture consommée par ce LUN iSCSI vSAN.
+vsaniscsilun.bandwidth.metrics.bandwidthWrite.name = Bande passante en écriture
+vsaniscsilun.bandwidth.metrics.bandwidthWrite.description = Bande passante en écriture consommée par ce LUN iSCSI vSAN.
+vsaniscsilun.bandwidth.metrics.bandwidthTotal.name = Bande passante totale
+vsaniscsilun.bandwidth.metrics.bandwidthTotal.description = Bande passante totale consommée par ce LUN iSCSI vSAN.
+
+vsaniscsilun.latency.name = Latence
+vsaniscsilun.latency.description = Latence moyenne des E/S générées par ce LUN iSCSI vSAN.
+vsaniscsilun.latency.metrics.latencyRead.name = Latence de lecture
+vsaniscsilun.latency.metrics.latencyRead.description = Latence de lecture moyenne des E/S générées par ce LUN iSCSI vSAN.
+vsaniscsilun.latency.metrics.latencyWrite.name = Latence d'écriture
+vsaniscsilun.latency.metrics.latencyWrite.description = Latence d'écriture moyenne des E/S générées par ce LUN iSCSI vSAN.
+vsaniscsilun.latency.metrics.latencyTotal.name = Latence totale
+vsaniscsilun.latency.metrics.latencyTotal.description = Latence totale moyenne des E/S générées par ce LUN iSCSI vSAN.
+
+vsaniscsilun.queue-depth.name = E/S en attente
+vsaniscsilun.queue-depth.description = E/S en attente dans ce LUN iSCSI vSAN.
+vsaniscsilun.queue-depth.metrics.queueDepth.name = E/S en attente
+vsaniscsilun.queue-depth.metrics.queueDepth.description = E/S en attente dans ce LUN iSCSI vSAN.
+
+#
+### VsanClusterSpaceReportStats
+##
+com.vmware.vsan.perf.entity.vsan-cluster-capacity.description = Mesures de la capacité vSAN.
+#
+##
+####VsanClusterCapacityStatsGraphs
+##
+vsanclustercapacity.overview.name = Présentation
+vsanclustercapacity.overview.description =
+vsanclustercapacity.overview.metrics.total.name = Capacité totale
+vsanclustercapacity.overview.metrics.total.description = Capacité totale du cluster vSAN.
+vsanclustercapacity.overview.metrics.free.name = Capacité libre
+vsanclustercapacity.overview.metrics.free.description = Capacité libre dans le cluster vSAN.
+vsanclustercapacity.overview.metrics.used.name = Capacité utilisée
+vsanclustercapacity.overview.metrics.used.description = Capacité déjà consommée dans le cluster vSAN.
+vsanclustercapacity.dedup.name = Efficacité de l'utilisation de l'espace
+vsanclustercapacity.dedup.description = L'efficacité de l'utilisation de l'espace améliorera le coût total de possession en réduisant les données stockées sur vos disques physiques.
+vsanclustercapacity.dedup.metrics.savedByDedup.name = Capacité économisée
+vsanclustercapacity.dedup.metrics.savedByDedup.description = Quantité de capacité physique enregistrée par la fonctionnalité Efficacité de l'utilisation de l'espace.
+vsanclustercapacity.dedupRatio.name = Taux d'efficacité de l'utilisation de l'espace
+vsanclustercapacity.dedupRatio.description = Espace nécessaire sans efficacité de l'utilisation de l'espace/Espace nécessaire avec efficacité de l'utilisation de l'espace.
+vsanclustercapacity.dedupRatio.metrics.dedupRatio.name = Taux d'efficacité de l'utilisation de l'espace
+vsanclustercapacity.dedupRatio.metrics.dedupRatio.description = La mesure Taux d'efficacité de l'utilisation de l'espace indique l'efficacité de l'utilisation de l'espace. Il s'agit d'un pourcentage calculé en divisant la capacité utilisée sans efficacité de l'utilisation de l'espace par la capacité utilisée avec efficacité de l'utilisation de l'espace.
+
+
+#
+# VsanFileService
+#
+com.vmware.vsan.perf.entity.vsan-file-service.description = Mesures sur les services de fichiers vSAN.
+
+#
+# VsanFileServiceGraphs
+#
+vsan-file-service.throughput.name = Débit
+vsan-file-service.throughput.description = Débit pour les services de fichiers vSAN.
+vsan-file-service.throughput.metrics.readRequested.name = Octets demandés pour lecture
+vsan-file-service.throughput.metrics.readRequested.description = Octets demandés pour lecture.
+vsan-file-service.throughput.metrics.readTransferred.name = Octets transférés réels pour lecture
+vsan-file-service.throughput.metrics.readTransferred.description = Octets transférés réels pour lecture.
+vsan-file-service.throughput.metrics.writeRequested.name = Octets demandés pour écriture
+vsan-file-service.throughput.metrics.writeRequested.description = Octets demandés pour écriture.
+vsan-file-service.throughput.metrics.writeTransferred.name = Octets transférés réels pour écriture
+vsan-file-service.throughput.metrics.writeTransferred.description = Octets transférés réels pour écriture.
+
+vsan-file-service.iops.name = IOPS
+vsan-file-service.iops.description = IOPS pour les services de fichiers vSAN.
+vsan-file-service.iops.metrics.readOpTotal.name = IOPS pour les opérations de lecture
+vsan-file-service.iops.metrics.readOpTotal.description = IOPS pour les opérations de lecture.
+vsan-file-service.iops.metrics.writeOpTotal.name = IOPS pour les opérations d'écriture
+vsan-file-service.iops.metrics.writeOpTotal.description = IOPS pour les opérations d'écriture.
+
+vsan-file-service.latency.name = Latence
+vsan-file-service.latency.description = Latence pour les services de fichiers vSAN.
+vsan-file-service.latency.metrics.readLatency.name = Latence de lecture
+vsan-file-service.latency.metrics.readLatency.description = Latence de lecture moyenne par E/S.
+vsan-file-service.latency.metrics.writeLatency.name = Latence d'écriture
+vsan-file-service.latency.metrics.writeLatency.description = Latence d'écriture moyenne par E/S.
+
+
+#
+# VsanIoInsightVmdk
+#
+com.vmware.vsan.perf.entity.vmdk-ioinsight.description = Mesures concernant vSAN IOInsight.
+
+#
+# VsanIoInsightVmdkGraphs
+#
+vmdk-ioinsight.iosize-dist-histogram.name = Distribution de la taille des E/S
+vmdk-ioinsight.iosize-dist-histogram.description = Distribution des E/S du VMDK par taille.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz0_4k.name = ReadSize<4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz0_4k.description = La taille des E/S de lecture est inférieure à 4 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz0_4k.name = WriteSize<4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz0_4k.description = La taille des E/S d'écriture est inférieure à 4 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k.name = ReadSize=4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k.description = La taille des E/S de lecture est égale à 4 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k.name = WriteSize=4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k.description = La taille des E/S d'écriture est égale à 4 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k_8k.name = 4K<ReadSize<8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k_8k.description = La taille des E/S de lecture est supérieure à 4 Ko et inférieure à 8 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k_8k.name = 4K<WriteSize<8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k_8k.description = La taille des E/S d'écriture est supérieure à 4 Ko et inférieure à 8 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k.name = ReadSize=8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k.description = La taille des E/S de lecture est égale à 8 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k.name = WriteSize=8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k.description = La taille des E/S d'écriture est égale à 8 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k_16k.name = 8K<ReadSize<16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k_16k.description = La taille des E/S de lecture est supérieure à 8 Ko et inférieure à 16 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k_16k.name = 8K<WriteSize<16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k_16k.description = La taille des E/S d'écriture est supérieure à 8 Ko et inférieure à 16 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k.name = ReadSize=16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k.description = La taille des E/S de lecture est égale à 16 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k.name = WriteSize=16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k.description = La taille des E/S d'écriture est égale à 16 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k_32k.name = 16K<ReadSize<32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k_32k.description = La taille des E/S de lecture est supérieure à 16 Ko et inférieure à 32 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k_32k.name = 16K<WriteSize<32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k_32k.description = La taille des E/S d'écriture est supérieure à 16 Ko et inférieure à 32 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k.name = ReadSize=32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k.description = La taille des E/S de lecture est égale à 32 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k.name = WriteSize=32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k.description = La taille des E/S d'écriture est égale à 32 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k_64k.name = 32K<ReadSize<64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k_64k.description = La taille des E/S de lecture est supérieure à 32 Ko et inférieure à 64 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k_64k.name = 32K<WriteSize<64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k_64k.description = La taille des E/S d'écriture est supérieure à 32 Ko et inférieure à 64 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k.name = ReadSize=64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k.description = ReadSize=64K.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k.name = WriteSize=64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k.description = La taille des E/S d'écriture est égale à 64 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k_128k.name = 64K<ReadSize<128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k_128k.description = La taille des E/S de lecture est supérieure à 64 Ko et inférieure à 128 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k_128k.name = 64K<WriteSize<128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k_128k.description = La taille des E/S d'écriture est supérieure à 64 Ko et inférieure à 128 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k.name = ReadSize=128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k.description = La taille des E/S de lecture est égale à 128 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k.name = WriteSize=128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k.description = La taille des E/S d'écriture est égale à 128 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k_256k.name = 128K<ReadSize<256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k_256k.description = La taille des E/S de lecture est supérieure à 128 Ko et inférieure à 256 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k_256k.name = 128K<WriteSize<256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k_256k.description = La taille des E/S d'écriture est supérieure à 128 Ko et inférieure à 256 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k.name = ReadSize=256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k.description = La taille des E/S de lecture est égale à 256 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k.name = WriteSize=256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k.description = La taille des E/S d'écriture est égale à 256 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k_512k.name = 256K<ReadSize<512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k_512k.description = La taille des E/S de lecture est supérieure à 256 Ko et inférieure à 512 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k_512k.name = 256K<WriteSize<512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k_512k.description = La taille des E/S d'écriture est supérieure à 256 Ko et inférieure à 512 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k.name = ReadSize=512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k.description = La taille des E/S de lecture est égale à 512 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k.name = WriteSize=512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k.description = La taille des E/S d'écriture est égale à 512 Ko.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k_1m.name = 512K<ReadSize<1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k_1m.description = La taille des E/S de lecture est supérieure à 512 Ko et inférieure à 1 Mo.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k_1m.name = 512K<WriteSize<1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k_1m.description = La taille des E/S d'écriture est supérieure à 512 Ko et inférieure à 1 Mo.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1m.name = ReadSize=1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1m.description = La taille des E/S de lecture est égale à 1 Mo.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1m.name = WriteSize=1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1m.description = La taille des E/S d'écriture est égale à 1 Mo.
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1_m.name = ReadSize>1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1_m.description = La taille des E/S de lecture est supérieure à 1 Mo.
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1_m.name = WriteSize>1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1_m.description = La taille des E/S d'écriture est supérieure à 1 Mo.
+
+vmdk-ioinsight.io-latency-histogram.name = Distribution de la latence des E/S
+vmdk-ioinsight.io-latency-histogram.description = Distribution des E/S du VMDK par latence.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat0_1us.name = 0<ReadLatency<1(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat0_1us.description = Latence des E/S de lecture inférieure ou égale à 1 microseconde.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat0_1us.name = 0<WriteLatency<1(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat0_1us.description = Latence des E/S d'écriture inférieure ou égale à 1 microseconde.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_10us.name = 1<ReadLatency<10(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_10us.description = Latence des E/S de lecture supérieure à 1 et inférieure ou égale à 10 microsecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_10us.name = 1<WriteLatency<10(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_10us.description = Latence des E/S d'écriture supérieure à 1 et inférieure ou égale à 10 microsecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_100us.name = 10<ReadLatency<100(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_100us.description = Latence des E/S de lecture supérieure à 10 et inférieure à 100 microsecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_100us.name = 10<WriteLatency<100(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_100us.description = Latence des E/S d'écriture supérieure à 10 et inférieure ou égale à 100 microsecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_500us.name = 100<ReadLatency<500(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_500us.description = Latence des E/S de lecture supérieure à 100 et inférieure ou égale à 500 microsecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_500us.name = 100<WriteLatency<500(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_500us.description = Latence des E/S d'écriture supérieure à 100 et inférieure ou égale à 500 microsecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat500us_1ms.name = 500us<ReadLatency<1ms
+vmdk-ioinsight.io-latency-histogram.metrics.rlat500us_1ms.description = Latence des E/S de lecture supérieure à 500 microsecondes et inférieure ou égale à 1 milliseconde.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat500us_1ms.name = 500us<WriteLatency<1ms
+vmdk-ioinsight.io-latency-histogram.metrics.wlat500us_1ms.description = Latence des E/S d'écriture supérieure à 500 microsecondes et inférieure ou égale à 1 milliseconde.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_5ms.name = 1<ReadLatency<5(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_5ms.description = Latence des E/S de lecture supérieure à 1 et inférieure ou égale à 5 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_5ms.name = 1<WriteLatency<5(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_5ms.description = Latence des E/S d'écriture supérieure à 1 et inférieure ou égale à 5 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat5_10ms.name = 5<ReadLatency<10(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat5_10ms.description = Latence des E/S de lecture supérieure à 5 et inférieure ou égale à 10 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat5_10ms.name = 5<WriteLatency<10(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat5_10ms.description = Latence des E/S d'écriture supérieure à 5 et inférieure ou égale à 10 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_25ms.name = 10<ReadLatency<25(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_25ms.description = Latence des E/S de lecture supérieure à 10 et inférieure ou égale à 25 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_25ms.name = 10<WriteLatency<25(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_25ms.description = Latence des E/S d'écriture supérieure à 10 et inférieure ou égale à 25 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat25_50ms.name = 25<ReadLatency<50(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat25_50ms.description = Latence des E/S de lecture supérieure à 25 et inférieure ou égale à 50 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat25_50ms.name = 25<WriteLatency<50(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat25_50ms.description = Latence des E/S d'écriture supérieure à 25 et inférieure ou égale à 50 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat50_100ms.name = 50<ReadLatency<100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat50_100ms.description = Latence des E/S de lecture supérieure à 50 et inférieure ou égale à 100 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat50_100ms.name = 50<WriteLatency<100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat50_100ms.description = Latence des E/S d'écriture supérieure à 50 et inférieure ou égale à 100 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_ms.name = ReadLatency>100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_ms.description = Latence des E/S de lecture supérieure à 100 millisecondes.
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_ms.name = WriteLatency>100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_ms.description = Latence des E/S d'écriture supérieure à 100 millisecondes.
+
+vmdk-ioinsight.iops.name = IOPS
+vmdk-ioinsight.iops.description = E/S par seconde sur le VMDK.
+vmdk-ioinsight.iops.metrics.iopsRead.name = IOPS de lecture
+vmdk-ioinsight.iops.metrics.iopsRead.description = E/S de lecture par seconde sur le VMDK.
+vmdk-ioinsight.iops.metrics.iopsWrite.name = IOPS d'écriture
+vmdk-ioinsight.iops.metrics.iopsWrite.description = E/S d'écriture par seconde sur le VMDK.
+vmdk-ioinsight.iops.metrics.iopsTotal.name = Total des IOPS
+vmdk-ioinsight.iops.metrics.iopsTotal.description = Nombre total des E/S par seconde sur le VMDK.
+
+vmdk-ioinsight.readThroughput.name = Débit
+vmdk-ioinsight.readThroughput.description = Débit d'E/S sur le VMDK.
+vmdk-ioinsight.readThroughput.metrics.throughputRead.name = Débit de lecture
+vmdk-ioinsight.readThroughput.metrics.throughputRead.description = Débit d'E/S de lecture sur le VMDK.
+vmdk-ioinsight.readThroughput.metrics.throughputWrite.name = Débit d'écriture
+vmdk-ioinsight.readThroughput.metrics.throughputWrite.description = Débit d'E/S d'écriture sur le VMDK.
+vmdk-ioinsight.readThroughput.metrics.throughputTotal.name = Débit total
+vmdk-ioinsight.readThroughput.metrics.throughputTotal.description = Débit d'E/S total sur le VMDK.
+
+vmdk-ioinsight.sequentialityThroughput.name = Débit séquentiel et aléatoire
+vmdk-ioinsight.sequentialityThroughput.description = Débit d'E/S séquentiel et aléatoire sur le VMDK.
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputSequential.name = Débit séquentiel
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputSequential.description = Débit d'E/S séquentiel sur le VMDK.
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputRandom.name = Débit aléatoire
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputRandom.description = Débit d'E/S aléatoire sur le VMDK.
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputTotal.name = Débit total
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputTotal.description = Débit d'E/S total sur le VMDK.
+
+vmdk-ioinsight.sequentialityRatio.name = Taux des E/S séquentielles et aléatoires
+vmdk-ioinsight.sequentialityRatio.description = Pourcentage des E/S séquentielles et aléatoires.
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialReadRatio.name = E/S de lecture séquentielle
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialReadRatio.description = Pourcentage des E/S de lecture séquentielle.
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialWriteRatio.name = E/S d'écriture séquentielle
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialWriteRatio.description = Pourcentage des E/S d'écriture séquentielle.
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialRatio.name = E/S séquentielles
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialRatio.description = Pourcentage des E/S séquentielles.
+vmdk-ioinsight.sequentialityRatio.metrics.randomReadRatio.name = E/S de lecture aléatoire
+vmdk-ioinsight.sequentialityRatio.metrics.randomReadRatio.description = Pourcentage des E/S de lecture aléatoire.
+vmdk-ioinsight.sequentialityRatio.metrics.randomWriteRatio.name = E/S d'écriture aléatoire
+vmdk-ioinsight.sequentialityRatio.metrics.randomWriteRatio.description = Pourcentage des E/S d'écriture aléatoire.
+vmdk-ioinsight.sequentialityRatio.metrics.randomRatio.name = E/S aléatoires
+vmdk-ioinsight.sequentialityRatio.metrics.randomRatio.description = Pourcentage des E/S aléatoires.
+
+vmdk-ioinsight.4kbAlignmentRatio.name = Taux des E/S alignées et non alignées de 4 Ko
+vmdk-ioinsight.4kbAlignmentRatio.description = Pourcentage des E/S alignées et non alignées de 4 Ko.
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kReadRatio.name = E/S de lecture alignées de 4 Ko
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kReadRatio.description = Pourcentage des E/S de lecture alignées de 4 Ko.
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kWriteRatio.name = E/S d'écriture alignées de 4 Ko
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kWriteRatio.description = Pourcentage des E/S d'écriture alignées de 4 Ko.
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kRatio.name = E/S alignées de 4 Ko
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kRatio.description = Pourcentage des E/S alignées de 4 Ko.
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kReadRatio.name = E/S de lecture non alignées de 4 Ko
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kReadRatio.description = Pourcentage des E/S de lecture non alignées de 4 Ko.
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kWriteRatio.name = E/S d'écriture non alignées de 4 Ko
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kWriteRatio.description = Pourcentage des E/S d'écriture non alignées de 4 Ko.
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kRatio.name = E/S non alignées de 4 Ko
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kRatio.description = Pourcentage des E/S non alignées de 4 Ko.
+
+vmdk-ioinsight.readRatio.name = Taux des E/S de lecture et d'écriture
+vmdk-ioinsight.readRatio.description = Pourcentage des E/S de lecture et d'écriture.
+vmdk-ioinsight.readRatio.metrics.readRatio.name = E/S de lecture
+vmdk-ioinsight.readRatio.metrics.readRatio.description = Pourcentage des E/S de lecture.
+vmdk-ioinsight.readRatio.metrics.writeRatio.name = E/S d'écriture
+vmdk-ioinsight.readRatio.metrics.writeRatio.description = Pourcentage des E/S d'écriture.
+
+#
+# VsanPMemClusterStats
+#
+com.vmware.vsan.perf.entity.vsan-pmem-cluster.description = Mesures des performances des VMDK dans la banque de données de la PMem.
+
+#
+# VsanPMemClusterStatsGraphs
+#
+vsan-pmem-cluster.iops.name = IOPS
+vsan-pmem-cluster.iops.description = IOPS consommées par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.iops.metrics.iopsRead.name = IOPS de lecture
+vsan-pmem-cluster.iops.metrics.iopsRead.description = IOPS de lecture consommées par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.iops.metrics.iopsWrite.name = IOPS d'écriture
+vsan-pmem-cluster.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.iops.metrics.iopsTotal.name = Total des IOPS
+vsan-pmem-cluster.iops.metrics.iopsTotal.description = Nombre total d'IOPS consommées par toutes les VM dans la banque de données de la PMem.
+
+vsan-pmem-cluster.throughput.name = Débit
+vsan-pmem-cluster.throughput.description = Débit consommé par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.throughput.metrics.throughputRead.name = Débit de lecture
+vsan-pmem-cluster.throughput.metrics.throughputRead.description = Débit de lecture consommé par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.throughput.metrics.throughputWrite.name = Débit d'écriture
+vsan-pmem-cluster.throughput.metrics.throughputWrite.description = Débit d'écriture consommé par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.throughput.metrics.throughputTotal.name = Débit total
+vsan-pmem-cluster.throughput.metrics.throughputTotal.description = Débit total consommé par toutes les VM dans la banque de données de la PMem.
+
+vsan-pmem-cluster.latency.name = Latence
+vsan-pmem-cluster.latency.description = Latence moyenne générée par les E/S consommées par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.latency.metrics.latencyRead.name = Latence de lecture
+vsan-pmem-cluster.latency.metrics.latencyRead.description = Latence de lecture générée par les E/S consommées par toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.latency.metrics.latencyWrite.name = Latence d'écriture
+vsan-pmem-cluster.latency.metrics.latencyWrite.description = Latence d'écriture générée par les E/S consommées par toutes les VM dans la banque de données de la PMem.
+
+vsan-pmem-cluster.oio.name = E/S en attente
+vsan-pmem-cluster.oio.description = E/S en attente de toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.oio.metrics.oioRead.name = E/S en attente de lecture
+vsan-pmem-cluster.oio.metrics.oioRead.description = E/S en attente de lecture de toutes les VM dans la banque de données de la PMem.
+vsan-pmem-cluster.oio.metrics.oioWrite.name = E/S en attente d'écriture
+vsan-pmem-cluster.oio.metrics.oioWrite.description = E/S en attente d'écriture de toutes les VM dans la banque de données de la PMem.
+
+#
+# VsanPMemHostStats
+#
+com.vmware.vsan.perf.entity.vsan-pmem-host.description = Mesures des performances des VMDK dans la banque de données de la PMem.
+
+#
+# VsanPMemHostStatsGraphs
+#
+vsan-pmem-host.iops.name = IOPS
+vsan-pmem-host.iops.description = IOPS consommées par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.iops.metrics.iopsRead.name = IOPS de lecture
+vsan-pmem-host.iops.metrics.iopsRead.description = IOPS de lecture consommées par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.iops.metrics.iopsWrite.name = IOPS d'écriture
+vsan-pmem-host.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.iops.metrics.iopsTotal.name = Total des IOPS
+vsan-pmem-host.iops.metrics.iopsTotal.description = Total des IOPS consommées par toutes les VM dans la banque de données de la PMem de cet hôte.
+
+vsan-pmem-host.throughput.name = Débit
+vsan-pmem-host.throughput.description = Débit consommé par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.throughput.metrics.throughputRead.name = Débit de lecture
+vsan-pmem-host.throughput.metrics.throughputRead.description = Débit de lecture consommé par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.throughput.metrics.throughputWrite.name = Débit d'écriture
+vsan-pmem-host.throughput.metrics.throughputWrite.description = Débit d'écriture consommé par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.throughput.metrics.throughputTotal.name = Débit total
+vsan-pmem-host.throughput.metrics.throughputTotal.description = Débit total consommé par toutes les VM dans la banque de données de la PMem de cet hôte.
+
+vsan-pmem-host.latency.name = Latence
+vsan-pmem-host.latency.description = Latence moyenne générée par les E/S consommées par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.latency.metrics.latencyRead.name = Latence de lecture
+vsan-pmem-host.latency.metrics.latencyRead.description = Latence de lecture générée par les E/S consommées par toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.latency.metrics.latencyWrite.name = Latence d'écriture
+vsan-pmem-host.latency.metrics.latencyWrite.description = Latence d'écriture générée par les E/S consommées par toutes les VM dans la banque de données de la PMem de cet hôte.
+
+vsan-pmem-host.oio.name = E/S en attente
+vsan-pmem-host.oio.description = E/S en attente de toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.oio.metrics.oioRead.name = E/S en attente de lecture
+vsan-pmem-host.oio.metrics.oioRead.description = E/S en attente de lecture de toutes les VM dans la banque de données de la PMem de cet hôte.
+vsan-pmem-host.oio.metrics.oioWrite.name = E/S en attente d'écriture
+vsan-pmem-host.oio.metrics.oioWrite.description = E/S en attente d'écriture de toutes les VM dans la banque de données de la PMem de cet hôte.
+
+#
+# VsanDirectClusterStats
+#
+com.vmware.vsan.perf.entity.vsan-direct-cluster.description = Mesures des performances des fichiers VMDK dans la banque de données vSAN Direct.
+
+#
+# VsanDirectClusterStatsGraphs
+#
+vsan-direct-cluster.iops.name = IOPS
+vsan-direct-cluster.iops.description = IOPS consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.iops.metrics.iopsDevRead.name = IOPS de lecture
+vsan-direct-cluster.iops.metrics.iopsDevRead.description = IOPS de lecture consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.iops.metrics.iopsDevWrite.name = IOPS d'écriture
+vsan-direct-cluster.iops.metrics.iopsDevWrite.description = IOPS d'écriture consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+vsan-direct-cluster.throughput.name = Débit
+vsan-direct-cluster.throughput.description = Débit consommé par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.throughput.metrics.throughputDevRead.name = Débit de lecture
+vsan-direct-cluster.throughput.metrics.throughputDevRead.description = Débit de lecture consommé par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.throughput.metrics.throughputDevWrite.name = Débit d'écriture
+vsan-direct-cluster.throughput.metrics.throughputDevWrite.description = Débit d'écriture consommé par tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+vsan-direct-cluster.latency.name = Latence
+vsan-direct-cluster.latency.description = Latence moyenne générée par les E/S consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.latency.metrics.latencyDevRead.name = Latence de lecture
+vsan-direct-cluster.latency.metrics.latencyDevRead.description = Latence de lecture générée par les E/S consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.latency.metrics.latencyDevWrite.name = Latence d'écriture
+vsan-direct-cluster.latency.metrics.latencyDevWrite.description = Latence d'écriture générée par les E/S consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+vsan-direct-cluster.oio.name = E/S en attente
+vsan-direct-cluster.oio.description = E/S en attente de tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.oio.metrics.oioDevRead.name = E/S en attente de lecture
+vsan-direct-cluster.oio.metrics.oioDevRead.description = E/S en attente de lecture de tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-cluster.oio.metrics.oioDevWrite.name = E/S en attente d'écriture
+vsan-direct-cluster.oio.metrics.oioDevWrite.description = E/S en attente d'écriture de tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+#
+# VsanDirectHostStats
+#
+com.vmware.vsan.perf.entity.vsan-direct-host.description = Mesures des performances des fichiers VMDK dans la banque de données vSAN Direct.
+
+#
+# VsanDirectHostStatsGraphs
+#
+vsan-direct-host.iops.name = IOPS
+vsan-direct-host.iops.description = IOPS consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.iops.metrics.iopsDevRead.name = IOPS de lecture
+vsan-direct-host.iops.metrics.iopsDevRead.description = IOPS de lecture consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.iops.metrics.iopsDevWrite.name = IOPS d'écriture
+vsan-direct-host.iops.metrics.iopsDevWrite.description = IOPS d'écriture consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+vsan-direct-host.throughput.name = Débit
+vsan-direct-host.throughput.description = Débit consommé par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.throughput.metrics.throughputDevRead.name = Débit de lecture
+vsan-direct-host.throughput.metrics.throughputDevRead.description = Débit de lecture consommé par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.throughput.metrics.throughputDevWrite.name = Débit d'écriture
+vsan-direct-host.throughput.metrics.throughputDevWrite.description = Débit d'écriture consommé par tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+vsan-direct-host.latency.name = Latence
+vsan-direct-host.latency.description = Latence moyenne générée par les E/S consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.latency.metrics.latencyDevRead.name = Latence de lecture
+vsan-direct-host.latency.metrics.latencyDevRead.description = Latence de lecture générée par les E/S consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.latency.metrics.latencyDevWrite.name = Latence d'écriture
+vsan-direct-host.latency.metrics.latencyDevWrite.description = Latence d'écriture générée par les E/S consommées par tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+vsan-direct-host.oio.name = E/S en attente
+vsan-direct-host.oio.description = E/S en attente de tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.oio.metrics.oioDevRead.name = E/S en attente de lecture
+vsan-direct-host.oio.metrics.oioDevRead.description = E/S en attente de lecture de tous les fichiers VMDK dans la banque de données vSAN Direct.
+vsan-direct-host.oio.metrics.oioDevWrite.name = E/S en attente d'écriture
+vsan-direct-host.oio.metrics.oioDevWrite.description = E/S en attente d'écriture de tous les fichiers VMDK dans la banque de données vSAN Direct.
+
+
+#
+# VsanCpuStats
+#
+com.vmware.vsan.perf.entity.vsan-cpu.description = Mesures de capacité supplémentaire du CPU vSAN.
+
+#
+# VsanCpuStatsGraphs
+#
+vsan-cpu.utilization.name = Utilisation du CPU vSAN
+vsan-cpu.utilization.description = Utilisation du CPU vSAN.
+vsan-cpu.utilization.metrics.usedPct.name = Pourcentage de temps CPU utilisé
+vsan-cpu.utilization.metrics.usedPct.description = Pourcentage de temps CPU utilisé
+vsan-cpu.utilization.metrics.readyPct.name = Pourcentage de temps CPU prêt
+vsan-cpu.utilization.metrics.readyPct.description = Pourcentage de temps CPU prêt.
+vsan-cpu.utilization.metrics.runPct.name = Pourcentage de temps CPU en cours d'exécution
+vsan-cpu.utilization.metrics.runPct.description = Pourcentage de temps CPU en cours d'exécution.
+
+#
+# VsanMemStats
+#
+com.vmware.vsan.perf.entity.vsan-memory.description = Mesures de la capacité supplémentaire de la mémoire vSAN.
+
+#
+# VsanMemStatsGraphs
+#
+vsan-memory.usage.name = Utilisation de la mémoire vSAN
+vsan-memory.usage.description = Utilisation de la mémoire.
+vsan-memory.usage.metrics.kernelReservedSize.name = Taille de la mémoire réservée du noyau
+vsan-memory.usage.metrics.kernelReservedSize.description = Taille de la mémoire réservée du noyau.
+vsan-memory.usage.metrics.uwReservedSize.name = Taille de la mémoire réservée du monde de l'utilisateur
+vsan-memory.usage.metrics.uwReservedSize.description = Taille de la mémoire réservée du monde de l'utilisateur.
+
+#
+# HostCpuStats
+#
+com.vmware.vsan.perf.entity.host-cpu.description = Mesures du CPU sur l'hôte.
+
+#
+# HostCpuStatsGraphs
+#
+host-cpu.utilization.name = Pourcentage du CPU
+host-cpu.utilization.description = Pourcentage du CPU de l'hôte.
+host-cpu.utilization.metrics.coreUtilPct.name = Pourcentage d'utilisation du cœur du CPU
+host-cpu.utilization.metrics.coreUtilPct.description = Pourcentage d'utilisation du cœur du CPU.
+host-cpu.utilization.metrics.pcpuUsedPct.name = Pourcentage de temps CPU physique utilisé
+host-cpu.utilization.metrics.pcpuUsedPct.description = Pourcentage de temps CPU physique utilisé.
+host-cpu.utilization.metrics.pcpuUtilPct.name = Pourcentage d'utilisation du CPU physique
+host-cpu.utilization.metrics.pcpuUtilPct.description = Pourcentage d'utilisation du CPU physique.
+
+#
+# Vsan2DiskScsifw
+#
+com.vmware.vsan.perf.entity.vsan2-disk-scsifw.description = Mesures de la couche physique/du microprogramme du disque vSAN2.
+
+#
+# Vsan2DiskScsifwGraphs
+#
+vsan2-disk-scsifw.iopsDev.name = IOPS de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.iopsDev.description = IOPS de la couche physique/du microprogramme du disque vSAN2.
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevRead.name = IOPS de lecture de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevRead.description = IOPS de lecture de la couche physique/du microprogramme du disque vSAN2.
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevWrite.name = IOPS d'écriture de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevWrite.description = IOPS d'écriture de la couche physique/du microprogramme du disque vSAN2.
+
+vsan2-disk-scsifw.latencyDev.name = Latence de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.latencyDev.description = Latence de la couche physique/du microprogramme du disque vSAN2.
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevRead.name = Latence de lecture de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevRead.description = Latence de lecture de la couche physique/du microprogramme du disque vSAN2.
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevWrite.name = Latence d'écriture de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevWrite.description = Latence d'écriture de la couche physique/du microprogramme du disque vSAN2.
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevGAvg.name = Latence moyenne de l'invité de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevGAvg.description = Latence d'E/S moyenne de l'invité de la couche physique/du microprogramme du disque vSAN2 (latence totale).
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevDAvg.name = Latence moyenne de périphérique de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevDAvg.description = Latence d'E/S moyenne du périphérique de la couche physique/du microprogramme du disque vSAN2 (du HBA au stockage principal).
+
+vsan2-disk-scsifw.throughputDev.name = Débit de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.throughputDev.description = Débit de la couche physique/du microprogramme du disque vSAN2.
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevRead.name = Débit de lecture de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevRead.description = Débit de lecture de la couche physique/du microprogramme du disque vSAN2.
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevWrite.name = Débit d'écriture de la couche physique/du microprogramme du disque vSAN2
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevWrite.description = Débit d'écriture de la couche physique/du microprogramme du disque vSAN2.
+
+
+#
+# Vsan2DiskLsom2
+#
+com.vmware.vsan.perf.entity.vsan2-disk-lsom2.description = Mesures de la couche vSAN du disque vSAN2.
+
+#
+# Vsan2DiskLsom2Graphs
+#
+vsan2-disk-lsom2.iopsCap.name = IOPS de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.iopsCap.description = IOPS de la couche vSAN du disque vSAN2.
+vsan2-disk-lsom2.iopsCap.metrics.iopsReadCapacity.name = IOPS en lecture de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.iopsCap.metrics.iopsReadCapacity.description = IOPS en lecture de la couche vSAN du disque vSAN2.
+vsan2-disk-lsom2.iopsCap.metrics.iopsWriteCapacity.name = IOPS en écriture de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.iopsCap.metrics.iopsWriteCapacity.description = IOPS en écriture de la couche vSAN du disque vSAN2.
+
+vsan2-disk-lsom2.throughputCap.name = Débit de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.throughputCap.description = Débit de la couche vSAN du disque vSAN2.
+vsan2-disk-lsom2.throughputCap.metrics.tputReadCapacity.name = Débit de lecture de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.throughputCap.metrics.tputReadCapacity.description = Débit de lecture de la couche vSAN du disque vSAN2.
+vsan2-disk-lsom2.throughputCap.metrics.tputWriteCapacity.name = Débit d'écriture de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.throughputCap.metrics.tputWriteCapacity.description = Débit d'écriture de la couche vSAN du disque vSAN2.
+
+vsan2-disk-lsom2.avgLatencyCap.name = Latence moyenne de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.avgLatencyCap.description = Latence moyenne de la couche vSAN du disque vSAN2.
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatReadCapacity.name = Latence de lecture moyenne de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatReadCapacity.description = Latence de lecture moyenne de la couche vSAN du disque vSAN2.
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatWriteCapacity.name = Latence d'écriture moyenne de la couche vSAN du disque vSAN2
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatWriteCapacity.description = Latence d'écriture moyenne de la couche vSAN du disque vSAN2.
+
+
+#
+# ClusterRemoteDomClient
+#
+com.vmware.vsan.perf.entity.cluster-remotedomclient.description = Mesures sur les clusters du point de vue de la consommation des VM vSAN.
+
+#
+# ClusterRemoteDomClientGraphs
+#
+cluster-remotedomclient.iops.name = IOPS
+cluster-remotedomclient.iops.description = IOPS consommées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.iops.metrics.iopsRead.name = IOPS de lecture
+cluster-remotedomclient.iops.metrics.iopsRead.description = IOPS de lecture consommées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.iops.metrics.iopsWrite.name = IOPS d'écriture
+cluster-remotedomclient.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-remotedomclient.throughput.name = Débit
+cluster-remotedomclient.throughput.description = Débit consommé par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.throughput.metrics.throughputRead.name = Débit de lecture
+cluster-remotedomclient.throughput.metrics.throughputRead.description = Débit de lecture consommé par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.throughput.metrics.throughputWrite.name = Débit d'écriture
+cluster-remotedomclient.throughput.metrics.throughputWrite.description = Débit d'écriture consommé par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-remotedomclient.latency.name = Latence
+cluster-remotedomclient.latency.description = Latence moyenne des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.latency.metrics.latencyAvgRead.name = Latence de lecture
+cluster-remotedomclient.latency.metrics.latencyAvgRead.description = Latence de lecture moyenne des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.latency.metrics.latencyAvgWrite.name = Latence d'écriture
+cluster-remotedomclient.latency.metrics.latencyAvgWrite.description = Latence d'écriture moyenne des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-remotedomclient.congestion.name = Encombrements
+cluster-remotedomclient.congestion.description = Encombrements des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.congestion.metrics.congestion.name = Encombrements
+cluster-remotedomclient.congestion.metrics.congestion.description = Encombrements des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+cluster-remotedomclient.oio.name = E/S en attente
+cluster-remotedomclient.oio.description = E/S en attente de tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+cluster-remotedomclient.oio.metrics.oio.name = E/S en attente
+cluster-remotedomclient.oio.metrics.oio.description = E/S en attente de tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+#
+# ComputeClusterRemoteDomClient
+#
+com.vmware.vsan.perf.entity.computeCluster-remotedomclient.description = Mesures sur les clusters du point de vue de la consommation des VM vSAN.
+
+#
+# ClusterRemoteDomClientGraphs
+#
+computeCluster-remotedomclient.iops.name = IOPS
+computeCluster-remotedomclient.iops.description = IOPS consommées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.iops.metrics.iopsRead.name = IOPS de lecture
+computeCluster-remotedomclient.iops.metrics.iopsRead.description = IOPS de lecture consommées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.iops.metrics.iopsWrite.name = IOPS d'écriture
+computeCluster-remotedomclient.iops.metrics.iopsWrite.description = IOPS d'écriture consommées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+computeCluster-remotedomclient.throughput.name = Débit
+computeCluster-remotedomclient.throughput.description = Débit consommé par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.throughput.metrics.throughputRead.name = Débit de lecture
+computeCluster-remotedomclient.throughput.metrics.throughputRead.description = Débit de lecture consommé par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.throughput.metrics.throughputWrite.name = Débit d'écriture
+computeCluster-remotedomclient.throughput.metrics.throughputWrite.description = Débit d'écriture consommé par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+computeCluster-remotedomclient.latency.name = Latence
+computeCluster-remotedomclient.latency.description = Latence moyenne des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.latency.metrics.latencyAvgRead.name = Latence de lecture
+computeCluster-remotedomclient.latency.metrics.latencyAvgRead.description = Latence de lecture moyenne des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.latency.metrics.latencyAvgWrite.name = Latence d'écriture
+computeCluster-remotedomclient.latency.metrics.latencyAvgWrite.description = Latence d'écriture moyenne des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+computeCluster-remotedomclient.congestion.name = Encombrements
+computeCluster-remotedomclient.congestion.description = Encombrements des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.congestion.metrics.congestion.name = Encombrements
+computeCluster-remotedomclient.congestion.metrics.congestion.description = Encombrements des E/S générées par tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+
+computeCluster-remotedomclient.oio.name = E/S en attente
+computeCluster-remotedomclient.oio.description = E/S en attente de tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.
+computeCluster-remotedomclient.oio.metrics.oio.name = E/S en attente
+computeCluster-remotedomclient.oio.metrics.oio.description = E/S en attente de tous les clients vSAN distants par rapport au cluster de serveurs sélectionné, tels que les machines virtuelles, l'objet statistiques, etc.

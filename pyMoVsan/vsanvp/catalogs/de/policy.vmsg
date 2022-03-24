@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = VMware vSAN-Funktionen
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = Von VMware vSAN veröffentlichte Funktionen
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = vSAN VASA-Anbieter
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = Von VMware vSAN veröffentlichter VASA-Anbieter
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = Anzahl der Datenträger-Stripes pro Objekt
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = Die Anzahl der Festplattenlaufwerke, auf die jede Replik eines Speicherobjekts per Striping verteilt wird. Höhere Werte als 1 können die Leistung verbessern (z. B. bei Flash-Lesecache-Fehltreffern, die vom Festplattenlaufwerk bedient werden müssen), führen aber auch zu einer höheren Auslastung von Systemressourcen. Standardwert: 1, maximaler Wert: 12.
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = Platzierung des PMem-Datenspeichers
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = Platzieren Sie die virtuelle Festplatte im PMem-Datenspeicher.
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = vSAN Direct-Datenspeicherplatzierung
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = Platzieren Sie die Cloud Native Volumes auf vSAN Direct-Datenspeichern.
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = Platzierungstyp
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = Legt fest, wo die Daten platziert werden sollen.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = vSAN Direct-Datenspeicher-Volume-Zuteilung
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = Volume-Zuteilungstyp.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = Vollständig initialisiert
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = Alle Blöcke werden zugeteilt und auf null gesetzt
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = Speicherplatz reservieren
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = Alle Blöcke werden zugeteilt.
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = Flash-Lesecache-Reservierung (%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = Die für das Speicherobjekt als Lesecache reservierte Flash-Kapazität. Sie wird prozentual bezogen auf die logische Größe des Objekts angegeben und dient lediglich zur Behebung von Problemen mit der Leseleistung. Reservierte Flash-Kapazitäten können nicht von anderen Objekten genutzt werden. Nicht reservierter Flash-Speicher wird gerecht auf alle Objekte verteilt. Standardwert: 0 %, maximaler Wert: 100 %.
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = Primäre Ebene von zu tolerierenden Fehlern
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = Legt die Anzahl der Host-, Festplatten- oder Netzwerkfehler fest, die ein Speicherobjekt tolerieren kann. Wenn die Fault Tolerance-Methode "Mirroring" ist, gilt: Um "n" Fehler zu tolerieren, werden "n+1" Kopien des Objekts erstellt, und für diese sind "2n+1" Speicher bereitstellende Hosts erforderlich. (Wenn Fehlerdomänen konfiguriert sind, sind "2n+1" Fehlerdomänen mit Speicher bereitstellenden Hosts erforderlich.) Wenn die Fault Tolerance-Methode "Erasure Coding" lautet, gilt: Um 1 Fehler zu tolerieren, sind 4 Hosts (oder Fehlerdomänen) erforderlich. Und um 2 Fehler zu tolerieren, sind 6 Hosts (oder Fehlerdomänen) erforderlich. Hinweis: Ein Host, der nicht Teil einer Fehlerdomäne ist, wird als eigene Einzelhost-Fehlerdomäne gezählt. Standardwert: 1, Maximalwert: 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = Sekundäre Ebene von zu tolerierenden Fehlern
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = Legt die Anzahl der Host-, Festplatten- oder Netzwerkfehler fest, die ein Speicherobjekt in einer Fehlerdomäne tolerieren kann. Wenn die Fault Tolerance-Methode "Mirroring" ist, gilt: Um "n" Fehler zu tolerieren, werden "n+1" Kopien des Objekts erstellt, und für diese sind "2n+1" Speicher bereitstellende Hosts in der Fehlerdomäne erforderlich. Wenn die Fault Tolerance-Methode "Erasure Coding" lautet, gilt: Um 1 Fehler zu tolerieren, sind 4 Hosts erforderlich, und um 2 Fehler zu tolerieren, sind 6 Hosts erforderlich. Standardwert: 1, Maximalwert: 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = Spielraum für die sekundäre Ebene der zu tolerierenden Ausfälle, wenn die Clusterkonfiguration Dual Host Mirroring ist
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = Definiert den Bereich (Host oder Festplatte), in dem die sekundäre Ebene der zu tolerierenden Ausfälle erfüllt wird. Wenn die Clusterkonfiguration Dual Host Mirroring ist und dieses Attribut auf „Festplatte“ gesetzt ist, erfolgt die Replikation mithilfe von Festplattengruppen gemäß der sekundären Ebene der zu tolerierenden Ausfälle
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = Hostbasierter Schutz der zweiten Ebene
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = Der Schutz der zweiten Ebene besteht in der Replikation unter Verwendung von Hosts entsprechend der zweiten Ebene, um Ausfälle zu tolerieren
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = Festplattenbasierter Schutz der zweiten Ebene für Dual-Host-Mirroring-Cluster
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = Der Schutz der zweiten Ebene besteht in der Replikation unter Verwendung von Festplattengruppen entsprechend der zweiten Ebene der zu tolerierenden Ausfälle für Dual Host Mirroring-Cluster
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = Datenbelegung
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = Geben Sie als Datenspeicherort entweder die bevorzugte Fehlerdomäne oder die nicht bevorzugte Fehlerdomäne in einem Stretch-Cluster an oder wählen Sie „Lokaler Host“ aus, um den Ordner und die Festplattendateien der VM an den Host zu binden, auf dem sie erstellt wurden. Diese Richtlinie ist nur für Objekte gültig, bei denen die primäre Ebene der zu tolerierenden Fehler gleich 0 ist. Standardwert: Keine
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = Keine
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = Keine.
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = Bevorzugte Fehlerdomäne (Stretched Cluster)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = Bevorzugte Fehlerdomäne (Stretched Cluster).
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = Nicht bevorzugte Fehlerdomäne (Stretched Cluster)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = Nicht bevorzugte Fehlerdomäne (Stretched Cluster).
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = Lokaler Host
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = Lokaler Host.
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = Bereitstellung erzwingen
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = Bei Aktivierung dieser Option wird das Objekt selbst dann bereitgestellt, wenn die in der Speicherrichtlinie angegebene Richtlinie nicht durch die derzeit im Cluster verfügbaren Ressourcen erfüllbar ist. vSAN wird versuchen, die Anforderungen für das Objekt zu erfüllen, wenn und sobald die Ressourcen verfügbar sind. Standardwert: Nein.
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = Reservierter Objektspeicherplatz (%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = Prozentualer Anteil der logischen Größe des Speicherobjekts, der bei VM-Bereitstellung reserviert (Thick-bereitgestellt) wird. Der Rest des Speicherobjekts wird Thin-bereitgestellt. Standardwert: 0 %, maximaler Wert: 100 %.
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = IOPS-Grenzwert für Objekt
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = Definiert den IOPS-Grenzwert für einen Datenträger. IOPS wird unter Verwendung einer gewichteten Größe als die Anzahl der E/As berechnet. Standardmäßig verwendet das System eine Basisgröße von 32 KB, eine E/A von 64 K stellt daher 2 E/A dar. Hinweis: Bei der Berechnung von IOPS werden Schreib- und Lesevorgänge als äquivalent betrachtet, und die Cache-Zugriffsrate oder Aufeinanderfolge wird nicht berücksichtigt. Wenn der IOPS-Wert eines Datenträgers den Grenzwert überschreitet, wird die E/A gedrosselt. Wenn der Grenzwert auf 0 gesetzt ist, ist die E/A nicht mit einem Grenzwert verknüpft. Standardwert: 0.
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = Objektprüfsumme deaktivieren
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = Wenn diese Option auf "Ja" festgelegt ist, werden für das Objekt keine Prüfsummeninformationen berechnet. Standardwert: Nein.
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = Fehlertoleranzmethode
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = Definiert die Methode zum Tolerieren von Fehlern. RAID-1 erzielt Fehlertoleranz mithilfe von Spiegeln, wodurch die Leistung erhöht wird. RAID-5/6 erreicht Fehlertoleranz mit Paritätsblöcken, was speichereffizienter ist. RAID-5/6 ist für All Flash verfügbar. Wenn die Anzahl der zu tolerierenden Fehler auf 1 oder 2 gesetzt ist, gilt: Der Wert 1 impliziert eine RAID-5-Konfiguration, und der Wert 2 impliziert eine RAID-6-Konfiguration. Standardwert: RAID-1
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID-1 (Spiegelung) - Leistung
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID-1 (Spiegelung) - Leistung.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID-5/6 (Erasure Coding) - Kapazität
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID-5/6 (Erasure Coding) - Kapazität.
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = Bevorzugter Backing-Speichertyp
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = Geben Sie an, welcher Backing-Speicher für die Platzierung von vSAN-Objektkomponenten verwendet werden soll. Mögliche vSAN-Backing-Speichertypen: Hybrid oder All Flash. Bei Angabe von "Hybrid" werden die Objektkomponenten nur in Hybrid-Datenträgergruppen platziert. Bei Angabe von „All Flash“ werden die Objektkomponenten nur in All-Flash-Datenträgergruppen platziert. Bei Angabe des Standardwerts "Beliebig" nimmt vSAN die Platzierung vor.
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = Native Snapshots verwenden
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = Verwenden Sie diese Option zum Erstellen nativer Snapshots. Wenn die Richtlinie Datenschutzoptionen aufweist, wird dieser Wert mit dem Wert ‚true‘ überschrieben. Standardwert: false.
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = Lokaler Datenschutz (Hauptspeicher)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = VMs mit der aktuellen Richtlinie enthalten regelmäßig erstellte Snapshots, die Schutz vor Fehlern auf Anwendungsebene bieten. Diese Snapshots werden im vSAN-Speicher gespeichert, um schnelle und langsame RTO-Wiederherstellung zu vereinfachen.
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = Snapshot-Häufigkeit (RPO)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = Häufigkeit, mit der Snapshots erstellt werden. Der Wert wird in Minuten angegeben. Standardwert = 60 Minuten, Höchstwert = 30 Tage.
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = Jeden x-ten Snapshot anwendungskonsistent machen
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = Anwendungskonsistente Snapshots bereiten eine Anwendung ordnungsgemäß für den Datenschutz vor. Durch die Erfassung anwendungskonsistenter Snapshots werden möglicherweise zusätzliche Anwendungsressourcen verbraucht. Standard = 0, Bereich = 0 bis 30.
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = Anzahl der beizubehaltenden Snapshots
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = Gesamtzahl der Snapshots, die lokal im vSAN-Speicher beibehalten werden. Beim Erstellen neuer Snapshots werden die ältesten Snapshots entsprechend dem angegebenen Aufbewahrungswert gelöscht. Standardwert = 10, Maximalwert = 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = Archivierungsschutz
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = Stellt Archivierungsschutz für VMs bereit.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = Nur stillgelegte Snapshots archivieren
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = Es werden nur Snapshots archiviert, die stillgelegt sind.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = Jeden ‚n-ten‘ Snapshot archivieren
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = Nur jeder ‚n-te‘ Snapshot wird archiviert. Wenn der Benutzer die Option zum ausschließlichen Archivieren von stillgelegten Snapshots auswählt, wird nur jeder ‚n-te‘ stillgelegte Snapshot archiviert. Der Standardwert von 0 bedeutet, dass das Kopieren in den Archivspeicher deaktiviert ist.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = Letzte ‚X‘ beizubehaltende Wiederherstellungspunkte
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = Dieser Parameter definiert, wie viele der letzten Archiv-Snapshots über die Aufbewahrungsregeln für die stündliche (Xh), tägliche (Xd), wöchentliche (Xw) und monatliche (Xm) Aufbewahrung hinaus aufbewahrt werden sollen. Die Aufbewahrungsrichtlinie wird durch folgende Formel eingeschränkt: (X + Xh + Xd + Xw + Xm) <= 100. Standardwert: 1, Maximalwert: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = Beizubehaltende stündliche Wiederherstellungspunkte (Xh)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = Die Anzahl der aufzubewahrenden stündlichen Wiederherstellungspunkte. Der Standardwert von 0 bedeutet, dass stündliche Snapshots nicht erforderlich sind. Ein stündlicher Snapshot ist der erste Snapshot zur vollen Stunde oder nach der vollen Stunde in UTC-Zeit. Standardwert: 0, Maximalwert: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = Beizubehaltende tägliche Wiederherstellungspunkte (Xd)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = Die Anzahl der aufzubewahrenden täglichen Wiederherstellungspunkte. Der Standardwert von 0 bedeutet, dass tägliche Snapshots nicht erforderlich sind. Ein täglicher Snapshot ist der erste Snapshot um Mitternacht oder nach Mitternacht in UTC-Zeit. Standardwert: 0, Maximalwert: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = Beizubehaltende wöchentliche Wiederherstellungspunkte (Xw)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = Die Anzahl der aufzubewahrenden wöchentlichen Wiederherstellungspunkte. Der Standardwert von 0 bedeutet, dass wöchentliche Snapshots nicht erforderlich sind. Ein wöchentlicher Snapshot ist der erste Snapshot um Mitternacht oder nach Mitternacht am Sonntag in UTC-Zeit. Standardwert: 0, Maximalwert: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = Beizubehaltende monatliche Wiederherstellungspunkte (Xm)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = Die Anzahl der aufzubewahrenden monatlichen Wiederherstellungspunkte. Der Standardwert von 0 bedeutet, dass monatliche Snapshots nicht erforderlich sind. Ein monatlicher Snapshot ist der erste Snapshot um Mitternacht oder nach Mitternacht am Ende des Monats in UTC-Zeit. Standardwert: 0, Maximalwert: 100.
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = Remoteschutz
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = Bietet Remote-Replizierungsschutz für VMs.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = Remoteschutz-RPO (Minuten)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = Remoteschutz-RPO (Recovery Point Objective). Der Wert ist in Minuten angegeben. Standardwert: 30, Minimalwert: 5, Maximalwert: 1440.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = Anzahl der aufzubewahrenden Remoteinstanzen
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = Anzahl der auf der Remote-Site aufzubewahrenden Snapshot-Instanzen. Standardwert: 1, Minimalwert: 1, Maximalwert: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = Tag für Remoterichtlinie
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = Tag, der dem Remotereplikat der VM-Speicherrichtlinie entspricht.
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = Datendienst
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = Datendienstrichtlinie für VMs
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = Speicherplatzeffizienz
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = Speicherplatzeffizienzanforderung für vSAN-Datenspeicher
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = Verschlüsselung ruhender Daten
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = Anforderung zur Verschlüsselung von Daten im Ruhezustand für vSAN-Datenspeicher
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = Deduplizierung und Komprimierung
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = Deduplizierung und Komprimierung des vSAN-Datenspeichers erforderlich
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = Nur Komprimierung
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = Nur Komprimierung des vSAN-Datenspeichers erforderlich
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = Keine Speicherplatzeffizienz
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = Erfordert vSAN-Datenspeicher mit deaktivierter Komprimierung und Deduplizierung
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = Objektkomprimierung deaktivieren
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = Wenn diese Option auf „Ja“ festgelegt ist, wird das Objekt auf Speichergeräten nicht komprimiert. Standardwert: Nein.

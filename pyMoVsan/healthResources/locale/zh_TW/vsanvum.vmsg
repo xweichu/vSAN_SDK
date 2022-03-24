@@ -1,0 +1,113 @@
+#
+# vSAN Build Recommendation messages
+#
+com.vmware.vsan.vum.enum.supported = 支援的硬體
+com.vmware.vsan.vum.enum.sameSupport = 良好的硬體支援
+com.vmware.vsan.vum.enum.lessSupport = 較差的硬體支援
+com.vmware.vsan.vum.enum.incompleteSupport = 部分支援的硬體
+com.vmware.vsan.vum.enum.noSupport = 不受支援的硬體
+com.vmware.vsan.vum.enum.vcNoSupport = 不受支援的 vCenter
+com.vmware.vsan.vum.enum.incompatibleBuildType = 不相容的組建類型
+com.vmware.vsan.vum.enum.missingBuild = 版本資料庫中遺失組建編號
+com.vmware.vsan.vum.enum.sameSupportNotOnHcl = 現有版本和建議的版本均不受 HCL 支援
+com.vmware.vsan.vum.enum.invalidEsxUpgradePath = 不是正式支援的升級路徑
+com.vmware.vsan.vum.enum.unknownCustomIsoVendor = vSAN 叢集具有來自不支援的廠商的 ISO
+com.vmware.vsan.vum.enum.multipleCustomIsoVendor = vSAN 叢集具有來自多家廠商的 ISO
+com.vmware.vsan.vum.enum.preferenceNotMatch = 喜好設定不相符
+com.vmware.vsan.vum.enum.customIsoNotAvailable = 自訂 ISO 不可用
+com.vmware.vsan.vum.enum.noRecommendation = 無建議
+com.vmware.vsan.vum.enum.latestPatch = 包括目前 ESXi 版本的修補程式和更新
+com.vmware.vsan.vum.enum.latestRelease = 包括至新 ESXi 版本的升級
+com.vmware.vsan.vum.enum.incompatibleDiskGroupVersion = vSAN 叢集具有已過時的 vSAN 磁碟群組
+com.vmware.vsan.vum.enum.sourceReleaseInfoNotFound = 版本詳細資料無法使用
+
+com.vmware.vsan.vum.note.notRecommended = 版本 {evalRelease} 不是建議版本，因為其支援的硬體少於目前安裝的版本。不支援的控制器: {controllerLostSupport}。
+com.vmware.vsan.vum.note.recommended = 建議使用 {evalRelease}，因為它與 {existingRelease} 不同，可支援所有硬體
+com.vmware.vsan.vum.note.vcNotSupported = 版本 {evalRelease} 不是建議版本，因為 vCenter {vcVersion} 不支援將此叢集中的某些主機升級到 {evalRelease}。
+com.vmware.vsan.vum.note.notFullySupport = 附註: 根據 vSAN HCL，所選版本 ({chosenRelease}) 不 (完全) 支援該硬體。但仍選擇了該版本，因為支援情況並不比使用目前安裝的版本差。
+com.vmware.vsan.vum.note.fullySupport = 該硬體完全支援所選版本 {chosenRelease}。它是最新建議的 vSAN 版本。
+com.vmware.vsan.vum.note.notSupported = 根據 vSAN HCL，最新版本 ({chosenRelease}) 和目前安裝的版本都不支援該硬體。不支援的控制器: {controllerLostSupport}。
+com.vmware.vsan.vum.note.incompatibleBuildType = 不建議使用 {chosenRelease}，因為來源組建類型 {srcType} 不相容。
+com.vmware.vsan.vum.note.mixVersionInstalled = 叢集擁有的一組已安裝版本: {releases}
+com.vmware.vsan.vum.note.mixBldTypeInstalled = 叢集擁有的一組已安裝組建類型: {buildTypes}
+com.vmware.vsan.vum.note.upgradeToHclEnabledVersion = vSAN 無法存取硬體的 HCL 相容性，因為安裝的 ESXi 版本比 6.0 U2 舊。vSAN 建議升級到最新的 ESXi 版本，但使用者應手動再檢查一次，確保所有先前支援的硬體在最新版本上都受支援。
+com.vmware.vsan.vum.note.driverManualUpgradeNeeded = 適用於裝置 ({device}) 的驅動程式 {driverName} 具有更新的 vSAN HCL 支援的版本 {version} (需要手動升級)。
+com.vmware.vsan.vum.note.noDriverUpgradeNeeded = 此案例不涉及驅動程式升級/更新。
+com.vmware.vsan.vum.note.updateTime = 上次更新於 {updateTime}。
+com.vmware.vsan.vum.note.invalidEsxUpgradePath = 不正式支援從 {existingRelease} 至 {evalRelease} 的升級路徑。
+com.vmware.vsan.vum.note.multipleCustomIsoVendor = vSAN 叢集具有來自多家廠商 {vendors} 的 ISO。
+com.vmware.vsan.vum.note.unknownCustomIsoVendor = vSAN 叢集具有來自不支援的 {vendors} 的 ISO。
+com.vmware.vsan.vum.note.customIsoNotAvailable = 不建議使用版本 {evalRelease}，因為廠商 {vendors} 的自訂 ISO 不會透過 vSAN 組建編號建議引擎提供。
+com.vmware.vsan.vum.note.preferenceNotMatch = 版本 {evalRelease} 不是建議版本，因為針對叢集 {cluster} 設定的喜好設定為 {preference}。
+com.vmware.vsan.vum.note.incompatibleDiskGroupVersion = 不建議將版本 {evalRelease} 用於叢集 {cluster}，因為主機 {hostsHasObsoleteDgStr} 具有已過時的 vSAN 磁碟群組。請先觸發磁碟格式轉換。
+com.vmware.vsan.vum.note.failed = 無法產生建議。請導覽至 [vSAN 健全狀況] 頁面並查看更多詳細資料。
+com.vmware.vsan.vum.note.usage = 附註: 建議將系統基準群組做為一個群組進行修復。
+com.vmware.vsan.vum.note.sourceReleaseInfoNotFound = 未產生任何建議，因為沒有可供 VUM 使用的 {existingRelease} 版本詳細資料。
+com.vmware.vsan.vum.note.upgradeWitnessFirst = 此叢集是延伸叢集，請先升級見證主機 {witnessHost}。
+
+com.vmware.vsan.vum.patchName = 要在 {chosenRelease} 上套用的 vSAN 建議的修補程式: {patchIds}
+com.vmware.vsan.vum.upgradeBaselineWithPatch = 含 vSAN 建議的修補程式 {patchIds} 的 {upgradePatchName}
+
+com.vmware.vsan.vum.witnessBaselineGroupName = vSAN 見證主機 {hostname} ({release})
+com.vmware.vsan.vum.witnessBaselineGroupDesc = 根據叢集的建議，產生此基準群組: {clusterNames}。
+
+#
+# vSAN Build Recommendation health check
+#
+com.vmware.vsan.health.test.vum = vSAN 組建編號建議
+
+com.vmware.vsan.health.test.vum.vumconfig =  vSAN 組建編號建議引擎依賴於《VMware 相容性指南》和 VMware 版本中繼資料提供建議。此外，它還需要 VMware Update Manager 服務可用、設定網際網路連線和有效的 my.vmware.com 認證以提供組建編號建議。此健全狀況檢查可確保符合這些相依性且建議引擎正確運作。
+com.vmware.vsan.health.test.vum.vumconfig.short = 檢查組建編號建議引擎是否符合所有相依性且如預期運作
+com.vmware.vsan.health.test.vum.vumconfig.testName = vSAN 組建編號建議引擎健全狀況
+
+com.vmware.vsan.health.test.vum.vumconfig.testResult.label = 問題
+com.vmware.vsan.health.test.vum.vumconfig.testResult.columnIssue = 問題資訊
+
+com.vmware.vsan.health.test.vum.releasecataloguptodate = 檢查用於 vSAN 組建編號建議的 vSAN 版本目錄的存留期。超過 90 天或 180 天時，會分別顯示警告或錯誤。當有新版本或重大修補程式時，將更新 vSAN 版本目錄，因此請務必將本機複本保持在最新狀態。
+com.vmware.vsan.health.test.vum.releasecataloguptodate.short = 檢查 vSAN 版本目錄的存留期。
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testName = vSAN 版本目錄處於最新狀態
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.label = vSAN 版本目錄資訊
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.columnEntity = 實體
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.columnTime = UTC 時間
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.rowCurrentTime = 目前時間
+com.vmware.vsan.health.test.vum.releasecataloguptodate.testResult.rowCatalogReleaseTime = 本機發行資料庫複本上次更新時間
+
+com.vmware.vsan.health.test.vum.vumDisabled = VMware Update Manager (VUM) 已停用或未安裝。請確定 VUM 已安裝且正常運作。
+com.vmware.vsan.health.test.vum.vumNotResponsive = VMware Update Manager (VUM) 沒有回應。請確定 VUM 服務可用且正常運作。
+com.vmware.vsan.health.test.vum.metadataOutdated = vSAN 版本中繼資料已過期。請確定具有網際網路連線且 vSAN 可存取 VMware 的最新版本中繼資料。
+com.vmware.vsan.health.test.vum.metadataNotFound = vSAN 版本中繼資料不可用。請確定具有網際網路連線或手動上傳版本目錄。
+com.vmware.vsan.health.test.vum.isoDepotCookieNotSet = my.vmware.com 登入認證未設定或已到期。在驗證登入認證之後，應在幾分鐘內產生基準。
+com.vmware.vsan.health.test.vum.isoDepotAuthenticationFailed = my.vmware.com 驗證失敗。在驗證登入認證之後，應在幾分鐘內產生基準。
+com.vmware.vsan.health.test.vum.createBaselineFailed = 非預期的 VMware Update Manager (VUM) 基準建立失敗。請查看 vSAN 和 VUM 記錄以取得詳細資料。
+com.vmware.vsan.health.test.vum.isoDepotIsDown = VMware ISO 下載網站已關閉。
+com.vmware.vsan.health.test.vum.ISONotAvailable = 所需 ISO 檔案 {filename} 尚未上傳到 VUM 伺服器。
+com.vmware.vsan.health.test.vum.OfflineBundleNotAvailable = 無法將所需離線服務包檔案 {filename} 上傳到 VUM 伺服器。
+com.vmware.vsan.health.test.vum.invalidReleaseCatalog = 無法為 {cluster} 產生建議的基準，因為版本目錄不包含 {release}。請更新版本目錄並重試。
+
+com.vmware.vsan.health.test.vum.vumrecommendation = vSAN 組建編號建議。這是 vSAN 建議最適合的 ESXi 組建編號，指定了硬體、依照《VMware 相容性指南》的相容性以及 VMware 的可用版本。
+com.vmware.vsan.health.test.vum.vumrecommendation.short =  根據可用版本和《VCG 相容性指南》的 vSAN 組建編號建議
+com.vmware.vsan.health.test.vum.vumrecommendation.testName = vSAN 組建編號建議
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.label = vSAN 組建編號建議
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.columnCluster = 叢集
+com.vmware.vsan.health.test.vum.vumrecommendation.testResult.columnRecommendation = 建議
+com.vmware.vsan.health.test.vum.vumrecommendation.recommendationAvailable = 叢集 {cluster} 具有建議的版本: {release}
+com.vmware.vsan.health.test.vum.vumrecommendation.patchRecommendationAvailable = 叢集 {cluster} 具有可用的建議修補程式。
+com.vmware.vsan.health.test.vum.vumrecommendation.driverRecommendationAvailable = 叢集 {cluster} 具有可用的建議驅動程式。
+
+com.vmware.vsan.vum.error.incorrectCredential = my.vmware.com 登入認證不正確。在驗證登入認證之後，應在幾分鐘內產生基準。
+com.vmware.vsan.vum.error.isoDepotIsDown = VMware ISO 下載網站已關閉，請稍後重試。
+com.vmware.vsan.vum.error.incorrectReleaseDb = 版本目錄格式不正確，預期為 JSON 檔案。
+com.vmware.vsan.vum.error.updateReleaseDbFailed = 無法更新版本目錄。
+
+
+# FW checks
+com.vmware.vsan.health.test.hcl.fwrecommendation = vSAN 韌體建議。此韌體建議目前基於主機軟體版本、硬體驅動程式版本，及其依照《VMware 相容性指南》的相容性。
+com.vmware.vsan.health.test.hcl.fwrecommendation.short = 依據 VCG 的 vSAN 韌體建議。
+com.vmware.vsan.health.test.hcl.fwrecommendation.testName = vSAN 韌體版本建議
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.label = vSAN 韌體版本建議
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnHost = 主機
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnESXi = 建議的 ESXi 版本
+com.vmware.vsan.health.test.hcl.fwrecommendation.testResult.columnRecommendation = 建議的韌體版本
+com.vmware.vsan.health.test.hcl.fwrecommendation.recommendationAvailable = 主機 {host} 需要韌體更新: {recommendations}
+
+com.vmware.vsan.fwUpgrade.error.fwBinaryNotFound = 所需韌體二進位檔案 {url} 不存在。需要下載。

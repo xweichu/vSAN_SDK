@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = VMware vSAN capabilities
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = Capabilities published by VMware vSAN
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = vSAN VASA Provider
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = VASA Provider published by VMware vSAN
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = Number of disk stripes per object
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = The number of HDDs across which each replica of a storage object is striped. A value higher than 1 may result in better performance (for e.g. when flash read cache misses need to get serviced from HDD), but also results in higher use of system resources. Default value: 1, Maximum value: 12.
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = PMem datastore placement
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = Place the virtual disk into PMem datastore.
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = vSAN Direct datastore placement
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = Place the Cloud Native Volumes on vSAN Direct datastores.
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = Placement Type
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = Defines where to place the data.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = vSAN Direct datastore volume allocation
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = Volume allocation type.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = Fully initialized
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = All the blocks are allocated and zeroed
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = Reserve space
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = All the blocks are allocated.
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = Flash read cache reservation (%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = Flash capacity reserved as read cache for the storage object. Specified as a percentage of the logical size of the object. To be used only for addressing read performance issues. Reserved flash capacity cannot be used by other objects. Unreserved flash is shared fairly among all objects. Default value: 0%, Maximum value: 100%.
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = Primary level of failures to tolerate
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = Defines the number of host, disk, or network failures a storage object can tolerate. When the fault tolerance method is mirroring: to tolerate "n" failures, "n+1" copies of the object are created and "2n+1" hosts contributing storage are required (if fault domains are configured, "2n+1" fault domains with hosts contributing storage are required.) When the fault tolerance method is erasure coding: to tolerate 1 failure, 4 hosts (or fault domians) are required; and to tolerate 2 failures, 6 hosts (or fault domains) are required. Note: A host which is not part of a fault domain is counted as its own single-host fault domain. Default value: 1, Maximum value: 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = Secondary level of failures to tolerate
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = Defines the number of host, disk, or network failures a storage object can tolerate within a fault domain. When the fault tolerance method is mirroring: to tolerate "n" failures, "n+1" copies of the object are created and "2n+1" hosts contributing storage are required in the fault domain. When the fault tolerance method is erasure coding: to tolerate 1 failure, 4 hosts are required; and to tolerate 2 failures, 6 hosts are required. Default value: 1, Maximum value: 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = Scope for secondary level of failures to tolerate when the cluster configuration is Dual Host Mirroring
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = Defines the scope (Host or Disk) at which the secondary level of failures to tolerate will be satisfied. If the cluster configuration is Dual Host Mirroring and this attribute is set to "Disk" then replication using disk groups is done according to secondary level of failures to tolerate
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = Host-based second level protection
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = Second level protection will be replication using hosts according to secondary level of failures to tolerate
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = Disk-based second level protection for Dual Host Mirroring clusters
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = Second level protection will be replication using disk groups according to secondary level of failures to tolerate for Dual Host Mirroring clusters
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = Data locality
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = Specify the data location. Either the Preferred Fault Domain or Non-preferred Fault Domain in a stretch cluster, or set to Host Local to pin the VM's folder and VMDKs to the host it was created on. This policy is only valid for objects with the primary level of failures to tolerate = 0. Default value: None
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = None
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = None.
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = Preferred Fault Domain (Stretch Cluster)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = Preferred Fault Domain (Stretch Cluster).
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = Non-preferred Fault Domain (Stretch Cluster)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = Non-preferred Fault Domain (Stretch Cluster).
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = Host Local
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = Host Local.
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = Force provisioning
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = If this option is "Yes", the object will be provisioned even if the policy specified in the storage policy is not satisfiable with the resources currently available in the cluster. vSAN will try to bring the object into compliance if and when resources become available. Default Value: No.
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = Object space reservation (%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = Percentage of the logical size of the storage object that will be reserved (thick provisioned) upon VM provisioning. The rest of the storage object is thin provisioned. Default value: 0%, Maximum value: 100%.
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = IOPS limit for object
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = Defines IOPS limit for a disk. IOPS is calculated as the number of IOs using a weighted size. By default the system is using a base size of 32KB, then a 64KB IO will represent 2 IO. Note: when calculating IOPS read and write are regarded as equivalent and cache hit ratio or sequentiality are not taken into account. If IOPS of a disk exceeds the limit, IO will be throttled. If the limit is set 0, means no limit for the IO. Default value: 0.
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = Disable object checksum
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = If this option is "Yes", the object will not calculate checksum information. Default Value: No.
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = Failure tolerance method
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = Defines the method used to tolerate failures. RAID-1 achieves failure tolerance using mirrors, which provides better performance. RAID-5/6 achieves failure tolerance using parity blocks, which provides better space efficiency. RAID-5/6 is only available on All-flash and when the number of failures to tolerate is set to 1 or 2: a value of 1 implies a RAID-5 configuration, and a value of 2 implies a RAID-6 configuration. Default value: RAID-1.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID-1 (Mirroring) - Performance
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID-1 (Mirroring) - Performance.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID-5/6 (Erasure Coding) - Capacity
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID-5/6 (Erasure Coding) - Capacity.
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = Preferred backing storage type
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = Specify which type of backing storage will be selected for placing components of vSAN objects. vSAN backing storage type could be Hybrid or All-flash. If "Hybrid" is specified, the components of objects will be only placed in Hybrid disk groups. If "Allflash" is specified, the components of objects will be only placed in All-flash disk groups. Default value "Any" will leave vSAN decides where to place.
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = Use native snapshots
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = Use this constraint to create native snapshots. If the policy has data protection constraints, this value will override to 'true'. Default Value: false.
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = Local Data Protection (Primary Storage)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = VMs with the current policy have snapshots taken regularly to protect from application level failures. These snapshots are stored in vSAN storage to facilitate quick and low RTO recovery.
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = Snapshot frequency (RPO)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = Frequency at which snapshots are taken. The value is in minutes. Default = 60 mins, Max = 30 days.
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = Make every x nd/th/rd/st snapshot application consistent
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = Application consistent snapshots properly prepares an application for data protection. Additional application resources may be consumed when application consistent snapshots are taken. Default = 0, Range = 0 to 30.
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = Number of snapshots to retain
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = Total number of snapshots to retain locally in vSAN storage. When new snapshots are created, the oldest ones are deleted according to the specified retained value. Default = 10, Maximum = 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = Archival protection
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = Provide archival protection for VMs.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = Only archive quiesced snapshots
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = Archive only snapshots which are quiesced.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = Archive every 'Mth' snapshot
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = Only every 'M'th snapshot will be archived. If the user selects the option to archive only quiesced snapshot, then every 'M'th quiesced snapshot will be archived. Default value of 0 indicates copying to archive store is disabled
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = Last 'X' restore points to keep
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = This parameter defines how many recent archival snapshots are to be retained in addition to the retention rules for hourly (Xh), daily (Xd), weekly (Xw) and monthly (Xm). The retention policy is constrained by (X + Xh + Xd + Xw + Xm) <= 100. Default value: 1, Maximum value: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = Hourly restore points to keep (Xh)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = Number of hourly restore points to be retained. Default value of 0 indicates hourly snapshots are not required. Hourly snapshot is the first snapshot at or after the top of the hour in UTC time. Default value: 0, Maximum value: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = Daily restore points to keep (Xd)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = Number of daily restore points to be retained. Default value of 0 indicates daily snapshots are not required. Daily snapshot is the first snapshot at or after midnight in UTC time. Default value: 0, Maximum value: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = Weekly restore points to keep (Xw)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = Number of weekly restore points to be retained. Default value of 0 indicates weekly snapshots are not required. Weekly snapshot is the first snapshot at or after midnight on Sunday in UTC time. Default value: 0, Maximum value: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = Monthly restore points to keep (Xm)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = Number of monthly restore points to be retained. Default value of 0 indicates monthly snapshots are not required. Monthly snapshot is the first snapshot at or after midnight at the end of the month in UTC time. Default value: 0, Maximum value: 100.
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = Remote protection
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = Provide remote replication protection for VMs.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = Remote protection RPO (minutes)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = Remote protection recovery point objective. The value is in minutes. Default value: 30, Minimum value: 5, Maximum value: 1440.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = Number of remote instances to retain
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = Number of snapshot instances to retain on the remote site. Default value: 1, Minimum value 1, Maximum value: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = Remote Policy Tag
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = Tag to match remote replica VM storage policy.
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = Data service
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = Data service policy for VMs
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = Space efficiency
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = Space efficiency requirement for vSAN datastores
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = Data at rest encryption
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = Data at rest encryption requirement for vSAN datastores
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = Dedup and compression
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = Dedup and compression vSAN datastore required
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = Compression Only
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = Compression only vSAN datastore required
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = No space efficiency
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = Requires vSAN datastore with both compression and dedup disabled
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = Disable object compression
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = If this option is "Yes", object will not be compressed on storage devices. Default Value: No.

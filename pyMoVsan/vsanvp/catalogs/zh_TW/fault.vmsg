@@ -1,0 +1,7 @@
+#
+# Vsan VP Localizable Messages for faults
+#
+vsan.fault.alarm.invalid.id = 無效的警示 {Id} 序列。
+vsan.fault.alarm.lost.id = 遺失警示 {Id}
+vsan.fault.event.invalid.id = 無效的事件 {Id} 序列
+vsan.fault.event.lost.id = 遺失事件 {Id}。

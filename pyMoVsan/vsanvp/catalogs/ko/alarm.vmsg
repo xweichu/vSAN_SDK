@@ -1,0 +1,4 @@
+#
+# Vsan VP Localizable Messages for alarms
+#
+vsan.alarm.compliance.changed = 규정 준수가 변경됨

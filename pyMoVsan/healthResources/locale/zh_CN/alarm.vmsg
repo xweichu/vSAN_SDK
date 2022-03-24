@@ -1,0 +1,391 @@
+signature = "sIgNaTuRe"
+
+#
+# Hardware compatibility Group 14
+#
+vsan.health.test.hcl.hcldbuptodate.label = "vSAN 硬件兼容性警报“vSAN HCL 数据库最新版本”"
+vsan.health.test.hcl.hcldbuptodate.summary = "查看用于 HCL 检查的《VMware 硬件兼容性指南》数据库的使用期限。如果超过 90 天或集群上的所有 ESXi 版本都不包含在本地 HCL 数据库中，则会显示警告。如果超过 180 天，则会显示错误。VMware 会经常更新 VCG，因此保持本地副本是最新版本很重要。"
+
+vsan.health.test.hcl.autohclupdate.label = "vSAN 硬件兼容性警报“vSAN HCL 数据库自动更新”"
+vsan.health.test.hcl.autohclupdate.summary = "验证是否可从 VMware HCL 发行网站中自动下载和更新 vSAN HCL 数据库。当不具有 VMware 公共网站的 Internet 访问权限或未启用 vSAN HCL 数据库自动更新时，此运行状况检查会默认位于静默运行状况检查列表中且显示为“已跳过”状态，除非用户从静默列表中将其手动移除。另外，如果 HCL 数据库由于任何其他原因 (如无法连接 VMware HCL 发行网站、无法下载最新 HCL 数据库或无法更新本地 HCL 数据库) 而无法自动更新，则会显示警告。"
+
+vsan.health.test.hcl.controlleronhcl.label = "vSAN 硬件兼容性警报“SCSI 控制器已由 VMware 认证”"
+vsan.health.test.hcl.controlleronhcl.summary = "显示关于存储 I/O 控制器的信息并基于 PCI ID 验证在《VMware 兼容性指南》中控制器是否受支持。如果存在不匹配问题，请联系 VMware 技术支持。"
+
+vsan.health.test.hcl.nvmeidentifiable.label = "vSAN 硬件兼容性警报“可以标识 NVMe 设备”"
+vsan.health.test.hcl.nvmeidentifiable.summary = "检查是否只有一个 vSAN VCG (《VMware 兼容性指南》) 条目的 PCI ID 与 vSAN 集群内的某个 NVMe 设备相匹配，以便可以将此 NVMe 设备标识为进行 vSAN HCL 检查。"
+
+vsan.health.test.hcl.nvmeonhcl.label = "vSAN 硬件兼容性警报“NVMe 设备已经过 VMware 认证”"
+vsan.health.test.hcl.nvmeonhcl.summary = "显示有关 NVMe 设备的信息，并确认这些设备已在 vSAN VCG (《VMware 兼容性指南》) 中认证。如果存在不匹配项，请联系 VMware 技术支持团队。"
+
+vsan.health.test.hcl.controllerreleasesupport.label = "vSAN 硬件兼容性警报“ESXi 版本的控制器已由 VMware 认证”"
+vsan.health.test.hcl.controllerreleasesupport.summary = "显示有关存储 I/O 控制器驱动程序的信息。检查当前 ESXi 版本中对应的控制器是否支持已安装的驱动程序。仅测试由 VMware 认证的控制器。"
+
+vsan.health.test.hcl.controllerdriver.label = "vSAN 硬件兼容性警报“控制器驱动程序已由 VMware 认证”"
+vsan.health.test.hcl.controllerdriver.summary = "检查控制器使用的驱动程序在《VMware 兼容性指南》中是否作为经认证的驱动程序列出。仅测试位于 vSAN HCL 上且针对当前 ESXi 版本进行了认证的控制器。"
+
+vsan.health.test.hcl.hclhostbadstate.label = "vSAN 硬件兼容性警报“检索硬件信息时出现主机问题”"
+vsan.health.test.hcl.hclhostbadstate.summary = "检查是否有任何主机已断开连接/无响应或者未能响应要获取硬件信息的尝试。对于此处列出的主机，系统没有根据《VMware 兼容性指南》来检查它们的硬件。"
+
+vsan.health.test.hcl.controllerfirmware.label = "vSAN 硬件兼容性警报“控制器固件已由 VMware 认证”"
+vsan.health.test.hcl.controllerfirmware.summary = "检查控制器固件是否已根据《VMware 兼容性指南》进行了认证。仅测试位于 vSAN HCL 上且针对当前 ESXi 版本进行了认证的控制器。"
+
+vsan.health.test.hcl.controllerdiskmode.label = "vSAN 硬件兼容性警报“控制器磁盘组模式已由 VMware 认证”"
+vsan.health.test.hcl.controllerdiskmode.summary = "检查 vSAN 磁盘组类型是否通过了《VMware 兼容性指南》中列出的 SCSI 控制器的认证。将仅测试位于 vSAN HCL 上且通过了当前 ESXi 版本认证的控制器。"
+
+vsan.health.test.hcl.pniclinkspeed.label = "vSAN 硬件兼容性警报“物理网卡链路速度符合要求”"
+vsan.health.test.hcl.pniclinkspeed.summary = "vSAN 主机中使用的网卡 (NIC) 必须满足特定要求。这些网卡要求假定超融合环境中的数据包丢失率不超过 0.0001%。建议使用链路速度可以满足最低要求的网卡。否则，可能会严重影响 vSAN 性能。"
+
+vsan.health.test.hcl.fwrecommendation.label = "vSAN 硬件兼容性警报“vSAN 固件版本建议”"
+vsan.health.test.hcl.fwrecommendation.summary = "vSAN 固件建议。这是基于当前主机软件版本、硬件驱动程序版本及其在《VMware 兼容性指南》中的兼容性提出的固件建议。"
+
+vsan.health.test.physicaldisks.diskusage.label = "vSAN 硬件兼容性警报“存储控制器上的磁盘使用情况”"
+vsan.health.test.physicaldisks.diskusage.summary = "vSAN 不支持以下配置: 将非 vSAN 磁盘用于 VMFS 或裸设备映射 (RDM)。请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章，了解修复步骤。"
+
+vsan.health.test.hcl.mixedmode.label = "vSAN 硬件兼容性警报“具有直通磁盘和 RAID 磁盘的控制器”"
+vsan.health.test.hcl.mixedmode.summary = "混用控制器磁盘模式 (直通/RAID) 会导致存储控制器以不同方式处理各种磁盘。这可能会导致影响一种配置的问题也会影响另一种配置，从而可能会对 vSAN 带来不良后果。请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章，了解修复步骤。"
+
+vsan.health.test.hcl.h730.label = "vSAN 硬件兼容性警报“基于 LSI-3108 的控制器的 vSAN 配置”"
+vsan.health.test.hcl.h730.summary = "为确保 vSAN 在基于 LSI-3108 的控制器上运行时的稳定性和最佳性能，必须设置一些建议的配置值。请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章，了解修复步骤。"
+
+vsan.health.test.hcl.mixedmodeh730.label = "vSAN 硬件兼容性警报“vSAN 和 VMFS 数据存储在具有 lsi_mr3 驱动程序的 Dell H730 控制器上”"
+vsan.health.test.hcl.mixedmodeh730.summary = "VMware 不支持以下配置: vSAN 磁盘与 VMFS 卷在使用 lsi_mr3 驱动程序的 Dell H730 控制器上共存。要修复这个问题，请在具有 vSAN 驱动器的磁盘 (仅限 ESXi 引导磁盘) 上安装 ESXi，然后从本地引导设备上移除/删除 VMFS 数据存储。"
+
+vsan.health.test.hcl.controllercacheconfig.label = "vSAN 硬件兼容性警报“RAID 控制器配置”"
+vsan.health.test.hcl.controllercacheconfig.summary = "vSAN 需要对直通或 RAID0 单驱动器 (SSD/HDD) 进行一些特定的控制器级配置，才能以最佳方式与 vSAN 软件级缓存配合使用。请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章，了解用于正确配置控制器的详细缓存配置设置和步骤。"
+
+vsan.health.test.hcl.vsanhpefwtest.label = "vSAN 运行状况警报“HPE NVMe 固态驱动器 - 需要关键固件升级”"
+vsan.health.test.hcl.vsanhpefwtest.summary = "用于监控运行状况测试“HPE NVMe 固态驱动器 - 需要关键固件升级”更改的默认警报"
+
+#
+# vSAN iSCSI target service Group 3
+#
+vsan.health.test.iscsi.iscsihomeobjectstatustest.label = "vSAN iSCSI 目标服务警报“主对象”"
+vsan.health.test.iscsi.iscsihomeobjectstatustest.summary = "主对象存储 vSAN iSCSI 目标服务使用的元数据。此警报验证以下项: 主对象已创建且可置于系统中。主对象正常运行且符合存储策略。主对象具有唯一性。如果存在多个主对象，集群中的某些主机可能会访问不同的主对象。主对象中的元数据文件存在且可解析，所有元数据均已妥善存储。"
+
+vsan.health.test.iscsi.iscsiservicenetworktest.label = "vSAN iSCSI 目标服务警报“网络配置”"
+vsan.health.test.iscsi.iscsiservicenetworktest.summary = "必须在集群中的所有主机上配置 vSAN iSCSI 目标服务使用的所有网络接口 (包括默认接口)。具有相同名称的所有网络接口形成分布式门户。如果一个或多个主机没有网络接口，则 vSAN iSCSI 目标服务无法正常运行。"
+
+vsan.health.test.iscsi.iscsiservicerunningtest.label = "vSAN iSCSI 目标服务警报“服务运行时状态”"
+vsan.health.test.iscsi.iscsiservicerunningtest.summary = "检查集群中的所有主机是否都已启用此服务。如果某个主机未启用此服务，请运行以下命令: “esxcli vsan iscsi status set --enabled=true”。也可以使用“编辑”操作 (“管理”>“设置”>“常规”>“vSAN iSCSI 目标服务”) 来启用 iSCSI 目标服务。此警报还会验证以下进程的运行状况: “vitd”用于提供服务，“vitsafehd”用于使 VMDK 保持打开状态。如果“vitd”进程未运行，请使用以下命令来启动此进程: “/etc/init.d/vitd start”。如果“vitsafehd”进程未运行，请使用以下命令来启动此进程: “/etc/init.d/vitd io_restart”。"
+
+#
+# Network Group 16
+#
+vsan.health.test.network.multicastsuspected.label = "vSAN 网络警报“基于其他检查的多播评估”"
+vsan.health.test.network.multicastsuspected.summary = "如果 vSAN 配置检查已通过，单播连接检查已通过，但存在 vSAN 集群分区，则此警报指示可能存在多播问题。如果触发了此警报，则会执行额外的“活动多播连接检查”。"
+
+vsan.health.test.network.multicastdeepdive.label = "vSAN 网络警报“活动多播连接检查”"
+vsan.health.test.network.multicastdeepdive.summary = "此警报会捕获一段时间内集群中所有主机的多播数据包。此警报会检查是否有 CMMDS 主节点检测信号。选定作为“vSAN/CMMDS 主节点”(每个分区一个) 的所有主机都会每秒发送此类检测信号一次。这些检测信号通过多播方式进行发送，集群中的所有主机都必须收到这些检测信号，集群才能正常运行。因此，如果主机发送检测信号，而另一个主机未收到此检测信号，则通常表示物理网络中存在多播配置错误。"
+
+vsan.health.test.network.largeping.label = "vSAN 网络警报“vSAN: MTU 检查 (使用较大数据包执行 Ping 操作)”"
+vsan.health.test.network.largeping.summary = "使用较大数据包执行从每个主机到所有其他主机的 Ping 测试。如果触发了此警报但未触发基本连接检查警报，则意味着在 vSAN 网络中的某处存在 MTU 配置错误。必须跟踪此配置错误的来源。这可能是 VMkernel 适配器、虚拟交换机或物理网络交换机。"
+
+vsan.health.test.network.smallping.label = "vSAN 网络警报“vSAN: 基本 (单播) 连接检查”"
+vsan.health.test.network.smallping.summary = "使用较小数据包执行从每个主机到所有其他主机的 Ping 测试。如果触发此警报，则表示网络连接存在基本问题。请检查 vmknic、上行链路、VLAN、物理交换机和相关设置。"
+
+vsan.health.test.network.hostconnectivity.label = "vSAN 网络警报“存在连接问题的主机”"
+vsan.health.test.network.hostconnectivity.summary = "此警报是指 vCenter Server 将主机列为“已连接”但 vCenter Server 对主机发出的 API 调用却失败的情况。这个问题比较罕见，但它可能会导致主机与 vCenter Server 断开连接的类似情况。"
+
+vsan.health.test.network.multicastsettings.label = "vSAN 网络警报“所有主机均具有匹配的多播设置”"
+vsan.health.test.network.multicastsettings.summary = "为了参与 vSAN 集群，并形成一个完全连接的主机组，vSAN 集群中的每个主机都必须使用相同的 IP 多播地址。根据集群使用 IPv4 还是 IPv6，将验证对应的多播配置。使用以下命令调整多播 IP: \nesxcli vsan network list\nesxcli vsan network ip set"
+
+vsan.health.test.network.vsanvmknic.label = "vSAN 网络警报“所有主机均已配置 vSAN vmknic”"
+vsan.health.test.network.vsanvmknic.summary = "为了加入 vSAN 集群，并且形成一个完全连接的主机组，vSAN 集群中的每台主机都必须为 vSAN 流量配置 vmknic (VMkernel 网络接口或 VMkernel 适配器)。"
+
+vsan.health.test.network.clusterpartition.label = "vSAN 网络警报“vSAN 集群分区”"
+vsan.health.test.network.clusterpartition.summary = "为了确保正常运行，所有 vSAN 主机都必须能够通过多播和单播方式进行通信。如果不能，则 vSAN 集群将拆分为多个分区 (即无法与其他子组进行通信的主机子组)。如果发生此情况，则在解决网络配置错误之前，vSAN 对象可能不可用。"
+
+vsan.health.test.network.hostdisconnected.label = "vSAN 网络警报“主机已从 VC 断开连接”"
+vsan.health.test.network.hostdisconnected.summary = "此警报会验证 vCenter Server 与集群中的所有主机之间是否存在活动连接。如果有任何主机与 vCenter Server 断开连接 (或无响应)，则可能会导致运行问题。如果 vCenter Server 未连接到主机，则其状态对 vCenter 来说是未知的。主机可能正在运行，并且可能正在加入 vSAN 集群，提供数据并在集群的存储功能中发挥重要作用。或者，主机可能已关闭且不可用。因此，当主机断开连接时，vCenter Server 和 vSAN 运行状况检查无法充分评估情况。如果主机正在加入 vSAN 集群，则它会意外地出现在“意外 vSAN 集群成员”检查中，因为无法确定其 UUID。运行状况检查无法最终判断 vSAN 集群中显示的主机是否为该断开连接的主机。而诸如 vSAN 连接检查或磁盘运行状况检查等其他运行状况检查，也无法将该断开连接的主机考虑在内。"
+
+vsan.health.test.network.vmotionpingsmall.label = "vSAN 网络警报“vMotion: 基本 (单播) 连接检查”"
+vsan.health.test.network.vmotionpingsmall.summary = "使用较小的数据包在启用了 vMotion 流量的所有 VMkernel 适配器之间执行 Ping 测试。如果触发此警报，则表示网络配置错误。测试会发送三个 Ping 操作。它会在一个 Ping 操作丢失时显示一条警告，在两个或多个 Ping 操作失败时显示错误。导致操作失败的因素可能有多种。可能是诸如 VMkernel 适配器或虚拟交换机的虚拟网络中存在问题。可能是诸如电缆、物理网卡或物理交换机的物理网络中存在问题。"
+
+vsan.health.test.network.vmotionpinglarge.label = "vSAN 网络警报“vMotion: MTU 检查 (使用较大数据包执行 Ping 操作)”"
+vsan.health.test.network.vmotionpinglarge.summary = "使用较大的数据包在启用了 vMotion 流量的所有 VMkernel 适配器之间执行 Ping 测试。当小型 Ping 测试成功时，如果所有 VMkernel 适配器、虚拟交换机和所有物理交换机上的 MTU 大小配置一致，则大型 Ping 测试也会成功。如果触发了此警报，则会在 vSAN 网络上检测到配置错误的来源。请检查 VMkernel 适配器、虚拟交换机或物理网络交换机。"
+
+vsan.health.test.network.hostlatencycheck.label = "vSAN 网络警报“网络延迟检查”"
+vsan.health.test.network.hostlatencycheck.summary = "对 vSAN 主机执行网络延迟检查。正常集群的网络配置指南要求 RTT 小于 1 毫秒。为了将暂时性的波动考虑在内，此运行状况检查会基于 5 毫秒的保守阈值来报告警告。如果触发了此警报，请检查 vmknic、上行链路、VLAN、物理交换机和相关设置以查找网络问题。\n注意: 如果这一对主机的连接检查失败，则会跳过此警报。"
+
+vsan.health.test.network.serverpartition.label = "vSAN 网络警报“服务器集群分区”"
+vsan.health.test.network.serverpartition.summary = "通常情况下，客户端集群中挂载远程 vSAN 数据存储的所有主机都必须能够与服务器集群中的所有主机进行通信。在网络分区的情况下，客户端主机可能只看到一部分服务器主机。不同的客户端主机可能会看到不同的服务器主机。只要存在分区，对象可用性将会持续受到影响。如果服务器集群存在分区，则会触发此警报。有关更多详细信息，请参阅 vSAN 运行状况监控器中的知识库文章。"
+
+vsan.health.test.network.rdmaconfig.label = "vSAN 网络警报“RDMA 配置运行状况”"
+vsan.health.test.network.rdmaconfig.summary = "检查启用了 RDMA 的 vSAN 物理网卡是否配置了无损流量。要确保第 2 层无损环境，必须将数据中心桥接 (DCB) 模式配置为 IEEE，且优先级流量控制 (PFC) 值必须设置为 3。"
+
+vsan.health.test.network.multiplevsanvmknic.label = "vSAN 网络警报“远程 vSAN 中的所有主机均未配置多个 vSAN vmknic”"
+vsan.health.test.network.multiplevsanvmknic.summary = "检查远程 vSAN 客户端或服务器集群中是否有任何主机配置了多个 vSAN vmknic。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.network.pnicconsistent.label = "vSAN 网络警报“物理网络适配器链路速度一致性”"
+vsan.health.test.network.pnicconsistent.summary = "检查 vSAN 在每个主机中使用的物理网络适配器的链路速度是否一致。物理网络适配器的链路速度不一致，可能会导致 vSAN 性能问题。请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章，了解修复步骤。"
+
+vsan.health.test.network.duplicateip.label = "vSAN 网络警报“具有重复 IP 地址的主机”"
+vsan.health.test.network.duplicateip.summary = "检查是否为 vmknic 接口配置了重复的 IP 地址。"
+
+vsan.health.test.network.pnictso.label = "vSAN 网络警报“存在物理网卡 TSO 问题的主机”"
+vsan.health.test.network.pnictso.summary = "检查是否为物理网卡启用了 TSO。"
+
+vsan.health.test.network.lacpstatus.label = "vSAN 网络警报“存在 LACP 问题的主机”"
+vsan.health.test.network.lacpstatus.summary = "检查 LACP 是否可正常使用。"
+
+#
+# vSAN Build Recommendation Group 4
+#
+vsan.health.test.vum.releasecataloguptodate.label = "vSAN 内部版本建议警报“vSAN 版本目录最新版本”"
+vsan.health.test.vum.releasecataloguptodate.summary = "检查用于 vSAN 内部版本建议的 vSAN 版本目录的使用期限。如果超过 90 天或 180 天，则会触发此警报。如果存在新版本或关键修补程序，则会更新 vSAN 版本目录，因此保持本地副本是最新版本很重要。"
+
+vsan.health.test.vum.vumconfig.label = "vSAN 内部版本建议警报“vSAN 内部版本建议引擎”"
+vsan.health.test.vum.vumconfig.summary = "vSAN 内部版本建议引擎需要依靠《VMware 兼容性指南》和 VMware 版本元数据来提供建议。此外，它还要求启用 VMware Update Manager 服务，并设置 Internet 连接以及有效的 my.vmware.com 凭据来提供建议。如果不满足这些依赖关系，或者建议引擎未正常运行，则会触发此警报。"
+
+vsan.health.test.vum.vumrecommendation.label = "vSAN 内部版本建议警报“vSAN 内部版本建议”"
+vsan.health.test.vum.vumrecommendation.summary = "根据硬件及其在《VMware 兼容性指南》中的兼容性以及 VMware 已推出的版本，这是 vSAN 所建议的最合适的 ESXi 内部版本。"
+
+vsan.health.test.vum.patchalert.label = "vSAN 内部版本建议警报“具有新可用修补程序的 vSAN 主机”"
+vsan.health.test.vum.patchalert.summary = "检查是否有新的关键 vSAN 修补程序可用。如果触发了此警报，请立即升级到此修补程序版本。有关如何升级 vSAN 软件的说明，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+#
+# Physical Disk Group 9
+#
+vsan.health.test.physicaldisks.physdiskcomplimithealth.label = "vSAN 物理磁盘警报“组件限制”"
+vsan.health.test.physicaldisks.physdiskcomplimithealth.summary = "检查物理磁盘上的组件数量是否达到最大限制。由于每个 vSAN 对象都由一系列组件 (由虚拟机存储策略中正在使用的功能确定) 组成，如果已达到组件上限，则部署新虚拟机可能会失败，或可能不允许任何组件重建操作。您必须添加更多主机或者删除一些 vSAN 对象。但是，如果见证节点中的组件已满，则必须提供更多容量。"
+
+vsan.health.test.physicaldisks.componentmetadata.label = "vSAN 物理磁盘警报“组件元数据”"
+vsan.health.test.physicaldisks.componentmetadata.summary = "如果 vSAN 遇到此磁盘中某个组件的元数据的完整性问题，则会触发此警报。这可能是由驱动器故障、控制器故障或设备驱动程序行为不当引起的。也有可能是由 vSAN 软件中存在的问题引起的。请联系 VMware 技术支持团队。"
+
+vsan.health.test.physicaldisks.physdiskcongestion.label = "vSAN 物理磁盘警报“拥堵”"
+vsan.health.test.physicaldisks.physdiskcongestion.summary = "如果触发了此警报，则表示 vSAN 仍在使用此磁盘，但其处于性能下降状态，这会导致使用此磁盘的 vSAN 对象的吞吐量/IOPS 下降且延迟增加。"
+
+vsan.health.test.physicaldisks.physdiskcapacity.label = "vSAN 物理磁盘警报“磁盘容量”"
+vsan.health.test.physicaldisks.physdiskcapacity.summary = "如果特定磁盘触发了此警报，则表示此磁盘的可用磁盘空间不足。此警报仅适用于容量层驱动器，而不适用于缓存设备。"
+
+vsan.health.test.physicaldisks.physdiskoverall.label = "vSAN 物理磁盘警报“操作”"
+vsan.health.test.physicaldisks.physdiskoverall.summary = "检查 vSAN 集群中所有主机的 vSAN 磁盘和 vSAN 直接磁盘的物理磁盘操作运行状况。如果在某个 vSAN 磁盘上触发了此警报，则表明 vSAN 无法使用该磁盘。可能的原因是: 读取磁盘元数据时出现问题，或者出现了阻止使用该磁盘的 vSAN 软件问题。对于 vSAN 直接磁盘，将无法使用该磁盘，可能的原因是: 读取磁盘操作状态描述时出现问题，而此问题导致无法使用该磁盘。"
+
+vsan.health.test.physicaldisks.lsomheap.label = "vSAN 物理磁盘警报“内存池 (堆)”"
+vsan.health.test.physicaldisks.lsomheap.summary = "如果 vSAN 在物理磁盘正常运行所需的重要内存池上运行缓慢，则会触发此警报。该磁盘还可能会报告导致性能问题的严重拥堵运行状况。请联系 VMware 技术支持团队。"
+
+vsan.health.test.physicaldisks.lsomslab.label = "vSAN 物理磁盘警报“内存池 (碎片)”"
+vsan.health.test.physicaldisks.lsomslab.summary = "如果 vSAN 在物理磁盘运行所需的重要内存池上运行缓慢，则会触发此警报。该磁盘还可能会报告导致性能问题的严重拥堵运行状况。请联系 VMware 技术支持团队。"
+
+vsan.health.test.physicaldisks.smalldiskstest.label = "vSAN 物理磁盘警报“vSAN 最大组件大小”"
+vsan.health.test.physicaldisks.smalldiskstest.summary = "当用于 vSAN 的容量磁盘小于 255 GB (默认为最大组件大小) 时，vSAN 数据存储上运行的虚拟机可能会遇到磁盘空间问题。有关更改最大组件大小的说明，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.physicaldisks.physdiskhostissues.label = "vSAN 物理磁盘警报“物理磁盘运行状况检索问题”"
+vsan.health.test.physicaldisks.physdiskhostissues.summary = "如果触发了此警报，则表示在从 vSAN 集群中的至少一个主机中检索物理磁盘信息时出现问题。有关此特定原因的详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+#
+# Cluster Group 12
+#
+vsan.health.test.cluster.clomdliveness.label = "vSAN 集群警报“vSAN 守护进程活跃度”"
+vsan.health.test.cluster.clomdliveness.summary = "检查所有 vSAN 主机上关键主机守护进程的活跃度。注意: 在见证节点上不检查 CLOMD 状态。在见证节点和元数据节点上不检查 EPD 状态。"
+
+vsan.health.test.cluster.advcfgsync.label = "vSAN 集群警报“同步的高级 vSAN 配置”"
+vsan.health.test.cluster.advcfgsync.summary = "vSAN 提供了多个高级配置选项，用于微调或满足特定部署的特殊要求。通常情况下，可以使用 VMware 知识库文章中的步骤在 VMware 技术支持的指导下更改这些配置选项。可以为每台主机设置这些高级配置选项，这可能会导致整个集群中的配置不一致。此检查可确保指定集群中所有主机的关键 vSAN 高级配置选项具有相同值或默认值。"
+
+vsan.health.test.cluster.upgradesoftware.label = "vSAN 集群警报“软件版本兼容性”"
+vsan.health.test.cluster.upgradesoftware.summary = "在 vSAN 集群 (在软件升级之后) 开始使用新的磁盘格式版本后，使用较低软件版本的主机由于不支持新磁盘格式而变得不兼容。如果集群中引入了此类较低的主机版本，则该主机将被放到网络分区中或者只能访问有限的数据集。此类配置不受支持，建议立即升级软件或移除较低的主机版本。"
+
+vsan.health.test.cluster.upgradelowerhosts.label = "vSAN 集群警报“磁盘格式版本”"
+vsan.health.test.cluster.upgradelowerhosts.summary = "vSAN 集群的预期格式版本为 13，这是集群中任何主机所支持的最高格式版本。对于格式版本低于预期版本的磁盘，建议升级 vSAN 磁盘格式，以支持 vSAN 最新功能。"
+
+vsan.health.test.cluster.diskbalance.label = "vSAN 集群警报“vSAN 磁盘均衡”"
+vsan.health.test.cluster.diskbalance.summary = "此警报可帮助用户监控磁盘之间的均衡状态。默认情况下，“自动重新均衡”设置处于禁用状态。如果不均衡率超过系统确定的阈值，则会触发此警报。启用“自动重新均衡”后，vSAN 将自动重新均衡以使状态保持为绿色。重新均衡最多可能要等待 30 分钟才能启动，从而使诸如 EMM 和修复等高优先级任务可以在重新均衡之前使用资源。"
+
+vsan.health.test.cluster.clustermembership.label = "vSAN 集群警报“vSphere 集群成员与 vSAN 集群成员匹配”"
+vsan.health.test.cluster.clustermembership.summary = "检查 vSphere 集群成员是否与 vSAN 集群成员匹配。如果触发了此警报，则意味着 vSphere 集群成员与 vSAN 集群成员不完全相同。当在某些 vSphere 集群成员上未启用 vSAN 时，或者当某些 vSAN 集群成员不受 vSphere 集群管理时，就可能出现此问题。集群成员资格不匹配的主机将显示在“集群成员资格”表中。您可以修改不正确的成员资格，以让主机重新加入相应的集群。将自动完成 vSAN 配置。"
+
+vsan.health.test.cluster.consistentconfig.label = "vSAN 集群警报“vSAN 集群配置一致性”"
+vsan.health.test.cluster.consistentconfig.summary = "如果集群中主机或磁盘上的配置 (例如去重/压缩、加密) 设置不一致，则会触发此警报。如果触发了此警报，则意味着主机或磁盘上的配置 (例如去重/压缩、加密) 设置与集群不一致。您可以转到相应的运行状况检查页面，了解更多详情以及修复步骤。"
+
+vsan.health.test.cluster.vsandconfigconsistency.label = "vSAN 集群警报“vSAN Direct 同类磁盘声明”"
+vsan.health.test.cluster.vsandconfigconsistency.summary = "检查集群中的主机上是否均匀地声明了 vSAN Direct 磁盘。如果触发此警报，则意味着集群中主机上的配置设置 (例如磁盘容量、模式和编号) 不一致。您可以转到相应的运行状况检查页面，以获取更多的详细信息并相应地重新进行配置。"
+
+vsan.health.test.cluster.timedrift.label = "vSAN 集群警报“主机和 VC 之间的时间已同步”"
+vsan.health.test.cluster.timedrift.summary = "检查 vCenter Server 与主机之间的时间偏差。如果时间偏差大于 60 秒，则会触发此警报。如果触发了此警报，请检查 NTP 服务器配置。"
+
+vsan.health.test.cluster.resynclimit.label = "vSAN 集群警报“重新同步操作限制”"
+vsan.health.test.cluster.resynclimit.summary = "检查是否在任何主机上限制了重新同步操作。如果配置了重新同步带宽限制，则会显示警告；如果该值小于 20 MBps，则会显示错误。除非您在特殊情况下 (例如，导致较高虚拟机延迟的大量重新同步流量) 需要施加该限制，否则请清除该限制。设置该限制可能会降低基于重新同步的操作 (如策略更改或维护模式) 的速度。"
+
+vsan.health.test.cluster.vcauthoritative.label = "vSAN 集群警报“vCenter 状态具有权威性”"
+vsan.health.test.cluster.vcauthoritative.summary = "正常操作期间，会将 vCenter Server 状态视为可信来源，并且会使用最新主机成员资格列表来更新 ESXi 主机。替换/从备份恢复 vCenter Server 后，vCenter Server 中的主机成员资格列表可能会不同步。此运行状况检查会检测此类情况，并且会在因 vCenter Server 不同步而未将 vCenter Server 状态推送到 ESXi 时发出警示。在这种情况下，首先完全还原 vCenter Server 中的成员资格列表，然后根据需要执行“更新 ESXi 配置”操作。"
+
+vsan.health.test.cluster.extendedconfig.label = "vSAN 集群警报“同步的 vSAN 扩展配置”"
+vsan.health.test.cluster.extendedconfig.summary = "vSAN 集群扩展配置的默认设置如下: 对象修复计时器为 60 分钟，站点读取位置已启用，自定义交换对象已启用，大规模集群支持已禁用，自动重新均衡已关闭，自动重新均衡阈值为 30。如果主机具有不一致的扩展配置，则建议修复 vSAN 集群。如果主机不支持任何扩展配置，则升级 ESXi 软件。若要使集群可扩展性配置生效，可能需要重新引导主机。"
+
+vsan.health.test.cluster.mmdecominsync.label = "vSAN 集群警报“主机维护模式”"
+vsan.health.test.cluster.mmdecominsync.summary = "验证主机的维护模式是否与 vSAN 节点的取消配置状态同步。如果主机处于维护模式，则 vSAN 节点应处于取消配置状态。如果节点已取消配置但主机未处于维护模式，请使用任何 vSAN 选项将主机置于维护模式，然后从维护模式中将其移除以重置 vSAN 取消配置状态，并使它与 vSphere 维护模式状态一致。"
+
+vsan.health.test.cluster.rdmanodes.label = "vSAN 集群警报“vSAN over RDMA 中的最大主机数”"
+vsan.health.test.cluster.rdmanodes.summary = "vSAN with RDMA 最多支持 32 个主机。"
+
+vsan.health.test.cluster.hostmemcheck.label = "vSAN 集群警报“主机物理内存合规性检查”"
+vsan.health.test.cluster.hostmemcheck.summary = "检查主机物理内存是否超过最小 vSAN 内存要求。"
+
+#
+# Capacity utilization Group (AKA Limits Group) 4
+#
+vsan.health.test.limits.nodecomponentlimit.label = "vSAN 容量利用率警报“组件”"
+vsan.health.test.limits.nodecomponentlimit.summary = "检查集群和每个主机的组件利用率。如果任何主机中的利用率超过 80% 或 90%，则会触发此警报，并显示警告或错误。如果达到了这些限制，则部署新虚拟机可能会失败，或可能不允许任何组件重建操作。请添加更多主机或删除一些 vSAN 对象。但是，如果在见证节点中达到了组件限制，则必须将其更换为更大的容量。"
+
+# Deco in future as pr 2518894
+vsan.health.test.limits.rcreservation.label = "vSAN 容量利用率警报“读取缓存预留”"
+vsan.health.test.limits.rcreservation.summary = "检查整个集群中的读取缓存预留。如果可用预留少于总读取缓存预留的 30% 或 10%，则会触发此警报，并显示警告或错误。这将影响虚拟机的性能。"
+
+vsan.health.test.limits.diskspace.label = "vSAN 容量利用率警报“存储空间”"
+vsan.health.test.limits.diskspace.summary = "检查 vSAN 集群容量层磁盘和集群下的 vSAN 受管数据存储的使用情况是否超出阈值。如果没有足够的可用容量层磁盘空间，则部署新虚拟机可能会失败，或可能不允许任何组件重建操作。在每个受影响的虚拟机中，正在运行的虚拟机可能存在未解决的问题。请按照 vSAN 运行状况监控器中的“Ask VMware”知识库文章来恢复虚拟机和 vSAN 集群。"
+
+vsan.health.test.limits.limit1hf.label = "vSAN 容量利用率警报“假设消耗最多的主机失败”"
+vsan.health.test.limits.limit1hf.summary = "此警报会模拟使用了大部分资源的主机失败情况。该主机上的资源将不再可用。vSAN 将尝试重新保护正在降低冗余的情况下运行的所有对象。如果在利用率超过 100% 时无法重新保护所有对象，则会触发此警报。"
+
+#
+# Performance service Group 8
+#
+vsan.health.test.perfsvc.perfsvcstatus.label = "vSAN 性能服务警报“性能服务状态”"
+vsan.health.test.perfsvc.perfsvcstatus.summary = "检查 vSAN 性能服务的状态。此警报发出的警告可通过启用 vSAN 性能服务来修复。"
+
+vsan.health.test.perfsvc.statsdb.label = "vSAN 性能服务警报“统计信息数据库对象”"
+vsan.health.test.perfsvc.statsdb.summary = "检查 vSAN 性能服务统计信息数据库对象的运行状况。如果统计信息数据库对象不存在、统计信息数据库对象不是 100% 正常、对象不可用或者 vSAN 统计信息数据库对象在可用逻辑磁盘空间不足的磁盘上运行，则会触发此警报。"
+
+vsan.health.test.perfsvc.masterexist.label = "vSAN 性能服务警报“统计信息主节点选举”"
+vsan.health.test.perfsvc.masterexist.summary = "检查 vSAN 性能服务的统计信息主节点。如果不存在任何统计信息主节点，则会触发此警报。请检查 vSAN 数据存储和统计信息数据库对象的运行状况，尤其是网络运行状况。如果确认所有这些检查均正常，请联系 VMware 技术支持团队并提交支持请求。"
+
+vsan.health.test.perfsvc.collection.label = "vSAN 性能服务警报“性能数据收集”"
+vsan.health.test.perfsvc.collection.summary = "检查 vSAN 性能服务的统计信息收集。将按固定时间间隔收集统计信息，例如，每 5 分钟收集一次。如果连续三个时间间隔的统计信息收集或写入存储失败，则会触发此警报。请检查 vSAN 数据存储的运行状况，尤其是所有物理磁盘的运行状况、网络运行状况和 vSAN 统计信息数据库对象的运行状况。如果所有这些项目均正常，请联系 VMware 技术支持团队并提交支持请求。"
+
+vsan.health.test.perfsvc.hostsmissing.label = "vSAN 性能服务警报“统计信息包含所有主机”"
+vsan.health.test.perfsvc.hostsmissing.summary = "验证性能统计信息中是否包含所有主机。如果触发了此警报，则意味着性能统计信息中不包含某些主机。导致此警报的原因未知。如果持续触发了此警报，请联系 VMware 技术支持团队并提交支持请求。提供整个集群的支持包，包括 vCenter Server 和所有主机。"
+
+vsan.health.test.perfsvc.renameddirs.label = "vSAN 性能服务警报“统计信息数据库对象冲突”"
+vsan.health.test.perfsvc.renameddirs.summary = "检查统计信息数据库对象冲突。如果其他统计信息数据库对象非常有用，可以通过数据存储浏览器作为文件备份这些对象，也可以在数据存储中重命名并保留这些对象。不支持合并多个统计信息数据库对象。"
+
+vsan.health.test.perfsvc.verbosemode.label = "vSAN 性能服务警报“详细模式”"
+vsan.health.test.perfsvc.verbosemode.summary = "检查是否已启用 vSAN 性能服务详细模式。如果详细模式的启用时间超过 5 天，则会触发此警报。"
+
+vsan.health.test.perfsvc.diagmode.label = "vSAN 性能服务警报“网络诊断模式”"
+vsan.health.test.perfsvc.diagmode.summary = “检查是否已启用 vSAN 性能服务网络诊断模式。如果网络诊断模式的启用时间超过 24 小时，则会触发此警报。”
+
+#
+# Hyperconverged cluster configuration compliance 2
+#
+vsan.health.test.hcicluster.hosthciconfig.label = "vSAN 超融合集群配置警报“超融合集群配置的主机合规性检查”"
+vsan.health.test.hcicluster.hosthciconfig.summary = "检查每个主机的配置是否符合超融合集群配置。主机必须全部使用相同的适配器连接到 vSphere Distributed Switch。适配器必须存在于正确的分布式端口组中，并且必须根据规范配置了 NTP 服务器和锁定模式。"
+
+vsan.health.test.hcicluster.dvshciconfig.label = "vSAN 超融合集群配置警报“超融合集群配置的 VDS 合规性检查”"
+vsan.health.test.hcicluster.dvshciconfig.summary = "检查 vSphere Distributed Switch 是否处于活动状态以及分布式端口组配置是否符合超融合集群配置。"
+
+#
+# Stretched cluster Group 15
+#
+vsan.health.test.stretchedcluster.siteconnectivity.label = "“站点延迟”运行状况的 vSAN 延伸集群警报"
+vsan.health.test.stretchedcluster.siteconnectivity.summary = "如果数据站点和见证节点中任意两台主机之间的最高延迟超过某个限制，则会触发此警报。警告阈值: 5 毫秒 (数据站点之间/内部)、200 毫秒 (非 ROBO 集群中的数据站点和见证节点之间)、500 毫秒 (ROBO 集群中的数据站点和见证节点之间)。检查失败的主机对之间的网络，确保网络设置满足最低要求。注意: 此检查将跳过在 vSAN 基本连接 (较小 ping) 测试中失败的主机对。"
+
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.label = "vSAN 延伸集群警报“未找到见证主机”"
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.summary = "延伸集群不包含有效的见证主机。如果触发了此警报，则意味着 vSAN 延伸集群中存在影响其操作的配置错误。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.label = "vSAN 延伸集群警报“单播代理无效”"
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.summary = "如果集群包含具有无效单播代理的主机，则会触发此警报。主机上的无效单播代理可能会导致与见证主机的通信失败。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.label = "vSAN 延伸集群警报“单播代理配置不一致”"
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.summary = "延伸集群包含多个单播代理。这意味着在非见证主机上设置了多个单播代理。如果触发了此警报，则意味着 vSAN 延伸集群中存在影响其操作的配置错误。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.label = "vSAN 延伸集群警报“意外的故障域数量”"
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.summary = "延伸集群没有包含两个有效的故障域。每个数据站点必须驻留在不同的故障域中。数据站点的故障域总数必须为两个。如果触发了此警报，则意味着 vSAN 延伸集群中存在影响其操作的配置错误。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.label = "vSAN 延伸集群警报“见证主机上的首选故障域无效”"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.summary = "以下 (见证) 主机的首选故障域无效。首选故障域由见证主机使用，并且必须是 vSAN 延伸集群中任一数据站点的故障域。首选故障域不能为空。如果触发了此警报，则意味着 vSAN 延伸集群中存在影响其操作的配置错误。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.hostunicastagentunset.label = "vSAN 延伸集群警报“未配置单播代理”"
+vsan.health.test.stretchedcluster.hostunicastagentunset.summary = "主机必须设置单播代理，以便能够与见证节点进行通信。如果触发了此警报，则意味着 vSAN 延伸集群中存在影响其操作的配置错误。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.label = "vSAN 延伸集群警报“首选故障域取消设置”"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.summary = "在见证主机的集群中未设置首选故障域。首选故障域由见证主机使用，并且必须是 vSAN 延伸集群中任一数据站点的故障域。首选故障域不能为空。如果触发了此警报，则意味着 vSAN 延伸集群中存在影响其操作的配置错误。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.label = "vSAN 延伸集群警报“见证主机上未声明磁盘”"
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.summary = "延伸集群见证主机未声明有效的磁盘。如果见证主机未声明任何磁盘，则其故障域不可用，且 vSAN 无法置备“允许的故障数”设置为 1 (FTT = 1) 的任何对象。有关更多详细信息，请参阅“Ask VMware”知识库中“vSAN 运行状况监控”的相关文章。"
+
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.label = "vSAN 延伸集群警报“见证主机故障域配置错误”"
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.summary = "以下见证节点驻留在其中一个数据故障域中。如果触发了此警报，则意味着 vSAN 延伸集群中存在影响其操作的配置错误。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.witnessinsidevccluster.label = "vSAN 延伸集群警报“vCenter 集群中的见证主机”"
+vsan.health.test.stretchedcluster.witnessinsidevccluster.summary = "见证主机不能是构成延伸集群的 vCenter 集群的组合部分。如果见证主机驻留在已启用 vSAN 的集群中，则会导致 vSphere DRS、HA 和 EVC 出现问题。有关更多详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.label = "vSAN 延伸集群警报“不受支持的主机版本”"
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.summary = "集群包含 ESXi 版本不支持延伸集群的主机。"
+
+vsan.health.test.stretchedcluster.witnessupgrade.label = "vSAN 延伸集群警报“将见证设备升级到 vSphere 7.0 或更高版本时需要特别小心”"
+vsan.health.test.stretchedcluster.witnessupgrade.summary = "当前见证设备版本低于 vSphere 7.0。如果直接将见证设备升级到 vSphere 7.0 或更高版本，则会出现问题。请按照“Ask VMware”知识库文章来重新配置见证设备并重新引导，然后再进入升级工作流。也可以部署 vSphere 7.0 或更高版本的新见证设备，然后重新配置集群。"
+
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.label = "vSAN 延伸集群警报“共享见证集群中存在意外数量的数据节点”"
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.summary = "检查共享见证集群中的数据节点数是否超过 2 个。所有共享见证延伸集群的数据主机数均不能超过 2 个。"
+
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.label = "vSAN 延伸集群警报“共享见证主机的每集群组件数限制已降低”"
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.summary = "检查共享见证节点中的每集群组件数限制是否因内存不足而降低。"
+
+vsan.health.test.stretchedcluster.witnessupgissue.label = "vSAN 延伸集群警报“见证设备的硬件兼容性问题”"
+vsan.health.test.stretchedcluster.witnessupgissue.summary = "升级见证设备时将出现问题。建议在进入升级工作流之前解决这些问题。有关更多详细信息，请检查 vSAN Skyline 运行状况。"
+
+#
+# File Service Group 3
+#
+vsan.health.test.fileservice.host.label = "vSAN 文件服务警报“基础架构运行状况”"
+vsan.health.test.fileservice.host.summary = "检查每个 ESXi 主机的文件服务基础架构运行状况。一旦检测到任何问题，通常会自动修复。在 vSAN 运行状况监视器中单击“修复文件服务”或“修复不均衡”可强制执行自动修复。如果主机处于维护模式，则会跳过此警报。在 vSAN 运行状况监控器中查看更多详细信息。"
+
+vsan.health.test.fileservice.fileserver.label = "vSAN 文件服务警报“文件服务器”"
+vsan.health.test.fileservice.fileserver.summary = "检查文件服务器是否处于正常运行状态。如果检测到问题，在大多数情况下，文件服务器会自动故障切换到另一个代理虚拟机。请在 vSAN 运行状况监控器中查看更多详细信息。"
+
+vsan.health.test.fileservice.sharehealth.label = "vSAN 文件服务警报“共享运行状况”"
+vsan.health.test.fileservice.sharehealth.summary = "检查文件服务共享是否处于正常运行状态。请在 vSAN 运行状况监控器中查看更多详细信息。"
+
+#
+# Data Group 2
+#
+vsan.health.test.data.objecthealth.label = "vSAN 数据警报“vSAN 对象”"
+vsan.health.test.data.objecthealth.summary = "如果集群中的某些对象未处于正常运行状态，则会触发此警报。有关更多详细信息，请查看运行状况监控器。"
+
+vsan.health.test.data.objectformat.label = "vSAN 数据警报“vSAN 对象格式”"
+vsan.health.test.data.objectformat.summary = "如果某些对象需要更改对象格式，则会触发此警报。对象格式更改可能涉及对象在物理磁盘上的重新布局，这可能会导致集群中的数据移动。旧格式的对象可能无法使用某些新功能。有关更多详细信息，请查看运行状况监控器。"
+
+#
+# Data-at-rest encryption Group (Encryption) 3
+#
+vsan.health.test.encryption.kmsconnection.label = "vSAN 静态数据加密警报“vCenter 和所有主机均已连接到密钥管理服务器”"
+vsan.health.test.encryption.kmsconnection.summary = "如果触发了此警报，则意味着 vCenter Server 或主机与密钥管理服务器之间存在连接问题。如果遇到 vCenter Server 与 KMS 的连接问题，请在 vCenter Server 配置页面中检查 KMS 设置和状态。如果集群中的任何主机存在连接问题，请查看运行状况结果来了解具体原因。如果主机的 KMS 配置与集群的其余部分不一致，请运行集群配置修复，以更新主机上的 KMS 配置。"
+
+vsan.health.test.encryption.hostcpuaesni.label = "vSAN 静态数据加密警报“在主机上启用了 CPU AES-NI”"
+vsan.health.test.encryption.hostcpuaesni.summary = "如果触发了此警报，则意味着存在不支持或禁用了 CPU AES-NI 的主机。将使用软件加密，这比 AES-NI 要慢得多。有关详细信息，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+vsan.health.test.encryption.dualencryption.label = "vSAN 静态数据加密警报“双重加密已应用于 vSAN 上的虚拟机”"
+vsan.health.test.encryption.dualencryption.summary = "如果 vSAN 检测到同时启用了虚拟机加密和 vSAN 数据存储加密，则会触发此警报。如果是有意这样设置，请忽略此警报，否则请关闭其中一种加密类型。有关加密的最佳做法，请参阅 vSAN 运行状况监控器中的“Ask VMware”知识库文章。"
+
+#
+# Data-in-transient encryption 1
+#
+vsan.health.test.ditencryption.ditconfig.label = "vSAN 传输数据加密警报“配置检查”"
+vsan.health.test.ditencryption.ditconfig.summary = "检查是否为集群正确配置了传输数据加密。仅当在集群上启用了传输数据加密时，才会触发此警报。所有主机都需要启用传输数据加密并处于预期状态，否则可能无法正确加密网络流量。"
+
+#
+# Remain unchanged
+#
+vsan.health.test.hciskip.label = "vSAN 运行状况警报已取消"
+vsan.health.test.hciskip.summary = "在完全配置集群或跳过此快速入门工作流之前，vSAN 运行状况警报处于已取消状态。"
+
+vsan.health.test.vsanhardwarecert.label = "vSAN 硬件兼容性问题"
+vsan.health.test.vsanhardwarecert.summary = "如果在集群中发现某些硬件兼容性问题，则会触发此警报。有关更多详细问题，请参阅 vSAN 运行状况监控器 UI。"
+
+vsan.health.test.cloudhealth.vsanenablesupportinsight.label = "vSAN Support Insight"
+vsan.health.test.cloudhealth.vsanenablesupportinsight.summary = "用于监控 vSAN Support Insight 状态的默认警报"
+vsan.health.test.cloudhealth.advisor.label = "vSAN 运行状况警报“Advisor”"
+vsan.health.test.cloudhealth.advisor.summary = "用于监控运行状况测试“Advisor”更改的默认警报"
+
+vsan.health.test.diagnostics.pnic.label = "检测到物理网卡错误率较高。有关详细信息，请查看主机的 vSAN 性能视图"
+vsan.health.test.diagnostics.pnic.summary = "用于监控“物理网卡错误率”的默认警报"
+
+vsan.health.test.diagnostics.rdt.label = "检测到很高的 RDT 网络错误率。有关详细信息，请查看主机的 vSAN 性能视图"
+vsan.health.test.diagnostics.rdt.summary = "用于监控“RDT 网络错误”的默认警报"
+
+#
+# Overall summary alarm is reactivate from VSANCORE-6413
+#
+vsan.health.test.overallsummary.label = "整体运行状况摘要的 vSAN Health Service 警报"
+vsan.health.test.overallsummary.summary = "用于监控整体运行状况摘要更改的默认警报"

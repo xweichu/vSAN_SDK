@@ -1,0 +1,694 @@
+/* Copyright (c) 2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2020-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019 VMware, Inc. All rights reserved. VMware Confidential */
+/* Defaults */
+[vsan-show-title-multi-line] > vsan-clipboard-icon {
+  background-color: var(--vsan-background-color);
+  height: 1.2rem;
+}
+[vsan-show-title-multi-line] .custom-ellipsis {
+  display: inline-block;
+  position: absolute;
+  height: 1.2rem;
+  width: 1.5rem;
+  text-align: center;
+  padding-top: 0.3rem;
+  padding-right: 0.3rem;
+  background-color: var(--vsan-background-color);
+}
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019 VMware, Inc. All rights reserved. VMware Confidential */
+/* Defaults */
+/*
+   Add button focus indicator with outline.
+   In high contrast mode, the border is not visible.
+   We should use an outline to show focused elements in that case.
+*/
+/**
+   Include this mixin at :host level to make every top level component in the view
+   have a bottom margin, besides the last one.
+ */
+/* Copyright (c) 2019 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019 VMware, Inc. All rights reserved. VMware Confidential */
+/* Defaults */
+.no-icon {
+  padding-left: 0.8rem;
+}
+.silent-check {
+  background: url('silent-check.8062e22a6c44f9fad471.svg');
+  background-size: 100%;
+}
+.skipped-check {
+  background: url('skipped-check.7a6b87ac9f24766f8454.svg');
+  background-size: 100%;
+}
+.spinner.spinner-icon {
+  height: 0.8rem;
+  width: 0.8rem;
+  min-height: 0.8rem;
+  min-width: 0.8rem;
+}
+.no-icon {
+  height: 0px;
+  width: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  display: none;
+}
+.is-disabled {
+  fill: #ccc;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.15rem;
+}
+vsan-root-component router-outlet {
+  display: none;
+}
+vsan-root-component > *:not(router-outlet) {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+ng-component {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+*[tabindex="-1"] {
+  outline: none;
+}
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0rem;
+}
+.dialog-container > * {
+  margin-bottom: 0.6rem !important;
+}
+.dialog-container > clr-button-group,
+.dialog-container > .vsan-actions {
+  margin-bottom: 0.3rem !important;
+}
+.dialog-container > *:last-child {
+  margin-bottom: 0rem !important;
+}
+/*
+  Horizontal & Vertical centering.
+ */
+.centered-content {
+  display: flex;
+  flex: 1 0 0rem;
+  align-items: center;
+  justify-content: center;
+}
+/*
+  This style can be used, when the content must only be centered horizontally,
+  while the above is useful for both horizontal & vertical alignment.
+ */
+.horizontally-centered-content {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.horizontally-centered-content > * {
+  margin-right: 0.6rem !important;
+}
+.horizontally-centered-content > clr-signpost {
+  margin-right: 0.3rem !important;
+}
+.horizontally-centered-content > clr-signpost:not(:first-child) {
+  margin-left: -0.3rem !important;
+}
+.horizontally-centered-content > clr-icon {
+  margin-right: 0.3rem !important;
+}
+.horizontally-centered-content > clr-icon:not(:first-child) {
+  margin-left: -0.3rem !important;
+}
+.horizontally-centered-content > *:last-child {
+  margin-right: 0rem !important;
+}
+.bold-no-selection {
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.bold {
+  font-weight: 500;
+}
+.loading-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.central-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1.8rem;
+  margin-top: -1.8rem;
+  z-index: 900;
+}
+.central-spinner.spinner-md {
+  margin-left: -0.9rem;
+  margin-top: -0.9rem;
+}
+.central-spinner.spinner-md + .central-spinner-details {
+  margin-top: 1.5rem;
+}
+.central-spinner.spinner-sm {
+  margin-left: -0.45rem;
+  margin-top: -0.45rem;
+}
+.central-spinner.spinner-sm + .central-spinner-details {
+  margin-top: 1.05rem;
+}
+.central-spinner.spinner-inline {
+  margin-left: -0.45rem;
+  margin-top: -0.45rem;
+}
+.central-spinner-details {
+  position: absolute;
+  top: 50%;
+  margin-top: 2.4rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.disable-action {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.disable-action * {
+  pointer-events: none;
+}
+.busy-backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--vsan-busy-backdrop-background-color);
+  z-index: 900;
+}
+.opaque-backdrop {
+  background-color: var(--vsan-busy-backdrop-background-color);
+}
+.right-float {
+  float: right;
+}
+.text-nowrap {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.icon-name-container {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+.icon-name-container > * {
+  margin-right: 0.6rem !important;
+}
+.icon-name-container > clr-signpost {
+  margin-right: 0.3rem !important;
+}
+.icon-name-container > clr-signpost:not(:first-child) {
+  margin-left: -0.3rem !important;
+}
+.icon-name-container > clr-icon {
+  margin-right: 0.3rem !important;
+}
+.icon-name-container > clr-icon:not(:first-child) {
+  margin-left: -0.3rem !important;
+}
+.icon-name-container > *:last-child {
+  margin-right: 0rem !important;
+}
+.column-flex-container {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 0 0rem !important;
+}
+/*
+   Styles for clarity horizontal layout of controls that are not inside a form.
+   E.g. clrFormLayout is not available.
+   Use this to position a label and its associated control horizontally.
+   Example usage:
+      <clr-select-container class="horizontal-layout">
+         <label>Example</label>
+         <select clrSelect>
+            <option....
+            <option....
+         </select>
+      </clr-select-container>
+*/
+.horizontal-layout {
+  display: flex;
+  flex: 1 0 0rem;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
+.horizontal-layout > * {
+  margin-right: 0.6rem !important;
+}
+.horizontal-layout > clr-signpost {
+  margin-right: 0.3rem !important;
+}
+.horizontal-layout > clr-signpost:not(:first-child) {
+  margin-left: -0.3rem !important;
+}
+.horizontal-layout > clr-icon {
+  margin-right: 0.3rem !important;
+}
+.horizontal-layout > clr-icon:not(:first-child) {
+  margin-left: -0.3rem !important;
+}
+.horizontal-layout > *:last-child {
+  margin-right: 0rem !important;
+}
+.horizontal-layout .clr-form-control {
+  flex-direction: row !important;
+}
+/*
+   Use this when you want label to get as much space as needed and what remaining to be for the clr control
+   For example:
+   <clr-input-container class="horizontal-layout label-auto-size">
+      <label>Example</example>
+      <input clrInput />
+   </clr-input-container>
+ */
+.label-auto-size .clr-control-container {
+  display: flex;
+  flex: 1 1 0rem;
+  flex-direction: column;
+}
+.label-auto-size .clr-control-container > * {
+  display: flex;
+  flex: 1 1 0rem;
+}
+.label-auto-size .clr-control-container > * > *:not(.clr-validate-icon) {
+  flex: 1 1 0rem;
+}
+/*
+   Use this when you want clr controls to be expanded on all available space of the parent
+ */
+.control-full-width {
+  display: flex;
+  flex: 1 1 0rem;
+}
+.control-full-width .clr-control-container {
+  display: flex;
+  flex: 1 1 0rem;
+  flex-direction: column;
+  width: 100%;
+}
+.control-full-width .clr-control-container > * {
+  display: flex;
+  flex: 1 0 0rem;
+}
+.control-full-width .clr-control-container > * > *:not(.clr-validate-icon) {
+  flex: 1 0 0rem;
+}
+.hidden {
+  display: none !important;
+}
+.indent {
+  margin-left: 1.2rem;
+}
+.no-spacing {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.small-btn {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin: 0 !important;
+}
+/*
+   Add wide-item class on dropdowns in order to have longer menu items
+ */
+clr-dropdown.wide-item clr-dropdown-menu {
+  max-width: 60rem;
+}
+.highcharts-tooltip-container {
+  z-index: 1000 !important;
+}
+.tooltip-action {
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.tooltip-padding-bottom {
+  padding-bottom: 0.5rem;
+}
+.tooltip-value {
+  padding-left: 1.2rem;
+  padding-right: 0.3rem;
+  text-align: right;
+}
+.tooltip-color-flag {
+  width: 1.2rem;
+  height: 0.6rem;
+  padding-right: 0.3rem;
+}
+.pointer {
+  cursor: pointer;
+}
+.right-align-cell {
+  text-align: right !important;
+}
+/*
+   Remove clr-control-label when a grouping label is already rendered outside of the clr-control container
+ */
+.no-label-input-container ::ng-deep .clr-control-label {
+  display: none;
+}
+.cdk-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* Copyright (c) 2019-2022 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019-2021 VMware, Inc. All rights reserved. VMware Confidential */
+/* Copyright (c) 2019 VMware, Inc. All rights reserved. VMware Confidential */
+/* Defaults */
+/*
+   Add button focus indicator with outline.
+   In high contrast mode, the border is not visible.
+   We should use an outline to show focused elements in that case.
+*/
+/**
+   Include this mixin at :host level to make every top level component in the view
+   have a bottom margin, besides the last one.
+ */
+/* Copyright (c) 2019 VMware, Inc. All rights reserved. VMware Confidential */
+clr-signpost {
+  display: inline-flex !important;
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+clr-signpost .signpost-action {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin: 0;
+}
+clr-signpost .signpost-content .signpost-wrap .signpost-content-body {
+  max-height: 7.2rem !important;
+  overflow-y: auto;
+  font-size: 0.65rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  white-space: normal;
+}
+clr-signpost .signpost-content .signpost-wrap .signpost-content-body > * {
+  margin-bottom: 0.6rem !important;
+}
+clr-signpost .signpost-content .signpost-wrap .signpost-content-body > clr-button-group,
+clr-signpost .signpost-content .signpost-wrap .signpost-content-body > .vsan-actions {
+  margin-bottom: 0.3rem !important;
+}
+clr-signpost .signpost-content .signpost-wrap .signpost-content-body > *:last-child {
+  margin-bottom: 0rem !important;
+}
+clr-datagrid {
+  flex: 1 0 0rem;
+  padding-top: 0rem !important;
+  min-height: 180px;
+}
+clr-datagrid .datagrid-filter-toggle {
+  height: 0.8rem !important;
+  width: 0.8rem !important;
+}
+clr-datagrid:not(.datagrid-compact) .datagrid .datagrid-column {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+clr-datagrid:not(.datagrid-compact) .datagrid .datagrid-column .datagrid-filter-toggle {
+  height: 1rem !important;
+  margin-bottom: 0.05rem;
+}
+clr-datagrid .datagrid {
+  margin-top: 0rem;
+}
+clr-datagrid .datagrid .datagrid-cell.datagrid-expandable-caret {
+  align-self: flex-start !important;
+}
+clr-datagrid .datagrid .datagrid-cell.datagrid-expandable-caret .datagrid-expandable-caret-icon {
+  margin-top: 0 !important;
+}
+clr-datagrid clr-dg-column > .datagrid-column-flex {
+  width: 100%;
+}
+clr-datagrid clr-dg-column > .datagrid-column-flex .datagrid-column-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+clr-datagrid clr-dg-column.datagrid-column .datagrid-column-flex > * :not(.datagrid-column-separator), clr-datagrid clr-dg-column.datagrid-column .datagrid-column-flex::after,
+clr-datagrid clr-dg-column.datagrid-column .datagrid-column-flex .datagrid-column-title {
+  align-self: center;
+}
+clr-datagrid clr-dg-row .datagrid-select .clr-checkbox-wrapper input[type=checkbox] + label:before, clr-datagrid clr-dg-row .datagrid-select .clr-checkbox-wrapper input[type=checkbox] + label:after,
+clr-datagrid clr-dg-row .datagrid-select .clr-radio-wrapper input[type=radio] + label:before,
+clr-datagrid clr-dg-row .datagrid-select .clr-radio-wrapper input[type=radio] + label:after {
+  top: 0px;
+}
+clr-datagrid .datagrid-row .datagrid-cell {
+  align-self: center;
+}
+clr-datagrid .datagrid-row.signpost-row-height-fix .datagrid-cell {
+  line-height: 1.8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+clr-datagrid clr-dg-cell clr-icon {
+  margin-right: 0.3rem;
+}
+clr-datagrid clr-dg-cell.datagrid-cell.no-vertical-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+clr-datagrid clr-dg-cell > * {
+  text-overflow: inherit;
+  overflow: inherit;
+}
+clr-datagrid clr-dg-cell vsan-popup-list {
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+clr-datagrid.datagrid-compact .datagrid-header {
+  min-height: 1.4rem;
+}
+clr-datagrid.datagrid-compact clr-dg-row-detail, clr-datagrid.datagrid-compact clr-dg-row .datagrid-cell clr-icon {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+clr-datagrid.signpost-datagrid .datagrid-cell {
+  line-height: 1.8rem;
+  padding: 0 0.6rem;
+}
+clr-datagrid .datagrid-header + clr-dg-placeholder {
+  border-top-width: 0rem !important;
+}
+clr-datagrid .datagrid-table clr-dg-placeholder .datagrid-placeholder.datagrid-empty {
+  justify-content: center;
+}
+clr-stack-view .stack-header .stack-title {
+  padding-top: 0rem;
+}
+.card {
+  margin-top: 0rem;
+}
+.alert, .card .alert {
+  margin: 0;
+}
+h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+clr-button-group.btn-group.btn-link {
+  margin-right: 0;
+  height: 1.2rem;
+}
+clr-button-group.btn-group.btn-link > * {
+  margin-right: 1.2rem !important;
+}
+clr-button-group.btn-group.btn-link > clr-signpost {
+  margin-right: 0.3rem !important;
+}
+clr-button-group.btn-group.btn-link > clr-signpost:not(:first-child) {
+  margin-left: -0.9rem !important;
+}
+clr-button-group.btn-group.btn-link > clr-icon {
+  margin-right: 0.3rem !important;
+}
+clr-button-group.btn-group.btn-link > clr-icon:not(:first-child) {
+  margin-left: -0.9rem !important;
+}
+clr-button-group.btn-group.btn-link > *:last-child {
+  margin-right: 0rem !important;
+}
+clr-button-group.btn-group.btn-link > .btn {
+  min-width: auto;
+  padding: 0 !important;
+}
+clr-button-group.btn-group.btn-link .btn-group-overflow .dropdown-toggle {
+  padding: 0;
+  border: none;
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+.btn-icon {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin: 0 !important;
+}
+.user-tabbing .btn-group .btn input[type=radio]:focus {
+  outline-offset: 0.05rem !important;
+  outline: 0.1rem solid var(--vsan-link-color) !important;
+}
+.user-tabbing button.btn:focus {
+  outline-offset: 0.05rem !important;
+  outline: 0.1rem solid var(--vsan-link-color) !important;
+}
+.user-tabbing button.close:focus {
+  outline-offset: 0.05rem !important;
+  outline: 0.1rem solid var(--vsan-link-color) !important;
+}
+.user-tabbing button.close:focus clr-icon {
+  fill: var(--vsan-gray-color) !important;
+}
+.user-tabbing .clr-toggle-wrapper input[type=checkbox]:focus + label::before,
+.user-tabbing .clr-radio-wrapper input[type=radio]:focus + label::before,
+.user-tabbing .clr-checkbox-wrapper input[type=checkbox]:focus + label::before {
+  outline-offset: 0.05rem !important;
+  outline: 0.1rem solid var(--vsan-link-color) !important;
+}
+.user-tabbing.cdk-high-contrast-active .datagrid-filter .clr-input:focus {
+  outline-offset: 0.05rem !important;
+  outline: 0.1rem solid var(--vsan-link-color) !important;
+}
+.cdk-high-contrast-active .clr-radio-wrapper input[type=radio]:checked + label::before {
+  border: 0.25rem solid var(--vsan-border-color);
+}
+form > * {
+  margin-bottom: 0.6rem !important;
+}
+form > clr-button-group,
+form > .vsan-actions {
+  margin-bottom: 0.3rem !important;
+}
+form > *:last-child {
+  margin-bottom: 0rem !important;
+}
+.clr-form, .clr-form-group {
+  padding: 0;
+}
+.clr-control-label {
+  line-height: 1.2rem !important;
+}
+.clr-form-control {
+  margin-top: 0;
+}
+.clr-row {
+  margin-right: 0;
+}
+.clr-row .clr-control-container {
+  padding-right: 0;
+}
+.table {
+  margin-top: 0;
+}
+.tab-content {
+  display: flex !important;
+  flex-direction: column;
+  flex: 1 0 auto;
+  padding-top: 0.6rem;
+  padding-bottom: 0.15rem;
+  min-height: 200px;
+}
+clr-tabs:not(:first-child) {
+  margin-top: -0.6rem;
+}
+.p1, .p2, .p3, .p4, .p5, .p6, .p7 {
+  margin-top: 0 !important;
+}
+.dropdown-item[disabled] {
+  cursor: not-allowed;
+  opacity: 0.54;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.dropdown-item[disabled] label {
+  cursor: not-allowed;
+}
+.label.label-info,
+a.label.label-info {
+  background: var(--clarity-v4-label-info-background-color) !important;
+  color: var(--clarity-v4-label-info-text-color) !important;
+  border-color: var(--clarity-v4-label-info-border-color) !important;
+}
+.label.label-success,
+a.label.label-success {
+  background: var(--clarity-v4-label-success-background-color) !important;
+  color: var(--clarity-v4-label-success-text-color) !important;
+  border-color: var(--clarity-v4-label-success-border-color) !important;
+}
+.label.label-warning,
+a.label.label-warning {
+  background: var(--clarity-v4-label-warning-background-color) !important;
+  color: var(--clarity-v4-label-warning-text-color) !important;
+  border-color: var(--clarity-v4-label-warning-border-color) !important;
+}
+.label.label-danger,
+a.label.label-danger {
+  background: var(--clarity-v4-label-danger-background-color) !important;
+  color: var(--clarity-v4-label-danger-text-color) !important;
+  border-color: var(--clarity-v4-label-danger-border-color) !important;
+}
+.badge.badge-info {
+  background: var(--clarity-v4-badge-info-background-color) !important;
+  color: var(--clarity-v4-badge-info-text-color) !important;
+}
+.badge.badge-success {
+  background: var(--clarity-v4-badge-success-background-color) !important;
+  color: var(--clarity-v4-badge-success-text-color) !important;
+}
+.badge.badge-warning {
+  background: var(--clarity-v4-badge-warning-background-color) !important;
+  color: var(--clarity-v4-badge-warning-text-color) !important;
+}
+.badge.badge-danger {
+  background: var(--clarity-v4-badge-danger-background-color) !important;
+  color: var(--clarity-v4-badge-danger-text-color) !important;
+}

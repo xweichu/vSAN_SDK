@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = VMware vSAN 容量
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = 由 VMware vSAN 发布的容量
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = vSAN VASA 提供程序
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = 由 VMware vSAN 发布的 VASA 提供程序
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = 每个对象的磁盘带数
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = 将存储对象的每个副本条带化的 HDD 数量。如果值大于 1，则可能产生较好的性能 (例如，当闪存读取缓存未命中时，需要从 HDD 获取服务)，但也会导致使用较多的系统资源。默认值: 1，最大值: 12。
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = PMem 数据存储放置
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = 将虚拟磁盘放置到 PMem 数据存储中。
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = vSAN Direct 数据存储放置
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = 将云原生卷放置在 vSAN Direct 数据存储上。
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = 放置类型
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = 定义放置数据的位置。
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = vSAN Direct 数据存储卷分配
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = 卷分配类型。
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = 已完全初始化
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = 所有块均已分配并置零
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = 预留空间
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = 所有块均已分配。
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = 闪存读取缓存预留 (%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = 作为存储对象的读取缓存预留的闪存容量。指定为该对象的逻辑大小百分比。仅用于解决读取性能问题。预留的闪存容量无法供其他对象使用。未预留的闪存将在所有对象之间公平共享。默认值: 0%，最大值: 100%。
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = 允许的故障数主要级别
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = 定义存储对象可允许的主机、磁盘或网络故障数。容错方法为镜像时: 若要允许“n”个故障，则会创建对象的“n+1”个副本，并且需要“2n+1”个提供存储的主机 (如果配置了故障域，则需要“2n+1”个具有提供存储的主机的故障域。) 容错方法为擦除编码时: 若要允许 1 个故障，需要 4 个主机 (或故障域)；若要允许 2 个故障，需要 6 个主机 (或故障域)。注意: 不属于任何故障域的主机将视为其自己的单主机故障域。默认值为 1，最大值为 3。
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = 允许的故障数辅助级别
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = 定义在故障域中存储对象可允许的主机、磁盘或网络故障数。容错方法为镜像时: 若要允许“n”个故障，则会创建对象的“n+1”个副本，并且故障域中需要“2n+1”个提供存储的主机。容错方法为擦除编码时: 若要允许 1 个故障，需要 4 个主机；若要允许 2 个故障，需要 6 个主机。默认值为 1，最大值为 3。
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = 集群配置为双主机镜像时允许的故障数辅助级别的范围
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = 定义将满足允许的故障数辅助级别的范围 (“主机”或“磁盘”)。如果集群配置为双主机镜像，并且此属性设置为“磁盘”，则将根据允许的故障数辅助级别使用磁盘组进行复制
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = 基于主机的二级保护
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = 二级保护将是根据允许的故障数辅助级别使用主机进行复制
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = 双主机镜像集群的基于磁盘的二级保护
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = 对于双主机镜像集群，二级保护将是根据允许的故障数辅助级别使用磁盘组进行复制
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = 数据局部性
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = 指定数据位置。可以是延伸集群中的首选故障域或非首选故障域，或者设置为“主机本地”以将虚拟机的文件夹和 VMDK 固定到创建虚拟机的主机的文件夹和 VMDK。此策略仅对“允许的故障数主要级别”为 0 的对象有效。默认值: 无
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = 无
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = 无。
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = 首选故障域 (延伸集群)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = 首选故障域 (延伸集群)。
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = 非首选故障域 (延伸集群)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = 非首选故障域 (延伸集群)。
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = 主机本地
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = 主机本地。
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = 强制置备
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = 如果该选项为“是”，则即使集群中当前可用的资源无法满足存储策略中指定的策略，也会置备该对象。一旦资源可用，vSAN 就会尝试将该对象置于合规状态。默认值: 否。
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = 对象空间预留 (%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = 在置备虚拟机时要预留 (厚置备) 的存储对象的逻辑大小百分比。存储对象的剩余容量将进行精简置备。默认值: 0%，最大值: 100%。
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = 对象的 IOPS 限制
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = 定义磁盘的 IOPS 限制。IOPS 是指使用加权大小计算的 IO 数。默认情况下，系统使用基础大小 32 KB，因此 64 KB IO 表示 2 个 IO。注意: 在计算 IOPS 时，读取和写入视为等同，并且不考虑缓存命中率或序列性。如果磁盘的 IOPS 超过限制，则 IO 将受限。如果此限制设置为 0，则意味着 IO 无限制。默认值: 0。
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = 禁用对象校验和
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = 如果此选项为“是”，则不会为该对象计算校验和信息。默认值: 否。
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = 容错方法
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = 定义用于容错的方法。RAID-1 使用镜像实现容错，可提供更佳的性能。RAID-5/6 使用校验块实现容错，可提供更佳的空间效率。RAID-5/6 只能在全闪存上使用，并且允许的故障数必须设置为 1 或 2: 值为 1 时表示 RAID-5 配置；值为 2 时表示 RAID-6 配置。默认值为 RAID-1。
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID-1 (镜像) - 性能
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID-1 (镜像) - 性能。
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID-5/6 (擦除编码) - 容量
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID-5/6 (擦除编码) - 容量。
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = 首选备用存储类型
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = 指定选择哪种备用存储放置 vSAN 对象的组件。vSAN 备用存储类型可以为“混合”或“全闪存”。如果指定“混合”，则对象的组件将仅放置在混合磁盘组中。如果指定“全闪存”，则对象的组件将仅放置在全闪存磁盘组中。默认值“任意”表示让 vSAN 决定放置位置。
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = 使用本机快照
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = 使用此限制可创建本机快照。如果策略具有数据保护限制，则此值将替代为“true”。默认值: false。
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = 本地数据保护 (主存储)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = 具有当前策略的虚拟机会定期生成快照以便在发生应用程序级别故障时提供保护。这些快照存储在 vSAN 存储中，有助于实现低 RTO 的快速恢复。
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = 快照频率 (RPO)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = 生成快照的频率。该值以分钟为单位。默认值为 60 分钟，最大值为 30 天。
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = 保持每第 x 个快照应用程序一致
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = 应用程序一致快照可为数据保护准备一个相应的应用程序。生成应用程序一致快照时，可能会消耗更多的应用程序资源。默认值为 0，范围为 0 到 30。
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = 要保留的快照数
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = 要在 vSAN 存储本地保留的快照总数。创建新快照时，会根据指定的保留值删除最旧的快照。默认值为 10，最大值为 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = 存档保护
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = 为虚拟机提供存档保护。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = 仅存档静默快照
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = 仅存档已静默的快照。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = 存档每“第 M 个”快照
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = 仅存档每“第 M 个”快照。如果用户选择仅存档静默快照的选项，则存档每“第 M 个”静默快照。默认值 0 表示禁用复制到存档存储
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = 要保留的最后“X”个还原点
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = 除了每小时 (Xh)、每天 (Xd)、每周 (Xw) 和每月 (Xm) 的保留规则外，此参数还定义了要保留的最近存档快照数。保留策略受 (X + Xh + Xd + Xw + Xm) <= 100 限制。默认值: 1，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = 要保留的每小时还原点数 (Xh)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = 要保留的每小时还原点的数量。默认值 0 表示不需要每小时快照。每小时快照指的是在整点 (UTC 时间) 或之后生成的第一个快照。默认值: 0，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = 要保留的每天还原点数 (Xd)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = 要保留的每天还原点的数量。默认值 0 表示不需要每天快照。每天快照指的是在午夜 (UTC 时间) 或之后生成的第一个快照。默认值: 0，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = 要保留的每周还原点数 (Xw)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = 要保留的每周还原点的数量。默认值 0 表示不需要每周快照。每周快照指的是在星期日午夜 (UTC 时间) 或之后生成的第一个快照。默认值: 0，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = 要保留的每月还原点数 (Xm)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = 要保留的每月还原点的数量。默认值 0 表示不需要每月快照。每月快照指的是在月末午夜 (UTC 时间) 或之后生成的第一个快照。默认值: 0，最大值: 100。
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = 远程保护
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = 为虚拟机提供远程复制保护。
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = 远程保护 RPO (分钟)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = 远程保护恢复点目标。该值以分钟为单位。默认值: 30，最小值: 5，最大值: 1440。
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = 要保留的远程实例数
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = 要在远程站点上保留的快照实例数。默认值: 1，最小值: 1，最大值: 100。
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = 远程策略标记
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = 用于与远程副本虚拟机存储策略匹配的标记。
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = 数据服务
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = 虚拟机的数据服务策略
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = 空间效率
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = vSAN 数据存储的空间效率要求
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = 静态数据加密
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = vSAN 数据存储的静态数据加密要求
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = 去重和压缩
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = 需要去重和压缩 vSAN 数据存储
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = 仅压缩
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = 需要仅压缩 vSAN 数据存储
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = 无空间效率
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = 需要同时禁用了压缩和去重的 vSAN 数据存储
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = 禁用对象压缩
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = 如果此选项为“是”，则不会在存储设备上压缩对象。默认值: 否。

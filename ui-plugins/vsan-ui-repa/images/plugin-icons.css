@@ -1,0 +1,32 @@
+/*
+ * EXTERNAL ICONS SUPPORT: plugin-icons.css contain "external" icons, i.e. the ones
+ * displayed outside plugin's views, in the main app menus, shortcuts or object lists.
+ * Do not include other CSS rules here!
+ *
+ * Css names can directly be used in plugin.xml:
+ */
+
+.VsanUi-cluster-shutdown {
+   background: url("svg/cluster-shutdown.svg");
+   width: 16px;
+   height: 16px;
+   background-size: 100%;
+}
+
+[data-plugin-theme='dark'] .VsanUi-cluster-shutdown {
+   background: url("svg/cluster-shutdown-dk.svg");
+   background-size: 100%;
+}
+.VsanUi-cluster-poweron {
+   background: url("svg/play-solid.svg");
+   width: 16px;
+   height: 16px;
+   background-size: 100%;
+}
+
+[data-plugin-theme='dark'] .VsanUi-cluster-poweron {
+   background: url("svg/play-solid-dark.svg");
+   width: 16px;
+   height: 16px;
+   background-size: 100%;
+}

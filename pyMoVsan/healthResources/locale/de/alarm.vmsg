@@ -1,0 +1,391 @@
+signature = "sIgNaTuRe"
+
+#
+# Hardware compatibility Group 14
+#
+vsan.health.test.hcl.hcldbuptodate.label = "vSAN-Hardwarekompatibilitätsalarm ‚vSAN-HCL-DB aktuell‘"
+vsan.health.test.hcl.hcldbuptodate.summary = "Überprüft das Alter der Hardware-Kompatibilitätshandbuch-Datenbank von VMware (HCL-DB), die für die HCL-Prüfungen verwendet wird. Zeigt eine Warnung an, wenn sie älter als 90 Tage oder nicht vorhanden ist. Die ESXi-Versionen auf dem Cluster sind in der lokalen HCL-DB enthalten. Zeigt einen Fehler an, wenn sie älter als 180 Tage ist. Da VMware das VCG häufig aktualisiert, ist es wichtig, die lokale Kopie auf dem neuesten Stand zu halten."
+
+vsan.health.test.hcl.autohclupdate.label = "vSAN-Hardwarekompatibilitätsalarm ‚Automatische Aktualisierung der vSAN-HCL-DB‘"
+vsan.health.test.hcl.autohclupdate.summary = "Überprüft, ob die vSAN HCL-Datenbank über die VMware HCL-Versions-Website automatisch heruntergeladen und aktualisiert werden kann. Wenn kein Internetzugang zur öffentlichen VMware-Website vorhanden oder die automatische Aktualisierung der vSAN HCL-Datenbank deaktiviert ist, befindet sich diese Integritätsprüfung standardmäßig in der Liste für automatische Integritätsprüfungen, um den übersprungenen Status anzuzeigen – es sei denn, der Benutzer entfernt sie manuell aus der Liste für die automatische Prüfung. Andernfalls wird eine Warnung angezeigt, wenn die HCL-Datenbank aus einem anderen Grund nicht automatisch aktualisiert werden kann. Mögliche Gründe sind, dass keine Verbindung zur VMware HCL-Versions-Website aufgebaut, dass die neueste HCL-Datenbank nicht heruntergeladen oder die lokale HCL-Datenbank nicht aktualisiert werden kann."
+
+vsan.health.test.hcl.controlleronhcl.label = "vSAN-Hardwarekompatibilitätsalarm ‚SCSI Controller ist von VMware zertifiziert‘"
+vsan.health.test.hcl.controlleronhcl.summary = "Zeigt Informationen zum Speicher-E/A-Controller an und prüft basierend auf seiner PCI-ID, ob der Controller im VMware-Kompatibilitätshandbuch unterstützt wird. Ist die Übereinstimmung nicht gegeben, wenden Sie sich an den VMware-Support."
+
+vsan.health.test.hcl.nvmeidentifiable.label = "vSAN-Hardwarekompatibilitätsalarm ‚NVMe-Gerät kann identifiziert werden‘"
+vsan.health.test.hcl.nvmeidentifiable.summary = "Prüft, ob es nur einen vSAN-VCG-Eintrag (VMware-Kompatibilitätshandbuch) gibt, dessen PCI-ID mit der des NVMe-Geräts im vSAN-Cluster übereinstimmt, sodass dieses NVMe-Gerät für die vSAN-HCL-Prüfung identifiziert werden kann."
+
+vsan.health.test.hcl.nvmeonhcl.label = "vSAN-Hardwarekompatibilitätsalarm ‚NVMe-Gerät ist von VMware zertifiziert‘"
+vsan.health.test.hcl.nvmeonhcl.summary = "Zeigt Informationen über die NVMe-Geräte an und überprüft, ob die Geräte im vSAN-VCG (VMware-Kompatibilitätshandbuch) zertifiziert sind. Wenn eine Nichtübereinstimmung vorliegt, wenden Sie sich an den VMware Support."
+
+vsan.health.test.hcl.controllerreleasesupport.label = "vSAN-Hardwarekompatibilitätsalarm ‚Controller ist von VMware zertifiziert für ESXi-Version‘"
+vsan.health.test.hcl.controllerreleasesupport.summary = "Zeigt Informationen zu den Speicher-E/A-Controller-Treibern an. Überprüft, ob der installierte Treiber für den entsprechenden Controller in der aktuellen Version von ESXi unterstützt wird. Nur der von VMware zertifizierte Controller wird getestet."
+
+vsan.health.test.hcl.controllerdriver.label = "vSAN-Hardwarekompatibilitätsalarm ‚Controller-Treiber ist von VMware zertifiziert‘"
+vsan.health.test.hcl.controllerdriver.summary = "Prüft, ob der von einem Controller verwendete Treiber im VMware-Kompatibilitätshandbuch als zertifiziert aufgeführt ist. Nur der Controller, der auf vSAN HCL vorhanden und für die aktuelle Version von ESXi zertifiziert ist, wird getestet."
+
+vsan.health.test.hcl.hclhostbadstate.label = "vSAN-Hardwarekompatibilitätsalarm ‚Hostprobleme beim Abrufen von Hardwareinfo‘"
+vsan.health.test.hcl.hclhostbadstate.summary = "Überprüft, ob ein Host getrennt ist, nicht reagiert oder ob das Abrufen von Hardwareinformationen fehlgeschlagen ist. Für hier aufgelistete Hosts wird die Hardware nicht anhand des VMware-Kompatibilitätshandbuchs überprüft."
+
+vsan.health.test.hcl.controllerfirmware.label = "vSAN-Hardwarekompatibilitätsalarm ‚Controller-Firmware ist von VMware zertifiziert‘"
+vsan.health.test.hcl.controllerfirmware.summary = "Prüft, ob die Controller-Firmware im VMware-Kompatibilitätshandbuch als zertifiziert aufgeführt ist. Nur der Controller, der auf vSAN HCL vorhanden und für die aktuelle Version von ESXi zertifiziert ist, wird getestet."
+
+vsan.health.test.hcl.controllerdiskmode.label = "vSAN-Hardwarekompatibilitätsalarm ‚Controller-Festplattengruppenmodus ist von VMware zertifiziert‘"
+vsan.health.test.hcl.controllerdiskmode.summary = "Überprüft, ob der vSAN-Festplattengruppentyp (All Flash oder Hybrid) für den im VMware-Kompatibilitätshandbuch aufgelisteten SCSI Controller zertifiziert ist. Nur der Controller, der auf vSAN HCL vorhanden und für die aktuelle Version von ESXi zertifiziert ist, wird getestet."
+
+vsan.health.test.hcl.pniclinkspeed.label = "vSAN-Hardwarekompatibilitätsalarm ‚Verbindungsgeschwindigkeit für physische Netzwerkkarte erfüllt die Anforderungen‘"
+vsan.health.test.hcl.pniclinkspeed.summary = "Die in vSAN-Hosts verwendeten Netzwerkkarten (NICs) müssen bestimmte Anforderungen erfüllen. Bei diesen Netzwerkkartenanforderungen wird davon ausgegangen, dass der Paketverlust in den hyperkonvergierten Umgebungen nicht mehr als 0,0001 % beträgt. Es wird empfohlen, eine Netzwerkkarte zu verwenden, deren Verbindungsgeschwindigkeit die Mindestanforderung erfüllen kann. Andernfalls kann es zu drastischen Auswirkungen auf die vSAN-Leistung kommen."
+
+vsan.health.test.hcl.fwrecommendation.label = "vSAN-Hardwarekompatibilitätsalarm ‚vSAN-Firmware-Versionsempfehlung‘"
+vsan.health.test.hcl.fwrecommendation.summary = "vSAN-Firmware-Empfehlung. Dieser Firmware-Vorschlag basiert auf der aktuellen Host-Softwareversion, der Hardwaretreiberversion und der Kompatibilität gemäß dem VMware-Kompatibilitätshandbuch."
+
+vsan.health.test.physicaldisks.diskusage.label = "vSAN-Hardwarekompatibilitätsalarm ‚Festplattennutzung auf Speicher-Controller‘"
+vsan.health.test.physicaldisks.diskusage.summary = "vSAN unterstützt keine Konfiguration, bei der keine vSAN-Festplatten für VMFS oder Raw-Gerätezuordnungen (RDMs) verwendet werden. Informationen zu den Fehlerbehebungsschritten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.hcl.mixedmode.label = "vSAN-Hardwarekompatibilitätsalarm ‚Controller mit Passthrough- und RAID-Festplatten‘"
+vsan.health.test.hcl.mixedmode.summary = "Das Mischen des Controller-Festplattenmodus (Passthrough/RAID) bedeutet, dass Festplatten vom Speicher-Controller unterschiedlich verarbeitet werden. Dies birgt die Gefahr, dass sich die Probleme der einen Konfiguration ebenfalls auf die andere auswirken und vSAN negativ beeinflussen können. Informationen zu den Fehlerbehebungsschritten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.hcl.h730.label = "vSAN-Hardwarekompatibilitätsalarm ‚vSAN-Konfiguration für LSI-3108-basierten Controller‘"
+vsan.health.test.hcl.h730.summary = "Um die Stabilität und optimale Leistung von vSAN bei der Ausführung auf dem LSI-3108-basierten Controller sicherzustellen, müssen einige empfohlene Konfigurationswerte festgelegt werden. Informationen zu den Fehlerbehebungsschritten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.hcl.mixedmodeh730.label = "vSAN-Hardwarekompatibilitätsalarm ‚vSAN- und VMFS-Datenspeicher auf einem Dell H730-Controller mit dem lsi_mr3-Treiber‘"
+vsan.health.test.hcl.mixedmodeh730.summary = "VMware unterstützt keine Konfigurationen, bei denen vSAN-Festplatten zusammen mit VMFS-Volumes auf Dell H730-Controllern, die den lsi_mr3-Treiber verwenden, vorhanden sind. Installieren Sie zur Behebung dieses Problems ESXi auf einer Festplatte mit vSAN-Treibern (nur ESXi-Startfestplatte) und entfernen/löschen Sie anschließend den VMFS-Datenspeicher vom lokalen Startgerät."
+
+vsan.health.test.hcl.controllercacheconfig.label = "vSAN-Hardwarekompatibilitätsalarm ‚RAID-Controller-Konfiguration‘"
+vsan.health.test.hcl.controllercacheconfig.summary = "Für vSAN sind einige besondere Konfigurationsschritte auf Controller-Ebene erforderlich, damit Passthrough oder RAID0 Single Drive (SSD/HDD) optimal mit vSAN-Caches auf Softwareebene zusammenarbeitet. Informationen zu den detaillierten Cache-Konfigurationseinstellungen und zu den Schritten für die ordnungsgemäße Controller-Konfiguration finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.hcl.vsanhpefwtest.label = "vSAN-Integritätsalarm „HPE NVMe Solid State Drives – kritisches Firmware-Upgrade erforderlich“"
+vsan.health.test.hcl.vsanhpefwtest.summary = "Standardalarm zur Überwachung von Änderungen für den Integritätstest „HPE NVMe Solid State Drives – kritisches Firmware-Upgrade erforderlich“"
+
+#
+# vSAN iSCSI target service Group 3
+#
+vsan.health.test.iscsi.iscsihomeobjectstatustest.label = "vSAN iSCSI Zieldienstalarm ‚Home-Objekt‘"
+vsan.health.test.iscsi.iscsihomeobjectstatustest.summary = "Das Home-Objekt speichert die vom vSAN-iSCSI-Zieldienst verwendeten Metadaten. Hierbei wird Folgendes sichergestellt: Das Home-Objekt wurde erstellt und kann im System gefunden werden. Die Integrität des Home-Objekts ist gewährleistet und es entspricht der Speicherrichtlinie. Das Home-Objekt ist eindeutig. Wenn mehrere Home-Objekte vorhanden sind, greifen einige Hosts im Cluster möglicherweise auf ein anderes Home-Objekt zu. Die Metadatendatei im Home-Objekt ist vorhanden und kann analysiert werden und alle Metadaten wurden ordnungsgemäß gespeichert."
+
+vsan.health.test.iscsi.iscsiservicenetworktest.label = "vSAN iSCSI-Zieldienstalarm ‚Netzwerkkonfiguration‘"
+vsan.health.test.iscsi.iscsiservicenetworktest.summary = "Alle vom vSAN-iSCSI-Zieldienst verwendeten Netzwerkschnittstellen (einschließlich der Standardschnittstelle) müssen auf allen Hosts im Cluster konfiguriert sein. Alle Netzwerkschnittstellen mit demselben Namen bilden ein verteiltes Portal. Wenn mindestens ein Host nicht über eine Netzwerkschnittstelle verfügt, kann der vSAN-iSCSI-Zieldienst nicht ordnungsgemäß funktionieren."
+
+vsan.health.test.iscsi.iscsiservicerunningtest.label = "vSAN iSCSI-Zieldienstalarm ‚Laufzeitstatus des Diensts‘"
+vsan.health.test.iscsi.iscsiservicerunningtest.summary = "Überprüft, ob der Dienst auf allen Hosts im Cluster aktiviert ist. Wenn der Dienst auf einem Host nicht aktiviert ist, führen Sie den folgenden Befehl aus: „esxcli vsan iscsi status set --enabled=true“. Wahlweise können Sie den iSCSI-Zieldienst mit der Aktion „Bearbeiten“ (Verwalten > Einstellungen > Allgemein > vSAN-iSCSI-Zieldienst) aktivieren. Mit diesem Alarm wird auch die Integrität der folgenden Vorgänge überprüft: „vitd“ wird zur Bereitstellung des Diensts und „vitsafehd“ zur Bereitstellung von Öffnungen für VMDKs verwendet. Wenn der vitd-Vorgang nicht ausgeführt wird, verwenden Sie den folgenden Befehl, um den Vorgang zu starten: „/etc/init.d/vitd start“. Wenn der vitsafehd-Vorgang nicht ausgeführt wird, verwenden Sie den folgenden Befehl, um den Vorgang zu starten: „/etc/init.d/vitd io_restart“."
+
+#
+# Network Group 16
+#
+vsan.health.test.network.multicastsuspected.label = "vSAN-Netzwerkalarm ‚Multicast-Überprüfung basierend auf anderen Prüfungen‘"
+vsan.health.test.network.multicastsuspected.summary = "Dieser Alarm weist auf ein mögliches Multicast-Problem hin, falls die vSAN-Konfigurationsprüfungen und die Unicast-Konnektivitätsprüfungen erfolgreich absolviert wurden, aber eine vSAN-Clusterpartition vorhanden ist. Falls dieser Alarm ausgelöst wird, wird zusätzlich eine ‚Aktive Multicast-Konnektivitätsprüfung‘ durchgeführt."
+
+vsan.health.test.network.multicastdeepdive.label = "vSAN-Netzwerkalarm ‚Aktive Multicast-Konnektivitätsprüfung‘"
+vsan.health.test.network.multicastdeepdive.summary = "Bei diesem Alarm werden Multicast-Pakete auf allen Hosts im Cluster für einen bestimmten Zeitraum erfasst. Dabei wird nach dem „CMMDS Primary-Taktsignal“ gesucht. Alle Hosts, die als „vSAN/CMMDS Primary“ (einer pro Partition) ausgewählt wurden, senden einmal pro Sekunde ein solches Taktsignal. Diese Taktsignale werden über Multicast gesendet und alle Hosts im Cluster müssen sie empfangen, damit der Cluster ordnungsgemäß funktioniert. Wenn also ein Host ein Taktsignal sendet und ein anderer Host es nicht erhalten hat, deutet dies auf eine Multicast-Fehlkonfiguration hin (normalerweise im physischen Netzwerk)."
+
+vsan.health.test.network.largeping.label = "vSAN-Netzwerkalarm ‚vSAN: MTU-Prüfung (Ping mit großem Paket)‘"
+vsan.health.test.network.largeping.summary = "Führt einen Ping-Test mit einem großen Paket von jedem Host zu allen anderen Hosts durch. Wenn dieser Alarm ausgelöst wird, der Alarm für die grundlegende Konnektivitätsprüfung jedoch nicht ausgelöst wird, bedeutet dies, dass es irgendwo im vSAN-Netzwerk eine fehlerhafte MTU-Konfiguration gibt. Die Quelle der fehlerhaften Konfiguration muss verfolgt werden. Es kann sich um die VMkernel-Adapter, die virtuellen Switches oder die physischen Netzwerk-Switches handeln."
+
+vsan.health.test.network.smallping.label = "vSAN-Netzwerkalarm ‚vSAN: Einfache (Unicast) Konnektivitätsprüfung‘"
+vsan.health.test.network.smallping.summary = "Führt einen Ping-Test mit einem kleinen Paket von jedem Host zu allen anderen Hosts durch. Falls dieser Alarm ausgelöst wird, liegt ein grundlegendes Problem mit der Netzwerkkonnektivität vor. Überprüfen Sie vmknic, Uplink, VLAN, den physischen Switch und die zugehörigen Einstellungen."
+
+vsan.health.test.network.hostconnectivity.label = "vSAN-Netzwerkalarm ‚Hosts mit Konnektivitätsproblemen‘"
+vsan.health.test.network.hostconnectivity.summary = "Dieser Alarm bezieht sich auf Situationen, in denen die Hosts in vCenter Server zwar als verbunden aufgelistet werden, API-Aufrufe von vCenter Server zum Host jedoch fehlschlagen. Dieses Problem tritt selten auf, es kann jedoch weitere Probleme nach sich ziehen, z. B. dass der Host von vCenter Server getrennt wird."
+
+vsan.health.test.network.multicastsettings.label = "vSAN-Netzwerkalarm ‚Alle Hosts weisen dieselben Multicast-Einstellungen auf‘"
+vsan.health.test.network.multicastsettings.summary = "Für die Teilnahme an einem vSAN-Cluster und die Erstellung einer einzelnen Gruppe mit vollständig verbundenen Hosts muss jeder Host in einem vSAN-Cluster dieselben IP-Multicast-Adressen verwenden. Je nachdem, ob der Cluster IPv4 oder IPv6 verwendet, wird die entsprechende Multicast-Konfiguration verifiziert. Passen Sie die Multicast-IPs mithilfe der folgenden Befehle an: \nesxcli vsan network list\nesxcli vsan network ip set"
+
+vsan.health.test.network.vsanvmknic.label = "vSAN-Netzwerkalarm ‚Für alle Hosts ist vSAN-vmknic konfiguriert‘"
+vsan.health.test.network.vsanvmknic.summary = "Für die Teilnahme an einem vSAN-Cluster und die Erstellung einer einzelnen Gruppe mit vollständig verbundenen Hosts muss für jeden Host in einem vSAN-Cluster eine vmknic (VMkernel-Netzwerkschnittstelle oder VMkernel-Adapter) für vSAN-Datenverkehr konfiguriert sein."
+
+vsan.health.test.network.clusterpartition.label = "vSAN-Netzwerkalarm ‚vSAN-Clusterpartition‘"
+vsan.health.test.network.clusterpartition.summary = "Um eine ordnungsgemäße Funktion sicherzustellen, müssen alle vSAN-Hosts in der Lage sein, sowohl über Multicast als auch über Unicast zu kommunizieren. Ist dies nicht der Fall, wird ein vSAN-Cluster in mehrere Partitionen aufgeteilt. Dabei handelt es sich um Untergruppen von Hosts, die nicht mit anderen Untergruppen kommunizieren können. Wenn dieser Fall eintritt, sind vSAN-Objekte möglicherweise nicht mehr verfügbar, bis die falsche Netzwerkkonfiguration korrigiert wurde."
+
+vsan.health.test.network.hostdisconnected.label = "vSAN-Netzwerkalarm ‚Von VC getrennte Hosts‘"
+vsan.health.test.network.hostdisconnected.summary = "Dieser Alarm gibt an, ob vCenter Server aktiv mit allen Hosts im Cluster verbunden ist. Falls ein Host von vCenter Server getrennt ist (oder nicht reagiert), können Betriebsprobleme auftreten. Falls vCenter Server nicht mit dem Host verbunden ist, ist der Status für vCenter unbekannt. Möglicherweise ist der Host in Betrieb, am vSAN-Cluster beteiligt, stellt Daten bereit und spielt eine wichtige Rolle bei den Speicherfunktionen des Clusters. Oder der Host ist möglicherweise ausgefallen und nicht verfügbar. vCenter Server und damit die vSAN-Integritätsprüfung können die Situation nicht vollständig bewerten, solange der Host getrennt ist. Falls der Host am vSAN-Cluster beteiligt ist, wird er Host bei der Prüfung „Unerwartete vSAN-Clustermitglieder“ als unerwartet angezeigt, da seine UUID nicht bestimmt werden kann. Die Integritätsprüfung kann nicht bestimmen, ob es sich bei dem im vSAN-Cluster angezeigten Host um den getrennten Host handelt oder nicht. Andere Integritätsprüfungen wie die vSAN-Konnektivitätsprüfungen oder Festplattenintegritätsprüfungen können den getrennten Host nicht berücksichtigen."
+
+vsan.health.test.network.vmotionpingsmall.label = "vSAN-Netzwerkalarm ‚vMotion: Einfache (Unicast) Konnektivitätsprüfung‘"
+vsan.health.test.network.vmotionpingsmall.summary = "Führt einen Ping-Test mit einem kleinen Paket zwischen allen VMkernel-Adaptern durch, für die vMotion-Datenverkehr aktiviert ist. Wenn dieser Alarm ausgelöst wird, ist das Netzwerk falsch konfiguriert. Der Test sendet drei Pings. Er zeigt eine Warnung an, wenn ein Ping verloren geht, und einen Fehler, wenn zwei oder mehr Pings fehlschlagen. Der Fehler kann durch viele Faktoren verursacht werden. Es können Probleme im virtuellen Netzwerk vorliegen, einschließlich der VMkernel-Adapter oder der virtuellen Switches. Auch das physische Netzwerk kann Probleme aufweisen, z. B. Kabel, physische Netzwerkkarten oder physische Switches."
+
+vsan.health.test.network.vmotionpinglarge.label = "vSAN-Netzwerkalarm ‚vMotion: MTU-Prüfung (Ping mit großem Paket)‘"
+vsan.health.test.network.vmotionpinglarge.summary = "Führt einen Ping-Test mit einem großen Paket zwischen allen VMkernel-Adaptern durch, für die vMotion-Datenverkehr aktiviert ist. Wenn der kleine Ping-Test erfolgreich verläuft, wird auch der große Ping Test erfolgreich ausgeführt, wenn die MTU-Größe für alle VMkernel-Adapter, virtuellen Switches und alle physischen Switches einheitlich konfiguriert ist. Wenn der Alarm ausgelöst wird, identifizieren Sie die Quelle der fehlerhaften Konfiguration im vSAN-Netzwerk. Überprüfen Sie die VMkernel-Adapter, die virtuellen Switches oder die physischen Netzwerk-Switches."
+
+vsan.health.test.network.hostlatencycheck.label = "vSAN-Netzwerkalarm ‚Netzwerklatenzprüfung‘"
+vsan.health.test.network.hostlatencycheck.summary = "Führt eine Überprüfung der Netzwerklatenz von vSAN-Hosts durch. Die Netzwerkkonfigurationsanweisung für normale Cluster erfordert eine RTT von weniger als 1 ms. Um temporäre Schwankungen zuzulassen, meldet diese Integritätsprüfung Warnungen auf Basis eines konservativen Schwellenwerts von 5 ms. Wenn dieser Alarm ausgelöst wird, überprüfen Sie vmknic, Uplink, VLAN, physischen Switch und zugehörige Einstellungen zum Auffinden des Netzwerkproblems.\nHinweis: Dieser Alarm wird übersprungen, wenn die Konnektivitätsprüfung des Hostpaars fehlgeschlagen ist."
+
+vsan.health.test.network.serverpartition.label = "vSAN-Netzwerkalarm ‚Server-Clusterpartition‘"
+vsan.health.test.network.serverpartition.summary = "Normalerweise müssen alle Hosts im Client-Cluster mit vSAN-Datenspeicherbereitstellung mit allen Hosts im Servercluster kommunizieren können. Im Falle der Netzwerkpartition sind für die Clienthosts möglicherweise nur einige Serverhosts sichtbar. Dies wirkt sich für die Dauer der Partition auf die Objektverfügbarkeit aus. Dieser Alarm wird ausgelöst, wenn der Servercluster Partitionen aufweist. Weitere Einzelheiten dazu finden Sie in der Systemüberwachung."
+
+vsan.health.test.network.rdmaconfig.label = "vSAN-Netzwerkalarm ‚Integrität der RDMA-Konfiguration‘"
+vsan.health.test.network.rdmaconfig.summary = "Überprüft, ob die vSAN-RDMA-fähige physische Netzwerkkarte für den verlustfreien Datenverkehr konfiguriert ist. Um eine verlustfreie Layer-2-Umgebung sicherzustellen, muss der DCB-Modus (Data Center Bridging) als IEEE konfiguriert werden und der PFC-Wert (Priority Flow Control) muss auf 3 festgelegt werden."
+
+vsan.health.test.network.multiplevsanvmknic.label = "vSAN-Netzwerkalarm ‚Keine Hosts im Remote vSAN haben mehrere vSAN-vmknics konfiguriert‘"
+vsan.health.test.network.multiplevsanvmknic.summary = "Prüft, ob für einen Host im vSAN-Remoteclient oder Servercluster mehrere vSAN vmknic-Konfigurationen vorhanden sind. Einzelheiten dazu finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.network.pnicconsistent.label = "vSAN-Netzwerkalarm ‚Konsistenz der Link-Geschwindigkeit des physischen Netzwerkadapters‘"
+vsan.health.test.network.pnicconsistent.summary = "Überprüft, ob die Verbindungsgeschwindigkeit des von vSAN in den einzelnen Hosts verwendeten physischen Netzwerkadapters konsistent ist. Eine inkonsistente Verbindungsgeschwindigkeit des physischen Netzwerkadapters kann zu vSAN-Leistungsproblemen führen. Informationen zu den Fehlerbehebungsschritten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.network.duplicateip.label = "vSAN-Netzwerkalarm ‚Hosts mit doppelten IP-Adressen‘"
+vsan.health.test.network.duplicateip.summary = "Prüft, ob eine doppelte IP-Adresse für die vmknic-Schnittstelle konfiguriert ist."
+
+vsan.health.test.network.pnictso.label = "vSAN-Netzwerkalarm ‚Hosts mit pNIC-TSO-Problemen‘"
+vsan.health.test.network.pnictso.summary = "Prüft, ob TSO für pNIC aktiviert ist."
+
+vsan.health.test.network.lacpstatus.label = "vSAN-Netzwerkalarm ‚Hosts mit LACP-Problemen‘"
+vsan.health.test.network.lacpstatus.summary = "Prüft, ob LACP ordnungsgemäß funktioniert."
+
+#
+# vSAN Build Recommendation Group 4
+#
+vsan.health.test.vum.releasecataloguptodate.label = "vSAN-Build-Empfehlungsalarm ‚vSAN-Versionskatalog aktuell‘"
+vsan.health.test.vum.releasecataloguptodate.summary = "Überprüft das Alter des vSAN-Versionskatalogs, der für die vSAN-Build-Empfehlung verwendet wird. Dieser Alarm wird ausgelöst, wenn er älter als 90 bzw. 180 Tage ist. Der vSAN-Versionskatalog wird aktualisiert, wenn neue Versionen oder kritische Patches vorliegen. Aus diesem Grund ist es wichtig, dass die lokale Kopie auf dem aktuellen Stand ist."
+
+vsan.health.test.vum.vumconfig.label = "vSAN-Build-Empfehlungsalarm ‚vSAN-Build-Empfehlungs-Engine‘"
+vsan.health.test.vum.vumconfig.summary = "Die Empfehlung der vSAN-Build-Empfehlungs-Engine basiert auf dem VMware-Kompatibilitätshandbuch und VMware-Versionsmetadaten. Für Build-Empfehlungen muss außerdem der VMware Update Manager-Dienst verfügbar sein, und es sind eine Internetverbindung und gültige my.vmware.com-Anmeldedaten erforderlich. Dieser Alarm wird ausgelöst, wenn diese Abhängigkeiten nicht erfüllt sind oder die Empfehlungs-Engine nicht ordnungsgemäß funktioniert."
+
+vsan.health.test.vum.vumrecommendation.label = "vSAN-Build-Empfehlungsalarm ‚vSAN-Build-Empfehlung‘"
+vsan.health.test.vum.vumrecommendation.summary = "Dieser ESXi-Build wird von vSAN als am besten geeignet empfohlen. Berücksichtigt wurden die Hardware, ihre Kompatibilität gemäß dem VMware-Kompatibilitätshandbuch und die verfügbaren Versionen von VMware."
+
+vsan.health.test.vum.patchalert.label = "vSAN-Build-Empfehlungsalarm ‚vSAN-Hosts mit neuem Patch verfügbar‘"
+vsan.health.test.vum.patchalert.summary = "Überprüft, ob ein neuer kritischer vSAN-Patch verfügbar ist. Wenn dieser Alarm ausgelöst wird, führen Sie sofort ein Upgrade auf diese Patch-Version durch. Anweisungen zum Aktualisieren der vSAN-Software finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+#
+# Physical Disk Group 9
+#
+vsan.health.test.physicaldisks.physdiskcomplimithealth.label = "vSAN-Alarm für die physische Festplatte ‚Komponentengrenzwert‘"
+vsan.health.test.physicaldisks.physdiskcomplimithealth.summary = "Überprüft, ob die Anzahl der Komponenten auf der physischen Festplatte den maximalen Grenzwert erreicht. Da jedes vSAN-Objekt, bestimmt durch die in der VM-Speicherrichtlinie verwendeten Funktionen, aus einer Reihe von Komponenten besteht, schlägt die Bereitstellung neuer virtueller Maschinen möglicherweise fehl oder ein Neuerstellungsvorgang wird möglicherweise nicht zugelassen, wenn der Komponentengrenzwert erreicht wurde. Sie müssen entweder weitere Hosts hinzufügen oder einige der vSAN-Objekte löschen. Wenn die Komponente im Zeugenknoten jedoch voll ist, müssen Sie die bereitgestellte Kapazität erhöhen."
+
+vsan.health.test.physicaldisks.componentmetadata.label = "vSAN-Alarm für die physische Festplatte ,Komponentenmetadaten‘"
+vsan.health.test.physicaldisks.componentmetadata.summary = "Dieser Alarm wird ausgelöst, wenn vSAN ein Problem mit der Integrität der Metadaten einer Komponente auf dieser Festplatte erkannt hat. Die Ursache dafür können fehlerhafte Festplatten, fehlerhafte Controller oder ein Gerätetreiber mit fehlerhaftem Verhalten sein. Der Alarm kann auch durch ein Problem in der vSAN-Software verursacht werden. Wenden Sie sich an den VMware Support."
+
+vsan.health.test.physicaldisks.physdiskcongestion.label = "vSAN-Alarm für die physische Festplatte ,Überlastung‘"
+vsan.health.test.physicaldisks.physdiskcongestion.summary = "Wenn dieser Alarm ausgelöst wird, verwendet vSAN die Festplatte weiterhin, aber er weist einen Status mit verminderter Leistung auf. Dies führt zu niedrigem Durchsatz/IOPS und hoher Latenz für vSAN-Objekte, die diese Festplatte verwenden."
+
+vsan.health.test.physicaldisks.physdiskcapacity.label = "vSAN-Alarm für die physische Festplatte ,Festplattenkapazität‘"
+vsan.health.test.physicaldisks.physdiskcapacity.summary = "Wenn dieser Alarm für eine bestimmte Festplatte ausgelöst wird, ist dies ein Hinweis darauf, dass auf dieser Festplatte wenig freier Festplattenspeicher vorhanden ist. Dieser Alarm betrifft nur Festplatten auf Kapazitätsebene, nicht die Cache-Geräte."
+
+vsan.health.test.physicaldisks.physdiskoverall.label = "vSAN-Alarm für die physische Festplatte ,Betrieb‘"
+vsan.health.test.physicaldisks.physdiskoverall.summary = "Überprüft für alle Hosts im vSAN-Cluster den Betriebszustand der physischen Festplatte für vSAN-Festplatten und vSAN-Direktfestplatten. Wenn dieser Alarm auf einer vSAN-Festplatte ausgelöst wird, kann die Festplatte nicht von vSAN verwendet werden. Mögliche Ursachen sind Probleme beim Lesen der Festplattenmetadaten oder ein vSAN-Softwareproblem, das die Verwendung dieser Festplatte verhindert. Im Falle von vSAN-Direktfestplatten kann die Festplatte nicht verwendet werden. Die mögliche Ursache kann ein Problem beim Lesen der Betriebszustandsbeschreibung sein, das die Verwendung der Festplatte verhindert."
+
+vsan.health.test.physicaldisks.lsomheap.label = "vSAN-Alarm für die physische Festplatte ‚Arbeitsspeicherpools (Heaps)‘"
+vsan.health.test.physicaldisks.lsomheap.summary = "Dieser Alarm wird ausgelöst, wenn vSAN nur über wenige wichtige Arbeitsspeicherpools verfügt, die für den ordnungsgemäßen Betrieb physischer Festplatten benötigt werden. Die Festplatte meldet möglicherweise auch einen fehlerhaften Überlastungszustand, was zu Leistungsproblemen führt. Kontaktieren Sie den VMware Support."
+
+vsan.health.test.physicaldisks.lsomslab.label = "vSAN-Alarm für die physische Festplatte ‚Arbeitsspeicherpools (Slabs)‘"
+vsan.health.test.physicaldisks.lsomslab.summary = "Dieser Alarm wird ausgelöst, wenn vSAN über nahezu keinen wichtigen Arbeitsspeicherpool verfügt, der für den ordnungsgemäßen Betrieb physischer Festplatten benötigt wird. Die Festplatte meldet möglicherweise auch einen fehlerhaften Überlastungszustand, was zu Leistungsproblemen führt. Kontaktieren Sie den VMware Support."
+
+vsan.health.test.physicaldisks.smalldiskstest.label = "vSAN-Alarm für die physische Festplatte ,Maximale Komponentengröße in vSAN‘"
+vsan.health.test.physicaldisks.smalldiskstest.summary = "Wenn eine für vSAN verwendete Kapazitätsfestplatte kleiner als 255 GB ist (standardmäßige maximale Komponentengröße), können auf virtuellen Maschinen, die im vSAN-Datenspeicher ausgeführt werden, Probleme mit dem Festplattenspeicher auftreten. Anweisungen zum Ändern der maximalen Komponentengröße finden Sie im AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.physicaldisks.physdiskhostissues.label = "vSAN-Alarm für die physische Festplatte ,Problem beim Abrufen der Integrität der physischen Festplatte‘"
+vsan.health.test.physicaldisks.physdiskhostissues.summary = "Wenn dieser Alarm ausgelöst wird, weist er darauf hin, dass ein Problem beim Abrufen der Informationen der physischen Festplatte von mindestens einem Host im vSAN-Cluster aufgetreten ist. Einzelheiten zu dieser Ursache finden Sie im AskVMware-KB in der vSAN-Systemüberwachung."
+
+#
+# Cluster Group 12
+#
+vsan.health.test.cluster.clomdliveness.label = "vSAN-Clusteralarm ,vSAN-Host-Daemon-Aktivität‘"
+vsan.health.test.cluster.clomdliveness.summary = "Überprüft die Aktivität kritischer Host-Daemons auf allen vSAN-Hosts. HINWEIS: der CLOMD-Status auf dem Zeugenknoten wird nicht überprüft. Der EPD-Status auf dem Zeugen- und Metdatenknoten wird nicht überprüft."
+
+vsan.health.test.cluster.advcfgsync.label = "vSAN-Clusteralarm ,Erweiterte vSAN-Konfiguration synchronisiert‘"
+vsan.health.test.cluster.advcfgsync.summary = "vSAN weist eine Reihe erweiterter Konfigurationsoptionen für die Optimierung oder für spezielle Anforderungen bestimmter Bereitstellungen auf. Diese Optionen werden gewöhnlich auf Anweisung des VMware Supports mithilfe eines VMware-KB-Artikels geändert. Diese erweiterten Optionen werden pro Host festgelegt, was zu inkonsistenten Konfigurationen in einem Cluster führen kann. Mit dieser Prüfung wird sichergestellt, dass kritische erweiterte Optionen für vSAN auf allen Hosts in einem bestimmten Cluster denselben Wert oder Standardwert aufweisen."
+
+vsan.health.test.cluster.upgradesoftware.label = "vSAN-Clusteralarm ,Kompatibilität der Softwareversion‘"
+vsan.health.test.cluster.upgradesoftware.summary = "Sobald ein vSAN-Cluster eine neue Festplattenformatversion verwendet (nach dem Softwareupgrade), sind Hosts mit älteren Softwareversionen, die das neue Festplattenformat nicht unterstützen, nicht mehr kompatibel. Wenn eine solche ältere Hostversion im Cluster vorhanden ist, befindet sich dieser Host entweder in einer Netzwerkpartition oder er kann nur auf einen sehr eingeschränkten Datensatz im Cluster zugreifen. Solche Konfigurationen werden nicht unterstützt und ein umgehendes Softwareupgrade oder das Entfernen der älteren Hostversion werden empfohlen."
+
+vsan.health.test.cluster.upgradelowerhosts.label = "vSAN-Clusteralarm ,Festplattenformatversion‘"
+vsan.health.test.cluster.upgradelowerhosts.summary = "Die erwartete Formatversion des vSAN-Clusters ist 13, was die höchste von allen Hosts im Cluster unterstützte Formatversion ist. Für Festplatten, deren Formatversion niedriger als die erwartete Version ist, wird das vSAN-Festplattenformat-Upgrade empfohlen, um die neuesten vSAN-Funktionen zu unterstützen."
+
+vsan.health.test.cluster.diskbalance.label = "vSAN-Clusteralarm ,vSAN-Festplattenverteilung‘"
+vsan.health.test.cluster.diskbalance.summary = "Mit diesem Alarm kann ein Benutzer den Verteilungsstatus für mehrere Festplatten überwachen. Standardmäßig ist „Automatische Neuverteilung“ deaktiviert. Dieser Alarm wird ausgelöst, wenn das Ungleichgewicht einen vom System bestimmten Schwellenwert überschreitet. Wenn „Automatische Neuverteilung“ aktiviert ist, nimmt vSAN die Neuverteilung automatisch vor, damit der Status grün bleibt. Mit dem Beginn der Neuverteilung kann bis zu 30 Minuten gewartet werden. Auf diese Weise ist es möglich, Aufgaben mit hoher Priorität wie EMM, Reparatur usw. vor der Neuverteilung Zeit für die Nutzung der Ressourcen einzuräumen."
+
+vsan.health.test.cluster.clustermembership.label = "vSAN-Clusteralarm ,vSphere-Clustermitglieder stimmen mit vSAN-Clustermitgliedern überein‘"
+vsan.health.test.cluster.clustermembership.summary = "Überprüft, ob vSphere-Clustermitglieder mit vSAN-Clustermitgliedern übereinstimmen. Wenn dieser Alarm ausgelöst wird, bedeutet dies, dass vSphere-Clustermitglieder nicht mit vSAN-Clustermitgliedern übereinstimmen. Dieses Problem kann auftreten, wenn vSAN auf bestimmten vSphere-Clustermitgliedern nicht aktiviert ist oder wenn bestimmte vSAN-Clustermitglieder nicht vom vSphere-Cluster verwaltet werden. Die Hosts mit nicht übereinstimmenden Clustermitgliedschaften werden in der Clustermitgliedschaftstabelle angezeigt. Sie können die falschen Mitgliedschaften bearbeiten, damit Ihre Hosts den entsprechenden Clustern erneut beitreten. Die vSAN-Konfiguration wird automatisch durchgeführt."
+
+vsan.health.test.cluster.consistentconfig.label = "vSAN-Clusteralarm ,Konsistenz der vSAN-Clusterkonfiguration‘"
+vsan.health.test.cluster.consistentconfig.summary = "Dieser Alarm wird ausgelöst, wenn auf Hosts oder Festplatten im Cluster eine inkonsistente Konfiguration (Deduplizierung/Komprimierung, Verschlüsselung) vorhanden ist. Wenn dieser Alarm ausgelöst wird, bedeutet dies, dass auf Hosts oder Festplatten im Cluster inkonsistente Konfigurationseinstellungen (z. B. Deduplizierung/Komprimierung, Verschlüsselung) vorhanden sind. Detailliertere Informationen und Tipps zum Beheben finden Sie auf der entsprechenden Integritätsprüfungsseite."
+
+vsan.health.test.cluster.vsandconfigconsistency.label = "vSAN-Clusteralarm ,Homogene vSAN Direct-Festplatte wird beansprucht‘"
+vsan.health.test.cluster.vsandconfigconsistency.summary = "Prüft, ob vSAN Direct-Festplatten auf den Hosts im Cluster homogen beansprucht werden. Wenn dieser Alarm ausgelöst wird, bedeutet dies, dass auf den Hosts im Cluster inkonsistente Konfigurationseinstellungen (wie Festplattenkapazität, Modus und Anzahl) eingerichtet sind. Sie können zur entsprechenden Integritätsprüfungsseite gehen, um detailliertere Informationen zu erhalten und entsprechend neu zu konfigurieren."
+
+vsan.health.test.cluster.timedrift.label = "vSAN-Clusteralarm ,Uhrzeit ist über Hosts und VC hinweg nicht synchronisiert‘"
+vsan.health.test.cluster.timedrift.summary = "Überprüft den Zeitunterschied zwischen vCenter Server und Hosts. Zeitabweichungen von über 60 Sekunden lösen diesen Alarm aus. Falls der Alarm ausgelöst wird, überprüfen Sie die NTP-Serverkonfiguration."
+
+vsan.health.test.cluster.resynclimit.label = "vSAN-Clusteralarm ,Drosselung von Neusynchronisierungsvorgängen‘"
+vsan.health.test.cluster.resynclimit.summary = "Überprüft, ob die Neusynchronisierungsvorgänge auf beliebigen Hosts gedrosselt wurden. Zeigt eine Warnung an, wenn der Grenzwert für die Neusynchronisierungsbandbreite konfiguriert wird, und einen Fehler, wenn der Wert bei unter 20 Mbit/s liegt. Löschen Sie den Grenzwert, es sei denn, er wird für besondere Fälle wie signifikanten Neusynchronisierungs-Datenverkehr mit hohen VM-Latenzen benötigt. Wenn Sie diesen Grenzwert festlegen, können Vorgänge auf der Basis von Neusynchronisierungen wie Richtlinienänderungs- oder Wartungsmodus langsamer sein."
+
+vsan.health.test.cluster.vcauthoritative.label = "vSAN-Clusteralarm ,vCenter-Zustand ist autoritativ‘"
+vsan.health.test.cluster.vcauthoritative.summary = "Während des normalen Betriebs wird der vCenter Server-Zustand als Wahrheitsquelle (Source of Truth) betrachtet und ESXi-Hosts werden mit der neuesten Host-Mitgliedsliste aktualisiert. Wenn vCenter Server aus einem Backup ersetzt oder wiederhergestellt wird, ist die Host-Mitgliedsliste in vCenter Server möglicherweise nicht synchronisiert. Bei dieser Integritätsprüfung werden solche Fälle erkannt und eine Warnung wird ausgegeben, wenn der vCenter Server-Zustand aufgrund der Tatsache, dass vCenter Server nicht synchronisiert ist, nicht an ESXi übertragen wurde. Stellen Sie in solchen Fällen zuerst die Mitgliedsliste in vCenter Server vollständig wieder her und führen Sie dann bei Bedarf die Aktion „ESXi-Konfiguration aktualisieren“ aus."
+
+vsan.health.test.cluster.extendedconfig.label = "vSAN-Clusteralarm ,Erweiterte Konfiguration von vSAN synchronisiert‘"
+vsan.health.test.cluster.extendedconfig.summary = "Die erweiterte Konfigurationen des vSAN-Clusters ist standardmäßig wie folgt festgelegt: der Wert für den Objektreparatur-Timer beträgt 60 Minuten, die Site-Lesebelegung ist „Aktiviert“, das angepasste Auslagerungsobjekt ist „Aktiviert“, die Unterstützung für umfangreiche Cluster ist „Deaktiviert“, die automatische Neuverteilung ist ausgeschaltet und der Schwellenwert für die automatische Neuverteilung ist 30. Bei Hosts mit inkonsistenten erweiterten Konfigurationen wird eine vSAN-Clusterstandardisierung empfohlen. Wenn der Host keine erweiterte Konfiguration unterstützt, führen Sie ein Upgrade der ESXi-Software durch. Damit die Konfiguration der Clusterskalierbarkeit wirksam wird, ist möglicherweise ein Neustart des Hosts erforderlich."
+
+vsan.health.test.cluster.mmdecominsync.label = "vSAN-Clusteralarm ,Hostwartungsmodus‘"
+vsan.health.test.cluster.mmdecominsync.summary = "Stellt sicher, dass der Wartungsmodus des Hosts mit dem Außerbetriebnahmestatus des vSAN-Knoten synchronisiert ist. Wenn sich der Host im Wartungsmodus befindet, sollte sich der vSAN-Knoten im Außerbetriebnahmestatus befinden. Wenn ein Knoten außer Betrieb genommen wird, der Host sich jedoch nicht im Wartungsmodus befindet, versetzen Sie den Host mithilfe einer beliebigen vSAN-Option in den Wartungsmodus und beenden Sie dann den Wartungsmodus des Hosts, um den vSAN-Außerbetriebnahmestatus zurückzusetzen und dafür zu sorgen, dass er mit dem Status des vSphere-Wartungsmodus konsistent ist."
+
+vsan.health.test.cluster.rdmanodes.label = "vSAN-Clusteralarm „Maximale Hostanzahl in vSAN über RDMA“"
+vsan.health.test.cluster.rdmanodes.summary = "vSAN mit RDMA unterstützt bis zu 32 Hosts."
+
+vsan.health.test.cluster.hostmemcheck.label = "vSAN-Clusteralarm ‚Überprüfung der Hostübereinstimmung bei physischem Arbeitsspeicher‘"
+vsan.health.test.cluster.hostmemcheck.summary = "Überprüfen Sie, ob der physische Hostarbeitsspeicher größer ist als die Mindestanforderung für vSAN-Arbeitsspeicher."
+
+#
+# Capacity utilization Group (AKA Limits Group) 4
+#
+vsan.health.test.limits.nodecomponentlimit.label = "vSAN-Kapazitätsnutzungsalarm ,Komponente‘"
+vsan.health.test.limits.nodecomponentlimit.summary = "Überprüft die Komponentennutzung für den Cluster und für jeden Host. Dieser Alarm wird als Warnung oder Fehler ausgelöst, wenn die Auslastung auf einem beliebigen Host 80 oder 90 %überschreitet. Wenn diese Grenzwerte erreicht sind, kann die Bereitstellung neuer virtueller Maschinen fehlschlagen oder Neuerstellungsvorgänge sind möglicherweise nicht zulässig. Fügen Sie weitere Hosts hinzu oder löschen Sie einige vSAN-Objekte. Wenn der Komponentengrenzwert jedoch im Zeugenknoten erreicht wird, müssen Sie ihn durch mehr Kapazität ersetzen."
+
+# Deco in future as pr 2518894
+vsan.health.test.limits.rcreservation.label = "vSAN-Kapazitätsnutzungsalarm ,Lesecache-Reservierungen‘"
+vsan.health.test.limits.rcreservation.summary = "Überprüft Reservierungen für Lesespeicher im Cluster. Dieser Alarm wird als Warnung oder Fehler ausgelöst, wenn die freien Reservierungen weniger als 30 % oder 10 % der gesamten Lesespeicherreservierungen ausmachen. Dies wirkt sich auf die Leistung virtueller Maschinen aus."
+
+vsan.health.test.limits.diskspace.label = "vSAN-Kapazitätsnutzungsalarm ,Speicherplatz‘"
+vsan.health.test.limits.diskspace.summary = "Überprüft, ob die Festplattennutzung auf der vSAN-Cluster-Kapazitätsebene und der von vSAN verwaltete Datenspeicher im Cluster über den Schwellenwerten liegen. Wenn nicht genügend Festplattenspeicher auf Kapazitätsebene vorhanden ist, schlägt die Bereitstellung neuer virtueller Maschinen möglicherweise fehl oder es sind unter Umständen keine Komponentenwiederherstellungen zulässig. Für ausgeführte virtuelle Maschinen steht möglicherweise in jeder betroffenen virtuellen Maschine eine Frage aus. Informationen zum Wiederherzustellen der virtuellen Maschine und des vSAN-Clusters finden Sie im AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.limits.limit1hf.label = "vSAN-Kapazitätsnutzungsalarm ,Was passiert, wenn der Host mit dem höchsten Verbrauch ausfällt‘"
+vsan.health.test.limits.limit1hf.summary = "Dieser Alarm simuliert den Ausfall des Hosts durch die Belegung des Großteils der Ressourcen. Die Ressourcen auf diesem Host wären nicht mehr verfügbar. vSAN versucht, alle Objekte erneut zu schützen, die nun mit verringerter Redundanz ausgeführt werden. Dieser Alarm wird ausgelöst, wenn der erneute Schutz aller Objekte nicht möglich ist, wenn die Auslastung 100 % überschreitet."
+
+#
+# Performance service Group 8
+#
+vsan.health.test.perfsvc.perfsvcstatus.label = "vSAN-Leistungsdienstalarm ,Leistungsdienststatus‘"
+vsan.health.test.perfsvc.perfsvcstatus.summary = "Überprüft den Status des vSAN-Leistungsdienstes. Warnungen dieses Alarms können durch Aktivieren des vSAN-Leistungsdiensts behoben werden."
+
+vsan.health.test.perfsvc.statsdb.label = "vSAN-Leistungsdienstalarm ,DB-Statistikobjekt‘"
+vsan.health.test.perfsvc.statsdb.summary = "Überprüft die Integrität des DB-Statistikobjekts im vSAN-Leistungservice. Der Alarm wird ausgelöst, wenn das DB-Statistikobjekt nicht vorhanden ist, das DB-Statistikobjekt nicht zu 100 Prozent fehlerfrei ist, das Objekt nicht verfügbar ist oder das vSAN-DB-Statistikobjekt nur noch wenig freien logischen Festplattenspeicher besitzt."
+
+vsan.health.test.perfsvc.masterexist.label = "vSAN-Leistungsdienstalarm ,Primärstatistik-Auswahl‘"
+vsan.health.test.perfsvc.masterexist.summary = "Überprüft den Primärstatistikknoten des vSAN-Leistungsdienstes. Dieser Alarm wird ausgelöst, wenn kein primärer Statistikknoten vorhanden ist. Überprüfen Sie die Integrität des vSAN-Datenspeichers und des DB-Statistikobjekts, insbesondere den Netzwerkzustand. Falls all diese Prüfungen ordnungsgemäß verlaufen, wenden Sie sich an den VMware Support und senden Sie eine Support-Anfrage."
+
+vsan.health.test.perfsvc.collection.label = "vSAN-Leistungsdienstalarm ,Leistungsdatenerfassung‘"
+vsan.health.test.perfsvc.collection.summary = "Überprüft die Statistikerfassung des vSAN-Leistungsdiensts. Statistiken werden in regelmäßigen Abständen erfasst, z. B. alle 5 Minuten. Wenn die Statistikerfassung oder das Schreiben in den Speicher in drei aufeinanderfolgenden Intervallen fehlgeschlagen ist, wird dieser Alarm ausgelöst. Überprüfen Sie den Zustand des vSAN-Datenspeichers, insbesondere den Zustand aller physischen Festplatten, des Netzwerks und des vSAN-DB-Statistikobjekts. Wenn all diese Elemente fehlerfrei sind, wenden Sie sich an den VMware Support und senden Sie eine Support-Anfrage."
+
+vsan.health.test.perfsvc.hostsmissing.label = "vSAN-Leistungsdienstalarm ,Alle Hosts tragen Statistiken bei‘"
+vsan.health.test.perfsvc.hostsmissing.summary = "Stellt sicher, dass alle Hosts Leistungsstatistiken beitragen. Wenn dieser Alarm ausgelöst wird, bedeutet dies, dass einige Hosts keine Leistungsstatistiken beitragen. Die Ursachen für diesen Alarm sind nicht bekannt. Falls er permanent ausgelöst wird, wenden Sie sich an den VMware Support und senden Sie eine Support-Anfrage. Stellen Sie Supportpakete für den gesamten Cluster bereit, einschließlich für vCenter Server und alle Hosts."
+
+vsan.health.test.perfsvc.renameddirs.label = "vSAN-Leistungsdienstalarm ,DB-Statistikobjektkonflikte‘"
+vsan.health.test.perfsvc.renameddirs.summary = "Prüft Konflikte bei DB-Statistikobjekten. Wenn die anderen DB-Statistikobjekte brauchbar sind, können diese über den Datenspeicherbrowser als Dateien gesichert werden. Sie können auch umbenannt und im Datenspeicher aufbewahrt werden. Das Zusammenführen mehrerer DB-Statistikobjekte wird nicht unterstützt."
+
+vsan.health.test.perfsvc.verbosemode.label = "vSAN-Leistungsdienstalarm ,Ausführlicher Modus‘"
+vsan.health.test.perfsvc.verbosemode.summary = "Überprüft, ob der ausführliche Modus für den vSAN-Leistungsdienst aktiviert ist. Dieser Alarm wird ausgelöst, wenn der ausführliche Modus länger als 5 Tage aktiviert ist."
+
+vsan.health.test.perfsvc.diagmode.label = "vSAN-Leistungsdienstalarm ,Netzwerkdiagnosemodus‘"
+vsan.health.test.perfsvc.diagmode.summary = „Überprüft, ob der Netzwerkdiagnosemodus für den vSAN-Leistungsdienst aktiviert ist. Dieser Alarm wird ausgelöst, wenn der Netzwerkdiagnosemodus länger als 24 Stunden aktiviert ist.“
+
+#
+# Hyperconverged cluster configuration compliance 2
+#
+vsan.health.test.hcicluster.hosthciconfig.label = "vSAN-Konfigurationsalarm für hyperkonvergierte Cluster ,Überprüfung der Hostübereinstimmung mit der Konfiguration hyperkonvergierter Cluster‘"
+vsan.health.test.hcicluster.hosthciconfig.summary = "Überprüft, ob die Konfiguration jedes Hosts mit der Konfiguration der hyperkonvergierten Cluster konform ist. Alle Hosts müssen über dieselben Adapter mit dem vSphere Distributed Switch verbunden sein. Die Adapter müssen sich in den richtigen verteilten Portgruppen befinden und der NTP-Server sowie der Sperrmodus müssen entsprechend den Spezifikationen konfiguriert sein."
+
+vsan.health.test.hcicluster.dvshciconfig.label = "vSAN-Konfigurationsalarm für hyperkonvergierte Cluster ,Überprüfung der VDS-Übereinstimmung mit der Konfiguration hyperkonvergierter Cluster‘"
+vsan.health.test.hcicluster.dvshciconfig.summary = "Überprüft, ob der vSphere Distributed Switch aktiv ist und die Konfiguration der verteilten Portgruppen mit der Konfiguration der hyperkonvergierten Cluster konform ist."
+
+#
+# Stretched cluster Group 15
+#
+vsan.health.test.stretchedcluster.siteconnectivity.label = "vSAN Stretched Cluster-Alarm für den Zustand der ,Site-Latenz‘"
+vsan.health.test.stretchedcluster.siteconnectivity.summary = "Dieser Alarm wird ausgelöst, wenn die schlechteste Latenz zwischen zwei beliebigen Hosts in Daten-Sites und dem Zeugen einen bestimmten Grenzwert überschreitet. Warnungsschwellenwert: 5 ms zwischen/innerhalb von Daten-Sites, 200 ms zwischen Daten-Sites und Zeugen im NON-ROBO Cluster, 500 ms zwischen Daten-Sites und Zeugen im ROBO-Cluster. Überprüfen Sie das Netzwerk zwischen dem fehlgeschlagenen Hostpaar, um sicherzustellen, dass die Netzwerkeinrichtung den Mindestanforderungen entspricht. HINWEIS: Diese Prüfung überspringt das Hostpaar, für das der vSAN-Basiskonnektivitätstest (Small Ping) fehlschlägt."
+
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.label = "vSAN Stretched Cluster-Alarm ,Zeugenhost nicht gefunden‘"
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.summary = "Der Stretched Cluster enthält keinen gültigen Zeugenhost. Wenn dieser Alarm ausgelöst wird, weist der vSAN Stretched Cluster Konfigurationsfehler auf, die dessen Funktion beeinträchtigen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.label = "vSAN Stretched Cluster-Alarm ,Unicast-Agent ungültig‘"
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.summary = "Dieser Alarm wird ausgelöst, wenn der Cluster Hosts mit einem ungültigen Unicast-Agent enthält. Ein ungültiger Unicast-Agent auf dem Host kann zu einem Kommunikationsfehler mit den Zeugenhosts führen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.label = "vSAN Stretched Cluster-Alarm ,Inkonsistente Konfiguration von Unicast-Agenten‘"
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.summary = "Der Stretched Cluster enthält mehrere Unicast-Agenten. Das bedeutet, dass für Nicht-Zeugenhosts mehrere Unicast-Agenten festgelegt wurden. Wenn dieser Alarm ausgelöst wird, weist der vSAN Stretched Cluster Konfigurationsfehler auf, die dessen Funktion beeinträchtigen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.label = "vSAN Stretched Cluster-Alarm ,Unerwartete Anzahl an Fehlerdomänen‘"
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.summary = "Der Stretched Cluster enthält keine zwei gültigen Fehlerdomänen. Jede Daten-Site muss sich in einer anderen Fehlerdomäne befinden. Die Gesamtanzahl Fehlerdomänen für Daten-Sites muss zwei sein. Wenn dieser Alarm ausgelöst wird, weist der vSAN Stretched Cluster Konfigurationsfehler auf, die dessen Funktion beeinträchtigen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.label = "vSAN Stretched Cluster-Alarm ,Ungültige bevorzugte Fehlerdomäne auf Zeugenhost‘"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.summary = "Die folgenden (Zeugen-)Hosts weisen ungültige bevorzugte Fehlerdomänen auf. Die bevorzugte Fehlerdomäne wird vom Zeugenhost verwendet und muss die Fehlerdomäne der beiden Daten-Sites im vSAN Stretched Cluster sein. Sie darf nicht leer sein. Wenn dieser Alarm ausgelöst wird, weist der vSAN Stretched Cluster Konfigurationsfehler auf, die dessen Funktion beeinträchtigen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.hostunicastagentunset.label = "vSAN Stretched Cluster-Alarm ,Unicast-Agent nicht konfiguriert‘"
+vsan.health.test.stretchedcluster.hostunicastagentunset.summary = "Hosts müssen den Unicast-Agent so einrichten, dass er mit dem Zeugenknoten kommunizieren kann. Wenn dieser Alarm ausgelöst wird, weist der vSAN Stretched Cluster Konfigurationsfehler auf, die dessen Funktion beeinträchtigen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.label = "vSAN Stretched Cluster-Alarm ,Bevorzugte Fehlerdomäne nicht festgelegt‘"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.summary = "Die bevorzugte Fehlerdomäne ist im Cluster für den Zeugenhost nicht festgelegt. Die bevorzugte Fehlerdomäne wird vom Zeugenhost verwendet und muss die Fehlerdomäne der beiden Daten-Sites im vSAN Stretched Cluster sein. Sie darf nicht leer sein. Wenn dieser Alarm ausgelöst wird, weist der vSAN Stretched Cluster Konfigurationsfehler auf, die dessen Funktion beeinträchtigen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.label = "vSAN Stretched Cluster-Alarm ,Keine Festplatte auf Zeugenhost beansprucht‘"
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.summary = "Der Stretched Cluster-Zeugenhost weist keine gültige Festplattenbeanspruchung auf. Wenn auf dem Zeugenhost keine Festplatten beansprucht werden, ist die zugehörige Fehlerdomäne nicht verfügbar und vSAN kann keine Objekte bereitstellen, für die die Anzahl der zu tolerierenden Fehler auf eins festgelegt ist (FTT = 1). Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemzustandsüberwachung."
+
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.label = "vSAN Stretched Cluster-Alarm ,Fehlerdomäne des Zeugenhosts falsch konfiguriert‘"
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.summary = "Der folgende Zeugenknoten befindet sich in einer der Datenfehlerdomänen. Wenn dieser Alarm ausgelöst wird, weist der vSAN Stretched Cluster Konfigurationsfehler auf, die dessen Funktion beeinträchtigen. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.witnessinsidevccluster.label = "vSAN Stretched Cluster-Alarm ,Zeugenhost innerhalb des vCenter-Clusters‘"
+vsan.health.test.stretchedcluster.witnessinsidevccluster.summary = "Der Zeugenhost sollte nicht Teil des vCenter-Clusters sein, der den Stretched Cluster gestaltet. Wenn sich der Zeugenhost in einem für vSAN aktivierten Cluster befindet, führt dies zu Problemen mit vSphere DRS, HA und EVC. Weitere Einzelheiten finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.label = "vSAN Stretched Cluster-Alarm ,Nicht unterstützte Hostversion‘"
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.summary = "Der Cluster enthält Hosts, deren ESXi-Version keine Stretched Cluster unterstützt."
+
+vsan.health.test.stretchedcluster.witnessupgrade.label = "vSAN Stretched Cluster-Alarm ,Vorsicht bei Upgrade von Zeugen-Appliance auf vSphere 7.0 oder höher‘"
+vsan.health.test.stretchedcluster.witnessupgrade.summary = "Die aktuelle Zeugen-Appliance-Version ist älter als vSphere 7.0. Ein direktes Upgrade der Zeugen-Appliance auf vSphere 7.0 oder höher führt zu einem Problem. Befolgen Sie die Anweisungen im Knowledgebase-Artikel unter „AskVMware“ zum Neukonfigurieren der Zeugen-Appliance und Neustarten, bevor Sie mit dem Upgrade-Workflow beginnen. Sie können auch eine neue Zeugen-Appliance der Version vSphere 7.0 oder höher bereitstellen und den Cluster neu konfigurieren."
+
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.label = "vSAN Stretched Cluster-Alarm ,Unerwartete Anzahl an Datenknoten im gemeinsam genutzten Zeugencluster‘"
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.summary = "Überprüft, ob die Anzahl Datenknoten in einem gemeinsam genutzten Zeugencluster 2 überschreitet. Die Anzahl Datenhosts eines Stretched Clusters mit einem gemeinsam genutzten Zeugen darf 2 nicht überschreiten."
+
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.label = "vSAN Stretched Cluster-Alarm ,Komponentengrenzwert pro Cluster für den gemeinsam genutzten Zeugenhost herunterskaliert‘"
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.summary = "Prüft, ob der Komponentengrenzwert pro Cluster im gemeinsam genutzten Zeugenknoten aufgrund mangelnden Arbeitsspeichers herunterskaliert wurde."
+
+vsan.health.test.stretchedcluster.witnessupgissue.label = "vSAN Stretched Cluster-Alarm „Hardware-Kompatibilitätsproblem für Zeugen-Appliance“"
+vsan.health.test.stretchedcluster.witnessupgissue.summary = "Beim Upgrade der Zeugen-Appliance treten Probleme auf. Es wird empfohlen, die Probleme vor dem Starten des Upgrade-Workflows zu beheben. Prüfen Sie die vSAN Skyline-Integrität, um weitere Informationen zu erhalten."
+
+#
+# File Service Group 3
+#
+vsan.health.test.fileservice.host.label = "vSAN-Dateidienstalarm ,Infrastrukturzustand‘"
+vsan.health.test.fileservice.host.summary = "Überprüft den Systemzustand der Dateidienstinfrastruktur für jeden ESXi-Host. Probleme können in der Regel automatisch behoben werden, sobald sie erkannt wurden. Klicken Sie auf „Dateidienst standardisieren“ oder „Ungleichgewicht in vSAN-Systemüberwachung standardisieren“, um die automatische Standardisierung zu erzwingen. Der Alarm wird übersprungen, wenn sich der Host im Wartungsmodus befindet. Weitere Einzelheiten finden Sie in der vSAN-Systemüberwachung."
+
+vsan.health.test.fileservice.fileserver.label = "vSAN-Dateidienstalarm ,Dateiserver‘"
+vsan.health.test.fileservice.fileserver.summary = "Überprüft, ob der Dateiserver in einem fehlerfreien Zustand ist. Wenn Probleme erkannt werden, erfolgt in den meisten Fällen ein automatischer Failover-Vorgang des Dateiservers auf eine andere Agent-VM. Weitere Einzelheiten finden Sie in der vSAN-Systemüberwachung."
+
+vsan.health.test.fileservice.sharehealth.label = "vSAN-Dateidienstalarm ,Freigabeintegrität‘"
+vsan.health.test.fileservice.sharehealth.summary = "Überprüfen Sie, ob sich die Dateidienstfreigabe in einem fehlerfreien Zustand befindet. Weitere Einzelheiten finden Sie in der vSAN-Systemüberwachung."
+
+#
+# Data Group 2
+#
+vsan.health.test.data.objecthealth.label = "vSAN-Datenalarm ,vSAN-Objekt‘"
+vsan.health.test.data.objecthealth.summary = "Dieser Alarm wird ausgelöst, wenn sich einige Objekte im Cluster nicht in einem fehlerfreien Zustand befinden. Weitere Einzelheiten finden Sie in der Systemüberwachung."
+
+vsan.health.test.data.objectformat.label = "vSAN-Datenalarm ,vSAN-Objektformat‘"
+vsan.health.test.data.objectformat.summary = "Dieser Alarm wird ausgelöst, wenn das Objektformat für einige Objekte geändert werden muss. Die Änderung des Objektformats kann ein neues physisches Layout von Objekten umfassen, was zu Datenverschiebungen im Cluster führen kann. Objekte mit dem alten Format können möglicherweise einige der neuen Funktionen nicht verwenden. Weitere Einzelheiten finden Sie in der Systemüberwachung."
+
+#
+# Data-at-rest encryption Group (Encryption) 3
+#
+vsan.health.test.encryption.kmsconnection.label = "Alarm für die Verschlüsselung ruhender vSAN-Daten ,vCenter und alle Hosts sind mit Schlüsselmanagementservern verbunden‘"
+vsan.health.test.encryption.kmsconnection.summary = "Wenn dieser Alarm ausgelöst wird, bedeutet dies, dass vCenter Server oder Hosts Verbindungsprobleme mit Schlüsselmanagementservern aufweisen. Wenn vCenter Server Probleme mit der KMS-Verbindung erfährt, überprüfen Sie die KMS-Einstellung und den Status auf der vCenter Server-Konfigurationsseite. Wenn Hosts im Cluster Verbindungsprobleme aufweisen, überprüfen Sie die Integritätsergebnisse auf bestimmte Ursachen. Wenn die KMS-Konfiguration des Hosts nicht mit dem Rest des Clusters konform ist, führen Sie die Wartung der Clusterkonfiguration aus, um die KMS-Konfiguration auf dem Host zu aktualisieren."
+
+vsan.health.test.encryption.hostcpuaesni.label = "Alarm für die Verschlüsselung ruhender vSAN-Daten ,CPU AES-NI ist auf Hosts aktiviert‘"
+vsan.health.test.encryption.hostcpuaesni.summary = "Wenn dieser Alarm ausgelöst wird, bedeutet dies, dass Hosts vorhanden sind, für die CPU AES-NI nicht unterstützt wird oder deaktiviert ist. Es wird die Softwareverschlüsselung verwendet, die wesentlich langsamer ist als AES-NI. Weitere Informationen finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+vsan.health.test.encryption.dualencryption.label = "Alarm für die Verschlüsselung ruhender vSAN-Daten ,Duale Verschlüsselung angewendet auf VMs auf vSAN‘"
+vsan.health.test.encryption.dualencryption.summary = "Dieser Alarm wird ausgelöst, wenn vSAN festgestellt hat, dass sowohl die Verschlüsselung der VM als auch des vSAN-Datenspeichers aktiviert sind. Ignorieren Sie den Alarm, falls dies beabsichtigt ist. Deaktivieren Sie andernfalls einen der Verschlüsselungstypen. Informationen zu bewährten Verschlüsselungsmethoden finden Sie in der AskVMware-KB in der vSAN-Systemüberwachung."
+
+#
+# Data-in-transient encryption 1
+#
+vsan.health.test.ditencryption.ditconfig.label = "vSAN data-in-transit-Verschlüsselungsalarm ,Konfigurationsprüfung‘"
+vsan.health.test.ditencryption.ditconfig.summary = "Überprüft, ob die Verschlüsselung in Übertragung begriffener Daten ordnungsgemäß für den Cluster konfiguriert ist. Dieser Alarm wird ausgelöst, wenn die Verschlüsselung in Übertragung begriffener Daten auf dem Cluster aktiviert ist. Die Verschlüsselung in Übertragung begriffener Daten muss bei allen Hosts aktiviert sein und sich im erwarteten Zustand befinden. Andernfalls wird der Netzwerkdatenverkehr möglicherweise nicht ordnungsgemäß verschlüsselt."
+
+#
+# Remain unchanged
+#
+vsan.health.test.hciskip.label = "vSAN-Integritätsalarme werden unterdrückt"
+vsan.health.test.hciskip.summary = "vSAN-Integritätsalarme werden unterdrückt, bis der Cluster vollständig konfiguriert wird oder dieser Schnellstart-Workflow übersprungen wird."
+
+vsan.health.test.vsanhardwarecert.label = "Probleme bei der vSAN-Hardwarekompatibilität"
+vsan.health.test.vsanhardwarecert.summary = "Dieser Alarm wird ausgelöst, wenn im Cluster Probleme mit der Hardwarekompatibilität festgestellt werden. Detailliertere Problemstellungen finden Sie in der Benutzeroberfläche der vSAN-Systemüberwachung."
+
+vsan.health.test.cloudhealth.vsanenablesupportinsight.label = "vSAN Support Insight"
+vsan.health.test.cloudhealth.vsanenablesupportinsight.summary = "Standardalarm zur Überwachung des Status von vSAN Support Insight"
+vsan.health.test.cloudhealth.advisor.label = "vSAN-Integritätsalarm ‚Advisor‘"
+vsan.health.test.cloudhealth.advisor.summary = "Standardalarm zur Überwachung von Änderungen für den Integritätstest ‚Advisor‘"
+
+vsan.health.test.diagnostics.pnic.label = "Hohe pNic-Fehlerrate erkannt. Details finden Sie in der vSAN-Leistungsansicht des Hosts"
+vsan.health.test.diagnostics.pnic.summary = "Standardalarm zum Überwachen von ,pNic-Fehlerrate‘"
+
+vsan.health.test.diagnostics.rdt.label = "Hoher RDT-Netzfehler erkannt. Details finden Sie in der vSAN-Leistungsansicht des Hosts"
+vsan.health.test.diagnostics.rdt.summary = "Standardalarm zur Überwachung von „RDT-Netzfehler“"
+
+#
+# Overall summary alarm is reactivate from VSANCORE-6413
+#
+vsan.health.test.overallsummary.label = "vSAN-Integritätsdienstalarm für ‚Allgemeine Integrität – Übersicht‘"
+vsan.health.test.overallsummary.summary = "Standardalarm zur Überwachung von Änderungen für ‚Allgemeine Integrität - Übersicht‘"

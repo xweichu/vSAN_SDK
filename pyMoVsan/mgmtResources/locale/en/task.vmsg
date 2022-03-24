@@ -1,0 +1,105 @@
+# Task for disk management
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.label               = "Create disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.summary             = "Create disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.label                   = "Rebuild disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.summary                 = "Rebuild disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.label                 = "Unmount disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.summary               = "Unmount disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.label                  = "Remove disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.summary                = "Remove disk group on vSAN"
+com.vmware.vsan.diskmgmt.tasks.removediskex.label                         = "Remove disk on vSAN"
+com.vmware.vsan.diskmgmt.tasks.removediskex.summary                       = "Remove disk on vSAN"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.label                 = "Remove capacity disk on vSAN"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.summary               = "Remove capacity disk on vSAN"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.label                   = "Remove vSAN direct disk"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.summary                 = "Remove vSAN direct disk"
+com.vmware.vsan.diskmgmt.tasks.adddisks.label                             = "Add disks in existing disk group"
+com.vmware.vsan.diskmgmt.tasks.adddisks.summary                           = "Add disks in existing disk group"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.label                  = "Add disk(s) to storage pool"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.summary                = "Add disk(s) to storage pool"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.label              = "Add disk(s) on host to storage pool"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.summary            = "Add disk(s) on host to storage pool"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.label                            = "Trim the specified disks"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.summary                          = "Trim the specified disks"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.label               = "Remove storage pool disk(s) on vSAN"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.summary             = "Remove storage pool disk(s) on vSAN"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.label            = "Remove storage pool disk(s) from host on vSAN"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.summary          = "Remove storage pool disk(s) from host on vSAN"
+
+# Tasks for stretched cluster
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.label               = "Add witness host"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.summary             = "Add witness host to a stretched cluster"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.label           = "Replace witness host"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.summary         = "Replace witness host for a stretched cluster"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.label            = "Remove witness host"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.summary          = "Remove witness host from a stretched cluster"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.label     = "Convert to a stretched cluster"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.summary   = "Convert the given configuration to a streched cluster"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.label      = "Set preferred fault domain"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.summary    = "Set preferred fault domain for a stretched cluster"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.label   = "Replace witness host for a batch of stretched clusters"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.summary = "Replace witness host for a batch of stretched clusters"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.label    = "configure witness host for a batch of clusters"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.summary  = "configure witness host for a batch of clusters"
+
+# Task for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.label                     = "Convert disk format for vSAN"
+com.vmware.vsan.diskconvertion.tasks.conversion.summary                   = "Convert disk format for vSAN"
+# Task descripiton to be updated for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvm   = "Waiting for redeploying FSVM on {host}"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsenabling = "Waiting for File service enabling/disabling"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvsmupgrading  = "Waiting for FSVM upgrading"
+
+# Task for cluster management
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.label                      = "Claim HCL disk"
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.summary                    = "Claim HCL disk for new host added to cluster"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.label                = "Reconfigure vSAN cluster"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.summary              = "Reconfigure vSAN cluster"
+com.vmware.vsan.clustermgmt.tasks.rekey.label                             = "Regenerate new keys for encrypted vSAN cluster"
+com.vmware.vsan.clustermgmt.tasks.rekey.summary                           = "Regenerate new keys for encrypted vSAN cluster"
+com.vmware.vsan.clustermgmt.tasks.precheck.label                          = "vSAN operation precheck"
+com.vmware.vsan.clustermgmt.tasks.precheck.summary                        = "vSAN operation precheck"
+
+# Task for new async VsanSystem
+com.vmware.vsan.vsansystem.tasks.update.label                             = "Update vSAN configuration"
+com.vmware.vsan.vsansystem.tasks.update.summary                           = "Updates the vSAN configuration for this host"
+
+com.vmware.vsan.diskconvertion.tasks.precheck.label                       = "Perform Convert disk format precheck"
+com.vmware.vsan.diskconvertion.tasks.precheck.summary                     = "Perform Convert disk format precheck for issues that could be encountered"
+
+com.vmware.vsan.diskmgmt.tasks.objectscan.label                           = "Scan vSAN Objects"
+com.vmware.vsan.diskmgmt.tasks.objectscan.summary                         = "Scan vSAN Objects for issues"
+
+# Task for VsanPrecheckerSystem
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.label            = "Perform compliance resource check task"
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.summary          = "Perform compliance resource check task"
+
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.label           = "Perform host decommission resource check task"
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.summary         = "Perform host decommission resource check task"
+
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.label        = "Perform disk data evacuation resource check task"
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.summary      = "Perform disk data evacuation resource check task"
+
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.label         = "Perform disk format conversion resource check task"
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.summary       = "Perform disk format conversion resource check task"
+
+com.vmware.vsan.prechecker.tasks.resourcecheck.label                      = "Perform vSAN resource check task"
+com.vmware.vsan.prechecker.tasks.resourcecheck.summary                    = "Perform vSAN resource check task"
+
+com.vmware.vsan.prechecker.tasks.queryCompliance.label                    = "Get WhatIf Compliance Details"
+com.vmware.vsan.prechecker.tasks.queryCompliance.summary                  = "Get WhatIf Compliance Details"
+
+# Task for VsanVcObjectSystem
+com.vmware.vsan.objectsystem.tasks.deleteobjects.label                    = "Perform delete vSAN objects task"
+com.vmware.vsan.objectsystem.tasks.deleteobjects.summary                  = "Perform delete vSAN objects task"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.label                  = "Perform vSAN objects policy regulation check task"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.summary                = "Perform vSAN objects policy regulation check task"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.label                  = "Re-layout vSAN objects task"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.summary                = "Re-layout vSAN objects task"
+
+com.vmware.vsan.vum.tasks.remediate.label                                 = "Update recommended vSAN baseline group"
+com.vmware.vsan.vum.tasks.remediate.summary                               = "Update recommended vSAN baseline group"
+
+# Task for VsanSystemEx
+host.VsanSystemEx.unmountDiskMappingEx.label                              = "Unmount vSAN disk group"
+host.VsanSystemEx.unmountDiskMappingEx.summary                            = "Unmount vSAN disk group"

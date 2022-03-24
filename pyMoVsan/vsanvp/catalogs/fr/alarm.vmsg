@@ -1,0 +1,4 @@
+#
+# Vsan VP Localizable Messages for alarms
+#
+vsan.alarm.compliance.changed = La conformité a été modifiée

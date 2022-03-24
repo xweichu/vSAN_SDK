@@ -1,0 +1,105 @@
+# Task for disk management
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.label               = "vSAN でのディスク グループの作成"
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.summary             = "vSAN でのディスク グループの作成"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.label                   = "vSAN でのディスク グループの再構築"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.summary                 = "vSAN でのディスク グループの再構築"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.label                 = "vSAN でのディスク グループのアンマウント"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.summary               = "vSAN でのディスク グループのアンマウント"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.label                  = "vSAN でのディスク グループの削除"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.summary                = "vSAN でのディスク グループの削除"
+com.vmware.vsan.diskmgmt.tasks.removediskex.label                         = "vSAN でのディスクの削除"
+com.vmware.vsan.diskmgmt.tasks.removediskex.summary                       = "vSAN でのディスクの削除"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.label                 = "vSAN でのキャパシティ ディスクの削除"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.summary               = "vSAN でのキャパシティ ディスクの削除"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.label                   = "vSAN Direct ディスクの削除"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.summary                 = "vSAN Direct ディスクの削除"
+com.vmware.vsan.diskmgmt.tasks.adddisks.label                             = "既存のディスク グループにディスクを追加"
+com.vmware.vsan.diskmgmt.tasks.adddisks.summary                           = "既存のディスク グループにディスクを追加"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.label                  = "ストレージ プールにディスクを追加"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.summary                = "ストレージ プールにディスクを追加"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.label              = "ホスト上のディスクをストレージ プールに追加"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.summary            = "ホスト上のディスクをストレージ プールに追加"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.label                            = "指定されたディスクのトリム"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.summary                          = "指定されたディスクのトリム"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.label               = "vSAN 上のストレージ プール ディスクを削除"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.summary             = "vSAN 上のストレージ プール ディスクを削除"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.label            = "vSAN 上のホストからストレージ プール ディスクを削除"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.summary          = "vSAN 上のホストからストレージ プール ディスクを削除"
+
+# Tasks for stretched cluster
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.label               = "監視ホストの追加"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.summary             = "ストレッチ クラスタに監視ホストを追加"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.label           = "監視ホストの置換"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.summary         = "ストレッチ クラスタの監視ホストを置換"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.label            = "監視ホストの削除"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.summary          = "ストレッチ クラスタから監視ホストを削除"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.label     = "ストレッチ クラスタへの変換"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.summary   = "指定した構成をストレッチ クラスタに変換"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.label      = "適切なフォルト ドメインの設定"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.summary    = "ストレッチ クラスタ用に適切なフォルト ドメインを設定"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.label   = "ストレッチ クラスタの監視ホストを一括置き換え"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.summary = "ストレッチ クラスタの監視ホストを一括置き換え"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.label    = "クラスタの監視ホストを一括構成"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.summary  = "クラスタの監視ホストを一括構成"
+
+# Task for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.label                     = "vSAN 用にディスク フォーマットを変換"
+com.vmware.vsan.diskconvertion.tasks.conversion.summary                   = "vSAN 用にディスク フォーマットを変換"
+# Task descripiton to be updated for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvm   = "{host} の FSVM の再展開を待機しています"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsenabling = "ファイル サービスの有効化/無効化を待機しています"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvsmupgrading  = "FSVM のアップグレードを待機しています"
+
+# Task for cluster management
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.label                      = "HCL ディスクの要求"
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.summary                    = "クラスタに追加された新しいホストの HCL ディスクの要求"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.label                = "vSAN クラスタの再構成"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.summary              = "vSAN クラスタの再構成"
+com.vmware.vsan.clustermgmt.tasks.rekey.label                             = "暗号化された vSAN クラスタ用の新しいキーの再生成"
+com.vmware.vsan.clustermgmt.tasks.rekey.summary                           = "暗号化された vSAN クラスタ用の新しいキーの再生成"
+com.vmware.vsan.clustermgmt.tasks.precheck.label                          = "vSAN 運用事前チェック"
+com.vmware.vsan.clustermgmt.tasks.precheck.summary                        = "vSAN 運用事前チェック"
+
+# Task for new async VsanSystem
+com.vmware.vsan.vsansystem.tasks.update.label                             = "vSAN 構成の更新"
+com.vmware.vsan.vsansystem.tasks.update.summary                           = "このホストの vSAN 構成を更新します"
+
+com.vmware.vsan.diskconvertion.tasks.precheck.label                       = "ディスク フォーマット変換事前チェックの実行"
+com.vmware.vsan.diskconvertion.tasks.precheck.summary                     = "ディスク フォーマット変換事前チェックを実行して発生する可能性のある問題を確認します"
+
+com.vmware.vsan.diskmgmt.tasks.objectscan.label                           = "vSAN オブジェクトのスキャン"
+com.vmware.vsan.diskmgmt.tasks.objectscan.summary                         = "問題を発見するために vSAN オブジェクトをスキャンします"
+
+# Task for VsanPrecheckerSystem
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.label            = "コンプライアンス リソース チェック タスクの実行"
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.summary          = "コンプライアンス リソース チェック タスクの実行"
+
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.label           = "ホストの廃止リソース チェック タスクの実行"
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.summary         = "ホストの廃止リソース チェック タスクの実行"
+
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.label        = "ディスク データの退避リソース チェック タスクの実行"
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.summary      = "ディスク データの退避リソース チェック タスクの実行"
+
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.label         = "ディスク フォーマット変換のリソース チェック タスクの実行"
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.summary       = "ディスク フォーマット変換のリソース チェック タスクの実行"
+
+com.vmware.vsan.prechecker.tasks.resourcecheck.label                      = "vSAN リソース チェック タスクの実行"
+com.vmware.vsan.prechecker.tasks.resourcecheck.summary                    = "vSAN リソース チェック タスクの実行"
+
+com.vmware.vsan.prechecker.tasks.queryCompliance.label                    = "WhatIf コンプライアンスの詳細の取得"
+com.vmware.vsan.prechecker.tasks.queryCompliance.summary                  = "WhatIf コンプライアンスの詳細の取得"
+
+# Task for VsanVcObjectSystem
+com.vmware.vsan.objectsystem.tasks.deleteobjects.label                    = "vSAN オブジェクト削除タスクの実行"
+com.vmware.vsan.objectsystem.tasks.deleteobjects.summary                  = "vSAN オブジェクト削除タスクの実行"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.label                  = "vSAN オブジェクト ポリシーの規則チェック タスクの実行"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.summary                = "vSAN オブジェクト ポリシーの規則チェック タスクの実行"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.label                  = "vSAN オブジェクトのレイアウト変更タスク"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.summary                = "vSAN オブジェクトのレイアウト変更タスク"
+
+com.vmware.vsan.vum.tasks.remediate.label                                 = "推奨される vSAN ベースライン グループの更新"
+com.vmware.vsan.vum.tasks.remediate.summary                               = "推奨される vSAN ベースライン グループの更新"
+
+# Task for VsanSystemEx
+host.VsanSystemEx.unmountDiskMappingEx.label                              = "vSAN ディスク グループのアンマウント"
+host.VsanSystemEx.unmountDiskMappingEx.summary                            = "vSAN ディスク グループのアンマウント"

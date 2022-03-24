@@ -1,0 +1,1496 @@
+# This message file defines all of labels, descriptions in vSAN performance test result showing in UI
+
+#
+# ClusterDomClient
+#
+com.vmware.vsan.perf.entity.cluster-domclient.description = 仮想マシン使用量の視点におけるクラスタ関連のメトリック。
+
+#
+# ClusterDomClientGraphs
+#
+cluster-domclient.iops.name = IOPS
+cluster-domclient.iops.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって使用される IOPS。
+cluster-domclient.iops.metrics.iopsRead.name = 読み取り IOPS
+cluster-domclient.iops.metrics.iopsRead.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって使用される読み取り IOPS。
+cluster-domclient.iops.metrics.iopsWrite.name = 書き込み IOPS
+cluster-domclient.iops.metrics.iopsWrite.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって使用される書き込み IOPS。
+
+cluster-domclient.throughput.name = スループット
+cluster-domclient.throughput.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって使用されるスループット。
+cluster-domclient.throughput.metrics.throughputRead.name = 読み取りスループット
+cluster-domclient.throughput.metrics.throughputRead.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって使用される読み取りスループット。
+cluster-domclient.throughput.metrics.throughputWrite.name = 書き込みスループット
+cluster-domclient.throughput.metrics.throughputWrite.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって使用される書き込みスループット。
+
+cluster-domclient.latency.name = 遅延
+cluster-domclient.latency.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって生成される I/O の平均遅延。
+cluster-domclient.latency.metrics.latencyAvgRead.name = 読み取り遅延
+cluster-domclient.latency.metrics.latencyAvgRead.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって生成される I/O の平均読み取り遅延。
+cluster-domclient.latency.metrics.latencyAvgWrite.name = 書き込み遅延
+cluster-domclient.latency.metrics.latencyAvgWrite.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって生成される I/O の平均書き込み遅延。
+
+cluster-domclient.congestion.name = 輻輳
+cluster-domclient.congestion.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって生成される I/O の輻輳。
+cluster-domclient.congestion.metrics.congestion.name = 輻輳
+cluster-domclient.congestion.metrics.congestion.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントによって生成される I/O の輻輳。
+
+cluster-domclient.oio.name = 未処理の I/O
+cluster-domclient.oio.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントの未処理の I/O。
+cluster-domclient.oio.metrics.oio.name = 未処理の I/O
+cluster-domclient.oio.metrics.oio.description = 仮想マシン、統計オブジェクトなど、クラスタ内のすべての vSAN クライアントの未処理の I/O。
+
+#
+# ClusterDomCompMgr
+#
+com.vmware.vsan.perf.entity.cluster-domcompmgr.description = vSAN バックエンドの視点におけるクラスタ関連のメトリック。
+
+#
+# ClusterDomCompMgrGraphs
+#
+
+cluster-domcompmgr.iops.name = IOPS
+cluster-domcompmgr.iops.description = vSAN クラスタ バックエンドの IOPS。
+cluster-domcompmgr.iops.metrics.iopsRead.name = 読み取り IOPS
+cluster-domcompmgr.iops.metrics.iopsRead.description = vSAN バックエンドの予測における vSAN クラスタの読み取り IOPS。
+cluster-domcompmgr.iops.metrics.iopsResyncRead.name = 再同期読み取り IOPS
+cluster-domcompmgr.iops.metrics.iopsResyncRead.description = vSAN バックエンドの予測におけるポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む、再同期トラフィックの vSAN クラスタの読み取り IOPS。
+cluster-domcompmgr.iops.metrics.iopsWrite.name = 書き込み IOPS
+cluster-domcompmgr.iops.metrics.iopsWrite.description = vSAN バックエンドの予測における vSAN クラスタの書き込み IOPS。
+cluster-domcompmgr.iops.metrics.iopsRecWrite.name = リカバリ書き込み IOPS
+cluster-domcompmgr.iops.metrics.iopsRecWrite.description = vSAN バックエンドの予測における vSAN クラスタ リカバリの書き込み IOPS。
+
+cluster-domcompmgr.throughput.name = スループット
+cluster-domcompmgr.throughput.description = vSAN クラスタ バックエンドのスループット。
+cluster-domcompmgr.throughput.metrics.throughputRead.name = 読み取りスループット
+cluster-domcompmgr.throughput.metrics.throughputRead.description = vSAN バックエンドの予測における vSAN クラスタの読み取りスループット。
+cluster-domcompmgr.throughput.metrics.tputResyncRead.name = 再同期読み取りスループット
+cluster-domcompmgr.throughput.metrics.tputResyncRead.description = vSAN バックエンドの予測におけるポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む、再同期トラフィックの vSAN クラスタの読み取りスループット。
+cluster-domcompmgr.throughput.metrics.throughputWrite.name = 書き込みスループット
+cluster-domcompmgr.throughput.metrics.throughputWrite.description = vSAN バックエンドの予測における vSAN クラスタの書き込みスループット。
+cluster-domcompmgr.throughput.metrics.throughputRecWrite.name = リカバリ書き込みスループット
+cluster-domcompmgr.throughput.metrics.throughputRecWrite.description = vSAN バックエンドの予測における vSAN クラスタ リカバリの書き込みスループット。
+
+cluster-domcompmgr.latency.name = 遅延
+cluster-domcompmgr.latency.description = vSAN クラスタ バックエンドの遅延。
+cluster-domcompmgr.latency.metrics.latencyAvgRead.name = 読み取り遅延
+cluster-domcompmgr.latency.metrics.latencyAvgRead.description = vSAN バックエンドの予測における vSAN クラスタ平均読み取り遅延。
+cluster-domcompmgr.latency.metrics.latAvgResyncRead.name = 再同期読み取り遅延
+cluster-domcompmgr.latency.metrics.latAvgResyncRead.description = vSAN バックエンドの予測におけるポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む、再同期トラフィックの vSAN クラスタの読み取り平均遅延。
+cluster-domcompmgr.latency.metrics.latencyAvgWrite.name = 書き込み遅延
+cluster-domcompmgr.latency.metrics.latencyAvgWrite.description = vSAN バックエンドの予測における vSAN クラスタ平均書き込み遅延。
+cluster-domcompmgr.latency.metrics.latencyAvgRecWrite.name = リカバリ書き込み遅延
+cluster-domcompmgr.latency.metrics.latencyAvgRecWrite.description = vSAN バックエンドの予測における vSAN クラスタ リカバリの書き込み平均遅延。
+
+cluster-domcompmgr.congestion.name = 輻輳
+cluster-domcompmgr.congestion.description = vSAN クラスタ バックエンドの輻輳。
+cluster-domcompmgr.congestion.metrics.congestion.name = 輻輳
+cluster-domcompmgr.congestion.metrics.congestion.description = vSAN バックエンドの予測における vSAN クラスタの輻輳。
+
+cluster-domcompmgr.oio.name = 未処理の I/O
+cluster-domcompmgr.oio.description = vSAN クラスタ バックエンドの未処理の I/O。
+cluster-domcompmgr.oio.metrics.oio.name = 未処理の I/O
+cluster-domcompmgr.oio.metrics.oio.description = vSAN バックエンドの予測における vSAN クラスタの未処理の I/O。
+
+#
+# HostDomClient
+#
+com.vmware.vsan.perf.entity.host-domclient.description = 仮想マシン使用量の予測におけるホスト関連のメトリック。
+
+#
+# HostDomClientGraphs
+#
+host-domclient.iops.name = IOPS
+host-domclient.iops.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用される IOPS。
+host-domclient.iops.metrics.iopsRead.name = 読み取り IOPS
+host-domclient.iops.metrics.iopsRead.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用される読み取り IOPS。
+host-domclient.iops.metrics.iopsWrite.name =  書き込み IOPS
+host-domclient.iops.metrics.iopsWrite.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用される書き込み IOPS。
+host-domclient.iops.metrics.iopsUnmap.name = アンマップ IOPS
+host-domclient.iops.metrics.iopsUnmap.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用されるトリム/アンマップ コマンドの vSAN ホスト IOPS。
+
+host-domclient.throughput.name = スループット
+host-domclient.throughput.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用されるスループット。
+host-domclient.throughput.metrics.throughputRead.name = 読み取りスループット
+host-domclient.throughput.metrics.throughputRead.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用される読み取りスループット。
+host-domclient.throughput.metrics.throughputWrite.name = 書き込みスループット
+host-domclient.throughput.metrics.throughputWrite.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用される書き込みスループット。
+
+host-domclient.throughputUnmap.name = トリム/アンマップ スループット
+host-domclient.throughputUnmap.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用されるトリム/アンマップ スループット。
+host-domclient.throughputUnmap.metrics.throughputUnmap.name = アンマップ スループット
+host-domclient.throughputUnmap.metrics.throughputUnmap.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって使用されるトリム/アンマップ コマンドの vSAN ホスト スループット。
+
+host-domclient.latency.name = 遅延
+host-domclient.latency.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって生成される I/O の平均遅延。
+host-domclient.latency.metrics.latencyAvgRead.name = 読み取り遅延
+host-domclient.latency.metrics.latencyAvgRead.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって生成される I/O の平均読み取り遅延。
+host-domclient.latency.metrics.latencyAvgWrite.name = 書き込み遅延
+host-domclient.latency.metrics.latencyAvgWrite.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって生成される I/O の平均書き込み遅延。
+host-domclient.latency.metrics.latencyAvgUnmap.name = アンマップ遅延
+host-domclient.latency.metrics.latencyAvgUnmap.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって生成されるトリム/アンマップ コマンドの vSAN ホスト平均遅延。
+
+host-domclient.clientCacheHits.name = ローカル クライアント キャッシュ ヒット IOPS
+host-domclient.clientCacheHits.description = 平均ローカル クライアント キャッシュ読み取り IOPS。
+host-domclient.clientCacheHits.metrics.clientCacheHits.name = ローカル クライアント キャッシュ ヒット IOPS
+host-domclient.clientCacheHits.metrics.clientCacheHits.description = 平均ローカル クライアント キャッシュ読み取り IOPS。
+
+host-domclient.clientCacheHitRate.name = ローカル クライアント キャッシュ ヒット率
+host-domclient.clientCacheHitRate.description = ローカル クライアント キャッシュによって満たすことができる読み取り I/O の割合。
+host-domclient.clientCacheHitRate.metrics.clientCacheHitRate.name = ローカル クライアント キャッシュ ヒット率
+host-domclient.clientCacheHitRate.metrics.clientCacheHitRate.description = ローカル クライアント キャッシュによって満たすことができる読み取り I/O の割合。
+
+host-domclient.congestion.name = 輻輳
+host-domclient.congestion.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって生成される I/O の輻輳。
+host-domclient.congestion.metrics.congestion.name = 輻輳
+host-domclient.congestion.metrics.congestion.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントによって生成される I/O の輻輳。
+
+host-domclient.oio.name = 未処理の I/O
+host-domclient.oio.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントの未処理の I/O。
+host-domclient.oio.metrics.oio.name = 未処理の I/O
+host-domclient.oio.metrics.oio.description = 仮想マシン、統計オブジェクトなど、ホスト内のすべての vSAN クライアントの未処理の I/O。
+
+#
+# HostDomCompMgr
+#
+com.vmware.vsan.perf.entity.host-domcompmgr.description = vSAN バックエンドの予測におけるホスト関連のメトリック。
+#
+# HostDomCompMgrGraphs
+#
+host-domcompmgr.iops.name = IOPS
+host-domcompmgr.iops.description = vSAN バックエンド ホストの IOPS。
+host-domcompmgr.iops.metrics.iopsRead.name = 読み取り IOPS
+host-domcompmgr.iops.metrics.iopsRead.description = vSAN バックエンドの予測における vSAN ホストの読み取り IOPS。
+host-domcompmgr.iops.metrics.iopsWrite.name = 書き込み IOPS
+host-domcompmgr.iops.metrics.iopsWrite.description = vSAN バックエンドの予測における vSAN ホストの書き込み IOPS。
+host-domcompmgr.iops.metrics.iopsResyncRead.name = 再同期読み取り IOPS
+host-domcompmgr.iops.metrics.iopsResyncRead.description = vSAN バックエンドの予測におけるポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む、再同期トラフィックの vSAN ホストの読み取り IOPS。
+host-domcompmgr.iops.metrics.iopsRecWrite.name = リカバリ書き込み IOPS
+host-domcompmgr.iops.metrics.iopsRecWrite.description = vSAN バックエンドの予測における vSAN ホスト リカバリの書き込み IOPS。
+host-domcompmgr.iops.metrics.iopsUnmap.name = アンマップ IOPS
+host-domcompmgr.iops.metrics.iopsUnmap.description = このホストのディスク グループに対するトリム/アンマップ コマンドの IOPS。
+host-domcompmgr.iops.metrics.iopsRecUnmap.name = リカバリ アンマップ IOPS
+host-domcompmgr.iops.metrics.iopsRecUnmap.description = このホストのディスク グループに対するリカバリ トリム/アンマップ コマンドの IOPS。
+
+host-domcompmgr.throughput.name = スループット
+host-domcompmgr.throughput.description = vSAN バックエンド ホストのスループット。
+host-domcompmgr.throughput.metrics.throughputRead.name = 読み取りスループット
+host-domcompmgr.throughput.metrics.throughputRead.description = vSAN バックエンドの予測における vSAN ホストの読み取りスループット。
+host-domcompmgr.throughput.metrics.throughputWrite.name = 書き込みスループット
+host-domcompmgr.throughput.metrics.throughputWrite.description = vSAN バックエンドの予測における vSAN ホストの書き込みスループット。
+host-domcompmgr.throughput.metrics.tputResyncRead.name = 再同期読み取りスループット
+host-domcompmgr.throughput.metrics.tputResyncRead.description = vSAN バックエンドの予測におけるポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む、再同期トラフィックの vSAN ホストの読み取りスループット。
+host-domcompmgr.throughput.metrics.throughputRecWrite.name = リカバリ書き込みスループット
+host-domcompmgr.throughput.metrics.throughputRecWrite.description = vSAN バックエンドの予測における vSAN ホスト リカバリの書き込みスループット。
+
+host-domcompmgr.throughputUnmap.name = トリム/アンマップ スループット
+host-domcompmgr.throughputUnmap.description = このホストのディスク グループに対するトリム/アンマップ スループット。
+host-domcompmgr.throughputUnmap.metrics.throughputUnmap.name = アンマップ スループット
+host-domcompmgr.throughputUnmap.metrics.throughputUnmap.description = このホストのディスク グループに対するトリム/アンマップ スループットの合計。
+host-domcompmgr.throughputUnmap.metrics.throughputRecUnmap.name = リカバリ アンマップ スループット
+host-domcompmgr.throughputUnmap.metrics.throughputRecUnmap.description = このホストのディスク グループに対するリカバリ トリム/アンマップ スループットの合計。
+
+host-domcompmgr.latency.name = 遅延
+host-domcompmgr.latency.description = vSAN バックエンド ホストの遅延。
+host-domcompmgr.latency.metrics.latencyAvgRead.name = 読み取り遅延
+host-domcompmgr.latency.metrics.latencyAvgRead.description = vSAN バックエンドの予測における vSAN ホストの読み取り I/O 平均遅延。
+host-domcompmgr.latency.metrics.latencyAvgWrite.name = 書き込み遅延
+host-domcompmgr.latency.metrics.latencyAvgWrite.description = vSAN バックエンドの予測における vSAN ホストの書き込み I/O 平均遅延。
+host-domcompmgr.latency.metrics.latAvgResyncRead.name = 再同期読み取り遅延
+host-domcompmgr.latency.metrics.latAvgResyncRead.description = vSAN バックエンドの予測におけるポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む、再同期トラフィックの vSAN ホストの読み取り平均遅延。
+host-domcompmgr.latency.metrics.latencyAvgRecWrite.name = リカバリ書き込み遅延
+host-domcompmgr.latency.metrics.latencyAvgRecWrite.description = vSAN バックエンドの予測における vSAN ホスト リカバリの書き込み I/O 平均遅延。
+host-domcompmgr.latency.metrics.latencyAvgUnmap.name = アンマップ遅延
+host-domcompmgr.latency.metrics.latencyAvgUnmap.description = このホストのディスク グループに対するトリム/アンマップ遅延の平均。
+host-domcompmgr.latency.metrics.latencyAvgRecUnmap.name = リカバリ アンマップ遅延
+host-domcompmgr.latency.metrics.latencyAvgRecUnmap.description = このホストのディスク グループに対するトリム/アンマップ遅延の平均。
+
+
+
+
+host-domcompmgr.congestion.name = 輻輳
+host-domcompmgr.congestion.description = vSAN バックエンド ホストの輻輳。
+host-domcompmgr.congestion.metrics.congestion.name = 輻輳
+host-domcompmgr.congestion.metrics.congestion.description = vSAN バックエンドの予測における vSAN ホストの輻輳。
+
+
+host-domcompmgr.oio.name = 未処理の I/O
+host-domcompmgr.oio.description = vSAN バックエンド ホストの未処理の I/O。
+host-domcompmgr.oio.metrics.oio.name = 未処理の I/O
+host-domcompmgr.oio.metrics.oio.description = vSAN バックエンドの予測における vSAN ホストの未処理の I/O。
+
+#
+# CacheDisk
+#
+com.vmware.vsan.perf.entity.cache-disk.description = キャッシュ層ディスク関連のメトリック。
+
+#
+# CacheDiskGraphs
+#
+cache-disk.iopsDev.name = 物理/ファームウェア レイヤ IOPS
+cache-disk.iopsDev.description = vSAN キャッシュ層ディスクの物理/ファームウェア レイヤーの IOPS。
+cache-disk.iopsDev.metrics.iopsDevRead.name = 物理レイヤ読み取り IOPS
+cache-disk.iopsDev.metrics.iopsDevRead.description = vSAN ディスクの物理/ファームウェア レイヤの読み取り IOPS。
+cache-disk.iopsDev.metrics.iopsDevWrite.name = 物理レイヤ書き込み IOPS
+cache-disk.iopsDev.metrics.iopsDevWrite.description = vSAN ディスクの物理/ファームウェア レイヤの書き込み IOPS。
+
+
+cache-disk.throughputDev.name = 物理/ファームウェア レイヤ スループット
+cache-disk.throughputDev.description = vSAN キャッシュ層ディスクの物理/ファームウェア レイヤーのスループット。
+cache-disk.throughputDev.metrics.throughputDevRead.name = 物理レイヤ読み取りスループット
+cache-disk.throughputDev.metrics.throughputDevRead.description = vSAN ディスクの物理/ファームウェア レイヤの読み取りスループット。
+cache-disk.throughputDev.metrics.throughputDevWrite.name = 物理レイヤ書き込みスループット
+cache-disk.throughputDev.metrics.throughputDevWrite.description = vSAN ディスクの物理/ファームウェア レイヤの書き込みスループット。
+
+
+cache-disk.latencyDev.name = 物理/ファームウェア レイヤ遅延
+cache-disk.latencyDev.description = vSAN キャッシュ層ディスクの物理/ファームウェア レイヤの遅延。
+cache-disk.latencyDev.metrics.latencyDevRead.name = 物理レイヤ読み取り遅延
+cache-disk.latencyDev.metrics.latencyDevRead.description = vSAN ディスクの物理/ファームウェア レイヤの読み取り遅延。
+cache-disk.latencyDev.metrics.latencyDevWrite.name = 物理レイヤ書き込み遅延
+cache-disk.latencyDev.metrics.latencyDevWrite.description = vSAN ディスクの物理/ファームウェア レイヤの書き込み遅延。
+cache-disk.latencyDev.metrics.latencyDevGAvg.name = ゲスト平均遅延
+cache-disk.latencyDev.metrics.latencyDevGAvg.description = vSAN ディスク ゲスト I/O 遅延 (合計遅延)。
+cache-disk.latencyDev.metrics.latencyDevDAvg.name = デバイス平均遅延
+cache-disk.latencyDev.metrics.latencyDevDAvg.description = vSAN ディスク I/O デバイス遅延 (HBA からバックエンド ストレージまで)。
+
+#
+# CapacityDisk
+#
+com.vmware.vsan.perf.entity.capacity-disk.description = キャパシティ層ディスク関連のメトリック。
+
+#
+# CapacityDiskGraphs
+#
+capacity-disk.iopsDev.name = 物理/ファームウェア レイヤ IOPS
+capacity-disk.iopsDev.description = vSAN キャパシティ層ディスクの物理/ファームウェア レイヤーの IOPS。
+capacity-disk.iopsDev.metrics.iopsDevRead.name = 物理レイヤ読み取り IOPS
+capacity-disk.iopsDev.metrics.iopsDevRead.description = vSAN ディスクの物理/ファームウェア レイヤの読み取り IOPS。
+capacity-disk.iopsDev.metrics.iopsDevWrite.name = 物理レイヤ書き込み IOPS
+capacity-disk.iopsDev.metrics.iopsDevWrite.description = vSAN ディスクの物理/ファームウェア レイヤの書き込み IOPS。
+
+capacity-disk.throughputDev.name = 物理/ファームウェア レイヤ スループット
+capacity-disk.throughputDev.description = vSAN キャパシティ層ディスクの物理/ファームウェア レイヤーのスループット。
+capacity-disk.throughputDev.metrics.throughputDevRead.name = 物理レイヤ読み取りスループット
+capacity-disk.throughputDev.metrics.throughputDevRead.description = vSAN ディスクの物理/ファームウェア レイヤの読み取りスループット。
+capacity-disk.throughputDev.metrics.throughputDevWrite.name = 物理レイヤ書き込みスループット
+capacity-disk.throughputDev.metrics.throughputDevWrite.description = vSAN ディスクの物理/ファームウェア レイヤの書き込みスループット。
+
+
+
+capacity-disk.latencyDev.name = 物理/ファームウェア レイヤ遅延
+capacity-disk.latencyDev.description = vSAN キャパシティ層ディスクの物理/ファームウェア レイヤの遅延。
+capacity-disk.latencyDev.metrics.latencyDevRead.name = 物理レイヤ読み取り遅延
+capacity-disk.latencyDev.metrics.latencyDevRead.description = vSAN ディスクの物理/ファームウェア レイヤの読み取り遅延。
+capacity-disk.latencyDev.metrics.latencyDevWrite.name = 物理レイヤ書き込み遅延
+capacity-disk.latencyDev.metrics.latencyDevWrite.description = vSAN ディスクの物理/ファームウェア レイヤの書き込み遅延。
+capacity-disk.latencyDev.metrics.latencyDevGAvg.name = ゲスト平均遅延
+capacity-disk.latencyDev.metrics.latencyDevGAvg.description = vSAN ディスク ゲスト I/O 遅延 (合計遅延)。
+capacity-disk.latencyDev.metrics.latencyDevDAvg.name = デバイス平均遅延
+capacity-disk.latencyDev.metrics.latencyDevDAvg.description = vSAN ディスク I/O デバイス遅延 (HBA からバックエンド ストレージまで)。
+
+
+capacity-disk.iops.name = vSAN レイヤの IOPS
+capacity-disk.iops.description = キャパシティ層ディスク vSAN レイヤ IOPS。
+capacity-disk.iops.metrics.iopsRead.name = vSAN レイヤの読み取り IOPS
+capacity-disk.iops.metrics.iopsRead.description = ディスク vSAN レイヤの読み取り IOPS。
+capacity-disk.iops.metrics.iopsWrite.name = vSAN レイヤの書き込み IOPS
+capacity-disk.iops.metrics.iopsWrite.description = ディスク vSAN レイヤの書き込み IOPS。
+
+
+capacity-disk.latency.name = vSAN レイヤの遅延
+capacity-disk.latency.description = キャパシティ層ディスク vSAN レイヤ遅延。
+capacity-disk.latency.metrics.latencyRead.name = vSAN レイヤの読み取り遅延
+capacity-disk.latency.metrics.latencyRead.description = ディスク vSAN レイヤの読み取り遅延。
+capacity-disk.latency.metrics.latencyWrite.name = vSAN レイヤの書き込み遅延
+capacity-disk.latency.metrics.latencyWrite.description = ディスク vSAN レイヤの書き込み遅延。
+
+#
+# DiskGroup
+#
+com.vmware.vsan.perf.entity.disk-group.description = ディスク グループ関連のメトリック。
+
+#
+# DiskGroupGraphs
+#
+disk-group.iopsFrontend.name = フロントエンド (ゲスト) IOPS
+disk-group.iopsFrontend.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンド (ゲスト) の IOPS。
+disk-group.iopsFrontend.metrics.iopsRead.name = フロントエンド読み取り IOPS
+disk-group.iopsFrontend.metrics.iopsRead.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンドの読み取り IOPS (RC 読み取りミスを含む)。
+disk-group.iopsFrontend.metrics.iopsWrite.name = フロントエンド書き込み IOPS
+disk-group.iopsFrontend.metrics.iopsWrite.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンドの書き込み IOPS。
+disk-group.iopsFrontend.metrics.iopsRcRead.name = 読み取りキャッシュ読み取り IOPS
+disk-group.iopsFrontend.metrics.iopsRcRead.description = vSAN ディスク グループ (キャッシュ層ディスク) の 読み取りキャッシュ読み取り IOPS。
+disk-group.iopsFrontend.metrics.iopsWbWrite.name = 書き込みバッファ書き込み IOPS
+disk-group.iopsFrontend.metrics.iopsWbWrite.description = vSAN ディスク グループ (キャッシュ層ディスク) の書き込みバッファ書き込み IOPS。
+
+
+disk-group.throughputFrontend.name = フロントエンド (ゲスト) スループット
+disk-group.throughputFrontend.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンド (ゲスト) のスループット。
+disk-group.throughputFrontend.metrics.throughputRead.name = フロントエンド読み取りスループット
+disk-group.throughputFrontend.metrics.throughputRead.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンドの読み取りスループット。
+disk-group.throughputFrontend.metrics.throughputWrite.name = フロントエンド書き込みスループット
+disk-group.throughputFrontend.metrics.throughputWrite.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンドの書き込みスループット。
+
+
+disk-group.latencyFrontend.name = フロントエンド (ゲスト) 遅延
+disk-group.latencyFrontend.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンド (ゲスト) の遅延。
+disk-group.latencyFrontend.metrics.latencyAvgRead.name = フロントエンド読み取り遅延
+disk-group.latencyFrontend.metrics.latencyAvgRead.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンドの読み取り遅延。
+disk-group.latencyFrontend.metrics.latencyAvgWrite.name = フロントエンド書き込み遅延
+disk-group.latencyFrontend.metrics.latencyAvgWrite.description = vSAN ディスク グループ (キャッシュ層ディスク) フロントエンドの書き込み遅延。
+disk-group.latencyFrontend.metrics.latencyRcRead.name = 読み取りキャッシュ読み取り遅延
+disk-group.latencyFrontend.metrics.latencyRcRead.description = vSAN ディスク グループ (キャッシュ層ディスク) の読み取りキャッシュ読み取り遅延。
+disk-group.latencyFrontend.metrics.latencyWbWrite.name = 書き込みバッファ書き込み遅延
+disk-group.latencyFrontend.metrics.latencyWbWrite.description = vSAN ディスク グループ (キャッシュ層ディスク) の書き込みバッファ書き込み遅延。
+
+
+disk-group.iopsOverhead.name = オーバーヘッド IOPS
+disk-group.iopsOverhead.description = vSAN ディスク グループ (キャッシュ層ディスク) オーバーヘッドの IOPS。
+disk-group.iopsOverhead.metrics.iopsRcWrite.name = 読み取りキャッシュ書き込み IOPS
+disk-group.iopsOverhead.metrics.iopsRcWrite.description = vSAN ディスク グループ (キャッシュ層ディスク) の読み取りキャッシュ書き込み IOPS。
+disk-group.iopsOverhead.metrics.iopsWbRead.name = 書き込みバッファ読み取り IOPS
+disk-group.iopsOverhead.metrics.iopsWbRead.description = vSAN ディスク グループ (キャッシュ層ディスク) の書き込みバッファ読み取り IOPS。
+
+
+disk-group.latencyOverhead.name = オーバーヘッド I/O 遅延
+disk-group.latencyOverhead.description = vSAN ディスク グループ (キャッシュ層ディスク) オーバーヘッドの I/O 遅延。
+disk-group.latencyOverhead.metrics.latencyRcWrite.name = 読み取りキャッシュ書き込み遅延
+disk-group.latencyOverhead.metrics.latencyRcWrite.description = vSAN ディスク グループ (キャッシュ層ディスク) の読み取りキャッシュ書き込み遅延。
+disk-group.latencyOverhead.metrics.latencyWbRead.name = 書き込みバッファ読み取り遅延
+disk-group.latencyOverhead.metrics.latencyWbRead.description = vSAN ディスク グループ (キャッシュ層ディスク) の書き込みバッファ読み取り遅延。
+
+
+disk-group.rcHitRate.name = 読み取りキャッシュ ヒット率
+disk-group.rcHitRate.description = vSAN ディスク グループ (キャッシュ層ディスク) の読み取りキャッシュ ヒット率。
+disk-group.rcHitRate.metrics.rcHitRate.name = 読み取りキャッシュ ヒット率
+disk-group.rcHitRate.metrics.rcHitRate.description = vSAN ディスク グループ (キャッシュ層ディスク) の読み取りキャッシュ ヒット率。
+
+
+disk-group.evictions.name = 削除
+disk-group.evictions.description = vSAN ディスク グループ (キャッシュ層ディスク) 削除。
+disk-group.evictions.metrics.warEvictions.name = キャッシュ無効化
+disk-group.evictions.metrics.warEvictions.description = 上書きされて無効になったキャッシュ行。
+disk-group.evictions.metrics.quotaEvictions.name = 削除
+disk-group.evictions.metrics.quotaEvictions.description = 読み取りキャッシュ競合による削除。
+
+
+disk-group.wbFreePct.name = 書き込みバッファの未使用割合
+disk-group.wbFreePct.description = vSAN ディスク グループ (キャッシュ層ディスク) の書き込みバッファ空き容量の割合。
+disk-group.wbFreePct.metrics.wbFreePct.name = 書き込みバッファの未使用割合
+disk-group.wbFreePct.metrics.wbFreePct.description = vSAN ディスク グループ (キャッシュ層ディスク) の書き込みバッファ空き容量の割合。
+
+disk-group.capacity.name = 容量と使用量
+disk-group.capacity.description = vSAN ディスク グループの容量と使用量。
+disk-group.capacity.metrics.capacity.name = 容量
+disk-group.capacity.metrics.capacity.description = vSAN ディスク グループの容量。
+disk-group.capacity.metrics.capacityUsed.name = 使用済み容量
+disk-group.capacity.metrics.capacityUsed.description = vSAN ディスク グループの使用済みの容量。
+disk-group.capacity.metrics.capacityReserved.name = 予約済みの容量
+disk-group.capacity.metrics.capacityReserved.description = vSAN ディスク グループの予約済みの容量。
+disk-group.capacity.metrics.rcSize.name = 読み取りキャッシュのサイズ
+disk-group.capacity.metrics.rcSize.description = vSAN ディスク グループの読み取りキャッシュのサイズ。
+disk-group.capacity.metrics.wbSize.name = 書き込みバッファのサイズ
+disk-group.capacity.metrics.wbSize.description = vSAN ディスク グループの書き込みバッファのサイズ。
+
+
+disk-group.destage.name = キャッシュ ディスクのステージング解除速度
+disk-group.destage.description = キャッシュ ディスクからキャパシティ ディスクへのデータ ステージング解除のスループット。
+disk-group.destage.metrics.ssdBytesDrained.name = SSD からのバイトのステージング解除
+disk-group.destage.metrics.ssdBytesDrained.description = キャッシュ ディスクからキャパシティ ディスクへステージング解除された SSD バイトのスループット。
+disk-group.destage.metrics.zeroBytesDrained.name = ゼロバイトのステージング解除
+disk-group.destage.metrics.zeroBytesDrained.description = キャパシティ ディスクへステージング解除されたゼロバイトのスループット。
+
+disk-group.congestions.name = 輻輳
+disk-group.congestions.description = vSAN ディスク グループの輻輳。
+disk-group.congestions.metrics.memCongestion.name = メモリの輻輳
+disk-group.congestions.metrics.memCongestion.description = vSAN ディスク グループのメモリの輻輳。
+disk-group.congestions.metrics.slabCongestion.name = スラブ輻輳
+disk-group.congestions.metrics.slabCongestion.description = vSAN ディスク グループのスラブ輻輳。
+disk-group.congestions.metrics.ssdCongestion.name = SSD 輻輳
+disk-group.congestions.metrics.ssdCongestion.description = vSAN ディスク グループの SSD 輻輳。
+disk-group.congestions.metrics.iopsCongestion.name = IOPS 輻輳
+disk-group.congestions.metrics.iopsCongestion.description = vSAN ディスク グループの IOPS 輻輳。
+disk-group.congestions.metrics.logCongestion.name = ログ輻輳
+disk-group.congestions.metrics.logCongestion.description = vSAN ディスク グループのログ輻輳。
+disk-group.congestions.metrics.compCongestion.name = コンポーネントの輻輳
+disk-group.congestions.metrics.compCongestion.description = vSAN ディスク グループのコンポーネントの輻輳。
+
+disk-group.oobCongestion.name = ログの輻輳下で使用できるバンド幅。
+disk-group.oobCongestion.description = ログの蓄積がしきい値を超えた際のステージング解除率による持続可能なバンド幅。ログの蓄積をバインドされたメモリの使用とマウント時間に限定します。4k ブロック サイズの I/O に最大のログの蓄積があります。ログの蓄積がしきい値を超えると、バンド幅は現在のステージング解除率でサポートされるものに制限されます。
+disk-group.oobCongestion.metrics.bytesPerSecondBandwidth.name = LogCongestionTput
+disk-group.oobCongestion.metrics.bytesPerSecondBandwidth.description = ログの蓄積がしきい値を超えたことにより、現在のステージング解除率で持続可能なバンド幅。
+
+disk-group.oio.name = 未処理の I/O
+disk-group.oio.description = ディスク グループの未処理の書き込み I/O。
+disk-group.oio.metrics.oioWrite.name = 未処理の書き込み操作
+disk-group.oio.metrics.oioWrite.description = ディスク グループの未処理の書き込み処理の数。
+disk-group.oio.metrics.oioRecWrite.name = 未処理のリカバリ書き込み操作
+disk-group.oio.metrics.oioRecWrite.description = ディスク グループの未処理のリカバリ書き込み処理の数。
+
+
+disk-group.oioSize.name = 未処理の I/O サイズ
+disk-group.oioSize.description = ディスク グループの未処理の書き込み I/O サイズ。
+disk-group.oioSize.metrics.oioWriteSize.name = 未処理の書き込み I/O サイズ
+disk-group.oioSize.metrics.oioWriteSize.description = ディスク グループの未処理の書き込み I/O のサイズ。
+disk-group.oioSize.metrics.oioRecWriteSize.name = 未処理のリカバリ書き込み I/O のサイズ
+disk-group.oioSize.metrics.oioRecWriteSize.description = ディスク グループの未処理のリカバリ書き込み I/O のサイズ。
+
+
+disk-group.schedulerIOPct.name = 遅延した I/O の割合
+disk-group.schedulerIOPct.description = vSAN 内部キューを通過する I/O の割合。
+disk-group.schedulerIOPct.metrics.iopsDelayPctSched.name = 遅延した I/O の割合
+disk-group.schedulerIOPct.metrics.iopsDelayPctSched.description = vSAN 内部キューを通過する I/O の割合。
+
+disk-group.schedulerLatency.name = 遅延した I/O の平均遅延
+disk-group.schedulerLatency.description = vSAN 内部キューを通過する I/O の平均遅延。
+disk-group.schedulerLatency.metrics.latencyDelaySched.name = 遅延した I/O の平均遅延
+disk-group.schedulerLatency.metrics.latencyDelaySched.description = vSAN 内部キューを通過するすべての I/O の平均遅延。
+disk-group.schedulerLatency.metrics.latencySchedQueueNS.name = ネームスペース キューの遅延
+disk-group.schedulerLatency.metrics.latencySchedQueueNS.description = vSAN 内部スケジューラのネームスペース I/O キューの遅延。
+disk-group.schedulerLatency.metrics.latencySchedQueueRec.name = リカバリ キューの遅延
+disk-group.schedulerLatency.metrics.latencySchedQueueRec.description = vSAN 内部スケジューラのリカバリ I/O キューの遅延。
+disk-group.schedulerLatency.metrics.latencySchedQueueVM.name = 仮想マシン キューの遅延
+disk-group.schedulerLatency.metrics.latencySchedQueueVM.description = vSAN 内部スケジューラの仮想マシン I/O キューの遅延。
+disk-group.schedulerLatency.metrics.latencySchedQueueMeta.name = メタ キューの遅延
+disk-group.schedulerLatency.metrics.latencySchedQueueMeta.description = vSAN 内部スケジューラのメタ I/O キューの遅延。
+
+
+disk-group.schedulerIOPS.name = 遅延した IOPS
+disk-group.schedulerIOPS.description = vSAN 内部キューを通過する遅延した I/O の IOPS。
+disk-group.schedulerIOPS.metrics.iopsSched.name = 遅延した IOPS の合計
+disk-group.schedulerIOPS.metrics.iopsSched.description = vSAN 内部キューを通過するすべての I/O の IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueNS.name = ネームスペース キューの IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueNS.description = vSAN 内部スケジューラのネームスペース I/O キューの IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueRec.name = リカバリ キューの IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueRec.description = vSAN 内部スケジューラのリカバリ I/O キューの IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueVM.name = 仮想マシン キューの IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueVM.description = vSAN 内部スケジューラの仮想マシン I/O キューの IOPS。
+disk-group.schedulerIOPS.metrics.iopsSchedQueueMeta.name = メタ キューの IOPS
+disk-group.schedulerIOPS.metrics.iopsSchedQueueMeta.description = vSAN 内部スケジューラのメタ I/O キューの IOPS。
+
+
+disk-group.schedulerTput.name = 遅延した I/O のスループット
+disk-group.schedulerTput.description = vSAN 内部キューを通過する遅延した I/O のスループット。
+disk-group.schedulerTput.metrics.throughputSched.name = キュー スループットの合計
+disk-group.schedulerTput.metrics.throughputSched.description = vSAN 内部スケジューラ内の遅延したすべての I/O のスループット。
+disk-group.schedulerTput.metrics.throughputSchedQueueNS.name = ネームスペース キューのスループット
+disk-group.schedulerTput.metrics.throughputSchedQueueNS.description = vSAN 内部スケジューラのネームスペース I/O キューのスループット。
+disk-group.schedulerTput.metrics.throughputSchedQueueRec.name = リカバリ キューのスループット
+disk-group.schedulerTput.metrics.throughputSchedQueueRec.description = vSAN 内部スケジューラのリカバリ I/O キューのスループット。
+disk-group.schedulerTput.metrics.throughputSchedQueueVM.name = 仮想マシン キューのスループット
+disk-group.schedulerTput.metrics.throughputSchedQueueVM.description = vSAN 内部スケジューラの仮想マシン I/O キューのスループット。
+disk-group.schedulerTput.metrics.throughputSchedQueueMeta.name = メタ キューのスループット
+disk-group.schedulerTput.metrics.throughputSchedQueueMeta.description = vSAN 内部スケジューラのメタ I/O キューのスループット。
+
+
+disk-group.iopsResync.name = 再同期 IOPS
+disk-group.iopsResync.description = ポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む再同期トラフィックの vSAN ディスク グループ レベルの IOPS。
+disk-group.iopsResync.metrics.iopsResyncReadPolicy.name = ポリシー変更読み取り
+disk-group.iopsResync.metrics.iopsResyncReadPolicy.description = ポリシーの変更により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り IOPS。
+disk-group.iopsResync.metrics.iopsResyncReadDecom.name = 退避読み取り
+disk-group.iopsResync.metrics.iopsResyncReadDecom.description = メンテナンス モードおよびオブジェクトの退避により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り IOPS。
+disk-group.iopsResync.metrics.iopsResyncReadRebalance.name = リバランス読み取り
+disk-group.iopsResync.metrics.iopsResyncReadRebalance.description = オブジェクトのリバランスにより発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り IOPS。
+disk-group.iopsResync.metrics.iopsResyncReadFixComp.name = 修復読み取り
+disk-group.iopsResync.metrics.iopsResyncReadFixComp.description = オブジェクトの修復により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り IOPS。
+disk-group.iopsResync.metrics.iopsResyncWritePolicy.name = ポリシー変更書き込み
+disk-group.iopsResync.metrics.iopsResyncWritePolicy.description = ポリシーの変更により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み IOPS。
+disk-group.iopsResync.metrics.iopsResyncWriteDecom.name = 退避書き込み
+disk-group.iopsResync.metrics.iopsResyncWriteDecom.description = メンテナンス モードおよびオブジェクトの退避により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み IOPS。
+disk-group.iopsResync.metrics.iopsResyncWriteRebalance.name = リバランス書き込み
+disk-group.iopsResync.metrics.iopsResyncWriteRebalance.description = オブジェクトのリバランスにより発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み IOPS。
+disk-group.iopsResync.metrics.iopsResyncWriteFixComp.name = 修復書き込み
+disk-group.iopsResync.metrics.iopsResyncWriteFixComp.description = オブジェクトの修復により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み IOPS。
+
+disk-group.tputResync.name = 再同期スループット
+disk-group.tputResync.description = ポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む再同期トラフィックの vSAN ディスク グループ レベルのスループット。
+disk-group.tputResync.metrics.tputResyncReadPolicy.name = ポリシー変更読み取り
+disk-group.tputResync.metrics.tputResyncReadPolicy.description = ポリシーの変更により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取りスループット。
+disk-group.tputResync.metrics.tputResyncReadDecom.name = 退避読み取り
+disk-group.tputResync.metrics.tputResyncReadDecom.description = メンテナンス モードおよびオブジェクトの退避により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取りスループット。
+disk-group.tputResync.metrics.tputResyncReadRebalance.name = リバランス読み取り
+disk-group.tputResync.metrics.tputResyncReadRebalance.description = オブジェクトのリバランスにより発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取りスループット。
+disk-group.tputResync.metrics.tputResyncReadFixComp.name = 修復読み取り
+disk-group.tputResync.metrics.tputResyncReadFixComp.description = オブジェクトの修復により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取りスループット。
+disk-group.tputResync.metrics.tputResyncWritePolicy.name = ポリシー変更書き込み
+disk-group.tputResync.metrics.tputResyncWritePolicy.description = ポリシーの変更により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込みスループット。
+disk-group.tputResync.metrics.tputResyncWriteDecom.name = 退避書き込み
+disk-group.tputResync.metrics.tputResyncWriteDecom.description = メンテナンス モードおよびオブジェクトの退避により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込みスループット。
+disk-group.tputResync.metrics.tputResyncWriteRebalance.name = リバランス書き込み
+disk-group.tputResync.metrics.tputResyncWriteRebalance.description = オブジェクトのリバランスにより発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込みスループット。
+disk-group.tputResync.metrics.tputResyncWriteFixComp.name = 修復書き込み
+disk-group.tputResync.metrics.tputResyncWriteFixComp.description = オブジェクトの修復により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込みスループット。
+
+disk-group.latResync.name = 再同期遅延
+disk-group.latResync.description = ポリシーの変更、修復、メンテナンス モードまたは再同期中のオブジェクトからの退避およびリバランスを含む再同期トラフィックの vSAN ディスク グループ レベルの平均遅延。
+disk-group.latResync.metrics.latResyncReadPolicy.name = ポリシー変更読み取り
+disk-group.latResync.metrics.latResyncReadPolicy.description = ポリシーの変更により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り遅延。
+disk-group.latResync.metrics.latResyncReadDecom.name = 退避読み取り
+disk-group.latResync.metrics.latResyncReadDecom.description = メンテナンス モードおよびオブジェクトの退避により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り遅延。
+disk-group.latResync.metrics.latResyncReadRebalance.name = リバランス読み取り
+disk-group.latResync.metrics.latResyncReadRebalance.description = オブジェクトのリバランスにより発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り遅延。
+disk-group.latResync.metrics.latResyncReadFixComp.name = 修復読み取り
+disk-group.latResync.metrics.latResyncReadFixComp.description = オブジェクトの修復により発生した再同期トラフィックの vSAN ディスク グループ レベルの読み取り遅延。
+disk-group.latResync.metrics.latResyncWritePolicy.name = ポリシー変更書き込み
+disk-group.latResync.metrics.latResyncWritePolicy.description = ポリシーの変更により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み遅延。
+disk-group.latResync.metrics.latResyncWriteDecom.name = 退避書き込み
+disk-group.latResync.metrics.latResyncWriteDecom.description = メンテナンス モードおよびオブジェクトの退避により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み遅延。
+disk-group.latResync.metrics.latResyncWriteRebalance.name = リバランス書き込み
+disk-group.latResync.metrics.latResyncWriteRebalance.description = オブジェクトのリバランスにより発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み遅延。
+disk-group.latResync.metrics.latResyncWriteFixComp.name = 修復書き込み
+disk-group.latResync.metrics.latResyncWriteFixComp.description = オブジェクトの修復により発生した再同期トラフィックの vSAN ディスク グループ レベルの書き込み遅延。
+
+#
+# VirtualSCSI
+#
+com.vmware.vsan.perf.entity.vscsi.description = 仮想マシンの仮想 SCSI のメトリック。
+
+#
+# VirtualSCSIGraphs
+#
+vscsi.iops.name = 仮想 SCSI IOPS
+vscsi.iops.description = 仮想マシンの VSCSI IOPS。
+vscsi.iops.metrics.iopsRead.name = 読み取り IOPS
+vscsi.iops.metrics.iopsRead.description = 仮想マシン VSCSI 読み取り IOPS。
+vscsi.iops.metrics.iopsWrite.name = 書き込み IOPS
+vscsi.iops.metrics.iopsWrite.description = 仮想マシン VSCSI 書き込み IOPS。
+
+
+vscsi.throughput.name = 仮想 SCSI スループット
+vscsi.throughput.description = 仮想マシン VSCSI スループット。
+vscsi.throughput.metrics.throughputRead.name = 読み取りスループット
+vscsi.throughput.metrics.throughputRead.description = 仮想マシン VSCSI 読み取りスループット。
+vscsi.throughput.metrics.throughputWrite.name = 書き込みスループット
+vscsi.throughput.metrics.throughputWrite.description = 仮想マシン VSCSI 書き込みスループット。
+
+
+vscsi.latency.name = 仮想 SCSI 遅延
+vscsi.latency.description = 仮想マシン VSCSI 遅延。
+vscsi.latency.metrics.latencyRead.name = 読み取り遅延
+vscsi.latency.metrics.latencyRead.description = 仮想マシン VSCSI 読み取り遅延
+vscsi.latency.metrics.latencyWrite.name = 書き込み遅延
+vscsi.latency.metrics.latencyWrite.description = 仮想マシン VSCSI 書き込み遅延。
+
+
+#
+# VirtualMachine
+#
+com.vmware.vsan.perf.entity.vm.description = 仮想マシンのメトリック。
+
+
+#
+# VirtualMachineGraphs
+#
+vm.iops.name = IOPS
+vm.iops.description = 仮想マシンの IOPS。
+vm.iops.metrics.iopsRead.name = 読み取り IOPS
+vm.iops.metrics.iopsRead.description = 仮想マシンの読み取り IOPS。
+vm.iops.metrics.iopsWrite.name = 書き込み IOPS
+vm.iops.metrics.iopsWrite.description = 仮想マシンの書き込み IOPS。
+
+
+vm.throughput.name = スループット
+vm.throughput.description = 仮想マシンのスループット。
+vm.throughput.metrics.throughputRead.name = 読み取りスループット
+vm.throughput.metrics.throughputRead.description = 仮想マシンの読み取りスループット。
+vm.throughput.metrics.throughputWrite.name = 書き込みスループット
+vm.throughput.metrics.throughputWrite.description = 仮想マシンの書き込みスループット。
+
+
+vm.latency.name = 遅延
+vm.latency.description = 仮想マシンの遅延。
+vm.latency.metrics.latencyRead.name = 読み取り遅延
+vm.latency.metrics.latencyRead.description = 仮想マシンの読み取り遅延。
+vm.latency.metrics.latencyWrite.name = 書き込み遅延
+vm.latency.metrics.latencyWrite.description = 仮想マシンの書き込み遅延。
+
+
+#
+# VirtualDisk
+#
+com.vmware.vsan.perf.entity.virtual-disk.description = 仮想ディスクのメトリック。
+
+
+#
+# VirtualDiskGraphs
+#
+virtual-disk.normalized-iops.name = IOPS および IOPS 制限
+virtual-disk.normalized-iops.description = このグラフには仮想ディスクの正規化済みの IOPS が表示されます。IOPS 制限値がポリシーに指定されている場合、グラフには制限値も表示されます。
+virtual-disk.normalized-iops.metrics.iopsLimit.name = 正規化済みの IOPS 制限
+virtual-disk.normalized-iops.metrics.iopsLimit.description = 適用された IOPS 制限。
+virtual-disk.normalized-iops.metrics.NIOPS.name = 正規化済みの IOPS
+virtual-disk.normalized-iops.metrics.NIOPS.description = デフォルトでは、これは重み付けされたサイズ (32 KB) を使用して表現された IOPS を示します。これは、64 KB の読み取りまたは書き込み操作が 2 つの正規化された I/O を表わすことを意味します。重み付けされたサイズは構成可能パラメータです。
+
+
+virtual-disk.delayed-normalized-iops.name = 遅延した正規化済みの IOPS
+virtual-disk.delayed-normalized-iops.description = このグラフは、IOPS 制限値の適用によって遅延された I/O の正規化された IOPS を示します。
+virtual-disk.delayed-normalized-iops.metrics.NIOPSDelayed.name = 遅延した正規化済みの IOPS
+virtual-disk.delayed-normalized-iops.metrics.NIOPSDelayed.description = これは遅延した正規化済みの I/O の IOPS です。
+
+#
+# VMKNICNetStats
+#
+com.vmware.vsan.perf.entity.vsan-vnic-net.description = vSAN VMkernel ネットワーク アダプタのメトリック。
+
+#
+# VMKNICNetStatsGraphs
+#
+vsannic.network-bytes-metrics.name = VMkernel ネットワーク アダプタのスループット
+vsannic.network-bytes-metrics.description = VMkernel ネットワーク アダプタのネットワーク I/O スループット。
+vsannic.network-bytes-metrics.metrics.rxThroughput.name = スループット受信
+vsannic.network-bytes-metrics.metrics.rxThroughput.description = VMkernel ネットワーク アダプタのスループット受信。
+vsannic.network-bytes-metrics.metrics.txThroughput.name = スループット送信
+vsannic.network-bytes-metrics.metrics.txThroughput.description = VMkernel ネットワーク アダプタのスループット送信。
+vsannic.packets-metrics.name = 1 秒あたりの VMkernel ネットワーク アダプタのパケット数
+vsannic.packets-metrics.description = 1 秒あたりの VMkernel ネットワーク アダプタのパケット数。
+vsannic.packets-metrics.metrics.rxPackets.name = 1 秒あたりの受信パケット数
+vsannic.packets-metrics.metrics.rxPackets.description = 1 秒あたりの VMkernel ネットワーク アダプタの受信パケット数。
+vsannic.packets-metrics.metrics.txPackets.name = 1 秒あたりの送信パケット数
+vsannic.packets-metrics.metrics.txPackets.description = 1 秒あたりの VMkernel ネットワーク アダプタの送信パケット数。
+vsannic.packets-loss-rate.name = VMkernel ネットワーク アダプタのパケット破棄レート
+vsannic.packets-loss-rate.description = VMkernel ネットワーク アダプタのパケット破棄レート (%)。
+vsannic.packets-loss-rate.metrics.rxPacketsLossRate.name = 受信パケット破棄レート
+vsannic.packets-loss-rate.metrics.rxPacketsLossRate.description = VMkernel ネットワーク アダプタの受信パケット破棄レート (%)。
+vsannic.packets-loss-rate.metrics.txPacketsLossRate.name = 送信パケット破棄レート
+vsannic.packets-loss-rate.metrics.txPacketsLossRate.description = VMkernel ネットワーク アダプタの送信パケット破棄レート (%)。
+vsannic.port-drop-rate.name = VMkernel ネットワークの vSwitch ポートのドロップ レート
+vsannic.port-drop-rate.description = VMkernel ネットワークの vSwitch ポートのドロップ レート (%)。
+vsannic.port-drop-rate.metrics.portRxDrops.name = vSwitch ポートの受信パケット ドロップ レート
+vsannic.port-drop-rate.metrics.portRxDrops.description = VMkernel ネットワークの vSwitch ポートの受信パケット ドロップ レート (%)。
+vsannic.port-drop-rate.metrics.portTxDrops.name = vSwitch ポートの送信パケット ドロップ レート
+vsannic.port-drop-rate.metrics.portTxDrops.description = VMkernel ネットワークの vSwitch ポートの送信パケット ドロップ レート (%)。
+
+#
+# VsanHostNetStats
+#
+com.vmware.vsan.perf.entity.vsan-host-net.description = vSAN ホスト ネットワークのメトリック。
+
+#
+# VsanHostNetStatsGraphs
+#
+vsanhost.network-bytes-metrics.name = vSAN ホストのネットワーク I/O スループット
+vsanhost.network-bytes-metrics.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタのホスト ネットワーク I/O スループット。
+vsanhost.network-bytes-metrics.metrics.rxThroughput.name = ネットワーク受信スループット
+vsanhost.network-bytes-metrics.metrics.rxThroughput.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタのホスト スループット受信。
+vsanhost.network-bytes-metrics.metrics.txThroughput.name = ネットワーク送信スループット
+vsanhost.network-bytes-metrics.metrics.txThroughput.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタのホスト スループット送信。
+vsanhost.packets-metrics.name = 1 秒あたりの vSAN ホストのパケット数
+vsanhost.packets-metrics.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタの 1 秒あたりの vSAN ホストのパケット数。
+vsanhost.packets-metrics.metrics.rxPackets.name = 1 秒あたりのネットワーク受信パケット数
+vsanhost.packets-metrics.metrics.rxPackets.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタの 1 秒あたりのホスト ネットワーク受信パケット数。
+vsanhost.packets-metrics.metrics.txPackets.name = 1 秒あたりのネットワーク送信パケット数
+vsanhost.packets-metrics.metrics.txPackets.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタの 1 秒あたりのホスト ネットワーク送信パケット数。
+vsanhost.packets-loss-rate.name = vSAN ホストのパケット破棄レート
+vsanhost.packets-loss-rate.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタのホスト パケット破棄レート (%)。
+vsanhost.packets-loss-rate.metrics.rxPacketsLossRate.name = ネットワーク受信パケット破棄レート
+vsanhost.packets-loss-rate.metrics.rxPacketsLossRate.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタのホスト受信パケット破棄レート (%)。
+vsanhost.packets-loss-rate.metrics.txPacketsLossRate.name = ネットワーク送信パケット破棄レート
+vsanhost.packets-loss-rate.metrics.txPacketsLossRate.description = vSAN トラフィックが有効なすべての VMkernel ネットワーク アダプタのホスト送信パケット破棄レート (%)。
+vsanhost.port-drop-rate.name = vSAN ホスト ポートのドロップ レート
+vsanhost.port-drop-rate.description = すべての vSAN VMkernel ネットワーク vSwitch ポートの vSAN ホスト ポート ドロップ レート (%)。
+vsanhost.port-drop-rate.metrics.portRxDrops.name = vSAN ホスト ポートの受信パケット ドロップ レート
+vsanhost.port-drop-rate.metrics.portRxDrops.description = vSAN ホスト ポートの受信パケット ドロップ レート (%)。
+vsanhost.port-drop-rate.metrics.portTxDrops.name = vSAN ホスト ポートの送信パケット ドロップ レート
+vsanhost.port-drop-rate.metrics.portTxDrops.description = vSAN ホスト ポートの送信パケット ドロップ レート (%)。
+
+
+#
+# RdtNetStats
+#
+com.vmware.vsan.perf.entity.rdt-net.description = RDT ネットのメトリック。
+
+#
+## RdtNetStatsStatsGraphs
+#
+rdtnet.checksum.name = RDT ネット チェックサム
+rdtnet.checksum.description = RDT ネット チェックサム。
+rdtnet.checksum.metrics.checksumMismatchCount.name = RDT ネット チェックサムの不一致数
+rdtnet.checksum.metrics.checksumMismatchCount.description = RDT ネット チェックサムの不一致数。
+
+#
+# pNICNetStats
+#
+com.vmware.vsan.perf.entity.vsan-pnic-net.description = vSAN 物理 NIC のメトリック。
+
+#
+# pNICNetStatsGraphs
+#
+vsanpnic.network-bytes-metrics.name = 物理 NIC スループット
+vsanpnic.network-bytes-metrics.description = 物理 NIC ネットワーク I/O スループット。
+vsanpnic.network-bytes-metrics.metrics.rxThroughput.name = 物理 NIC スループット受信
+vsanpnic.network-bytes-metrics.metrics.rxThroughput.description = 物理 NIC スループット受信。
+vsanpnic.network-bytes-metrics.metrics.txThroughput.name = 物理 NIC スループット送信
+vsanpnic.network-bytes-metrics.metrics.txThroughput.description = 物理 NIC スループット送信。
+vsanpnic.packets-metrics.name = 1 秒あたりの物理 NIC パケット数
+vsanpnic.packets-metrics.description = 1 秒あたりの物理 NIC パケット数。
+vsanpnic.packets-metrics.metrics.rxPackets.name = 1 秒あたりの物理 NIC 受信パケット数
+vsanpnic.packets-metrics.metrics.rxPackets.description = 1 秒あたりの物理 NIC 受信パケット数。
+vsanpnic.packets-metrics.metrics.txPackets.name = 1 秒あたりの物理 NIC 送信パケット数
+vsanpnic.packets-metrics.metrics.txPackets.description = 1 秒あたりの物理 NIC 送信パケット数。
+vsanpnic.packets-loss-rate.name = 物理 NIC パケット エラー率
+vsanpnic.packets-loss-rate.description = 物理 NIC パケット エラー率 (%)。
+vsanpnic.packets-loss-rate.metrics.rxPacketsLossRate.name = 物理 NIC 受信パケット エラー率
+vsanpnic.packets-loss-rate.metrics.rxPacketsLossRate.description = 物理 NIC 受信パケット エラー率 (%)。
+vsanpnic.packets-loss-rate.metrics.txPacketsLossRate.name = 物理 NIC 送信パケット エラー率
+vsanpnic.packets-loss-rate.metrics.txPacketsLossRate.description = 物理 NIC 送信パケット エラー率 (%)。
+vsanpnic.port-drop-rate.name = 物理 NIC の vSwitch ポートのドロップ レート
+vsanpnic.port-drop-rate.description = 物理 NIC の vSwitch ポートのドロップ レート (%)。
+vsanpnic.port-drop-rate.metrics.portRxDrops.name = 物理 NIC の vSwitch ポートの受信パケット ドロップ レート
+vsanpnic.port-drop-rate.metrics.portRxDrops.description = 物理 NIC の受信 vSwitch ポートのドロップ レート (%)。
+vsanpnic.port-drop-rate.metrics.portTxDrops.name = 物理 NIC の vSwitch ポートの送信パケット ドロップ レート
+vsanpnic.port-drop-rate.metrics.portTxDrops.description = 物理 NIC の送信 vSwitch ポートのドロップ レート (%)。
+vsanpnic.pause-count.name = 物理 NIC のフロー制御
+vsanpnic.pause-count.description = 物理 NIC の 802.3x 一時停止率 (%)。
+vsanpnic.pause-count.metrics.pauseCount.name = 物理 NIC の 802.3x 一時停止率
+vsanpnic.pause-count.metrics.pauseCount.description = 物理 NIC の 802.3x 一時停止率 (%)。
+vsanpnic.rxCrcErr.name = 物理 NIC の RX CRC エラー
+vsanpnic.rxCrcErr.description = 物理 NIC の RX CRC エラー率。
+vsanpnic.rxCrcErr.metrics.rxCrcErr.name = 物理 NIC の RX CRC エラー
+vsanpnic.rxCrcErr.metrics.rxCrcErr.description = 物理 NIC の RX CRC エラー率。
+vsanpnic.txCarErr.name = 物理 NIC の TX キャリア エラー
+vsanpnic.txCarErr.description = 物理 NIC の TX キャリア エラー率。
+vsanpnic.txCarErr.metrics.txCarErr.name = 物理 NIC の TX キャリア エラー
+vsanpnic.txCarErr.metrics.txCarErr.description = 物理 NIC の TX キャリア エラー率。
+vsanpnic.rxErr.name = 物理 NIC の RX 一般エラー
+vsanpnic.rxErr.description = 物理 NIC の RX 一般エラー率。
+vsanpnic.rxErr.metrics.rxErr.name = 物理 NIC の RX 一般エラー
+vsanpnic.rxErr.metrics.rxErr.description = 物理 NIC の RX 一般エラー率。
+vsanpnic.txErr.name = 物理 NIC の TX 一般エラー
+vsanpnic.txErr.description = 物理 NIC の TX 一般エラー率。
+vsanpnic.txErr.metrics.txErr.name = 物理 NIC の TX 一般エラー
+vsanpnic.txErr.metrics.txErr.description = 物理 NIC の TX 一般エラー率。
+vsanpnic.rxMissErr.name = 物理 NIC の RX ミス エラー
+vsanpnic.rxMissErr.description = 物理 NIC の RX ミス エラー率。
+vsanpnic.rxMissErr.metrics.rxMissErr.name = 物理 NIC の RX ミス エラー
+vsanpnic.rxMissErr.metrics.rxMissErr.description = 物理 NIC の RX ミス エラー率。
+vsanpnic.rxOvErr.name = 物理 NIC の RX バッファ オーバーフロー エラー
+vsanpnic.rxOvErr.description = 物理 NIC の RX バッファ オーバーフロー エラー率。
+vsanpnic.rxOvErr.metrics.rxOvErr.name = 物理 NIC の RX バッファ オーバーフロー エラー
+vsanpnic.rxOvErr.metrics.rxOvErr.description = 物理 NIC の RX バッファ オーバーフロー エラー率。
+vsanpnic.rxFifoErr.name = 物理 NIC の RX FIFO エラー
+vsanpnic.rxFifoErr.description = 物理 NIC の RX FIFO エラー率。
+vsanpnic.rxFifoErr.metrics.rxFifoErr.name = 物理 NIC の RX FIFO エラー
+vsanpnic.rxFifoErr.metrics.rxFifoErr.description = 物理 NIC の RX FIFO エラー率。
+
+
+#
+# VsanIscsiHostStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-host.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットのメトリック。
+
+#
+## VsanIscsiHostStatsGraphs
+#
+vsaniscsihost.iops.name = IOPS
+vsaniscsihost.iops.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用される IOPS。
+vsaniscsihost.iops.metrics.iopsRead.name = 読み取り IOPS
+vsaniscsihost.iops.metrics.iopsRead.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用される読み取り IOPS。
+vsaniscsihost.iops.metrics.iopsWrite.name = 書き込み IOPS
+vsaniscsihost.iops.metrics.iopsWrite.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用される書き込み IOPS。
+vsaniscsihost.iops.metrics.iopsTotal.name = 合計 IOPS
+vsaniscsihost.iops.metrics.iopsTotal.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用される合計 IOPS。
+
+vsaniscsihost.bandwidth.name = バンド幅
+vsaniscsihost.bandwidth.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用されるバンド幅。
+vsaniscsihost.bandwidth.metrics.bandwidthRead.name = 読み取りバンド幅
+vsaniscsihost.bandwidth.metrics.bandwidthRead.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用される読み取りバンド幅。
+vsaniscsihost.bandwidth.metrics.bandwidthWrite.name = 書き込みバンド幅
+vsaniscsihost.bandwidth.metrics.bandwidthWrite.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用される書き込みバンド幅。
+vsaniscsihost.bandwidth.metrics.bandwidthTotal.name = 合計バンド幅
+vsaniscsihost.bandwidth.metrics.bandwidthTotal.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって使用される合計バンド幅。
+
+vsaniscsihost.latency.name = 遅延
+vsaniscsihost.latency.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって生成される I/O の平均遅延。
+vsaniscsihost.latency.metrics.latencyRead.name = 読み取り遅延
+vsaniscsihost.latency.metrics.latencyRead.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって生成される I/O の平均読み取り遅延。
+vsaniscsihost.latency.metrics.latencyWrite.name = 書き込み遅延
+vsaniscsihost.latency.metrics.latencyWrite.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって生成される I/O の平均書き込み遅延。
+vsaniscsihost.latency.metrics.latencyTotal.name = 合計遅延
+vsaniscsihost.latency.metrics.latencyTotal.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットによって生成される I/O の平均合計遅延。
+
+vsaniscsihost.queue-depth.name = 未処理の I/O
+vsaniscsihost.queue-depth.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットの未処理の I/O。
+vsaniscsihost.queue-depth.metrics.queueDepth.name = 未処理の I/O
+vsaniscsihost.queue-depth.metrics.queueDepth.description = この ESXi ホストにあるすべての vSAN iSCSI ターゲットの未処理の I/O。
+
+#
+# VsanIscsiTargetStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-target.description = vSAN iSCSI ターゲットにあるすべての LUN のメトリック。
+
+#
+## VsanIscsiTargetStatsGraphs
+#
+vsaniscsitarget.iops.name = IOPS
+vsaniscsitarget.iops.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用される IOPS。
+vsaniscsitarget.iops.metrics.iopsRead.name = 読み取り IOPS
+vsaniscsitarget.iops.metrics.iopsRead.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用される読み取り IOPS。
+vsaniscsitarget.iops.metrics.iopsWrite.name = 書き込み IOPS
+vsaniscsitarget.iops.metrics.iopsWrite.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用される書き込み IOPS。
+vsaniscsitarget.iops.metrics.iopsTotal.name = 合計 IOPS
+vsaniscsitarget.iops.metrics.iopsTotal.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用される合計 IOPS。
+
+vsaniscsitarget.bandwidth.name = バンド幅
+vsaniscsitarget.bandwidth.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用されるバンド幅。
+vsaniscsitarget.bandwidth.metrics.bandwidthRead.name = 読み取りバンド幅
+vsaniscsitarget.bandwidth.metrics.bandwidthRead.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用される読み取りバンド幅。
+vsaniscsitarget.bandwidth.metrics.bandwidthWrite.name = 書き込みバンド幅
+vsaniscsitarget.bandwidth.metrics.bandwidthWrite.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用される書き込みバンド幅。
+vsaniscsitarget.bandwidth.metrics.bandwidthTotal.name = 合計バンド幅
+vsaniscsitarget.bandwidth.metrics.bandwidthTotal.description = このターゲットにあるすべての vSAN iSCSI LUN によって使用される合計バンド幅。
+
+vsaniscsitarget.latency.name = 遅延
+vsaniscsitarget.latency.description = このターゲットにあるすべての vSAN iSCSI LUN によって生成される I/O の平均遅延。
+vsaniscsitarget.latency.metrics.latencyRead.name = 読み取り遅延
+vsaniscsitarget.latency.metrics.latencyRead.description = このターゲットにあるすべての vSAN iSCSI LUN によって生成される I/O の平均読み取り遅延。
+vsaniscsitarget.latency.metrics.latencyWrite.name = 書き込み遅延
+vsaniscsitarget.latency.metrics.latencyWrite.description = このターゲットにあるすべての vSAN iSCSI LUN によって生成される I/O の平均書き込み遅延。
+vsaniscsitarget.latency.metrics.latencyTotal.name = 合計遅延
+vsaniscsitarget.latency.metrics.latencyTotal.description = このターゲットにあるすべての vSAN iSCSI LUN によって生成される I/O の平均合計遅延。
+
+vsaniscsitarget.queue-depth.name = 未処理の I/O
+vsaniscsitarget.queue-depth.description = このターゲットにあるすべての vSAN iSCSI LUN の未処理の I/O。
+vsaniscsitarget.queue-depth.metrics.queueDepth.name = 未処理の I/O
+vsaniscsitarget.queue-depth.metrics.queueDepth.description = このターゲットにあるすべての vSAN iSCSI LUN の未処理の I/O。
+
+#
+# VsanIscsiLunStats
+#
+com.vmware.vsan.perf.entity.vsan-iscsi-lun.description = vSAN iSCSI LUN のメトリック。
+
+#
+## VsanIscsiLunStatsGraphs
+#
+vsaniscsilun.iops.name = IOPS
+vsaniscsilun.iops.description = この vSAN iSCSI LUN によって使用される IOPS。
+vsaniscsilun.iops.metrics.iopsRead.name = 読み取り IOPS
+vsaniscsilun.iops.metrics.iopsRead.description = この vSAN iSCSI LUN によって使用される読み取り IOPS。
+vsaniscsilun.iops.metrics.iopsWrite.name = 書き込み IOPS
+vsaniscsilun.iops.metrics.iopsWrite.description = この vSAN iSCSI LUN によって使用される書き込み IOPS。
+vsaniscsilun.iops.metrics.iopsTotal.name = 合計 IOPS
+vsaniscsilun.iops.metrics.iopsTotal.description = この vSAN iSCSI LUN によって使用される合計 IOPS。
+
+vsaniscsilun.bandwidth.name = バンド幅
+vsaniscsilun.bandwidth.description = この vSAN iSCSI LUN によって使用されるバンド幅。
+vsaniscsilun.bandwidth.metrics.bandwidthRead.name = 読み取りバンド幅
+vsaniscsilun.bandwidth.metrics.bandwidthRead.description = この vSAN iSCSI LUN によって使用される読み取りバンド幅。
+vsaniscsilun.bandwidth.metrics.bandwidthWrite.name = 書き込みバンド幅
+vsaniscsilun.bandwidth.metrics.bandwidthWrite.description = この vSAN iSCSI LUN によって使用される書き込みバンド幅。
+vsaniscsilun.bandwidth.metrics.bandwidthTotal.name = 合計バンド幅
+vsaniscsilun.bandwidth.metrics.bandwidthTotal.description = この vSAN iSCSI LUN によって使用される合計バンド幅。
+
+vsaniscsilun.latency.name = 遅延
+vsaniscsilun.latency.description = この vSAN iSCSI LUN によって生成される I/O の平均遅延。
+vsaniscsilun.latency.metrics.latencyRead.name = 読み取り遅延
+vsaniscsilun.latency.metrics.latencyRead.description = この vSAN iSCSI LUN によって生成される I/O の平均読み取り遅延。
+vsaniscsilun.latency.metrics.latencyWrite.name = 書き込み遅延
+vsaniscsilun.latency.metrics.latencyWrite.description = この vSAN iSCSI LUN によって生成される I/O の平均書き込み遅延。
+vsaniscsilun.latency.metrics.latencyTotal.name = 合計遅延
+vsaniscsilun.latency.metrics.latencyTotal.description = この vSAN iSCSI LUN によって生成される I/O の平均合計遅延。
+
+vsaniscsilun.queue-depth.name = 未処理の I/O
+vsaniscsilun.queue-depth.description = この vSAN iSCSI LUN の未処理の I/O。
+vsaniscsilun.queue-depth.metrics.queueDepth.name = 未処理の I/O
+vsaniscsilun.queue-depth.metrics.queueDepth.description = この vSAN iSCSI LUN の未処理の I/O。
+
+#
+### VsanClusterSpaceReportStats
+##
+com.vmware.vsan.perf.entity.vsan-cluster-capacity.description = vSAN 容量のメトリック。
+#
+##
+####VsanClusterCapacityStatsGraphs
+##
+vsanclustercapacity.overview.name = 概要
+vsanclustercapacity.overview.description =
+vsanclustercapacity.overview.metrics.total.name = 合計容量
+vsanclustercapacity.overview.metrics.total.description = vSAN クラスタの合計容量。
+vsanclustercapacity.overview.metrics.free.name = 空き容量
+vsanclustercapacity.overview.metrics.free.description = vSAN クラスタの空き容量。
+vsanclustercapacity.overview.metrics.used.name = 使用済み容量
+vsanclustercapacity.overview.metrics.used.description = vSAN クラスタですでに使用されている容量。
+vsanclustercapacity.dedup.name = 容量効率
+vsanclustercapacity.dedup.description = 容量効率を使用すると、物理ディスクに保存されるデータが削減され、総所有コストを低減できます。
+vsanclustercapacity.dedup.metrics.savedByDedup.name = 保存済みの容量
+vsanclustercapacity.dedup.metrics.savedByDedup.description = 容量効率機能で削減される物理容量。
+vsanclustercapacity.dedupRatio.name = 容量効率の比率
+vsanclustercapacity.dedupRatio.description = 容量効率を使用しない場合に必要な容量 / 容量効率を使用する場合に必要な容量。
+vsanclustercapacity.dedupRatio.metrics.dedupRatio.name = 容量効率の比率
+vsanclustercapacity.dedupRatio.metrics.dedupRatio.description = 容量効率の比率とは、容量効率の効率を示すメトリックです。これは、容量効率が無効な場合に必要な容量を容量効率が有効な場合に必要な容量で割った値をパーセンテージで表したものです。
+
+
+#
+# VsanFileService
+#
+com.vmware.vsan.perf.entity.vsan-file-service.description = vSAN ファイル サービスに関するメトリック。
+
+#
+# VsanFileServiceGraphs
+#
+vsan-file-service.throughput.name = スループット
+vsan-file-service.throughput.description = vSAN ファイル サービスのスループット。
+vsan-file-service.throughput.metrics.readRequested.name = 読み取りのために要求されたバイト数
+vsan-file-service.throughput.metrics.readRequested.description = 読み取りのために要求されたバイト数。
+vsan-file-service.throughput.metrics.readTransferred.name = 読み取りで転送された実際のバイト数
+vsan-file-service.throughput.metrics.readTransferred.description = 読み取りで転送された実際のバイト数。
+vsan-file-service.throughput.metrics.writeRequested.name = 書き込みのために要求されたバイト数
+vsan-file-service.throughput.metrics.writeRequested.description = 書き込みのために要求されたバイト数。
+vsan-file-service.throughput.metrics.writeTransferred.name = 書き込みで転送された実際のバイト数
+vsan-file-service.throughput.metrics.writeTransferred.description = 書き込みで転送された実際のバイト数。
+
+vsan-file-service.iops.name = IOPS
+vsan-file-service.iops.description = vSAN ファイル サービスの IOPS。
+vsan-file-service.iops.metrics.readOpTotal.name = 読み取り処理の IOPS
+vsan-file-service.iops.metrics.readOpTotal.description = 読み取り処理の IOPS。
+vsan-file-service.iops.metrics.writeOpTotal.name = 書き込み処理の IOPS
+vsan-file-service.iops.metrics.writeOpTotal.description = 書き込み処理の IOPS。
+
+vsan-file-service.latency.name = 遅延
+vsan-file-service.latency.description = vSAN ファイル サービスの遅延。
+vsan-file-service.latency.metrics.readLatency.name = 読み取り遅延
+vsan-file-service.latency.metrics.readLatency.description = I/O あたりの平均読み取り遅延。
+vsan-file-service.latency.metrics.writeLatency.name = 書き込み遅延
+vsan-file-service.latency.metrics.writeLatency.description = I/O あたりの平均書き込み遅延。
+
+
+#
+# VsanIoInsightVmdk
+#
+com.vmware.vsan.perf.entity.vmdk-ioinsight.description = vSAN IOInsight に関するメトリック。
+
+#
+# VsanIoInsightVmdkGraphs
+#
+vmdk-ioinsight.iosize-dist-histogram.name = I/O サイズの分布
+vmdk-ioinsight.iosize-dist-histogram.description = サイズ別の VMDK I/O の分布。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz0_4k.name = ReadSize<4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz0_4k.description = サイズが 4K 未満の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz0_4k.name = WriteSize<4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz0_4k.description = サイズが 4K 未満の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k.name = ReadSize=4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k.description = サイズが 4K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k.name = WriteSize=4K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k.description = サイズが 4K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k_8k.name = 4K<ReadSize<8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz4k_8k.description = サイズが 4K よりも大きく、8K よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k_8k.name = 4K<WriteSize<8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz4k_8k.description = サイズが 4K よりも大きく、8K よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k.name = ReadSize=8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k.description = サイズが 8K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k.name = WriteSize=8K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k.description = サイズが 8K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k_16k.name = 8K<ReadSize<16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz8k_16k.description = サイズが 8K よりも大きく、16K よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k_16k.name = 8K<WriteSize<16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz8k_16k.description = サイズが 8K よりも大きく、16K よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k.name = ReadSize=16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k.description = サイズが 16K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k.name = WriteSize=16K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k.description = サイズが 16K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k_32k.name = 16K<ReadSize<32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz16k_32k.description = サイズが 16K よりも大きく、32K よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k_32k.name = 16K<WriteSize<32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz16k_32k.description = サイズが 16K よりも大きく、32K よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k.name = ReadSize=32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k.description = サイズが 32K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k.name = WriteSize=32K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k.description = サイズが 32K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k_64k.name = 32K<ReadSize<64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz32k_64k.description = サイズが 32K よりも大きく、64K よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k_64k.name = 32K<WriteSize<64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz32k_64k.description = サイズが 32K よりも大きく、64K よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k.name = ReadSize=64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k.description = サイズが 64K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k.name = WriteSize=64K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k.description = サイズが 64K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k_128k.name = 64K<ReadSize<128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz64k_128k.description = サイズが 64K よりも大きく、128K よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k_128k.name = 64K<WriteSize<128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz64k_128k.description = サイズが 64K よりも大きく、128K よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k.name = ReadSize=128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k.description = サイズが 128K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k.name = WriteSize=128K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k.description = サイズが 128K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k_256k.name = 128K<ReadSize<256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz128k_256k.description = サイズが 128K よりも大きく、256K よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k_256k.name = 128K<WriteSize<256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz128k_256k.description = サイズが 128K よりも大きく、256K よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k.name = ReadSize=256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k.description = サイズが 256K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k.name = WriteSize=256K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k.description = サイズが 256K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k_512k.name = 256K<ReadSize<512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz256k_512k.description = サイズが 256K よりも大きく、512K よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k_512k.name = 256K<WriteSize<512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz256k_512k.description = サイズが 256K よりも大きく、512K よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k.name = ReadSize=512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k.description = サイズが 512K の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k.name = WriteSize=512K
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k.description = サイズが 512K の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k_1m.name = 512K<ReadSize<1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz512k_1m.description = サイズが 512K よりも大きく、1M よりも小さい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k_1m.name = 512K<WriteSize<1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz512k_1m.description = サイズが 512K よりも大きく、1M よりも小さい書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1m.name = ReadSize=1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1m.description = サイズが 1M の読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1m.name = WriteSize=1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1m.description = サイズが 1M の書き込み I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1_m.name = ReadSize>1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.riosz1_m.description = サイズが 1M より大きい読み取り I/O。
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1_m.name = WriteSize>1M
+vmdk-ioinsight.iosize-dist-histogram.metrics.wiosz1_m.description = サイズが 1M より大きい書き込み I/O。
+
+vmdk-ioinsight.io-latency-histogram.name = I/O 遅延の分布
+vmdk-ioinsight.io-latency-histogram.description = 遅延時間別の VMDK I/O の分布。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat0_1us.name = 0<ReadLatency<1(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat0_1us.description = 遅延が 1 マイクロ秒未満の読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat0_1us.name = 0<WriteLatency<1(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat0_1us.description = 遅延が 1 マイクロ秒未満の書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_10us.name = 1<ReadLatency<10(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_10us.description = 遅延が 1 マイクロ秒より大きく、10 マイクロ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_10us.name = 1<WriteLatency<10(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_10us.description = 遅延が 1 マイクロ秒より大きく、10 マイクロ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_100us.name = 10<ReadLatency<100(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_100us.description = 遅延が 10 マイクロ秒より大きく、100 マイクロ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_100us.name = 10<WriteLatency<100(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_100us.description = 遅延が 10 マイクロ秒より大きく、100 マイクロ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_500us.name = 100<ReadLatency<500(us)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_500us.description = 遅延が 100 マイクロ秒より大きく、500 マイクロ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_500us.name = 100<WriteLatency<500(us)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_500us.description = 遅延が 100 マイクロ秒より大きく、500 マイクロ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat500us_1ms.name = 500us<ReadLatency<1ms
+vmdk-ioinsight.io-latency-histogram.metrics.rlat500us_1ms.description = 遅延が 500 マイクロ秒より大きく、1 ミリ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat500us_1ms.name = 500us<WriteLatency<1ms
+vmdk-ioinsight.io-latency-histogram.metrics.wlat500us_1ms.description = 遅延が 500 マイクロ秒より大きく、1 ミリ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_5ms.name = 1<ReadLatency<5(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat1_5ms.description = 遅延が 1 ミリ秒より大きく、5 ミリ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_5ms.name = 1<WriteLatency<5(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat1_5ms.description = 遅延が 1 ミリ秒より大きく、5 ミリ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat5_10ms.name = 5<ReadLatency<10(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat5_10ms.description = 遅延が 5 ミリ秒より大きく、10 ミリ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat5_10ms.name = 5<WriteLatency<10(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat5_10ms.description = 遅延が 5 ミリ秒より大きく、10 ミリ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_25ms.name = 10<ReadLatency<25(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat10_25ms.description = 遅延が 10 ミリ秒より大きく、25 ミリ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_25ms.name = 10<WriteLatency<25(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat10_25ms.description = 遅延が 10 ミリ秒より大きく、25 ミリ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat25_50ms.name = 25<ReadLatency<50(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat25_50ms.description = 遅延が 25 ミリ秒より大きく、50 ミリ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat25_50ms.name = 25<WriteLatency<50(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat25_50ms.description = 遅延が 25 ミリ秒より大きく、50 ミリ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat50_100ms.name = 50<ReadLatency<100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat50_100ms.description = 遅延が 50 ミリ秒より大きく、100 ミリ秒より小さい読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat50_100ms.name = 50<WriteLatency<100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat50_100ms.description = 遅延が 50 ミリ秒より大きく、100 ミリ秒よりも小さい書き込み I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_ms.name = ReadLatency>100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.rlat100_ms.description = 遅延が 100 ミリ秒を超える読み取り I/O。
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_ms.name = WriteLatency>100(ms)
+vmdk-ioinsight.io-latency-histogram.metrics.wlat100_ms.description = 遅延が 100 ミリ秒を超える書き込み I/O。
+
+vmdk-ioinsight.iops.name = IOPS
+vmdk-ioinsight.iops.description = VMDK の 1 秒あたりの I/O。
+vmdk-ioinsight.iops.metrics.iopsRead.name = 読み取り IOPS
+vmdk-ioinsight.iops.metrics.iopsRead.description = VMDK の 1 秒あたりの読み取り I/O。
+vmdk-ioinsight.iops.metrics.iopsWrite.name = 書き込み IOPS
+vmdk-ioinsight.iops.metrics.iopsWrite.description = VMDK の 1 秒あたりの書き込み I/O。
+vmdk-ioinsight.iops.metrics.iopsTotal.name = 合計 IOPS
+vmdk-ioinsight.iops.metrics.iopsTotal.description = VMDK の 1 秒あたりの I/O の合計。
+
+vmdk-ioinsight.readThroughput.name = スループット
+vmdk-ioinsight.readThroughput.description = VMDK の I/O スループット。
+vmdk-ioinsight.readThroughput.metrics.throughputRead.name = 読み取りスループット
+vmdk-ioinsight.readThroughput.metrics.throughputRead.description = VMDK の読み取り I/O スループット。
+vmdk-ioinsight.readThroughput.metrics.throughputWrite.name = 書き込みスループット
+vmdk-ioinsight.readThroughput.metrics.throughputWrite.description = VMDK の書き込み I/O スループット。
+vmdk-ioinsight.readThroughput.metrics.throughputTotal.name = 合計スループット
+vmdk-ioinsight.readThroughput.metrics.throughputTotal.description = VMDK の I/O スループットの合計。
+
+vmdk-ioinsight.sequentialityThroughput.name = シーケンシャル/ランダム スループット
+vmdk-ioinsight.sequentialityThroughput.description = VMDK のシーケンシャル/ランダム I/O スループット。
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputSequential.name = シーケンシャル スループット
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputSequential.description = VMDK のシーケンシャル I/O スループット。
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputRandom.name = ランダム スループット
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputRandom.description = VMDK のランダム I/O スループット。
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputTotal.name = 合計スループット
+vmdk-ioinsight.sequentialityThroughput.metrics.throughputTotal.description = VMDK の I/O スループットの合計。
+
+vmdk-ioinsight.sequentialityRatio.name = シーケンシャル/ランダム I/O の比率
+vmdk-ioinsight.sequentialityRatio.description = シーケンシャル/ランダム I/O の割合。
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialReadRatio.name = シーケンシャル読み取り I/O
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialReadRatio.description = シーケンシャル読み取り I/O の割合。
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialWriteRatio.name = シーケンシャル書き込み I/O
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialWriteRatio.description = シーケンシャル書き込み I/O の割合。
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialRatio.name = シーケンシャル I/O
+vmdk-ioinsight.sequentialityRatio.metrics.sequentialRatio.description = シーケンシャル I/O の割合。
+vmdk-ioinsight.sequentialityRatio.metrics.randomReadRatio.name = ランダム読み取り I/O
+vmdk-ioinsight.sequentialityRatio.metrics.randomReadRatio.description = ランダム読み取り I/O の割合。
+vmdk-ioinsight.sequentialityRatio.metrics.randomWriteRatio.name = ランダム書き込み I/O
+vmdk-ioinsight.sequentialityRatio.metrics.randomWriteRatio.description = ランダム書き込み I/O の割合。
+vmdk-ioinsight.sequentialityRatio.metrics.randomRatio.name = ランダム I/O
+vmdk-ioinsight.sequentialityRatio.metrics.randomRatio.description = ランダム I/O の割合。
+
+vmdk-ioinsight.4kbAlignmentRatio.name = 4K の整列/非整列 I/O の比率
+vmdk-ioinsight.4kbAlignmentRatio.description = 4K の整列/非整列 I/O の割合。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kReadRatio.name = 4K の整列読み取り I/O
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kReadRatio.description = 4K の整列読み取り I/O の割合。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kWriteRatio.name = 4K の整列書き込み I/O
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kWriteRatio.description = 4K の整列書き込み I/O の割合。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kRatio.name = 4K の整列 I/O
+vmdk-ioinsight.4kbAlignmentRatio.metrics.aligned4kRatio.description = 4K の整列 I/O の割合。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kReadRatio.name = 4K の非整列読み取り I/O
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kReadRatio.description = 4K の非整列読み取り I/O の割合。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kWriteRatio.name = 4K の非整列書き込み I/O
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kWriteRatio.description = 4K の非整列書き込み I/O の割合。
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kRatio.name = 4K の非整列 I/O
+vmdk-ioinsight.4kbAlignmentRatio.metrics.unaligned4kRatio.description = 4K の非整列 I/O の割合。
+
+vmdk-ioinsight.readRatio.name = 読み取り/書き込み I/O の比率
+vmdk-ioinsight.readRatio.description = 読み取り/書き込み I/O の割合。
+vmdk-ioinsight.readRatio.metrics.readRatio.name = 読み取り I/O
+vmdk-ioinsight.readRatio.metrics.readRatio.description = 読み取り I/O の割合。
+vmdk-ioinsight.readRatio.metrics.writeRatio.name = 書き込み I/O
+vmdk-ioinsight.readRatio.metrics.writeRatio.description = 書き込み I/O の割合。
+
+#
+# VsanPMemClusterStats
+#
+com.vmware.vsan.perf.entity.vsan-pmem-cluster.description = PMem データストアの VMDK パフォーマンスのメトリック。
+
+#
+# VsanPMemClusterStatsGraphs
+#
+vsan-pmem-cluster.iops.name = IOPS
+vsan-pmem-cluster.iops.description = PMem データストア上のすべての仮想マシンの IOPS。
+vsan-pmem-cluster.iops.metrics.iopsRead.name = 読み取り IOPS
+vsan-pmem-cluster.iops.metrics.iopsRead.description = PMem データストア上のすべての仮想マシンの読み取り IOPS。
+vsan-pmem-cluster.iops.metrics.iopsWrite.name = 書き込み IOPS
+vsan-pmem-cluster.iops.metrics.iopsWrite.description = PMem データストア上のすべての仮想マシンの書き込み IOPS。
+vsan-pmem-cluster.iops.metrics.iopsTotal.name = 合計 IOPS
+vsan-pmem-cluster.iops.metrics.iopsTotal.description = PMem データストア上のすべての仮想マシンの合計 IOPS。
+
+vsan-pmem-cluster.throughput.name = スループット
+vsan-pmem-cluster.throughput.description = PMem データストア上のすべての仮想マシンのスループット。
+vsan-pmem-cluster.throughput.metrics.throughputRead.name = 読み取りスループット
+vsan-pmem-cluster.throughput.metrics.throughputRead.description = PMem データストア上のすべての仮想マシンの読み取りスループット。
+vsan-pmem-cluster.throughput.metrics.throughputWrite.name = 書き込みスループット
+vsan-pmem-cluster.throughput.metrics.throughputWrite.description = PMem データストア上のすべての仮想マシンの書き込みスループット。
+vsan-pmem-cluster.throughput.metrics.throughputTotal.name = 合計スループット
+vsan-pmem-cluster.throughput.metrics.throughputTotal.description = PMem データストア上のすべての仮想マシンの合計スループット。
+
+vsan-pmem-cluster.latency.name = 遅延
+vsan-pmem-cluster.latency.description = PMem データストア上のすべての仮想マシンの I/O で発生する平均遅延。
+vsan-pmem-cluster.latency.metrics.latencyRead.name = 読み取り遅延
+vsan-pmem-cluster.latency.metrics.latencyRead.description = PMem データストア上のすべての仮想マシンの I/O で発生する読み取り遅延。
+vsan-pmem-cluster.latency.metrics.latencyWrite.name = 書き込み遅延
+vsan-pmem-cluster.latency.metrics.latencyWrite.description = PMem データストア上のすべての仮想マシンの I/O で発生する書き込み遅延。
+
+vsan-pmem-cluster.oio.name = 未処理の I/O
+vsan-pmem-cluster.oio.description = PMem データストア上のすべての仮想マシンの未処理の I/O。
+vsan-pmem-cluster.oio.metrics.oioRead.name = 未処理の読み取り I/O
+vsan-pmem-cluster.oio.metrics.oioRead.description = PMem データストア上のすべての仮想マシンの未処理の読み取り I/O。
+vsan-pmem-cluster.oio.metrics.oioWrite.name = 未処理の書き込み I/O
+vsan-pmem-cluster.oio.metrics.oioWrite.description = PMem データストア上のすべての仮想マシンの未処理の書き込み I/O。
+
+#
+# VsanPMemHostStats
+#
+com.vmware.vsan.perf.entity.vsan-pmem-host.description = PMem データストアの VMDK パフォーマンスのメトリック。
+
+#
+# VsanPMemHostStatsGraphs
+#
+vsan-pmem-host.iops.name = IOPS
+vsan-pmem-host.iops.description = このホストの PMem データストア上のすべての仮想マシンの IOPS。
+vsan-pmem-host.iops.metrics.iopsRead.name = 読み取り IOPS
+vsan-pmem-host.iops.metrics.iopsRead.description = このホストの PMem データストア上のすべての仮想マシンの読み取り IOPS。
+vsan-pmem-host.iops.metrics.iopsWrite.name = 書き込み IOPS
+vsan-pmem-host.iops.metrics.iopsWrite.description = このホストの PMem データストア上のすべての仮想マシンの書き込み IOPS。
+vsan-pmem-host.iops.metrics.iopsTotal.name = 合計 IOPS
+vsan-pmem-host.iops.metrics.iopsTotal.description = このホストの PMem データストア上のすべての仮想マシンの合計 IOPS。
+
+vsan-pmem-host.throughput.name = スループット
+vsan-pmem-host.throughput.description = このホストの PMem データストア上のすべての仮想マシンのスループット。
+vsan-pmem-host.throughput.metrics.throughputRead.name = 読み取りスループット
+vsan-pmem-host.throughput.metrics.throughputRead.description = このホストの PMem データストア上のすべての仮想マシンの読み取りスループット。
+vsan-pmem-host.throughput.metrics.throughputWrite.name = 書き込みスループット
+vsan-pmem-host.throughput.metrics.throughputWrite.description = このホストの PMem データストア上のすべての仮想マシンの書き込みスループット。
+vsan-pmem-host.throughput.metrics.throughputTotal.name = 合計スループット
+vsan-pmem-host.throughput.metrics.throughputTotal.description = このホストの PMem データストア上のすべての仮想マシンの合計スループット。
+
+vsan-pmem-host.latency.name = 遅延
+vsan-pmem-host.latency.description = このホストの PMem データストア上のすべての仮想マシンの I/O で発生する平均遅延。
+vsan-pmem-host.latency.metrics.latencyRead.name = 読み取り遅延
+vsan-pmem-host.latency.metrics.latencyRead.description = このホストの PMem データストア上のすべての仮想マシンの I/O で発生する読み取り遅延。
+vsan-pmem-host.latency.metrics.latencyWrite.name = 書き込み遅延
+vsan-pmem-host.latency.metrics.latencyWrite.description = このホストの PMem データストア上のすべての仮想マシンの I/O で発生する書き込み遅延。
+
+vsan-pmem-host.oio.name = 未処理の I/O
+vsan-pmem-host.oio.description = このホストの PMem データストア上のすべての仮想マシンの未処理の I/O。
+vsan-pmem-host.oio.metrics.oioRead.name = 未処理の読み取り I/O
+vsan-pmem-host.oio.metrics.oioRead.description = このホストの PMem データストア上のすべての仮想マシンの未処理の読み取り I/O。
+vsan-pmem-host.oio.metrics.oioWrite.name = 未処理の書き込み I/O
+vsan-pmem-host.oio.metrics.oioWrite.description = このホストの PMem データストア上のすべての仮想マシンの未処理の書き込み I/O。
+
+#
+# VsanDirectClusterStats
+#
+com.vmware.vsan.perf.entity.vsan-direct-cluster.description = vSAN Direct データストアの VMDK パフォーマンスのメトリック。
+
+#
+# VsanDirectClusterStatsGraphs
+#
+vsan-direct-cluster.iops.name = IOPS
+vsan-direct-cluster.iops.description = vSAN Direct データストア上のすべての VMDK の IOPS。
+vsan-direct-cluster.iops.metrics.iopsDevRead.name = 読み取り IOPS
+vsan-direct-cluster.iops.metrics.iopsDevRead.description = vSAN Direct データストア上のすべての VMDK の読み取り IOPS。
+vsan-direct-cluster.iops.metrics.iopsDevWrite.name = 書き込み IOPS
+vsan-direct-cluster.iops.metrics.iopsDevWrite.description = vSAN Direct データストア上のすべての VMDK の書き込み IOPS。
+
+vsan-direct-cluster.throughput.name = スループット
+vsan-direct-cluster.throughput.description = vSAN Direct データストア上のすべての VMDK のスループット。
+vsan-direct-cluster.throughput.metrics.throughputDevRead.name = 読み取りスループット
+vsan-direct-cluster.throughput.metrics.throughputDevRead.description = vSAN Direct データストア上のすべての VMDK の読み取りスループット。
+vsan-direct-cluster.throughput.metrics.throughputDevWrite.name = 書き込みスループット
+vsan-direct-cluster.throughput.metrics.throughputDevWrite.description = vSAN Direct データストア上のすべての VMDK の書き込みスループット。
+
+vsan-direct-cluster.latency.name = 遅延
+vsan-direct-cluster.latency.description = vSAN Direct データストア上のすべての VMDK の I/O で発生する平均遅延。
+vsan-direct-cluster.latency.metrics.latencyDevRead.name = 読み取り遅延
+vsan-direct-cluster.latency.metrics.latencyDevRead.description = vSAN Direct データストア上のすべての VMDK の I/O で発生する読み取り遅延。
+vsan-direct-cluster.latency.metrics.latencyDevWrite.name = 書き込み遅延
+vsan-direct-cluster.latency.metrics.latencyDevWrite.description = vSAN Direct データストア上のすべての VMDK の I/O で発生する書き込み遅延。
+
+vsan-direct-cluster.oio.name = 未処理の I/O
+vsan-direct-cluster.oio.description = vSAN Direct データストア上のすべての VMDK の未処理の I/O。
+vsan-direct-cluster.oio.metrics.oioDevRead.name = 未処理の読み取り I/O
+vsan-direct-cluster.oio.metrics.oioDevRead.description = vSAN Direct データストア上のすべての VMDK の未処理の読み取り I/O。
+vsan-direct-cluster.oio.metrics.oioDevWrite.name = 未処理の書き込み I/O
+vsan-direct-cluster.oio.metrics.oioDevWrite.description = vSAN Direct データストア上のすべての VMDK の未処理の書き込み I/O。
+
+#
+# VsanDirectHostStats
+#
+com.vmware.vsan.perf.entity.vsan-direct-host.description = vSAN Direct データストアの VMDK パフォーマンスのメトリック。
+
+#
+# VsanDirectHostStatsGraphs
+#
+vsan-direct-host.iops.name = IOPS
+vsan-direct-host.iops.description = vSAN Direct データストア上のすべての VMDK の IOPS。
+vsan-direct-host.iops.metrics.iopsDevRead.name = 読み取り IOPS
+vsan-direct-host.iops.metrics.iopsDevRead.description = vSAN Direct データストア上のすべての VMDK の読み取り IOPS。
+vsan-direct-host.iops.metrics.iopsDevWrite.name = 書き込み IOPS
+vsan-direct-host.iops.metrics.iopsDevWrite.description = vSAN Direct データストア上のすべての VMDK の書き込み IOPS。
+
+vsan-direct-host.throughput.name = スループット
+vsan-direct-host.throughput.description = vSAN Direct データストア上のすべての VMDK のスループット。
+vsan-direct-host.throughput.metrics.throughputDevRead.name = 読み取りスループット
+vsan-direct-host.throughput.metrics.throughputDevRead.description = vSAN Direct データストア上のすべての VMDK の読み取りスループット。
+vsan-direct-host.throughput.metrics.throughputDevWrite.name = 書き込みスループット
+vsan-direct-host.throughput.metrics.throughputDevWrite.description = vSAN Direct データストア上のすべての VMDK の書き込みスループット。
+
+vsan-direct-host.latency.name = 遅延
+vsan-direct-host.latency.description = vSAN Direct データストア上のすべての VMDK の I/O で発生する平均遅延。
+vsan-direct-host.latency.metrics.latencyDevRead.name = 読み取り遅延
+vsan-direct-host.latency.metrics.latencyDevRead.description = vSAN Direct データストア上のすべての VMDK の I/O で発生する読み取り遅延。
+vsan-direct-host.latency.metrics.latencyDevWrite.name = 書き込み遅延
+vsan-direct-host.latency.metrics.latencyDevWrite.description = vSAN Direct データストア上のすべての VMDK の I/O で発生する書き込み遅延。
+
+vsan-direct-host.oio.name = 未処理の I/O
+vsan-direct-host.oio.description = vSAN Direct データストア上のすべての VMDK の未処理の I/O。
+vsan-direct-host.oio.metrics.oioDevRead.name = 未処理の読み取り I/O
+vsan-direct-host.oio.metrics.oioDevRead.description = vSAN Direct データストア上のすべての VMDK の未処理の読み取り I/O。
+vsan-direct-host.oio.metrics.oioDevWrite.name = 未処理の書き込み I/O
+vsan-direct-host.oio.metrics.oioDevWrite.description = vSAN Direct データストア上のすべての VMDK の未処理の書き込み I/O。
+
+
+#
+# VsanCpuStats
+#
+com.vmware.vsan.perf.entity.vsan-cpu.description = vSAN CPU オーバーヘッドのメトリック。
+
+#
+# VsanCpuStatsGraphs
+#
+vsan-cpu.utilization.name = vSAN CPU 使用率
+vsan-cpu.utilization.description = vSAN CPU 使用率。
+vsan-cpu.utilization.metrics.usedPct.name = 使用済み CPU 時間の割合
+vsan-cpu.utilization.metrics.usedPct.description = 使用済み CPU 時間の割合
+vsan-cpu.utilization.metrics.readyPct.name = 準備完了 CPU 時間の割合
+vsan-cpu.utilization.metrics.readyPct.description = 準備完了 CPU 時間の割合。
+vsan-cpu.utilization.metrics.runPct.name = 実行中の CPU 時間の割合
+vsan-cpu.utilization.metrics.runPct.description = 実行中の CPU 時間の割合。
+
+#
+# VsanMemStats
+#
+com.vmware.vsan.perf.entity.vsan-memory.description = vSAN メモリ オーバーヘッドのメトリック。
+
+#
+# VsanMemStatsGraphs
+#
+vsan-memory.usage.name = vSAN メモリ使用量
+vsan-memory.usage.description = メモリ使用量。
+vsan-memory.usage.metrics.kernelReservedSize.name = カーネルの予約済みメモリ サイズ
+vsan-memory.usage.metrics.kernelReservedSize.description = カーネルの予約済みメモリ サイズ。
+vsan-memory.usage.metrics.uwReservedSize.name = ユーザー ワールドの予約済みメモリ サイズ
+vsan-memory.usage.metrics.uwReservedSize.description = ユーザー ワールドの予約済みメモリ サイズ。
+
+#
+# HostCpuStats
+#
+com.vmware.vsan.perf.entity.host-cpu.description = ホスト上の CPU のメトリック。
+
+#
+# HostCpuStatsGraphs
+#
+host-cpu.utilization.name = CPU の割合
+host-cpu.utilization.description = ホスト CPU の割合。
+host-cpu.utilization.metrics.coreUtilPct.name = CPU コアの使用率
+host-cpu.utilization.metrics.coreUtilPct.description = CPU コアの使用率。
+host-cpu.utilization.metrics.pcpuUsedPct.name = 使用済み物理 CPU 時間の割合
+host-cpu.utilization.metrics.pcpuUsedPct.description = 使用済み物理 CPU 時間の割合。
+host-cpu.utilization.metrics.pcpuUtilPct.name = 物理 CPU の使用率
+host-cpu.utilization.metrics.pcpuUtilPct.description = 物理 CPU の使用率。
+
+#
+# Vsan2DiskScsifw
+#
+com.vmware.vsan.perf.entity.vsan2-disk-scsifw.description = vSAN2 ディスクの物理/ファームウェア レイヤーのメトリック。
+
+#
+# Vsan2DiskScsifwGraphs
+#
+vsan2-disk-scsifw.iopsDev.name = vSAN2 ディスクの物理/ファームウェア レイヤーの IOPS
+vsan2-disk-scsifw.iopsDev.description = vSAN2 ディスクの物理/ファームウェア レイヤーの IOPS。
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevRead.name = vSAN2 ディスクの物理/ファームウェア レイヤーの読み取り IOPS
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevRead.description = vSAN2 ディスクの物理/ファームウェア レイヤーの読み取り IOPS。
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevWrite.name = vSAN2 ディスクの物理/ファームウェア レイヤーの書き込み IOPS
+vsan2-disk-scsifw.iopsDev.metrics.iopsDevWrite.description = vSAN2 ディスクの物理/ファームウェア レイヤーの書き込み IOPS。
+
+vsan2-disk-scsifw.latencyDev.name = vSAN2 ディスクの物理/ファームウェア レイヤーの遅延
+vsan2-disk-scsifw.latencyDev.description = vSAN2 ディスクの物理/ファームウェア レイヤーの遅延。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevRead.name = vSAN2 ディスクの物理/ファームウェア レイヤーの読み取り遅延
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevRead.description = vSAN2 ディスクの物理/ファームウェア レイヤーの読み取り遅延。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevWrite.name = vSAN2 ディスクの物理/ファームウェア レイヤーの書き込み遅延
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevWrite.description = vSAN2 ディスクの物理/ファームウェア レイヤーの書き込み遅延。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevGAvg.name = vSAN2 ディスクの物理/ファームウェア レイヤーのゲスト平均遅延
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevGAvg.description = vSAN2 ディスクの物理/ファームウェア レイヤーのゲスト平均 I/O 遅延 (合計遅延)。
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevDAvg.name = vSAN2 ディスクの物理/ファームウェア レイヤーのデバイス平均遅延
+vsan2-disk-scsifw.latencyDev.metrics.latencyDevDAvg.description = vSAN2 ディスクの物理/ファームウェア レイヤーのデバイス平均 I/O 遅延 (HBA からバックエンド ストレージまで)。
+
+vsan2-disk-scsifw.throughputDev.name = vSAN2 ディスクの物理/ファームウェア レイヤーのスループット
+vsan2-disk-scsifw.throughputDev.description = vSAN2 ディスクの物理/ファームウェア レイヤーのスループット。
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevRead.name = vSAN2 ディスクの物理/ファームウェア レイヤーの読み取りスループット
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevRead.description = vSAN2 ディスクの物理/ファームウェア レイヤーの読み取りスループット。
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevWrite.name = vSAN2 ディスクの物理/ファームウェア レイヤーの書き込みスループット
+vsan2-disk-scsifw.throughputDev.metrics.throughputDevWrite.description = vSAN2 ディスクの物理/ファームウェア レイヤーの書き込みスループット。
+
+
+#
+# Vsan2DiskLsom2
+#
+com.vmware.vsan.perf.entity.vsan2-disk-lsom2.description = vSAN2 ディスクの vSAN レイヤーのメトリック。
+
+#
+# Vsan2DiskLsom2Graphs
+#
+vsan2-disk-lsom2.iopsCap.name = vSAN2 ディスクの vSAN レイヤーの IOPS
+vsan2-disk-lsom2.iopsCap.description = vSAN2 ディスクの vSAN レイヤーの IOPS。
+vsan2-disk-lsom2.iopsCap.metrics.iopsReadCapacity.name = vSAN2 ディスクの vSAN レイヤーの読み取り IOPS
+vsan2-disk-lsom2.iopsCap.metrics.iopsReadCapacity.description = vSAN2 ディスクの vSAN レイヤーの読み取り IOPS。
+vsan2-disk-lsom2.iopsCap.metrics.iopsWriteCapacity.name = vSAN2 ディスクの vSAN レイヤーの書き込み IOPS
+vsan2-disk-lsom2.iopsCap.metrics.iopsWriteCapacity.description = vSAN2 ディスクの vSAN レイヤーの書き込み IOPS。
+
+vsan2-disk-lsom2.throughputCap.name = vSAN2 ディスクの vSAN レイヤーのスループット
+vsan2-disk-lsom2.throughputCap.description = vSAN2 ディスクの vSAN レイヤーのスループット。
+vsan2-disk-lsom2.throughputCap.metrics.tputReadCapacity.name = vSAN2 ディスクの vSAN レイヤーの読み取りスループット
+vsan2-disk-lsom2.throughputCap.metrics.tputReadCapacity.description = vSAN2 ディスクの vSAN レイヤーの読み取りスループット。
+vsan2-disk-lsom2.throughputCap.metrics.tputWriteCapacity.name = vSAN2 ディスクの vSAN レイヤーの書き込みスループット
+vsan2-disk-lsom2.throughputCap.metrics.tputWriteCapacity.description = vSAN2 ディスクの vSAN レイヤーの書き込みスループット。
+
+vsan2-disk-lsom2.avgLatencyCap.name = vSAN2 ディスクの vSAN レイヤーの平均遅延
+vsan2-disk-lsom2.avgLatencyCap.description = vSAN2 ディスクの vSAN レイヤーの平均遅延。
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatReadCapacity.name = vSAN2 ディスクの vSAN レイヤーの平均読み取り遅延
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatReadCapacity.description = vSAN2 ディスクの vSAN レイヤーの平均読み取り遅延。
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatWriteCapacity.name = vSAN2 ディスクの vSAN レイヤーの平均書き込み遅延
+vsan2-disk-lsom2.avgLatencyCap.metrics.avgLatWriteCapacity.description = vSAN2 ディスクの vSAN レイヤーの平均書き込み遅延。
+
+
+#
+# ClusterRemoteDomClient
+#
+com.vmware.vsan.perf.entity.cluster-remotedomclient.description = リモート vSAN 仮想マシン使用量の視点におけるクラスタ関連のメトリック。
+
+#
+# ClusterRemoteDomClientGraphs
+#
+cluster-remotedomclient.iops.name = IOPS
+cluster-remotedomclient.iops.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの IOPS。
+cluster-remotedomclient.iops.metrics.iopsRead.name = 読み取り IOPS
+cluster-remotedomclient.iops.metrics.iopsRead.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの読み取り IOPS。
+cluster-remotedomclient.iops.metrics.iopsWrite.name = 書き込み IOPS
+cluster-remotedomclient.iops.metrics.iopsWrite.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの書き込み IOPS。
+
+cluster-remotedomclient.throughput.name = スループット
+cluster-remotedomclient.throughput.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントのスループット。
+cluster-remotedomclient.throughput.metrics.throughputRead.name = 読み取りスループット
+cluster-remotedomclient.throughput.metrics.throughputRead.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの読み取りスループット。
+cluster-remotedomclient.throughput.metrics.throughputWrite.name = 書き込みスループット
+cluster-remotedomclient.throughput.metrics.throughputWrite.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの書き込みスループット。
+
+cluster-remotedomclient.latency.name = 遅延
+cluster-remotedomclient.latency.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の平均遅延。
+cluster-remotedomclient.latency.metrics.latencyAvgRead.name = 読み取り遅延
+cluster-remotedomclient.latency.metrics.latencyAvgRead.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の平均読み取り遅延。
+cluster-remotedomclient.latency.metrics.latencyAvgWrite.name = 書き込み遅延
+cluster-remotedomclient.latency.metrics.latencyAvgWrite.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の平均書き込み遅延。
+
+cluster-remotedomclient.congestion.name = 輻輳
+cluster-remotedomclient.congestion.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の輻輳。
+cluster-remotedomclient.congestion.metrics.congestion.name = 輻輳
+cluster-remotedomclient.congestion.metrics.congestion.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の輻輳。
+
+cluster-remotedomclient.oio.name = 未処理の I/O
+cluster-remotedomclient.oio.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの未処理の I/O。
+cluster-remotedomclient.oio.metrics.oio.name = 未処理の I/O
+cluster-remotedomclient.oio.metrics.oio.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの未処理の I/O。
+
+#
+# ComputeClusterRemoteDomClient
+#
+com.vmware.vsan.perf.entity.computeCluster-remotedomclient.description = リモート vSAN 仮想マシン使用量の視点におけるクラスタ関連のメトリック。
+
+#
+# ClusterRemoteDomClientGraphs
+#
+computeCluster-remotedomclient.iops.name = IOPS
+computeCluster-remotedomclient.iops.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの IOPS。
+computeCluster-remotedomclient.iops.metrics.iopsRead.name = 読み取り IOPS
+computeCluster-remotedomclient.iops.metrics.iopsRead.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの読み取り IOPS。
+computeCluster-remotedomclient.iops.metrics.iopsWrite.name = 書き込み IOPS
+computeCluster-remotedomclient.iops.metrics.iopsWrite.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの書き込み IOPS。
+
+computeCluster-remotedomclient.throughput.name = スループット
+computeCluster-remotedomclient.throughput.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントのスループット。
+computeCluster-remotedomclient.throughput.metrics.throughputRead.name = 読み取りスループット
+computeCluster-remotedomclient.throughput.metrics.throughputRead.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの読み取りスループット。
+computeCluster-remotedomclient.throughput.metrics.throughputWrite.name = 書き込みスループット
+computeCluster-remotedomclient.throughput.metrics.throughputWrite.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの書き込みスループット。
+
+computeCluster-remotedomclient.latency.name = 遅延
+computeCluster-remotedomclient.latency.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の平均遅延。
+computeCluster-remotedomclient.latency.metrics.latencyAvgRead.name = 読み取り遅延
+computeCluster-remotedomclient.latency.metrics.latencyAvgRead.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の平均読み取り遅延。
+computeCluster-remotedomclient.latency.metrics.latencyAvgWrite.name = 書き込み遅延
+computeCluster-remotedomclient.latency.metrics.latencyAvgWrite.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の平均書き込み遅延。
+
+computeCluster-remotedomclient.congestion.name = 輻輳
+computeCluster-remotedomclient.congestion.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の輻輳。
+computeCluster-remotedomclient.congestion.metrics.congestion.name = 輻輳
+computeCluster-remotedomclient.congestion.metrics.congestion.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの I/O の輻輳。
+
+computeCluster-remotedomclient.oio.name = 未処理の I/O
+computeCluster-remotedomclient.oio.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの未処理の I/O。
+computeCluster-remotedomclient.oio.metrics.oio.name = 未処理の I/O
+computeCluster-remotedomclient.oio.metrics.oio.description = 仮想マシン、統計オブジェクトなど、選択されたサーバ クラスタに対するすべてのリモート vSAN クライアントの未処理の I/O。

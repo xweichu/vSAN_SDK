@@ -1,0 +1,25 @@
+<!-- Copyright 2017-2022 VMware, Inc. All rights reserved. VMware Confidential -->
+<!doctype html>
+<html style="height: 100%">
+<head>
+   <title>H5 vSAN UI</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script type="text/javascript" src="/api/ui/htmlClientSdk.js"></script>
+   <script>
+      var sdk = window.htmlClientSdk;
+      const base = document.createElement("base");
+      base.href = htmlClientSdk.getProxiedPluginServerOrigin() + "/vsan/plugins/vsan-ui-repa/";
+      document.write(base.outerHTML);
+   </script>
+   <script type="text/javascript" src="esp-startup.js"></script>
+   <script type="text/javascript" src="vsan-index.js"></script>
+   <link rel="stylesheet" type="text/css" id="clr-theme-css-link" href="">
+   <link rel="stylesheet" type="text/css" id="vsan-ui-theme-css-link" href="">
+   <link rel="stylesheet" type="text/css" id="clr-accessibility-css-link" href="">
+<link rel="stylesheet" href="clr-icons.css"><link rel="stylesheet" href="third-party.css"><link rel="stylesheet" href="vsan-common.css"></head>
+<body>
+<div id="index-loading" class="spinner central-spinner" aria-busy="true"></div>
+<vsan-root-component></vsan-root-component>
+<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="scripts.js" defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+</html>

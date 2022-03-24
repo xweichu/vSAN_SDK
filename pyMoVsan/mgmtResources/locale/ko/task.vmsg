@@ -1,0 +1,105 @@
+# Task for disk management
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.label               = "vSAN에 디스크 그룹 생성"
+com.vmware.vsan.diskmgmt.tasks.initializediskmappings.summary             = "vSAN에 디스크 그룹 생성"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.label                   = "vSAN에 디스크 그룹 재구축"
+com.vmware.vsan.diskmgmt.tasks.rebuilddiskmapping.summary                 = "vSAN에 디스크 그룹 재구축"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.label                 = "vSAN에 디스크 그룹 마운트 해제"
+com.vmware.vsan.diskmgmt.tasks.unmountdiskmappingex.summary               = "vSAN에 디스크 그룹 마운트 해제"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.label                  = "vSAN에서 디스크 그룹 제거"
+com.vmware.vsan.diskmgmt.tasks.removediskmappingex.summary                = "vSAN에서 디스크 그룹 제거"
+com.vmware.vsan.diskmgmt.tasks.removediskex.label                         = "vSAN에서 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.removediskex.summary                       = "vSAN에서 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.label                 = "vSAN에서 용량 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.removecapacitydiskex.summary               = "vSAN에서 용량 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.label                   = "vSAN Direct 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.removedirectdiskex.summary                 = "vSAN Direct 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.adddisks.label                             = "기존 디스크 그룹에 디스크 추가"
+com.vmware.vsan.diskmgmt.tasks.adddisks.summary                           = "기존 디스크 그룹에 디스크 추가"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.label                  = "스토리지 풀에 디스크 추가"
+com.vmware.vsan.diskmgmt.tasks.addstoragepooldisks.summary                = "스토리지 풀에 디스크 추가"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.label              = "호스트의 디스크를 스토리지 풀에 추가"
+com.vmware.vsan.diskmgmt.tasks.addhoststoragepooldisks.summary            = "호스트의 디스크를 스토리지 풀에 추가"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.label                            = "지정된 디스크 트리밍"
+com.vmware.vsan.diskmgmt.tasks.trimdisks.summary                          = "지정된 디스크 트리밍"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.label               = "vSAN에서 스토리지 풀 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.deletestoragepooldisks.summary             = "vSAN에서 스토리지 풀 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.label            = "vSAN에서 호스트의 스토리지 풀 디스크 제거"
+com.vmware.vsan.diskmgmt.tasks.deletehoststoragepooldisk.summary          = "vSAN에서 호스트의 스토리지 풀 디스크 제거"
+
+# Tasks for stretched cluster
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.label               = "감시 호스트 추가"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshost.summary             = "확장된 클러스터에 감시 호스트 추가"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.label           = "감시 호스트 바꾸기"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshost.summary         = "확장된 클러스터를 위해 감시 호스트 바꾸기"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.label            = "감시 호스트 제거"
+com.vmware.vsan.stretchedcluster.tasks.removewitnesshost.summary          = "확장된 클러스터에서 감시 호스트 제거"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.label     = "확장된 클러스터로 변환"
+com.vmware.vsan.stretchedcluster.tasks.convert2stretchedcluster.summary   = "지정된 구성을 확장된 클러스터로 변환"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.label      = "기본 장애 도메인 설정"
+com.vmware.vsan.stretchedcluster.tasks.setpreferredfaultdomain.summary    = "확장된 클러스터에 대한 기본 장애 도메인 설정"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.label   = "확장된 클러스터의 감시 호스트 일괄 바꾸기"
+com.vmware.vsan.stretchedcluster.tasks.replacewitnesshostforclusters.summary = "확장된 클러스터의 감시 호스트 일괄 바꾸기"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.label    = "클러스터의 감시 호스트 일괄 구성"
+com.vmware.vsan.stretchedcluster.tasks.addwitnesshostforclusters.summary  = "클러스터의 감시 호스트 일괄 구성"
+
+# Task for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.label                     = "vSAN용으로 디스크 형식 변환"
+com.vmware.vsan.diskconvertion.tasks.conversion.summary                   = "vSAN용으로 디스크 형식 변환"
+# Task descripiton to be updated for disk format conversion
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvm   = "{host}에서 FSVM 재배포를 기다리는 중"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsenabling = "파일 서비스 사용/사용 안 함 설정 대기 중"
+com.vmware.vsan.diskconvertion.tasks.conversion.description.waitingfsvsmupgrading  = "FSVM 업그레이드 대기 중"
+
+# Task for cluster management
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.label                      = "HCL 디스크 할당"
+com.vmware.vsan.clustermgmt.tasks.claimhcldisk.summary                    = "클러스터에 추가된 새 호스트에 대해 HCL 디스크 할당"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.label                = "vSAN 클러스터 재구성"
+com.vmware.vsan.clustermgmt.tasks.reconfigurecluster.summary              = "vSAN 클러스터 재구성"
+com.vmware.vsan.clustermgmt.tasks.rekey.label                             = "암호화된 vSAN 클러스터의 새 키 재생성"
+com.vmware.vsan.clustermgmt.tasks.rekey.summary                           = "암호화된 vSAN 클러스터의 새 키 재생성"
+com.vmware.vsan.clustermgmt.tasks.precheck.label                          = "vSAN 작업 사전 검사"
+com.vmware.vsan.clustermgmt.tasks.precheck.summary                        = "vSAN 작업 사전 검사"
+
+# Task for new async VsanSystem
+com.vmware.vsan.vsansystem.tasks.update.label                             = "vSAN 구성 업데이트"
+com.vmware.vsan.vsansystem.tasks.update.summary                           = "이 호스트의 vSAN 구성을 업데이트합니다."
+
+com.vmware.vsan.diskconvertion.tasks.precheck.label                       = "디스크 형식 변환 사전 검사 수행"
+com.vmware.vsan.diskconvertion.tasks.precheck.summary                     = "디스크 형식 변환에서 발생할 수 있는 문제에 대한 사전 검사 수행"
+
+com.vmware.vsan.diskmgmt.tasks.objectscan.label                           = "vSAN 개체 검색"
+com.vmware.vsan.diskmgmt.tasks.objectscan.summary                         = "vSAN 개체에서 문제 검색"
+
+# Task for VsanPrecheckerSystem
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.label            = "규정 준수 리소스 검사 작업 수행"
+com.vmware.vsan.prechecker.tasks.complianceresourcecheck.summary          = "규정 준수 리소스 검사 작업 수행"
+
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.label           = "호스트 서비스 해제 리소스 검사 작업 수행"
+com.vmware.vsan.prechecker.tasks.whatifdecomresourcecheck.summary         = "호스트 서비스 해제 리소스 검사 작업 수행"
+
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.label        = "디스크 데이터 제거 리소스 검사 작업 수행"
+com.vmware.vsan.prechecker.tasks.whatifdiskevacresourcecheck.summary      = "디스크 데이터 제거 리소스 검사 작업 수행"
+
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.label         = "디스크 형식 변환 리소스 검사 작업 수행"
+com.vmware.vsan.prechecker.tasks.whatifupgraderesourcecheck.summary       = "디스크 형식 변환 리소스 검사 작업 수행"
+
+com.vmware.vsan.prechecker.tasks.resourcecheck.label                      = "vSAN 리소스 검사 작업 수행"
+com.vmware.vsan.prechecker.tasks.resourcecheck.summary                    = "vSAN 리소스 검사 작업 수행"
+
+com.vmware.vsan.prechecker.tasks.queryCompliance.label                    = "WhatIf 규정 준수 세부 정보 가져오기"
+com.vmware.vsan.prechecker.tasks.queryCompliance.summary                  = "WhatIf 규정 준수 세부 정보 가져오기"
+
+# Task for VsanVcObjectSystem
+com.vmware.vsan.objectsystem.tasks.deleteobjects.label                    = "vSAN 개체 삭제 작업 수행"
+com.vmware.vsan.objectsystem.tasks.deleteobjects.summary                  = "vSAN 개체 삭제 작업 수행"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.label                  = "vSAN 개체 정책 규정 검사 작업 수행"
+com.vmware.vsan.objectsystem.tasks.regulationcheck.summary                = "vSAN 개체 정책 규정 검사 작업 수행"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.label                  = "vSAN 개체 작업 레이아웃 재구성"
+com.vmware.vsan.objectsystem.tasks.relayoutobjects.summary                = "vSAN 개체 작업 레이아웃 재구성"
+
+com.vmware.vsan.vum.tasks.remediate.label                                 = "권장 vSAN 기준선 그룹 업데이트"
+com.vmware.vsan.vum.tasks.remediate.summary                               = "권장 vSAN 기준선 그룹 업데이트"
+
+# Task for VsanSystemEx
+host.VsanSystemEx.unmountDiskMappingEx.label                              = "vSAN 디스크 그룹 마운트 해제"
+host.VsanSystemEx.unmountDiskMappingEx.summary                            = "vSAN 디스크 그룹 마운트 해제"

@@ -1,0 +1,4 @@
+#
+# Vsan VP Localizable Messages for alarms
+#
+vsan.alarm.compliance.changed = 合規性已變更

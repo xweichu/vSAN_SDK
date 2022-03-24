@@ -1,0 +1,324 @@
+<!--  vsanmgmt default configuration file for vCenter -->
+
+<config>
+   <!-- the version of this config file -->
+   <version>7.0.3.20000</version>
+
+   <!-- working directory  -->
+   <!--workingDir>/var/log/vmware/</workingDir-->
+
+   <!-- location to examine for configuration files that are needed -->
+   <!--defaultConfigPath> /etc/vmware/ </defaultConfigPath-->
+
+   <log>
+      <!-- controls where rolling log files are stored -->
+      <directory>/var/log/vmware/vsan-health</directory>
+
+      <!-- name of log file -->
+      <name>vsanvcmgmtd</name>
+
+      <!-- controls whether logger sends its output to console also -->
+      <outputToConsole>false</outputToConsole>
+
+      <!-- If true, log to files on disk -->
+      <outputToFiles>true</outputToFiles>
+
+      <compressOnRoll>true</compressOnRoll>
+
+      <!--
+        default size(in bytes) of each log file before rolling over to next
+        -->
+      <maxFileSize>16777216</maxFileSize>
+
+      <!-- default number of log files to rotate amongst -->
+      <maxFileNum>100</maxFileNum>
+
+      <!-- default log level -->
+      <!-- <level>verbose</level> -->
+
+      <useFastPath>true</useFastPath>
+
+      <!-- If true, logs to syslog -->
+      <outputToSyslog>false</outputToSyslog>
+   </log>
+
+   <level id="PyBackedMO">
+      <logName>PyBackedMO</logName>
+      <logLevel>verbose</logLevel>
+      <prefix>false</prefix>
+   </level>
+
+   <level id="VapiHttpHandler">
+      <logName>VapiHttpHandler</logName>
+      <logLevel>info</logLevel>
+   </level>
+
+   <vmacore>
+      <pluginBaseDir>/usr/lib/vmware-vsan/lib/</pluginBaseDir>
+      <alertOnMissingQuickExit>false</alertOnMissingQuickExit>
+      <threadPool>
+         <threadNamePrefix>vsanvcmgmtd</threadNamePrefix>
+         <ThreadStackSizeKb>256</ThreadStackSizeKb>
+         <reservationRatio>32</reservationRatio>
+      </threadPool>
+      <sysCommand>
+         <enable>false</enable>
+      </sysCommand>
+      <soap>
+         <sessionTimeout>15</sessionTimeout>
+         <maxSessionCount>1000</maxSessionCount>
+      </soap>
+      <ssl>
+         <libraryPath></libraryPath>
+      </ssl>
+      <http>
+         <defaultClientPoolSize>64</defaultClientPoolSize>
+         <defaultClientPoolConnectionsPerServer>256</defaultClientPoolConnectionsPerServer>
+      </http>
+   </vmacore>
+
+   <vmomi>
+      <soapStubAdapter>
+         <pingTimeoutSeconds>60</pingTimeoutSeconds>
+      </soapStubAdapter>
+   </vmomi>
+
+   <propertyCollector>
+      <maxWaitSecondsLimit>600</maxWaitSecondsLimit>
+      <!-- The maximum objects update limit -->
+      <!-- <maxObjectsLimit>100</maxObjectsLimit> -->
+      <!-- The maximum filter count per session -->
+      <maxFilterCount>512</maxFilterCount>
+      <filterHistorySize>5</filterHistorySize>
+   </propertyCollector>
+
+   <plugins>
+      <VsanSoapSvc>
+         <static>true</static>
+         <sdkPath>/vsanHealth</sdkPath>
+         <sdkPipeName>vsan-sdk-pipe</sdkPipeName>
+         <sdkTunnelPath>/vsan/sdkTunnel</sdkTunnelPath>
+         <sdkTunnelPipeName>vsan-sdkTunnel-pipe</sdkTunnelPipeName>
+      </VsanSoapSvc>
+
+      <VsanDbgSvc>
+         <static>true</static>
+         <requires>VsanSoapSvc</requires>
+         <MobServer>
+            <pipeName>vsan-mob-pipe</pipeName>
+         </MobServer>
+         <ioTracker>
+            <!-- <thresholdSec>10</thresholdSec> -->
+         </ioTracker>
+      </VsanDbgSvc>
+
+      <VsanVdtTracer>
+         <enabled>true</enabled>
+         <path>libVsanVdtTracer.so</path>
+         <serviceName>vsanvcmgmtd</serviceName>
+      </VsanVdtTracer>
+
+      <CnsService>
+         <path>libcns.so</path>
+         <!-- full sync interval by second -->
+         <fullSyncInterval>600</fullSyncInterval>
+         <!-- new sync interval by second, 0 means disabled -->
+         <newSyncInterval>60</newSyncInterval>
+         <!-- determine how many times to do startup fullsync-->
+         <startupSyncTry>5</startupSyncTry>
+         <!-- determine interval between startupSyncs-->
+         <startupSyncInterval>60</startupSyncInterval>
+         <!-- volume place algo using for creating volume -->
+         <!-- algo include: lottery, greedy -->
+         <volumePlaceAlgo>lottery</volumePlaceAlgo>
+         <!-- max concurrent Query requests allowed, 0 means unlimited -->
+         <maxConcurrentQueryRequests>0</maxConcurrentQueryRequests>
+         <!-- max pending concurrent QueryAsync task in cns task queue,
+              0 means unlimited -->
+         <maxQueryAsyncTasksInQueue>20</maxQueryAsyncTasksInQueue>
+         <!-- determine whether volume relocation is enabled -->
+         <volumeRelocateEnabled>true</volumeRelocateEnabled>
+         <!-- determine whether property collector based dispatcher is enabled -->
+         <propertyCollectorDispatcherEnabled>true</propertyCollectorDispatcherEnabled>
+         <!-- chaos configuration of injected latency -->
+         <!-- <chaosConfigLatencyDuration>10</chaosConfigLatencyDuration> -->
+         <!-- Enable/disable 256 disks support for PVSCSI controller -->
+         <pvscsiCtrlr256DiskSupportEnabled>true</pvscsiCtrlr256DiskSupportEnabled>
+         <!-- determine whether cns new sync is enabled -->
+         <newSyncEnabled>false</newSyncEnabled>
+      </CnsService>
+
+      <DataProtectionService>
+         <path>libDataProtectionSvc.so</path>
+         <!-- max number of tasks in history to search for a DPS taskinfo -->
+         <!-- <maxTaskInfoLookback>1000</maxTaskInfoLookback> -->
+         <!-- <logLevel>verbose</logLevel> -->
+         <!-- <drsMemOverheadGrowth>5</drsMemOverheadGrowth> -->
+         <!-- <drsMemOverheadGrowthMin>0</drsMemOverheadGrowthMin> -->
+         <!-- <drsMemOverheadGrowthCap>0</drsMemOverheadGrowthCap> -->
+         <!-- <progressTimeoutSec>1800</progressTimeoutSec> -->
+         <!-- <dpdThrottle>20</dpdThrottle> -->
+         <!-- <legacyDpdThrottle>10</legacyDpdThrottle> -->
+         <!-- <dpdBlockingTimeoutSec>600</dpdBlockingTimeoutSec> -->
+         <!-- <phIntervalSec>3600</phIntervalSec> -->
+         <!-- <phBatchSize>1000</phBatchSize> -->
+         <!-- <phPerHostDelayMilliSec>1000</phPerHostDelayMilliSec> -->
+         <!--
+         <allowedVendorProviders>
+            <vendorProvider id="1">sample-vendor-provider</vendorProvider>
+         </allowedVendorProviders>
+         -->
+         <!--
+         Indicates whether a VM that is already protected by SRM can also be
+         protected by LWD.
+         -->
+         <!-- <protectSrmVm>false</protectSrmVm> -->
+         <!--
+         Indicates whether a VM that is already protected by HBR can also be
+         protected by LWD.
+         -->
+         <!-- <protectHbrVm>true</protectHbrVm> -->
+      </DataProtectionService>
+
+      <VsanVpSvc>
+         <path>libvsanvp.so</path>
+      </VsanVpSvc>
+
+      <VsanTaskSvc>
+         <path>libVsanTaskSvc.so</path>
+      </VsanTaskSvc>
+
+      <VsanVapiSvc>
+         <featureState>VSAN_Data_Provider</featureState>
+         <path>libVsanVapiSvc.so</path>
+         <apiPipeName>vsan-api-pipe</apiPipeName>
+         <maxSessionCount>128</maxSessionCount>
+         <metadata>
+            <cis_session>/usr/lib/vmware-vsan/metadata/com.vmware.cis_metadata.json</cis_session>
+         </metadata>
+      </VsanVapiSvc>
+
+      <VsanDataProvider>
+         <featureState>VSAN_Data_Provider</featureState>
+         <requires>VsanVapiSvc</requires>
+         <path>libVsanDataProvider.so</path>
+         <metadata>/usr/lib/vmware-vsan/metadata/com.vmware.cis.data.provider_metadata.json</metadata>
+      </VsanDataProvider>
+   </plugins>
+
+   <VsanMgmtServer>
+      <!-- The maximum file descriptor number that can be opened. -->
+      <!-- <maxFds>2048</maxFds> -->
+      <pythonSvc>
+         <!-- maximum depth of Python interpreter stack -->
+         <!-- <recursionLimit>400</recursionLimit> -->
+         <main>/usr/lib/vmware-vpx/vsan-health/VsanMgmtServer.pyc</main>
+         <arg id="1">-p</arg>
+         <arg id="2">8006</arg>
+         <arg id="3">--pidfile</arg>
+         <arg id="4">/var/log/vmware/vsan-health/vmware-vsan-health.pid</arg>
+         <supportedApis>
+            <api id="1">_typeinfo_vasa</api>
+            <api id="2">_typeinfo_pbm</api>
+            <api id="3">_typeinfo_sms</api>
+            <api id="4">_typeinfo_vslm</api>
+            <api id="5">_typeinfo_integrity</api>
+            <api id="6">_typeinfo_cislicense</api>
+            <api id="7">_typeinfo_lookup</api>
+            <api id="8">_typeinfo_sso</api>
+            <api id="9">_typeinfo_dataservice</api>
+            <api id="10">_typeinfo_dp</api>
+         </supportedApis>
+      </pythonSvc>
+      <preload-libs>
+         <lib id="1">/usr/lib/vmware-vsan/lib/libintegrity-types.so</lib>
+      </preload-libs>
+      <dynamicTypes>
+         <dynamicType id="1">vim.VsanPhoneHomeWrapper</dynamicType>
+         <dynamicType id="2">vim.host.VsanPhoneHomeHostSystem</dynamicType>
+      </dynamicTypes>
+      <hostMoTypes>
+         <type id="1">vim.host.VsanSystem</type>
+         <type id="2">vim.host.VsanInternalSystem</type>
+         <type id="3">vim.host.VsanSystemEx</type>
+         <type id="4">vim.host.HostSpbm</type>
+      </hostMoTypes>
+   </VsanMgmtServer>
+
+   <PyMemTracer>
+      <maxAllocSize>2147483648</maxAllocSize>
+   </PyMemTracer>
+
+   <MoManager>
+      <!-- Configure the timed out in seconds for vmodl API invocations -->
+      <!-- <timedOutSec>-1</timedOutSec> -->
+      <panicOnTimedOut>true</panicOnTimedOut>
+   </MoManager>
+
+   <PyCppVmomi>
+      <enablePy2CppStubForPbmConn>true</enablePy2CppStubForPbmConn>
+      <enablePy2CppStubForVslmConn>true</enablePy2CppStubForVslmConn>
+      <hostMgr>
+         <enableHostMonitoring>true</enableHostMonitoring>
+         <hmo id="1">
+            <type>vim.host.HostSpbm</type>
+            <moId>hostSpbm</moId>
+         </hmo>
+      </hostMgr>
+      <lockTracker>
+         <timedOutSec>0</timedOutSec>
+         <!-- <panicOnTimedOut>false</panicOnTimedOut> -->
+         <!-- <coreDumpOnTimedOut>true</coreDumpOnTimedOut> -->
+      </lockTracker>
+      <PyCppThread>
+         <!-- <enable>true</enable> -->
+         <!-- <throttlePct>80</throttlePct> -->
+      </PyCppThread>
+   </PyCppVmomi>
+
+   <adapterServer>
+      <!-- <maxPendingActivations>1000</maxPendingActivations> -->
+   </adapterServer>
+
+   <I18n>
+      <enabled>true</enabled>
+      <!-- <enableI18nOnSystemSession>false</enableI18nOnSystemSession> -->
+      <locale>
+         <path id="1">/etc/vmware-vpx/coreLocale/</path>
+         <path id="2">/etc/vmware-vpx/locale/</path>
+         <path id="3">/etc/vmware-vpx/extensions/com.vmware.vsan.health/locale/</path>
+      </locale>
+      <supportedMoTypes>
+         <type id="1">vim.host.VsanSystem</type>
+         <type id="2">vim.host.VsanInternalSystem</type>
+         <type id="3">vim.host.VsanSystemEx</type>
+         <type id="4">vim.host.HostSpbm</type>
+      </supportedMoTypes>
+      <blacklist>
+         <type id="1">vim.vsan.ConfigInfoEx</type>
+         <type id="2">vim.vsan.host.ConfigInfoEx</type>
+         <type id="3">vim.cluster.VsanPerfEntityMetricCSV</type>
+         <type id="4">vim.cluster.VsanClusterHealthAction</type>
+      </blacklist>
+   </I18n>
+
+   <WebServer>
+      <!-- The URI prefix for a namespace will be '${prefix}/${namespace}'. -->
+      <prefix>/vsan</prefix>
+      <docRootMap>
+         <ui-plugins>
+            <namespace>plugins</namespace>
+            <path>/usr/lib/vmware-vpx/vsan-health/ui-plugins/</path>
+         </ui-plugins>
+         <vasa>
+            <namespace>vasa</namespace>
+            <path>/usr/lib/vmware-vpx/vsan-health/pyMoVsan/vsanvp/</path>
+         </vasa>
+      </docRootMap>
+      <mimeMap>
+         <json>application/json</json>
+         <vmsg>text/plain</vmsg>
+      </mimeMap>
+   </WebServer>
+
+</config>

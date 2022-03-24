@@ -1,0 +1,7 @@
+<vimhealth xmlns="http://www.vmware.com/vi/healthservice"
+           schemaVersion="1.0">
+   <health id="com.vmware.vsan.health">
+      <name>VMware Virtual VSAN Health Service</name>
+      <status>green</status>
+   </health>
+</vimhealth>

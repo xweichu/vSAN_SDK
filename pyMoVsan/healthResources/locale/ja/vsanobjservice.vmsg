@@ -1,0 +1,16 @@
+##############################################################
+# Copyright (C) 2021 VMware, Inc.  All rights reserved. -- VMware Confidential
+##############################################################
+#
+# VSAN object service related #
+com.vmware.vsan.object.type.other.desc = 不明なオブジェクト タイプ
+com.vmware.vsan.object.type.statsdb.desc = パフォーマンス管理オブジェクト
+com.vmware.vsan.object.type.iscsihome.desc = iSCSI ホーム オブジェクト
+com.vmware.vsan.object.type.iscsitarget.desc = iSCSI ターゲット オブジェクト
+com.vmware.vsan.object.type.iscsilun.desc = iSCSI LUN
+com.vmware.vsan.object.type.fileshare.desc = ファイル共有
+com.vmware.vsan.object.type.fsroot.desc = ファイル サービスのルート ファイル システム
+com.vmware.vsan.object.type.haMetadataObject.desc = vSphere HA メタデータ オブジェクト
+com.vmware.vsan.object.type.fcdNamespace.desc = 仮想ディスク名前空間の向上
+com.vmware.vsan.object.type.fcdCatalogNamespace.desc = 仮想ディスク カタログ名前空間の向上
+com.vmware.vsan.object.type.fcdSnapshot.desc = {fcdName} スナップショット

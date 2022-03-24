@@ -1,0 +1,391 @@
+signature = "sIgNaTuRe"
+
+#
+# Hardware compatibility Group 14
+#
+vsan.health.test.hcl.hcldbuptodate.label = "vSAN hardware compatibility alarm 'vSAN HCL DB up-to-date'"
+vsan.health.test.hcl.hcldbuptodate.summary = "Checks the age of the VMware Hardware Compatibility Guide database used for the HCL checks. Shows warning when it is older than 90 days or none. ESXi versions on the cluster are included in the local HCL database. Shows error when it is older than 180 days. VMware updates the VCG frequently, so it is important to keep the local copy up-to-date."
+
+vsan.health.test.hcl.autohclupdate.label = "vSAN hardware compatibility alarm 'vSAN HCL DB auto update'"
+vsan.health.test.hcl.autohclupdate.summary = "Verifies the vSAN HCL database can be downloaded and updated from the VMware HCL release website automatically. When there is no internet access to the VMware public website or the vSAN HCL database auto-update is not enabled, this health check will be in silent health check list by default to show skipped status, unless user manually removes it from silent list. Otherwise, it shows warning if the HCL database cannot be auto-updated for any other reason, for example, if it cannot connect VMware HCL release website, fail to download latest HCL database, or fail to update the local HCL database."
+
+vsan.health.test.hcl.controlleronhcl.label = "vSAN hardware compatibility alarm 'SCSI controller is VMware certified'"
+vsan.health.test.hcl.controlleronhcl.summary = "Displays information about the storage I/O controller and verifies that the controller is supported in the VMware Compatibility Guide, based on its PCI ID. If there is a mismatch, contact VMware support."
+
+vsan.health.test.hcl.nvmeidentifiable.label = "vSAN hardware compatibility alarm 'NVMe device can be identified'"
+vsan.health.test.hcl.nvmeidentifiable.summary = "Checks if there is only one vSAN VCG (VMware Compatibility Guide) entry whose PCI ID matches the one of the NVMe device in the vSAN cluster, so that this NVMe device can be identified for vSAN HCL check."
+
+vsan.health.test.hcl.nvmeonhcl.label = "vSAN hardware compatibility alarm 'NVMe device is VMware certified'"
+vsan.health.test.hcl.nvmeonhcl.summary = "Displays information about the NVMe devices and verifies that the devices are certified in the vSAN VCG (VMware Compatibility Guide). If there is a mismatch, contact VMware support."
+
+vsan.health.test.hcl.controllerreleasesupport.label = "vSAN hardware compatibility alarm 'Controller is VMware certified for ESXi release'"
+vsan.health.test.hcl.controllerreleasesupport.summary = "Displays information about the storage I/O controller drivers. Checks if the installed driver is supported for the corresponding controller in the current release of ESXi. Only the VMware certified controller will be tested."
+
+vsan.health.test.hcl.controllerdriver.label = "vSAN hardware compatibility alarm 'Controller driver is VMware certified'"
+vsan.health.test.hcl.controllerdriver.summary = "Checks if the driver used by a controller is listed as certified in the VMware Compatibility Guide. Only the controller which is on the vSAN HCL and certified for the current release of ESXi will be tested."
+
+vsan.health.test.hcl.hclhostbadstate.label = "vSAN hardware compatibility alarm 'Host issues retrieving hardware info'"
+vsan.health.test.hcl.hclhostbadstate.summary = "Checks if any host is disconnected/non-responsive or failed to respond to attempts to fetch hardware information. Hosts listed here will not have their hardware checked against the VMware Compatibility Guide."
+
+vsan.health.test.hcl.controllerfirmware.label = "vSAN hardware compatibility alarm 'Controller firmware is VMware certified'"
+vsan.health.test.hcl.controllerfirmware.summary = "Checks if controller firmware is certified per the VMware Compatibility Guide. Only the controller which is on the vSAN HCL and certified for the current release of ESXi will be tested."
+
+vsan.health.test.hcl.controllerdiskmode.label = "vSAN hardware compatibility alarm 'Controller disk group mode is VMware certified'"
+vsan.health.test.hcl.controllerdiskmode.summary = "Checks if the vSAN disk group type (all-flash or hybrid) is certified for the SCSI controller listed in the VMware Compatibility Guide. Only the controller which is on the vSAN HCL and certified for the current release of ESXi will be tested."
+
+vsan.health.test.hcl.pniclinkspeed.label = "vSAN hardware compatibility alarm 'Physical NIC link speed meets requirements'"
+vsan.health.test.hcl.pniclinkspeed.summary = "Network Interface Cards (NICs) used in vSAN hosts must meet certain requirements. These NIC requirements assume that the packet loss is not more than 0.0001% in the hyper-converged environments. It's recommended to use NIC which link speed can meet the minimum requirement. Otherwise, there can be a drastic impact on the vSAN performance."
+
+vsan.health.test.hcl.fwrecommendation.label = "vSAN hardware compatibility alarm 'vSAN firmware version recommendation'"
+vsan.health.test.hcl.fwrecommendation.summary = "vSAN firmware recommendation. This firmware suggestion is based on the current host software version, hardware driver version and its compatibility per VMware Compatibility Guide."
+
+vsan.health.test.physicaldisks.diskusage.label = "vSAN hardware compatibility alarm 'Disks usage on storage controller'"
+vsan.health.test.physicaldisks.diskusage.summary = "vSAN does not support configuration where non-vSAN disks are used for VMFS or Raw Device Mappings(RDMs). Refer to Ask VMware KB in vSAN health monitor for remediation steps."
+
+vsan.health.test.hcl.mixedmode.label = "vSAN hardware compatibility alarm 'Controller with pass-through and RAID disks'"
+vsan.health.test.hcl.mixedmode.summary = "Mixing the controller disk mode (pass-through/RAID) causes disks to be handled in different ways by the storage controller. This introduces the possibility that issues affecting one configuration could also affect the other, with possible negative consequences for vSAN. Refer to Ask VMware KB in vSAN health monitor for remediation steps."
+
+vsan.health.test.hcl.h730.label = "vSAN hardware compatibility alarm 'vSAN configuration for LSI-3108 based controller'"
+vsan.health.test.hcl.h730.summary = "To ensure stability and optimal performance of vSAN when running on LSI-3108 based controller, some recommended configuration values must be set. Refer to Ask VMware KB in vSAN health monitor for remediation steps."
+
+vsan.health.test.hcl.mixedmodeh730.label = "vSAN hardware compatibility alarm 'vSAN and VMFS datastores on a Dell H730 controller with the lsi_mr3 driver'"
+vsan.health.test.hcl.mixedmodeh730.summary = "VMware does not support configurations where vSAN disks co-exist with VMFS volumes on Dell H730 controller using the lsi_mr3 driver. To remediate this issue, install ESXi on a disk with vSAN drives (ESXi boot disk only) and then remove/delete the VMFS datastore from the local boot device."
+
+vsan.health.test.hcl.controllercacheconfig.label = "vSAN hardware compatibility alarm 'RAID controller configuration'"
+vsan.health.test.hcl.controllercacheconfig.summary = "vSAN requires some specific controller-level configuration for Pass-Through or RAID0 Single Drive (SSD/HDD) to work optimally with vSAN software-level caches. Refer to Ask VMware KB in vSAN health monitor for detailed cache configuration settings and steps to configure the controller properly."
+
+vsan.health.test.hcl.vsanhpefwtest.label = "vSAN health alarm 'HPE NVMe Solid State Drives - critical firmware upgrade required'"
+vsan.health.test.hcl.vsanhpefwtest.summary = "Default alarm to monitor changes for the health test 'HPE NVMe Solid State Drives - critical firmware upgrade required'"
+
+#
+# vSAN iSCSI target service Group 3
+#
+vsan.health.test.iscsi.iscsihomeobjectstatustest.label = "vSAN iSCSI target service alarm 'Home object'"
+vsan.health.test.iscsi.iscsihomeobjectstatustest.summary = "Home object stores metadata used by the vSAN iSCSI target service. This alarm verifies the following items: The home object has been created and can be located in the system. The home object is healthy and is compliant with the storage policy. The home object is unique. If multiple home objects exist, some of the hosts in the cluster might access a different home object. The metadata file in the home object is present and can be parsed, and that all metadata is properly stored."
+
+vsan.health.test.iscsi.iscsiservicenetworktest.label = "vSAN iSCSI target service alarm 'Network configuration'"
+vsan.health.test.iscsi.iscsiservicenetworktest.summary = "All network interfaces used by vSAN iSCSI target service (including the default interface) must be configured on all hosts in the cluster. All network interfaces that have the same name form a distributed portal. If one or more hosts does not have a network interface, the vSAN iSCSI target service cannot operate correctly."
+
+vsan.health.test.iscsi.iscsiservicerunningtest.label = "vSAN iSCSI target service alarm 'Service runtime status'"
+vsan.health.test.iscsi.iscsiservicerunningtest.summary = "Checks whether the service is enabled on all hosts in the cluster. If the service is not enabled on a host, run the following command: esxcli vsan iscsi status set --enabled=true. Or you can use the Edit action (Manage > Settings > General > vSAN iSCSI Target Service) to enable the iSCSI target service. This alarm also verifies the health of the following processes: vitd is used to provide the service, vitsafehd is used to hold opens for VMDKs. If vitd process is not running, use the following command to start the process: /etc/init.d/vitd start. If vitsafehd process is not running, use the following command to start the process: /etc/init.d/vitd io_restart."
+
+#
+# Network Group 16
+#
+vsan.health.test.network.multicastsuspected.label = "vSAN network alarm 'Multicast assessment based on other checks'"
+vsan.health.test.network.multicastsuspected.summary = "This alarm indicates there might be a multicast issue if vSAN configuration checks passed, unicast connectivity checks passed, but there is a vSAN cluster partition. If it is triggered, an additional 'Active multicast connectivity check' will be performed."
+
+vsan.health.test.network.multicastdeepdive.label = "vSAN network alarm 'Active multicast connectivity check'"
+vsan.health.test.network.multicastdeepdive.summary = "This alarm captures multicast packets on all hosts in the cluster for a period of time. It checks for  the CMMDS Primary Heartbeat. All hosts elected to be a vSAN/CMMDS Primary (one per partition) send this heartbeat once every second. These heartbeats are sent over multicast and all hosts in the cluster have to receive them in order for the cluster to function properly. So if a host sends a heartbeat and another host didn't hear it, it indicates a multicast misconfiguration, usually in the physical network."
+
+vsan.health.test.network.largeping.label = "vSAN network alarm 'vSAN: MTU check (ping with large packet size)'"
+vsan.health.test.network.largeping.summary = "Performs a ping test with large packet size from each host to all other hosts. If this alarm is triggered but the basic connectivity check alarm is not triggered, it means that there is an MTU misconfiguration somewhere in the vSAN network. The source of the misconfiguration must be traced. It could be the VMkernel adapters, the virtual switches, or the physical network switches."
+
+vsan.health.test.network.smallping.label = "vSAN network alarm 'vSAN: Basic (unicast) connectivity check'"
+vsan.health.test.network.smallping.summary = "Performs a ping test with small packet size from each host to all other hosts. If this alarm is triggered, there is a basic issue with network connectivity. Check vmknic, uplink, VLAN, physical switch and associated settings."
+
+vsan.health.test.network.hostconnectivity.label = "vSAN network alarm 'Hosts with connectivity issues'"
+vsan.health.test.network.hostconnectivity.summary = "This alarm refers to situations where vCenter Server lists the host as connected, but API calls from vCenter Server to the host are failing. This issue is rare, but it can lead to similar issues as the host disconnected from vCenter Server situation."
+
+vsan.health.test.network.multicastsettings.label = "vSAN network alarm 'All hosts have matching multicast settings'"
+vsan.health.test.network.multicastsettings.summary = "In order to participate in a vSAN cluster, and form a single group of fully connected hosts, each host in a vSAN cluster must use the same IP multicast addresses. Depending on whether the cluster uses IPv4 or IPv6, the corresponding multicast configuration will be verified. Adjust multicast IPs using the following commands:\nesxcli vsan network list\nesxcli vsan network ip set"
+
+vsan.health.test.network.vsanvmknic.label = "vSAN network alarm 'All hosts have a vSAN vmknic configured'"
+vsan.health.test.network.vsanvmknic.summary = "In order to participate in a vSAN cluster, and form a single group of fully connected hosts, each host in a vSAN cluster must have a vmknic (VMkernel network interface or VMkernel adapter) configured for vSAN traffic."
+
+vsan.health.test.network.clusterpartition.label = "vSAN network alarm 'vSAN cluster partition'"
+vsan.health.test.network.clusterpartition.summary = "To ensure proper functionality, all vSAN hosts must be able to communicate over both multicast and unicast. If they cannot, a vSAN cluster will split into multiple partitions, sub-groups of hosts that cannot communicate to other sub-groups. When this happens, vSAN objects might become unavailable until the network misconfiguration is resolved."
+
+vsan.health.test.network.hostdisconnected.label = "vSAN network alarm 'Hosts disconnected from VC'"
+vsan.health.test.network.hostdisconnected.summary = "This alarm refers to whether vCenter Server has an active connection to all hosts in the cluster. If any host is disconnected from vCenter Server (or not responding), it could cause operational issues. If vCenter Server is not connected to the host, its state is unknown to vCenter. The host might be running, and might be participating in the vSAN cluster, serving data, and playing a critical role in the storage functions of the cluster. Or the host might be down and unavailable. vCenter Server and the vSAN health check cannot fully assess the situation while the host is disconnected. If the host is participating in the vSAN cluster, it appears in the Unexpected vSAN cluster member check as unexpected, because its UUID cannot be determined. The health check cannot determine if the host it sees in the vSAN cluster is the disconnected host or not. Other health checks, like vSAN connectivity checks or disk health checks will not be able to take the disconnected host into account."
+
+vsan.health.test.network.vmotionpingsmall.label = "vSAN network alarm 'vMotion: Basic (unicast) connectivity check'"
+vsan.health.test.network.vmotionpingsmall.summary = "Performs a ping test with small packet size between all VMkernel adapters with vMotion traffic enabled. If this alarm is triggered, it indicates that the network is misconfigured. The test sends three pings. It shows a warning when one ping is lost and an error when two or more pings fail. The failure could be caused by many factors. There might be problems in the virtual network, including VMkernel adapters or Virtual Switches. There might be problems in the physical network, such as cables, physical NICs, or physical switches."
+
+vsan.health.test.network.vmotionpinglarge.label = "vSAN network alarm 'vMotion: MTU check (ping with large packet size)'"
+vsan.health.test.network.vmotionpinglarge.summary = "Performs a ping test with large packet size between all VMkernel adapters with vMotion traffic enabled. When the small ping test succeeds, the large ping test also succeeds when the MTU size is consistently configured across all VMkernel adapters, virtual switches, and any physical switches. If the alarm is triggered, identify the source of the misconfiguration on the vSAN network. Check the VMkernel adapters, the virtual switches, or the physical network switches."
+
+vsan.health.test.network.hostlatencycheck.label = "vSAN network alarm 'Network latency check'"
+vsan.health.test.network.hostlatencycheck.summary = "Performs a network latency check of vSAN hosts. The network configuration guidance of normal cluster requires RTT less than 1ms. To allow for temporary fluctuations, this health check reports warnings based on a conservative threshold of 5ms. If this alarm is triggered, check vmknic, uplink, VLAN, physical switch and associated settings to locate the network issue.\nNote: This alarm will be skipped if the pair of hosts failed connectivity check."
+
+vsan.health.test.network.serverpartition.label = "vSAN network alarm 'Server cluster partition'"
+vsan.health.test.network.serverpartition.summary = "Normally all hosts in the client cluster mounting remote vSAN datastore must be able to communicate with all hosts in the server cluster. In the case of network partition, client hosts might only see a subset of server hosts. It is possible that different client hosts see different server hosts. Object availability will be impacted for as long as the partition lasts. This alarm is triggered if the server cluster has partitions. Refer to the health monitor for more details."
+
+vsan.health.test.network.rdmaconfig.label = "vSAN network alarm 'RDMA Configuration Health'"
+vsan.health.test.network.rdmaconfig.summary = "Checks if the vSAN RDMA-enabled physical NIC is configured for lossless traffic. To ensure a lossless layer 2 environment, the Data Center Bridging (DCB) mode must be configured as IEEE and the Priority Flow Control (PFC) value must set to 3."
+
+vsan.health.test.network.multiplevsanvmknic.label = "vSAN network alarm 'No hosts in remote vSAN have multiple vSAN vmknics configured'"
+vsan.health.test.network.multiplevsanvmknic.summary = "Checks if any host in remote vSAN client or server cluster has more than one vSAN vmknic configured. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.network.pnicconsistent.label = "vSAN network alarm 'Physical network adapter link speed consistency'"
+vsan.health.test.network.pnicconsistent.summary = "Checks if the link speed of physical network adapter used by vSAN in each of host is consistent. The inconsistent link speed of physical network adapter can introduce vSAN performance issues. Refer to Ask VMware KB in vSAN health monitor for remediation steps."
+
+vsan.health.test.network.duplicateip.label = "vSAN network alarm 'Hosts with duplicate IP addresses'"
+vsan.health.test.network.duplicateip.summary = "Checks if duplicate IP address is configured for vmknic interface."
+
+vsan.health.test.network.pnictso.label = "vSAN network alarm 'Hosts with pNIC TSO issues'"
+vsan.health.test.network.pnictso.summary = "Checks if TSO is enabled for pNIC."
+
+vsan.health.test.network.lacpstatus.label = "vSAN network alarm 'Hosts with LACP issues'"
+vsan.health.test.network.lacpstatus.summary = "Checks if LACP is working properly."
+
+#
+# vSAN Build Recommendation Group 4
+#
+vsan.health.test.vum.releasecataloguptodate.label = "vSAN build recommendation alarm 'vSAN release catalog up-to-date'"
+vsan.health.test.vum.releasecataloguptodate.summary = "Checks the age of the vSAN release catalog used for vSAN Build Recommendation. This alarm is triggered when it's older than 90 or 180 days, respectively. vSAN release catalog is updated when there are new releases or critical patches, so it's important to keep the local copy up-to-date."
+
+vsan.health.test.vum.vumconfig.label = "vSAN build recommendation alarm 'vSAN build recommendation engine'"
+vsan.health.test.vum.vumconfig.summary = "vSAN Build Recommendation engine relies on VMware Compatibility Guide and VMware release metadata for its recommendation. It also requires VMware Update Manager service to be available, Internet connectivity, and valid my.vmware.com credential to be set. This alarm is triggered if these dependencies are not met or the recommendation engine is not functioning correctly."
+
+vsan.health.test.vum.vumrecommendation.label = "vSAN build recommendation alarm 'vSAN build recommendation'"
+vsan.health.test.vum.vumrecommendation.summary = "This is the ESXi build that vSAN recommends to be the most appropriate, given the hardware, its compatibility per VMware Compatibility Guide and the available releases from VMware."
+
+vsan.health.test.vum.patchalert.label = "vSAN build recommendation alarm 'vSAN Hosts with new patch available'"
+vsan.health.test.vum.patchalert.summary = "Checks if a new critical vSAN patch is available. If this alarm is triggered, upgrade immediately to this patch release. Refer to Ask VMware KB in vSAN health monitor for instructions about how to update vSAN software."
+
+#
+# Physical Disk Group 9
+#
+vsan.health.test.physicaldisks.physdiskcomplimithealth.label = "vSAN physical disk alarm 'Component limit'"
+vsan.health.test.physicaldisks.physdiskcomplimithealth.summary = "Checks if the number of components on the physical disk reaches the maximum limit. Since each vSAN object is composed of a set of components, determined by capabilities that are in use in the VM Storage Policy, the deployment of new virtual machines might fail, or rebuild operations might not be allowed if the component limit has been reached. You must either add more host or delete some vSAN objects. However, if the component is full in witness node, you must provide more capacity."
+
+vsan.health.test.physicaldisks.componentmetadata.label = "vSAN physical disk alarm 'Component metadata'"
+vsan.health.test.physicaldisks.componentmetadata.summary = "This alarm is triggered if vSAN has encountered an issue with the integrity of the metadata of a component in this disk. This could be due to faulty drives, faulty controller or a misbehaving device driver. It also can be caused by a problem in the vSAN software. Contact VMware Support."
+
+vsan.health.test.physicaldisks.physdiskcongestion.label = "vSAN physical disk alarm 'Congestion'"
+vsan.health.test.physicaldisks.physdiskcongestion.summary = "If this alarm is triggered, vSAN is still using the disk, but it is in a state of reduced performance, resulting in low throughput/IOPS and high latencies for vSAN objects using this disk."
+
+vsan.health.test.physicaldisks.physdiskcapacity.label = "vSAN physical disk alarm 'Disk capacity'"
+vsan.health.test.physicaldisks.physdiskcapacity.summary = "If this alarm is triggered for a specific disk, it indicates that this disk is low on free disk space. This alarm is only applicable to capacity tier drives, not to the cache devices."
+
+vsan.health.test.physicaldisks.physdiskoverall.label = "vSAN physical disk alarm 'Operation'"
+vsan.health.test.physicaldisks.physdiskoverall.summary = "Checks the physical disk operation health for both vSAN disks and vSAN direct disks for all hosts in the vSAN cluster. If this alarm is triggered on a VSAN disk, the disk cannot be used by vSAN. Possible reasons are issues in reading the disk metadata or a vSAN software issue preventing it to use this disk. For vSAN direct disks, the disk cannot be used, with the possible reason being an issue reading the disk operational state description that prevents the disk from being used."
+
+vsan.health.test.physicaldisks.lsomheap.label = "vSAN physical disk alarm 'Memory pools (heaps)'"
+vsan.health.test.physicaldisks.lsomheap.summary = "This alarm is triggered if vSAN is running low on vital memory pools needed for the correct operation of physical disks. The disk might also report bad congestion health, which will lead to performance issues. Contact VMware Support."
+
+vsan.health.test.physicaldisks.lsomslab.label = "vSAN physical disk alarm 'Memory pools (slabs)'"
+vsan.health.test.physicaldisks.lsomslab.summary = "This alarm is triggered if vSAN is running low on a vital memory pool needed for the operation of physical disks. The disk might also report bad congestion health, which will lead to performance issues. Contact VMware Support."
+
+vsan.health.test.physicaldisks.smalldiskstest.label = "vSAN physical disk alarm 'vSAN max component size'"
+vsan.health.test.physicaldisks.smalldiskstest.summary = "When a capacity disk used for vSAN is smaller than 255 GB (default maximum component size), virtual machines that run on the vSAN Datastore might experience disk space issues. Refer to Ask VMware KB in vSAN health monitor for instructions about how to change maximum component size."
+
+vsan.health.test.physicaldisks.physdiskhostissues.label = "vSAN physical disk alarm 'Physical disk health retrieval issue'"
+vsan.health.test.physicaldisks.physdiskhostissues.summary = "If this alarm is triggered, it indicates that there was an issue retrieving the physical disk information from at least one host in the vSAN cluster. Please refer to Ask VMware KB in vSAN health monitor for details about this particular cause."
+
+#
+# Cluster Group 12
+#
+vsan.health.test.cluster.clomdliveness.label = "vSAN cluster alarm 'vSAN daemon liveness'"
+vsan.health.test.cluster.clomdliveness.summary = "Checks the liveness of critical host daemons on all vSAN hosts. NOTE: CLOMD status is not checked on he witness node. EPD status is not checked on witness and metadata node."
+
+vsan.health.test.cluster.advcfgsync.label = "vSAN cluster alarm 'Advanced vSAN configuration in sync'"
+vsan.health.test.cluster.advcfgsync.summary = "vSAN has a number of advanced configuration options for tuning or to address special requirements of particular deployments. Usually these options are changed under the guidance of VMware Support, using a VMware KB article procedure. These advanced options are set per host, which can lead to inconsistent configurations across a cluster. This check ensures that critical vSAN advanced options have the same value or default value across all hosts in a given cluster."
+
+vsan.health.test.cluster.upgradesoftware.label = "vSAN cluster alarm 'Software version compatibility'"
+vsan.health.test.cluster.upgradesoftware.summary = "Once a vSAN cluster starts using a new on-disk format version (after software upgrade), hosts with older software versions that do not support the new on-disk format become incompatible. If such an older host version is introduced in the cluster, this host is placed in a network partition or can only access a very limited set of data. Such configurations are unsupported, and an immediate software upgrade or removal of the older host version are advised."
+
+vsan.health.test.cluster.upgradelowerhosts.label = "vSAN cluster alarm 'Disk format version'"
+vsan.health.test.cluster.upgradelowerhosts.summary = "vSAN cluster expected format version is 13, which is the highest supported format version by any host in the cluster. For disk with format version lower than the expected version, vSAN on-disk format upgrade is recommended to support latest vSAN features."
+
+vsan.health.test.cluster.diskbalance.label = "vSAN cluster alarm 'vSAN disk balance'"
+vsan.health.test.cluster.diskbalance.summary = "This alarm helps a user monitor the balance state among disks. Default setting for Automatic Rebalance is disabled. This alarm is triggered if the imbalance exceeds a system-determined threshold. When Automatic Rebalance is enabled, vSAN automatically rebalances to keep the status green. Rebalance can wait up to 30 minutes to start, giving time to high priority tasks like EMM, repair, etc. to use the resources before rebalancing."
+
+vsan.health.test.cluster.clustermembership.label = "vSAN cluster alarm 'vSphere cluster members match vSAN cluster members'"
+vsan.health.test.cluster.clustermembership.summary = "Checks that vSphere cluster members match vSAN cluster members. If this alarm is triggered, it means that vSphere cluster members are not identical to vSAN cluster members. This issue might occur when vSAN is not enabled on certain vSphere cluster members, or when certain vSAN cluster members are not managed by the vSphere cluster. The hosts with mismatched cluster membership appear in the Cluster membership table. You can modify incorrect membership, so that your hosts rejoin appropriate clusters. vSAN configuration is done automatically."
+
+vsan.health.test.cluster.consistentconfig.label = "vSAN cluster alarm 'vSAN Cluster Configuration Consistency'"
+vsan.health.test.cluster.consistentconfig.summary = "This alarm is triggered when there are inconsistent configuration (like dedup/compression, encryption) setup on hosts or disks in the cluster. If this alarm is triggered, it means that there are inconsistent configuration  settings (for example: dedup/compression, encryption) on hosts or disks with the cluster. You can go to the corresponding health check page to get more detailed information and remediation steps."
+
+vsan.health.test.cluster.vsandconfigconsistency.label = "vSAN cluster alarm 'vSAN Direct homogeneous disk claiming'"
+vsan.health.test.cluster.vsandconfigconsistency.summary = "Checks if vSAN Direct disks are homogeneously claimed on hosts in the cluster. If this alarm is triggered, it means that there are inconsistent configuration settings (like disk capacity, mode and number) setup on hosts in the cluster. You can go to the corresponding health check page to get more detailed information and re-configure accordingly."
+
+vsan.health.test.cluster.timedrift.label = "vSAN cluster alarm 'Time is synchronized across hosts and VC'"
+vsan.health.test.cluster.timedrift.summary = "Checks the time difference among vCenter Server and hosts. Any difference larger than 60 seconds will trigger this alarm. If the alarm is triggered, check the NTP server configuration."
+
+vsan.health.test.cluster.resynclimit.label = "vSAN cluster alarm 'Resync Operations Throttling'"
+vsan.health.test.cluster.resynclimit.summary = "Checks if resync operations are throttled on any hosts. Displays a warning when resync bandwidth limit is configured, and shows an error when the value is less than 20 MBps. Clear the limit, unless you need it for particular cases like significant resync traffic causing high VM latencies. Setting this limit can slow resync-based operations like policy change or maintenance mode."
+
+vsan.health.test.cluster.vcauthoritative.label = "vSAN cluster alarm 'vCenter state is authoritative'"
+vsan.health.test.cluster.vcauthoritative.summary = "During normal operation, the vCenter Server state is regarded as the source of truth, and ESXi hosts are updated with the latest host membership list. When vCenter Server is replaced or recovered from backup, the host membership list in vCenter Server might be out of sync. This health check detects such cases, and alerts if vCenter Server state was not pushed to ESXi due to vCenter Server being out of sync. In such cases, first fully restore the membership list in vCenter Server, and then perform Update ESXi configuration action if required."
+
+vsan.health.test.cluster.extendedconfig.label = "vSAN cluster alarm 'vSAN extended configuration in sync'"
+vsan.health.test.cluster.extendedconfig.summary = "vSAN cluster extended configuration defaults are: object repair timer is 60 minutes, site read locality is Enabled, customized swap object is Enabled, large scale cluster support is Disabled, automatic rebalance is off, automatic rebalance threshold is 30. If the host has inconsistent extended configurations, vSAN cluster remediation is recommended. If the host doesn't support any extended configuration, upgrade ESXi software. For cluster scalability configuration to take effect, host reboot might be required."
+
+vsan.health.test.cluster.mmdecominsync.label = "vSAN cluster alarm 'Host Maintenance Mode'"
+vsan.health.test.cluster.mmdecominsync.summary = "Verifies that the host's maintenance mode is in sync with vSAN node decommission state. If the host is in maintenance mode, the vSAN node should be in decommission state. If a node is decommissioned but the host is not in maintenance mode, place the host into maintenance mode using any vSAN option and then remove it from maintenance mode to reset the vSAN decommission status and make it consistent with the vSphere maintenance mode state."
+
+vsan.health.test.cluster.rdmanodes.label = "vSAN cluster alarm 'Maximum host number in vSAN over RDMA'"
+vsan.health.test.cluster.rdmanodes.summary = "vSAN with RDMA supports up to 32 hosts."
+
+vsan.health.test.hcl.hostmemcheck.label = "vSAN cluster alarm 'Host physical memory compliance check'"
+vsan.health.test.hcl.hostmemcheck.summary = "Check if the host physical memory is larger than the minimum vSAN memory requirement."
+
+#
+# Capacity utilization Group (AKA Limits Group) 4
+#
+vsan.health.test.limits.nodecomponentlimit.label = "vSAN capacity utilization alarm 'Component'"
+vsan.health.test.limits.nodecomponentlimit.summary = "Checks the component utilization for the cluster and for each host. This alarm is triggered as warning or error if the utilization exceeds 80% or 90% in any host. When these limits are reached, the deployment of new virtual machines might fail, or a rebuild operations might not be allowed.  Add more hosts or delete some vSAN objects. However, if the component limit is reached in the witness node, you have to replace it with more capacity."
+
+# Deco in future as pr 2518894
+vsan.health.test.limits.rcreservation.label = "vSAN capacity utilization alarm 'Read cache reservations'"
+vsan.health.test.limits.rcreservation.summary = "Checks read cache reservations across the cluster. This alarm is triggered as warning or error if the free reservations is less than 30% or 10% of total read cache reservations. This will impact the performance of virtual machines."
+
+vsan.health.test.limits.diskspace.label = "vSAN capacity utilization alarm 'Storage space'"
+vsan.health.test.limits.diskspace.summary = "Checks if the usage of vSAN cluster capacity tier disks and vSAN managed datastore under the cluster are beyond the thresholds. If there is not enough free capacity tier disk space, the deployment of new virtual machines might fail or component rebuild operations might not be allowed. The running virtual machines might have a pending question in each impacted virtual machine. Refer to Ask VMware KB in vSAN health monitor to recover the virtual machine and vSAN cluster."
+
+vsan.health.test.limits.limit1hf.label = "vSAN capacity utilization alarm 'What if the most consumed host fails'"
+vsan.health.test.limits.limit1hf.summary = "This alarm simulates the failure of the host with most resources consumed. The resources on that host would no longer be available. vSAN attempts to re-protect all objects now running with reduced redundancy. This alarm is triggered if re-protection of all objects is impossible when utilization is more than 100%."
+
+#
+# Performance service Group 8
+#
+vsan.health.test.perfsvc.perfsvcstatus.label = "vSAN performance service alarm 'Performance service status'"
+vsan.health.test.perfsvc.perfsvcstatus.summary = "Checks the status of the vSAN performance service. Warning of this alarm can be remediated by enabling vSAN performance service."
+
+vsan.health.test.perfsvc.statsdb.label = "vSAN performance service alarm 'Stats DB object'"
+vsan.health.test.perfsvc.statsdb.summary = "Checks the health of the vSAN performance service statistics database object. This alarm is triggered if Stats DB object does not exist, the Stats DB object is not 100 percent healthy, the object is unavailable, or the vSAN Stats DB object is running low on free logical disk space."
+
+vsan.health.test.perfsvc.masterexist.label = "vSAN performance service alarm 'Stats primary election'"
+vsan.health.test.perfsvc.masterexist.summary = "Checks the stats primary node of vSAN performance service. This alarm is triggered if there is no stats primary node. Check the health of the vSAN datastore and the Stats DB object, especially the network health. If all of these checks are confirmed healthy, contact VMware Support and file a Support Request."
+
+vsan.health.test.perfsvc.collection.label = "vSAN performance service alarm 'Performance data collection'"
+vsan.health.test.perfsvc.collection.summary = "Checks the statistics collection of the vSAN performance service. Statistics are collected at regular intervals, such as every 5 minutes. If statistics collection or writing to storage fail for three consecutive intervals, this alarm is triggered. Check the health of the vSAN datastore, especially the health of all physical disks, the network health, and the health of the vSAN Stats DB object. If all of these items are healthy, contact VMware Support and file a Support Request."
+
+vsan.health.test.perfsvc.hostsmissing.label = "vSAN performance service alarm 'All hosts contributing stats'"
+vsan.health.test.perfsvc.hostsmissing.summary = "Verifies that all hosts are contributing performance stats. If this alarm is triggered, it means some hosts are not contributing performance statistics. There are no known causes for this alarm. If it triggers consistently, contact VMware Support and file a Support Request. Provide support bundles for the entire cluster, including the vCenter Server and all hosts."
+
+vsan.health.test.perfsvc.renameddirs.label = "vSAN performance service alarm 'Stats DB object conflicts'"
+vsan.health.test.perfsvc.renameddirs.summary = "Checks stats DB object conflicts. If the other Stats DB objects are useful, they can be backed up as files through the datastore browser, or they can be renamed and kept in the datastore. Merging of multiple Stats DB objects is not supported."
+
+vsan.health.test.perfsvc.verbosemode.label = "vSAN performance service alarm 'Verbose mode'"
+vsan.health.test.perfsvc.verbosemode.summary = "Checks if the vSAN performance service verbose mode is enabled. This alarm is triggered when verbose mode is enabled for more than 5 days."
+
+vsan.health.test.perfsvc.diagmode.label = "vSAN performance service alarm 'Network diagnostic mode'"
+vsan.health.test.perfsvc.diagmode.summary = "Checks if the vSAN performance service network diagnostic mode is enabled. This alarm is triggered when the network diagnostic mode is enabled for more than 24 hours".
+
+#
+# Hyperconverged cluster configuration compliance 2
+#
+vsan.health.test.hcicluster.hosthciconfig.label = "vSAN hyperconverged cluster configuration alarm 'Host compliance check for hyperconverged cluster configuration'"
+vsan.health.test.hcicluster.hosthciconfig.summary = "Checks if the configuration of each host is compliant with the hyperconverged cluster configuration. The hosts must all be attached to the vSphere Distributed Switch with the same adapters. The adapters must be present on the correct distributed port groups, and the NTP server and lockdown mode must be configured according to specifications."
+
+vsan.health.test.hcicluster.dvshciconfig.label = "vSAN hyperconverged cluster configuration alarm 'VDS compliance check for hyperconverged cluster configuration'"
+vsan.health.test.hcicluster.dvshciconfig.summary = "Checks if the vSphere Distributed Switch is alive and the distributed port groups configuration is compliant with the hyperconverged cluster configuration."
+
+#
+# Stretched cluster Group 15
+#
+vsan.health.test.stretchedcluster.siteconnectivity.label = "vSAN stretched cluster alarm for 'Site latency' health"
+vsan.health.test.stretchedcluster.siteconnectivity.summary = "This alarm is triggered if the worst latency between any two hosts in data sites and witness exceed certain limit. Warning threshold: 5ms between/within data sites, 200ms between data site and witness in NON-ROBO cluster, 500ms between data site and witness in ROBO cluster. Check the network between the failed pair of hosts to ensure the network setup meets the minimal requirements. NOTE: The pair of hosts failing in vSAN basic connectivity (small ping) test will be skipped."
+
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.label = "vSAN stretched cluster alarm 'Witness host not found'"
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.summary = "The stretched cluster does not contain a valid witness host. If this alarm is triggered, the vSAN stretched cluster has configuration errors that affect its operation. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.label = "vSAN stretched cluster alarm 'Invalid unicast agent'"
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.summary = "This alarm is triggered if the cluster contains hosts with invalid unicast agent. An invalid unicast agent on the host can cause a communication malfunction with the witness hosts. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.label = "vSAN stretched cluster alarm 'Unicast agent configuration inconsistent'"
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.summary = "The stretched cluster contains multiple unicast agents. This means multiple unicast agents were set on non-witness hosts. If this alarm is triggered, the vSAN stretched cluster has configuration errors that affect its operation. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.label = "vSAN stretched cluster alarm 'Unexpected number of fault domains'"
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.summary = "The stretched cluster does not contain two valid fault domains. Each data site must reside in a different fault domain. The total number of fault domains for data sites must be two. If this alarm is triggered, the vSAN stretched cluster has configuration errors that affect its operation. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.label = "vSAN stretched cluster alarm 'Invalid preferred fault domain on witness host'"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.summary = "The following (witness) hosts have invalid preferred fault domains. The preferred fault domain is utilized by the witness host, and it must be the fault domain of either data site in the vSAN stretched cluster. It cannot be empty. If this alarm is triggered, the vSAN stretched cluster has configuration errors that affect its operation. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.hostunicastagentunset.label = "vSAN stretched cluster alarm 'Unicast agent not configured'"
+vsan.health.test.stretchedcluster.hostunicastagentunset.summary = "Hosts must setup unicast agent so that they are able to communicate with the witness node. If this alarm is triggered, the vSAN stretched cluster has configuration errors that affect its operation. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.label = "vSAN stretched cluster alarm 'Preferred fault domain unset'"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.summary = "The preferred fault domain is not set in the cluster for the witness host. The preferred fault domain is utilized by the witness host, and it must be the fault domain of either data site in the vSAN stretched cluster. It cannot be empty. If this alarm is triggered, the vSAN stretched cluster has configuration errors that affect its operation. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.label = "vSAN stretched cluster alarm 'No disk claimed on witness host'"
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.summary = "The stretched cluster witness host does not have a valid disk claimed. If the witness host does not have any disk claimed, its fault domain is not available and vSAN cannot provision any objects with Number of Failures To Tolerate set to one (FTT = 1). Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.label = "vSAN stretched cluster alarm 'Witness host fault domain misconfigured'"
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.summary = "The following witness node resides in one of the data fault domains. If this alarm is triggered, the vSAN stretched cluster has configuration errors that affect its operation. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.witnessinsidevccluster.label = "vSAN stretched cluster alarm 'Witness host within vCenter cluster'"
+vsan.health.test.stretchedcluster.witnessinsidevccluster.summary = "The witness host should not be a part of the vCenter cluster, which forms the stretched cluster. If the witness host resides within a vSAN-enabled cluster, it causes problems with vSphere DRS, HA, and EVC. Refer to Ask VMware KB in vSAN health monitor for more details."
+
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.label = "vSAN stretched cluster alarm 'Unsupported host version'"
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.summary = "Cluster contains hosts whose ESXi version does not support stretched cluster."
+
+vsan.health.test.stretchedcluster.witnessupgrade.label = "vSAN stretched cluster alarm 'Witness appliance upgrade to vSphere 7.0 or higher with caution'"
+vsan.health.test.stretchedcluster.witnessupgrade.summary = "Current witness appliance version is older than vSphere 7.0. There will be problem if you upgrade witness appliance to vSphere 7.0 or higher directly. Refer to the Ask VMware knowledge base article to reconfigure witness appliance and reboot before entering the upgrade workflow. Or you can deploy a new witness appliance of vSphere 7.0 or higher, and reconfigure cluster."
+
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.label = "vSAN stretched cluster alarm 'Unexpected number of data node in shared witness cluster'"
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.summary = "Checks if the number of data nodes in a shared witness cluster exceeds 2. The number of data hosts of any stretched cluster with shared witness cannot exceed 2."
+
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.label = "vSAN stretched cluster alarm 'Shared witness per cluster component limit scaled down'"
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.summary = "Checks if the per cluster component limit has been scaled down in shared witness node due to lack of memory."
+
+vsan.health.test.stretchedcluster.witnessupgissue.label = "vSAN stretched cluster alarm 'Hardware compatibility issue for witness appliance'"
+vsan.health.test.stretchedcluster.witnessupgissue.summary = "There will be problems for witness appliance upgrade. It's recommended to address the issues before entering the upgrade workflow. Check vSAN Skyline health for more details."
+
+#
+# File Service Group 3
+#
+vsan.health.test.fileservice.host.label = "vSAN file service alarm 'Infrastructure Health'"
+vsan.health.test.fileservice.host.summary = "Checks file service infrastructure health state for each ESXi host. Issues usually can be remediated automatically once detected. Click Remediate File Service or Remediate Imbalance in vSAN health monitor to force auto remediation. The alarm is skipped if the host is in maintenance mode.  Check for more details in vSAN health monitor."
+
+vsan.health.test.fileservice.fileserver.label = "vSAN file service alarm 'File Server'"
+vsan.health.test.fileservice.fileserver.summary = "Checks if file server is in healthy state. If issues are detected, the file server fails over to another agent VM automatically in most cases. Check more details in vSAN health monitor."
+
+vsan.health.test.fileservice.sharehealth.label = "vSAN file service alarm 'Share Health'"
+vsan.health.test.fileservice.sharehealth.summary = "Check if the file service share is in healthy state. Check for more details in vSAN health monitor."
+
+#
+# Data Group 2
+#
+vsan.health.test.data.objecthealth.label = "vSAN data alarm 'vSAN object'"
+vsan.health.test.data.objecthealth.summary = "This alarm is triggered if some objects in the cluster are not in a healthy state. Check the health monitor for more details."
+
+vsan.health.test.data.objectformat.label = "vSAN data alarm 'vSAN object format'"
+vsan.health.test.data.objectformat.summary = "This alarm is triggered if there are some objects that need to change the object format. The object format change can involve physical on-disk re-layout of objects, which can cause data movement in the cluster. Objects with the old format might not be able to use some of the new features. Check the health monitor for more details."
+
+#
+# Data-at-rest encryption Group (Encryption) 3
+#
+vsan.health.test.encryption.kmsconnection.label = "vSAN data-at-rest encryption alarm 'vCenter and all hosts are connected to Key Management Servers'"
+vsan.health.test.encryption.kmsconnection.summary = "If this alarm is triggered, it means that vCenter Server or hosts have connection issues to Key Management Servers. If vCenter Server experiences issues with KMS connection, check the KMS setting and status in the vCenter Server configuration page. If any hosts in the cluster have connection issues, check the health results for specific reasons. If the host's KMS configuration is not consistent with the rest of the cluster, run the cluster configuration remediation to update KMS configuration on the host."
+
+vsan.health.test.encryption.hostcpuaesni.label = "vSAN data-at-rest encryption alarm 'CPU AES-NI is enabled on hosts'"
+vsan.health.test.encryption.hostcpuaesni.summary = "If this alarm is triggered, it means that there are hosts with CPU AES-NI not supported or disabled. The software encryption will be used, which is significantly slower than AES-NI. Refer to Ask VMware KB in vSAN health monitor for more information."
+
+vsan.health.test.encryption.dualencryption.label = "vSAN data-at-rest encryption alarm 'Dual encryption applied to VMs on vSAN'"
+vsan.health.test.encryption.dualencryption.summary = "This alarm is triggered when vSAN has detected that both VM encryption and vSAN datastore encryption are turned on. Ignore the alarm if this is intended, otherwise turn off one of the encryption types. Refer to Ask VMware KB in vSAN health monitor for encryption best practices."
+
+#
+# Data-in-transient encryption 1
+#
+vsan.health.test.ditencryption.ditconfig.label = "vSAN data-in-transient encryption alarm 'Configuration check'"
+vsan.health.test.ditencryption.ditconfig.summary = "Checks if data-in-transit encryption is configured properly for the cluster. This alarm is triggered if data-in-transit encryption is enabled on the cluster. All hosts are required to have data-in-transit encryption enabled and rest in expected state, otherwise the network traffic might not be properly encrypted."
+
+#
+# Remain unchanged
+#
+vsan.health.test.hciskip.label = "vSAN health alarms are suppressed"
+vsan.health.test.hciskip.summary = "vSAN health alarms are suppressed until the cluster is fully configured or this Quickstart workflow is skipped."
+
+vsan.health.test.vsanhardwarecert.label = "vSAN hardware compatibility issues"
+vsan.health.test.vsanhardwarecert.summary = "This alarm will be triggered if some hardware compatibility issues are found in the cluster. Please refer to vSAN health monitor UI for more detailed issues."
+
+vsan.health.test.cloudhealth.vsanenablesupportinsight.label = "vSAN Support Insight"
+vsan.health.test.cloudhealth.vsanenablesupportinsight.summary = "Default alarm to monitor the status of vSAN Support Insight"
+vsan.health.test.cloudhealth.advisor.label = "vSAN health alarm 'Advisor'"
+vsan.health.test.cloudhealth.advisor.summary = "Default alarm to monitor changes for the health test 'Advisor'"
+
+vsan.health.test.diagnostics.pnic.label = "High pNic error rate detected. Check the host's vSAN performance view for details"
+vsan.health.test.diagnostics.pnic.summary = "Default alarm to monitor 'pNic Error Rate'"
+
+vsan.health.test.diagnostics.rdt.label = "High RDT net error detected. Check the host's vSAN performance view for details"
+vsan.health.test.diagnostics.rdt.summary = "Default alarm to monitor 'RDT net error'"
+
+#
+# Overall summary alarm is reactivate from VSANCORE-6413
+#
+vsan.health.test.overallsummary.label = "vSAN health service alarm for Overall Health Summary"
+vsan.health.test.overallsummary.summary = "Default alarm to monitor changes for the overall health summary"

@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = Capacidades de VMware vSAN
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = Capacidades publicadas por VMware vSAN
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = Proveedor VASA de vSAN
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = Proveedor VASA publicado por VMware vSAN
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = Número de fracciones de disco por objeto
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = El número de discos duros en los que se fracciona cada réplica de un objeto de almacenamiento. Un valor mayor que 1 permite obtener un mejor rendimiento (por ejemplo, cuando no se cumple la necesidad de Flash Read Cache de obtener el servicio de HDD), pero también implica un mayor uso de recursos. Valor predeterminado: 1, Valor máximo: 12.
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = Ubicación del almacén de datos de PMem
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = Coloque el disco virtual en el almacén de datos de PMem.
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = Ubicación de almacén de datos de vSAN Direct
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = Coloque los volúmenes nativos de nube en almacenes de datos de vSAN Direct.
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = Tipo de ubicación
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = Define dónde colocar los datos.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = Asignación de volúmenes del almacén de datos de vSAN Direct
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = Tipo de asignación de volumen.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = Totalmente inicializado
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = Todos los bloques están asignados y a cero
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = Reservar espacio
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = Todos los bloques están asignados.
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = Reserva de Flash Read Cache (%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = La capacidad flash reservada como memoria caché de lectura para el objeto de almacenamiento, especificada como un porcentaje del tamaño lógico del objeto. Solo se debe usar para abordar problemas de rendimiento de lectura. No es posible que otros objetos utilicen la capacidad flash reservada. La capacidad flash no reservada se comparte de manera equitativa entre todos los objetos. Valor predeterminado: 0 %, Valor máximo: 100 %.
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = Nivel primario de errores que se toleran
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = Define el número de errores de host, disco o red que se pueden tolerar en un objeto de almacenamiento. Cuando el método de tolerancia a errores es la creación de reflejos: para tolerar "n" errores, se crean "n+1" copias del objeto y se requieren "2n+1" hosts que aporten almacenamiento (si se configuran dominios de errores, se requieren "2n+1" dominios de errores con hosts que aporten almacenamiento). Cuando el método de tolerancia a errores es la codificación de borrado: para tolerar 1 error, se necesitan 4 hosts (o dominios de errores); para tolerar 2 errores, 6 hosts (o dominios de errores). Nota: un host que no forma parte de un dominio de errores se cuenta como su propio dominio de errores de host único. Valor predeterminado: 1. Valor máximo: 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = Nivel secundario de errores que se toleran
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = Define la cantidad de errores de host, disco o red que se pueden tolerar en un objeto de almacenamiento dentro de un dominio de errores. Cuando el método de tolerancia a errores es la creación de reflejos, para tolerar "n" errores, se crean "n+1" copias del objeto y se requieren "2n+1" hosts que aporten almacenamiento en el dominio de errores. Cuando el método de tolerancia a errores es la codificación de borrado para tolerar 1 error, se requieren 4 hosts; y para tolerar 2 errores, se requieren 6 hosts. Valor predeterminado: 1. Valor máximo: 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = Ámbito del nivel secundario de errores que se toleran cuando la configuración del clúster es creación de reflejo de host dual
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = Define el ámbito (host o disco) en el que se satisfará el nivel secundario de errores que se toleran. Si la configuración del clúster es creación de reflejo de host dual y este atributo se establece en "Disco", la replicación mediante grupos de discos se realizará de acuerdo con el nivel secundario de errores que se toleran
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = Protección de segundo nivel basada en host
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = La protección de segundo nivel será replicación mediante hosts de acuerdo con el nivel secundario de errores que se toleran
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = Protección de segundo nivel basada en discos para clústeres de creación de reflejo de host dual
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = La protección de segundo nivel será replicada mediante grupos de discos de acuerdo con el nivel secundario de errores que se toleran en los clústeres de creación de reflejo de host dual
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = Ubicación de los datos
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = Especifique la ubicación de los datos. Puede ser un dominio de error preferido o no preferido en un clúster ampliado, o bien configurarse en "Local del host" para fijar la carpeta de la máquina virtual y los VMDK al host en el que se creó. Esta directiva solo es válida para los objetos con el nivel primario de errores que se toleran = 0. Valor predeterminado: ninguna.
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = Ninguno
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = Ninguna.
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = Dominio de error preferido (clúster ampliado)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = Dominio de error preferido (clúster ampliado).
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = Dominio de error que no es preferido (clúster ampliado)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = Dominio de error que no es preferido (clúster ampliado).
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = Local del host
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = Local del host.
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = Forzar aprovisionamiento
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = Si la opción es "Sí", se aprovisiona el objeto aunque los recursos actualmente disponibles en el clúster no puedan satisfacer la directiva especificada en la directiva de almacenamiento. vSAN intentará hacer que el objeto esté en cumplimiento cuando haya recursos disponibles. Valor predeterminado: No.
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = Reserva de espacio de objetos (%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = Porcentaje del tamaño lógico del objeto de almacenamiento que se debe reservar (aprovisionamiento grueso) al aprovisionar máquinas virtuales. El resto del objeto de almacenamiento tiene aprovisionamiento fino. Valor predeterminado: 0 %, Valor máximo: 100 %.
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = Límite de IOPS para el objeto
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = Define el límite de IOPS para un disco. Las IOPS se calculan como el número de E/S mediante un tamaño ponderado. De forma predeterminada, el sistema utiliza un tamaño base de 32 KB; de esta manera, una E/S de 64 KB representa 2 E/S. Nota: al calcular las IOPS, la lectura y escritura se consideran equivalentes y la frecuencia de aciertos de memoria caché o la secuencialidad no se toman en cuenta. Si las IOPS de un disco superan el límite, estas se reducirán. Si el límite es 0, significa que no hay restricciones para las E/S. Valor predeterminado: 0.
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = Deshabilitar la suma de comprobación del objeto
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = Si la opción es "Sí", el objeto no calculará la información de suma de comprobación. Valor predeterminado: No.
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = Método de tolerancia a errores
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = Define el método utilizado para tolerar errores. RAID-1 logra la tolerancia a errores mediante reflejos, que ofrecen un mejor rendimiento. RAID-5/6 logra la tolerancia a errores mediante bloques de paridad, que ofrecen una mayor eficiencia del espacio. RAID-5/6 solo está disponible en "Basado íntegramente en tecnología flash" y cuando el número de errores que se debe tolerar se configura en 1 o 2: un valor de 1 implica una configuración RAID-5 y un valor de 2 implica una configuración RAID-6. Valor predeterminado: RAID-1.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID-1 (creación de reflejos): rendimiento
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID-1 (creación de reflejos): rendimiento.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID-5/6 (codificación de borrado): capacidad
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID-5/6 (codificación de borrado): capacidad.
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = Tipo de almacenamiento de respaldo preferido
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = Especifique el tipo de almacenamiento de respaldo que se seleccionará para colocar componentes de objetos de vSAN. El tipo de almacenamiento de respaldo de vSAN puede ser Híbrido o Basado íntegramente en tecnología flash. Si se especifica "Híbrido", los componentes de objetos solo se colocarán en grupos de discos híbridos. Si se especifica "Basado íntegramente en tecnología flash", los componentes de objetos solo se colocarán en grupos de discos basados íntegramente en tecnología flash. El valor predeterminado, "Cualquiera", permitirá a vSAN decidir dónde colocar los componentes.
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = Usar instantáneas nativas
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = Utilice esta restricción para crear instantáneas nativas. Si la directiva tiene restricciones de protección de datos, este valor se anulará y será reemplazado por 'true'. Valor predeterminado: false.
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = Protección local de datos (almacenamiento primario)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = En las máquinas virtuales con la directiva actual se toman instantáneas periódicamente para ofrecer protección contra los errores de capa de aplicación. Estas instantáneas se almacenan en el almacenamiento de vSAN para permitir una recuperación rápida con un RTO bajo.
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = Frecuencia de las instantáneas (RPO)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = La frecuencia con la que se toman las instantáneas. El valor está en minutos. Predeterminado = 60 min, Máx. = 30 días.
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = Hacer que todas las instantáneas de aplicación x nd/th/rd/st sean coherentes
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = Las instantáneas de aplicación coherentes preparan las aplicaciones para la protección de datos de forma correcta. Es posible que se consuman recursos de aplicación adicionales al tomar instantáneas coherentes. Valor predeterminado: 0; intervalo: de 0 a 30.
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = Cantidad de instantáneas conservadas
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = La cantidad total de instantáneas que se deben conservar localmente en el almacenamiento de vSAN. Cuando se crean nuevas instantáneas, las más antiguas se eliminan de acuerdo con el valor conservado que se especificó. Predeterminado = 10, Máx. = 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = Protección de archivos
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = Ofrece protección de archivos a las máquinas virtuales.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = Solo archivar instantáneas en modo inactivo
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = Únicamente se archivan las instantáneas en modo inactivo.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = Archivar cada 'enésima' instantánea
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = Únicamente se archivará cada 'enésima' instantánea. Si el usuario selecciona la opción que solo archiva las instantáneas en modo inactivo, se archivará cada 'enésima' instantánea en modo inactivo. El valor predeterminado, 0, indica que se deshabilita la copia en el almacén de archivos.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = Últimos 'X' puntos de restauración que se conservarán
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = Este parámetro define cuántas instantáneas de archivo recientes se conservarán además de las reglas de retención horaria (Xh), diaria (Xd), semanal (Xw) y mensual (Xm). El siguiente cálculo restringe la directiva de retención: (X + Xh + Xd + Xw + Xm) <= 100. Valor predeterminado: 1. Valor máximo: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = Puntos de restauración horaria que se conservarán (Xh)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = La cantidad de puntos de restauración horaria que se conservarán. El valor predeterminado, 0, indica que no se requieren instantáneas horarias. La instantánea horaria es la primera instantánea creada en el inicio de una hora o después de ella en horario UTC. Valor predeterminado: 0. Valor máximo: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = Puntos de restauración diaria que se conservarán (Xd)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = La cantidad de puntos de restauración diaria que se conservarán. El valor predeterminado, 0, indica que no se requieren instantáneas diarias. La instantánea diaria es la primera instantánea creada a medianoche o después de la medianoche en horario UTC. Valor predeterminado: 0. Valor máximo: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = Puntos de restauración semanal que se conservarán (Xw)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = La cantidad de puntos de restauración semanal que se conservarán. El valor predeterminado, 0, indica que no se requieren instantáneas semanales. La instantánea semanal es la primera instantánea creada a medianoche o después de la medianoche del domingo en horario UTC. Valor predeterminado: 0. Valor máximo: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = Puntos de restauración mensual que se conservarán (Xm)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = La cantidad de puntos de restauración mensual que se conservarán. El valor predeterminado, 0, indica que no se requieren instantáneas mensuales. La instantánea mensual es la primera instantánea creada a medianoche o después de la medianoche al final del mes en horario UTC. Valor predeterminado: 0. Valor máximo: 100.
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = Protección remota
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = Ofrece protección de replicación remota a las máquinas virtuales.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = RPO de protección remota (minutos)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = El objetivo de punto de recuperación de protección remota. El valor se mide en minutos. Valor predeterminado: 30. Valor mínimo: 5. Valor máximo: 1440.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = Cantidad de instancias remotas que se conservarán
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = La cantidad de instancias de instantánea que se conservarán en el sitio remoto. Valor predeterminado: 1. Valor mínimo: 1. Valor máximo: 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = Etiqueta de directiva remota
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = Etiqueta para hacer coincidir la directiva de almacenamiento de máquinas virtuales de réplica remota.
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = Servicio de datos
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = Directiva de servicio de datos para máquinas virtuales
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = Eficiencia de espacio
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = Requisito de eficiencia de espacio para almacenes de datos de vSAN
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = Cifrado de datos en reposo
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = Requisito de cifrado de datos en reposo para almacenes de datos de vSAN
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = Desduplicación y compresión
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = Se requiere un almacén de datos de vSAN de desduplicación y compresión
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = Solo compresión
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = Se requiere un almacén de datos de vSAN de solo compresión
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = Sin eficiencia de espacio
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = Requiere un almacén de datos de vSAN con la compresión y la desduplicación deshabilitadas
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = Deshabilitar la compresión del objeto
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = Si la opción es "Sí", el objeto no se comprimirá en los dispositivos de almacenamiento. Valor predeterminado: No.

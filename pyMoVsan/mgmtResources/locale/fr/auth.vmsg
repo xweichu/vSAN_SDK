@@ -1,0 +1,28 @@
+# en_US resources
+signature= "sIgNaTuRe"
+
+# vSAN DP is also sharing same root category, need to make them consistent:
+#   <VMTREE>/bora/vsan/dp/common/L10N/extLocale/en/auth.vmsg
+privilege.Vsan.label = "vSAN"
+privilege.Vsan.summary = "VMware vSAN"
+
+privilege.Vsan.Cluster.label = "Cluster"
+privilege.Vsan.Cluster.summary = "Cluster vSphere"
+
+privilege.Vsan.Cluster.ShallowRekey.label = "ShallowRekey"
+privilege.Vsan.Cluster.ShallowRekey.summary = "Alterner la clé de chiffrement des clés pour le cluster vSAN, sans rechiffrer toutes les données"
+
+privilege.Cns.label = "Cns"
+privilege.Cns.summary = "VMware Cns"
+
+privilege.Cns.Searchable.label = "Autorisant la recherche"
+privilege.Cns.Searchable.summary = "Peut utiliser toutes les API CNS autorisant la recherche"
+
+privilege.vSphereDataProtection.label = "vSphere Data Protection"
+privilege.vSphereDataProtection.summary = "vSphere Data Protection"
+
+privilege.vSphereDataProtection.Recovery.label = "Récupération"
+privilege.vSphereDataProtection.Recovery.summary = "Peut récupérer des entités protégées (telles que des machines virtuelles)"
+
+privilege.vSphereDataProtection.Protection.label = "Protection"
+privilege.vSphereDataProtection.Protection.summary = "Impossible de protéger des entités protégées (telles que des VM)"

@@ -1,0 +1,16 @@
+##############################################################
+# Copyright (C) 2021 VMware, Inc.  All rights reserved. -- VMware Confidential
+##############################################################
+#
+# VSAN object service related #
+com.vmware.vsan.object.type.other.desc = Tipo de objeto desconocido
+com.vmware.vsan.object.type.statsdb.desc = Objeto de administración del rendimiento
+com.vmware.vsan.object.type.iscsihome.desc = Objeto de inicio de iSCSI
+com.vmware.vsan.object.type.iscsitarget.desc = Objeto de destino de iSCSI
+com.vmware.vsan.object.type.iscsilun.desc = LUN de iSCSI
+com.vmware.vsan.object.type.fileshare.desc = Recurso compartido de archivos
+com.vmware.vsan.object.type.fsroot.desc = Sistema de archivos raíz del servicio de archivos
+com.vmware.vsan.object.type.haMetadataObject.desc = Objeto de metadatos de vSphere HA
+com.vmware.vsan.object.type.fcdNamespace.desc = Espacio de nombres de disco virtual mejorado
+com.vmware.vsan.object.type.fcdCatalogNamespace.desc = Espacio de nombres del catálogo de discos virtuales mejorado
+com.vmware.vsan.object.type.fcdSnapshot.desc = Instantánea de {fcdName}

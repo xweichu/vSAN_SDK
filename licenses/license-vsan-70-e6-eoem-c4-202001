@@ -1,0 +1,12 @@
+# VMware software license
+StartFields = "Cpt, ProductID, LicenseVersion, LicenseType, LicenseEdition, Option, Epoch"
+Cpt = "COPYRIGHT (c) VMware, Inc."
+ProductID = "VMware VSAN"
+LicenseVersion = "7.0"
+LicenseType = "Site"
+Epoch = "2020-1-1"
+LicenseEdition = "vsan.advancedEmbeddedOem.cpuPackageCoreLimited"
+Option = "7"
+Data = "FileVersion=7.0.8.0;capacityType=cpuPackage:32core;enable=vit,allflash,erasurecoding,storageefficiency;eoem=true:3;desc=vSAN Advanced for Embedded OEMs"
+DataHash = "7b3b0a74-7cbb03fe-c0f07459-717d3c9f-0f3f2f17"
+Hash = "d033744e-efa7d9e9-e79a4500-f955f72d-3424716d"

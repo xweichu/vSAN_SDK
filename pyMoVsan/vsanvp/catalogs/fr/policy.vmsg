@@ -1,0 +1,146 @@
+vsan.capabilityobjectschema.vendorInfo.info.vsan.label = Capacités de VMware vSAN
+vsan.capabilityobjectschema.vendorInfo.info.vsan.summary = Capacités publiées par VMware vSAN
+
+vsan.capabilityobjectschema.servicetype.name.vsan.label = Fournisseur VASA de vSAN
+vsan.capabilityobjectschema.servicetype.name.vsan.summary = Fournisseur VASA publié par VMware vSAN
+
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.label = Nombre de bandes de disque par objet
+vsan.capabilitymetadata.propertymetadata.summary.stripeWidth.summary = Le nombre de disques durs sur lesquels chaque réplique d'un objet de stockage est agrégée par bandes. Une valeur supérieure à 1 peut produire de meilleures performances (par exemple, lorsque les problèmes de cache de lecture Flash doivent être résolus sur un disque dur), mais peut aussi engendrer une plus grande sollicitation des ressources système. La valeur par défaut est 1, la valeur maximale est 12.
+
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.label = Placement de la banque de données de la PMem
+vsan.capabilitymetadata.propertymetadata.summary.PMemType.summary = Placez le disque virtuel dans la banque de données de la PMem.
+
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.label = Placement de la banque de données vSAN Direct
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectType.summary = Placez les volumes natifs de cloud dans les banques de données vSAN Direct.
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.label = Type de placement
+vsan.capabilitymetadata.propertymetadata.summary.placementMeta.summary = Définit l'emplacement des données.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.label = Allocation de volume de banque de données vSAN Direct
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.summary = Type d'allocation de volume.
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.label = Entièrement initialisé
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.fullyinitialized.summary = Tous les blocs sont alloués et mis à zéro
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.label = Réserver de l'espace
+vsan.capabilitymetadata.propertymetadata.summary.vSANDirectVolumeAllocation.reservespace.summary = Tous les blocs sont alloués.
+
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.label = Réservation du cache de lecture Flash (%)
+vsan.capabilitymetadata.propertymetadata.summary.cacheReservation.summary = Capacité de la mémoire flash réservée au cache de lecture pour l'objet de stockage. Elle est exprimée en pourcentage de la taille logique de l'objet. Elle sert uniquement à résoudre les problèmes de performance de lecture. La capacité de mémoire flash réservée ne peut pas être utilisée par d'autres objets. La mémoire flash non réservée est partagée équitablement entre tous les objets. Valeur par défaut : 0 %, valeur maximale : 100 %.
+
+
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.label = Niveau primaire de pannes à tolérer
+vsan.capabilitymetadata.propertymetadata.summary.hostFailuresToTolerate.summary = Définit le nombre de pannes d'hôte, de disque ou de réseau qu'un objet de stockage peut tolérer. Si la méthode de tolérance de panne est la mise en miroir, pour tolérer « n » pannes, « n+1 » copies de l'objet sont créées et « 2n+1 » hôtes contribuant au stockage sont requis (si des domaines de pannes sont configurés, « 2n+1 » domaines de pannes incluant des hôtes contribuant au stockage sont requis). Si la méthode de tolérance de panne est l'utilisation de codes de suppression, pour tolérer 1 ou 2 pannes, 4 ou 6 hôtes (ou domaines de pannes) sont requis respectivement. Remarque : un hôte qui ne fait pas partie d'un domaine de pannes est lui-même comptabilisé comme domaine de pannes à hôte unique. Valeur par défaut : 1, valeur maximale : 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.label = Niveau secondaire de pannes à tolérer
+vsan.capabilitymetadata.propertymetadata.summary.subFailuresToTolerate.summary = Définit le nombre de pannes d'hôte, de disque ou de réseau qu'un objet de stockage peut tolérer dans un domaine de pannes. Si la méthode de tolérance de panne est mise en miroir, pour tolérer « n » pannes, « n+1 » copies de l'objet sont créées et « 2n+1 » hôtes contribuant au stockage sont requis dans le domaine de pannes. Si la méthode de tolérance de panne est l'utilisation de codes de suppression, pour tolérer 1 ou 2 pannes, 4 ou 6 hôtes sont requis respectivement. Valeur par défaut : 1, valeur maximale : 3.
+
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.label = Étendue du niveau secondaire de pannes à tolérer lorsque la configuration du cluster est la mise en miroir à deux hôtes
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.summary = Définit l'étendue (hôte ou disque) à laquelle le niveau secondaire de pannes à tolérer sera satisfait. Si la configuration du cluster est la mise en miroir à deux hôtes et que cet attribut est défini sur « Disque », la réplication utilisant des groupes de disques est effectuée en fonction du niveau secondaire de pannes à tolérer
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.label = Protection de second niveau basée sur l'hôte
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Host.summary = La protection de second niveau sera la réplication utilisant des hôtes en fonction du niveau secondaire de pannes à tolérer
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.label = Protection de second niveau basée sur un disque pour les clusters de mise en miroir à deux hôtes
+vsan.capabilitymetadata.propertymetadata.summary.lowerFailureDomainScope.Disk.summary = La protection de second niveau sera la réplication utilisant des groupes de disques en fonction du niveau secondaire de pannes à tolérer pour les clusters de mise en miroir à deux hôtes
+
+vsan.capabilitymetadata.propertymetadata.summary.locality.label = Localité des données
+vsan.capabilitymetadata.propertymetadata.summary.locality.summary = Spécifiez l'emplacement des données. Soit le domaine de pannes préféré, soit le domaine de pannes non préféré dans un cluster étendu, ou définissez Hôte local pour épingler le dossier de la VM et les VMDK sur l'hôte de création. Cette stratégie est uniquement valide pour les objets dont le niveau principal de pannes à tolérer est égal à 0. Valeur par défaut : Aucun
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.label = Aucun
+vsan.capabilitymetadata.propertymetadata.summary.locality.None.summary = aucune.
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.label = Domaine de pannes préféré (cluster étendu)
+vsan.capabilitymetadata.propertymetadata.summary.locality.Preferred.summary = Domaine de pannes préféré (cluster étendu).
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.label = Domaine de pannes non préféré (cluster étendu)
+vsan.capabilitymetadata.propertymetadata.summary.locality.NonPreferred.summary = Domaine de pannes non préféré (cluster étendu).
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.label = Hôte local
+vsan.capabilitymetadata.propertymetadata.summary.locality.LocalHost.summary = Hôte local.
+
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.label = Forcer le provisionnement
+vsan.capabilitymetadata.propertymetadata.summary.forceProvisioning.summary = Si cette option est définie sur « Oui », l'objet sera provisionné même si la stratégie de stockage ne peut pas être respectée avec les ressources actuellement disponibles dans le cluster. vSAN tentera de mettre l'objet en conformité dès que des ressources seront éventuellement disponibles. Valeur par défaut : Non.
+
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.label = Réservation d'espace d'objet (%)
+vsan.capabilitymetadata.propertymetadata.summary.proportionalCapacity.summary = Pourcentage de la taille logique de l'objet de stockage qui sera réservé (provisionnement statique) lors du provisionnement d'une VM. Le reste de l'objet de stockage est provisionné dynamiquement. Valeur par défaut : 0 %, valeur maximale : 100 %.
+
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.label = Limite IOPS pour l'objet
+vsan.capabilitymetadata.propertymetadata.summary.iopsLimit.summary = Définit la limite IOPS pour un disque. IOPS est calculée comme le nombre d'E/S utilisant une taille pondérée. Par défaut, le système utilise une taille de base de 32 Ko, puis une E/S de 64 Ko représentera 2 E/S. Remarque : lors du calcul de nombre d'IOPS, la lecture et l'écriture sont considérées équivalentes et le ratio de réussite du cache ou la séquentialité ne sont pas pris en compte. Si l'IOPS d'un disque dépasse la limite, les E/S seront régulées. Si la limite est définie sur 0, cela signifie qu'aucune limite n'est définie pour l'E/S. Valeur par défaut : 0.
+
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.label = Désactiver le total de contrôle de l'objet
+vsan.capabilitymetadata.propertymetadata.summary.checksumDisabled.summary = Si cette option est définie sur « Oui », les informations du total de contrôle de l'objet seront calculées. Valeur par défaut : Non.
+
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.label = Méthode de tolérance de panne
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.summary = Définit la méthode à utiliser pour tolérer les pannes. RAID 1 obtient la tolérance de panne par le biais de mises en miroir, ce qui entraîne de meilleures performances. RAID 5/6 obtient la tolérance de panne par le biais de blocs de parité, ce qui permet une meilleure efficacité de l'espace. RAID 5/6 est disponible uniquement sur les configurations intégralement Flash et lorsque le nombre de pannes à tolérer est défini sur 1 ou 2 : si la valeur est de 1, la configuration doit être RAID 5 et si la valeur est de 2, la configuration doit être RAID 6. Valeur par défaut : RAID 1.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.label = RAID 1 (mise en miroir) - Performance
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Performance.summary = RAID 1 (mise en miroir) - Performance.
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.label = RAID 5/6 (codage d'effacement) - Capacité
+vsan.capabilitymetadata.propertymetadata.summary.replicaPreference.Capacity.summary = RAID 5/6 (codage d'effacement) - Capacité.
+
+vsan.capabilitymetadata.propertymetadata.summary.storageType.label = Type de stockage de sauvegarde préféré
+vsan.capabilitymetadata.propertymetadata.summary.storageType.summary = Spécifiez quel type de stockage de sauvegarde sera sélectionné pour le placement de composants d'objets vSAN. Le type de stockage de sauvegarde vSAN peut être hybride ou intégralement flash. Si « Hybride » est spécifié, les composants d'objets seront uniquement placés dans des groupes de disques hybrides. Si « Intégralement flash » est spécifié, les composants d'objets seront placés uniquement dans des groupes de disques intégralement flash. La valeur par défaut « Tout » laissera vSAN décider du placement.
+
+# VSAN DP resources
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.label = Utiliser des snapshots natifs
+vsan.capabilitymetadata.propertymetadata.summary.useNativeSnapshots.summary = Utilisez cette contrainte pour créer des snapshots natifs. Si la stratégie possède des contraintes de protection des données, cette valeur passera à « true ». Valeur par défaut : false.
+
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.label = Protection des données locales (stockage principal)
+vsan.capabilitymetadata.propertymetadata.summary.localProtection.summary = Les VM avec la stratégie actuelle contiennent des snapshots pris régulièrement pour les protéger contre les pannes au niveau des applications. Ces snapshots sont stockés dans un stockage vSAN pour permettre une récupération RTO rapide et basse.
+
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.label = Fréquence des snapshots (RPO)
+vsan.capabilitymetadata.propertymetadata.summary.localSnapshotFrequency.summary = Fréquence de prise des snapshots. La valeur est en minutes. Valeur par défaut : 60 minutes, valeur maximale : 30 jours.
+
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.label = Rendre chaque snapshot d'application x nd/th/rd/st cohérent
+vsan.capabilitymetadata.propertymetadata.summary.localQuiesceEveryMth.summary = Les snapshots cohérents d'application préparent de manière adéquate une application pour la protection des données. Des ressources d'application supplémentaires peuvent être consommées lorsque des snapshots cohérents d'application sont pris. Valeur par défaut = 0, Plage = 0 à 30.
+
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.label = Nombre de snapshots à conserver
+vsan.capabilitymetadata.propertymetadata.summary.localInstancesRetained.summary = Nombre total de snapshots à conserver localement dans le stockage vSAN. Lorsque des snapshots sont créés, les plus anciens sont supprimés conformément à la valeur de conservation spécifiée. Valeur par défaut : 10, valeur maximale : 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.label = Protection de l'archivage
+vsan.capabilitymetadata.propertymetadata.summary.archivalProtection.summary = Fournissez la protection de l'archivage pour les VM.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.label = Archiver uniquement les snapshots mis au repos
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveOnlyQuiesced.summary = Archivez uniquement les snapshots qui sont mis au repos.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.label = Archiver chaque snapshot « mensuel »
+vsan.capabilitymetadata.propertymetadata.summary.archivalArchiveMth.summary = Seul chaque snapshot « mensuel » sera archivé. Si l'utilisateur sélectionne l'option pour archiver uniquement le snapshot mis au repos, chaque snapshot mis au repos 'mensuel' sera archivé. La valeur par défaut 0 indique que la copie vers la banque d'archives est désactivée.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.label = Derniers points de restauration « X » à conserver
+vsan.capabilitymetadata.propertymetadata.summary.archivalRecentRestorePoints.summary = Ce paramètre définit le nombre de snapshots d'archivage récents qui doivent être conservés outre les règles de rétention pour horaire (Xh), quotidien (Xd), hebdomadaire (Xw) et mensuel (Xm). La stratégie de rétention est contrainte par (X + Xh + Xd + Xw + Xm) <= 100. Valeur par défaut : 1, valeur maximale : 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.label = Points de restauration horaires à conserver (Xh)
+vsan.capabilitymetadata.propertymetadata.summary.archivalHourlyRestorePoints.summary = Nombre de points de restauration horaires à conserver. La valeur par défaut 0 indique que les snapshots horaires ne sont pas obligatoires. Le snapshot horaire est le premier snapshot à l'heure précise (ou après) à l'heure UTC. Valeur par défaut : 0, valeur maximale : 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.label = Points de restauration quotidiens à conserver (Xd)
+vsan.capabilitymetadata.propertymetadata.summary.archivalDailyRestorePoints.summary = Nombre de points de restauration quotidiens à conserver. La valeur par défaut 0 indique que les snapshots quotidiens ne sont pas obligatoires. Le snapshot quotidien est le premier snapshot à minuit (ou après) à l'heure UTC. Valeur par défaut : 0, valeur maximale : 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.label = Points de restauration hebdomadaires à conserver (Xw)
+vsan.capabilitymetadata.propertymetadata.summary.archivalWeeklyRestorePoints.summary = Nombre de points de restauration hebdomadaires à conserver. La valeur par défaut 0 indique que les snapshots hebdomadaires ne sont pas obligatoires. Le snapshot hebdomadaire est le premier snapshot à minuit (ou après) le dimanche à l'heure UTC. Valeur par défaut : 0, valeur maximale : 100.
+
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.label = Points de restauration mensuels à conserver (Xm)
+vsan.capabilitymetadata.propertymetadata.summary.archivalMonthlyRestorePoints.summary = Nombre de points de restauration mensuels à conserver. La valeur par défaut 0 indique que les snapshots mensuels ne sont pas obligatoires. Le snapshot mensuel est le premier snapshot à minuit (ou après) à la fin du mois à l'heure UTC. Valeur par défaut : 0, valeur maximale : 100.
+
+# VSAN RP resources
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.label = Protection à distance
+vsan.capabilitymetadata.propertymetadata.summary.remoteProtection.summary = Fournissez la protection à distance de la réplication pour les VM.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.label = RPO de protection à distance (minutes)
+vsan.capabilitymetadata.propertymetadata.summary.remoteRpo.summary = Objectif de point de récupération de la protection à distance. La valeur est en minutes. Valeur par défaut : 30. valeur minimale : 5, valeur maximale : 1 440.
+
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.label = Nombre d'instances distantes à conserver
+vsan.capabilitymetadata.propertymetadata.summary.remoteInstancesRetained.summary = Nombre d'instances de snapshot à conserver sur le site distant. Valeur par défaut : 1, valeur minimale : 1, valeur maximale : 100
+
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.label = Balise de stratégie à distance
+vsan.capabilitymetadata.propertymetadata.summary.remotePolicyTag.summary = Balise pour faire correspondre la stratégie de stockage de la VM pour le réplica distant.
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.label = Service de données
+vsan.capabilitymetadata.propertymetadata.summary.dataService.summary = Stratégie de service de données pour les VM
+
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.label = Efficacité de l'utilisation de l'espace
+vsan.capabilitymetadata.propertymetadata.summary.datastoreSpaceEfficiency.summary = Exigences d'efficacité de l'utilisation de l'espace pour les banques de données vSAN
+
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.label = Chiffrement des données au repos
+vsan.capabilitymetadata.propertymetadata.summary.dataAtRestEncryption.summary = Exigences de chiffrement des données au repos pour les banques de données vSAN
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.label = Déduplication et compression
+vsan.capabilitymetadata.propertymetadata.summary.dataService.dedupCompression.summary = Banque de données vSAN de déduplication et de compression requise
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.label = Compression uniquement
+vsan.capabilitymetadata.propertymetadata.summary.dataService.compression.summary = Banque de données vSAN de compression uniquement requise
+
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.label = Aucune efficacité de l'espace
+vsan.capabilitymetadata.propertymetadata.summary.dataService.noSpaceEfficiency.summary = Exige la banque de données vSAN avec la compression et la déduplication désactivées
+
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.label = Désactiver la compression des objets
+vsan.capabilitymetadata.propertymetadata.summary.compressionDisabled.summary = Si cette option est « Oui », l'objet n'est pas compressé sur les périphériques de stockage. Valeur par défaut : Non.

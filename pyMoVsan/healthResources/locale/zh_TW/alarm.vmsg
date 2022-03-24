@@ -1,0 +1,391 @@
+signature = "sIgNaTuRe"
+
+#
+# Hardware compatibility Group 14
+#
+vsan.health.test.hcl.hcldbuptodate.label = "vSAN 硬體相容性警示「vSAN HCL 資料庫處於最新狀態」"
+vsan.health.test.hcl.hcldbuptodate.summary = "檢查用於 HCL 檢查的 VMware 硬體相容性指南資料庫存留期。超過 90 天時會顯示警告或不顯示警告。叢集上的 ESXi 版本均包含在本機 HCL 資料庫中。超過 180 天時，會顯示錯誤。VMware 會經常更新 VCG，因此請務必將本機複本保持在最新狀態。"
+
+vsan.health.test.hcl.autohclupdate.label = "vSAN 硬體相容性警示「vSAN HCL 資料庫自動更新」"
+vsan.health.test.hcl.autohclupdate.summary = "驗證可從 VMware HCL 發行網站自動下載與更新 vSAN HCL 資料庫。當沒有 VMware 公用網站的網際網路存取權或 vSAN HCL 資料庫自動更新未啟用時，此健全狀況檢查依預設會位於無訊息健全狀況檢查清單中，以顯示略過的狀態，除非使用者手動將其從無訊息清單中移除。否則，如果 HCL 資料庫因無法連線 VMware HCL 發行網站、無法下載最新的 HCL 資料庫或無法更新本機 HCL 資料庫等任何其他原因而無法自動更新，健全狀況檢查就會顯示警告。"
+
+vsan.health.test.hcl.controlleronhcl.label = "vSAN 硬體相容性警示「SCSI 控制器已通過 VMware 認證」"
+vsan.health.test.hcl.controlleronhcl.summary = "顯示 Storage I/O 控制器的相關資訊，並根據該控制器的 PCI 識別碼在《VMware 相容性指南》中確認其是否受到支援。如果發現不符，請連絡 VMware 支援。"
+
+vsan.health.test.hcl.nvmeidentifiable.label = "vSAN 硬體相容性警示「可識別 NVMe 裝置」"
+vsan.health.test.hcl.nvmeidentifiable.summary = "檢查是否只有一個 vSAN VCG (VMware 相容性指南) 項目的 PCI 識別碼與 vSAN 叢集的其中一個 NVMe 裝置相符，以便 vSAN HCL 檢查可以識別此 NVMe 裝置。"
+
+vsan.health.test.hcl.nvmeonhcl.label = "vSAN 硬體相容性警示「NVMe 裝置已通過 VMware 認證」"
+vsan.health.test.hcl.nvmeonhcl.summary = "顯示 NVMe 裝置的相關資訊，以及確認裝置已通過 vSAN VCG (VMware 相容性指南) 中的認證。如果不相符，請連絡 VMware 支援。"
+
+vsan.health.test.hcl.controllerreleasesupport.label = "vSAN 硬體相容性警示「控制器已通過 VMware 認證，可用於 ESXi 版本」"
+vsan.health.test.hcl.controllerreleasesupport.summary = "顯示 Storage I/O 控制器驅動程式的相關資訊。檢查目前版本的 ESXi 中對應控制器是否支援已安裝的驅動程式。僅通過 VMware 認證的控制器才會進行測試。"
+
+vsan.health.test.hcl.controllerdriver.label = "vSAN 硬體相容性警示「控制器驅動程式已通過 VMware 認證」"
+vsan.health.test.hcl.controllerdriver.summary = "檢查控制器所使用的驅動程式在《VMware 相容性指南》中是否列為已認證。僅位於 vSAN HCL 上及已針對目前版本的 ESXi 進行認證的控制器才會進行測試。"
+
+vsan.health.test.hcl.hclhostbadstate.label = "vSAN 硬體相容性警示「擷取硬體資訊時的主機問題」"
+vsan.health.test.hcl.hclhostbadstate.summary = "檢查是否有任何主機中斷連線/沒有回應，或無法回應提取硬體資訊的嘗試。將不會根據《VMware 相容性指南》檢查這裡所列出主機的硬體。"
+
+vsan.health.test.hcl.controllerfirmware.label = "vSAN 硬體相容性警示「控制器韌體已通過 VMware 認證」"
+vsan.health.test.hcl.controllerfirmware.summary = "檢查控制器韌體是否已依照《VMware 相容性指南》進行認證。僅位於 vSAN HCL 上及已針對目前版本的 ESXi 進行認證的控制器才會進行測試。"
+
+vsan.health.test.hcl.controllerdiskmode.label = "vSAN 硬體相容性警示「控制器磁碟群組模式已通過 VMware 認證」"
+vsan.health.test.hcl.controllerdiskmode.summary = "檢查 vSAN 磁碟群組類型 (全快閃或混合) 是否已通過認證，可用於《VMware 相容性指南》中所列的 SCSI 控制器。僅會對位於 vSAN HCL 上且已通過認證可用於目前版本 ESXi 的控制器進行測試。"
+
+vsan.health.test.hcl.pniclinkspeed.label = "vSAN 硬體相容性警示「實體 NIC 連結速度符合需求」"
+vsan.health.test.hcl.pniclinkspeed.summary = "vSAN 主機中使用的網路介面卡 (NIC) 必須符合特定需求。這些 NIC 需求假設在超聚合式環境中封包遺失不超過 0.0001%。建議使用連結速度可符合最低需求的 NIC。否則，可能會對 vSAN 效能造成重大影響。"
+
+vsan.health.test.hcl.fwrecommendation.label = "vSAN 硬體相容性警示「vSAN 韌體版本建議」"
+vsan.health.test.hcl.fwrecommendation.summary = "vSAN 韌體建議。此韌體建議基於目前的主機軟體版本、硬體驅動程式版本，及其依照《VMware 相容性指南》的相容性。"
+
+vsan.health.test.physicaldisks.diskusage.label = "vSAN 硬體相容性警示「儲存控制器上的磁碟使用量」"
+vsan.health.test.physicaldisks.diskusage.summary = "vSAN 不支援將非 vSAN 磁碟用於 VMFS 或原始裝置對應 (RDM) 的組態。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得修復步驟。"
+
+vsan.health.test.hcl.mixedmode.label = "vSAN 硬體相容性警示「具有傳遞和 RAID 磁碟的控制器」"
+vsan.health.test.hcl.mixedmode.summary = "混合控制器磁碟模式 (傳遞/RAID) 會導致儲存控制器以不同方式處理各種磁碟。這可能會導致影響一個組態的問題也影響其他組態，且可能會對 vSAN 造成負面後果。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得修復步驟。"
+
+vsan.health.test.hcl.h730.label = "vSAN 硬體相容性警示「以 LSI-3108 為基礎的控制器的 vSAN 組態」"
+vsan.health.test.hcl.h730.summary = "在以 LSI-3108 為基礎的控制器上執行時，為確保 vSAN 的穩定性和最佳效能，必須設定一些建議的組態值。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得修復步驟。"
+
+vsan.health.test.hcl.mixedmodeh730.label = "vSAN 硬體相容性警示「具有 lsi_mr3 驅動程式之 Dell H730 控制器上的 vSAN 與 VMFS 資料存放區」"
+vsan.health.test.hcl.mixedmodeh730.summary = "VMware 不支援使用 lsi_mr3 驅動程式的 Dell H730 控制器上同時存在 vSAN 磁碟與 VMFS 磁碟區的組態。若要修復此問題，請在具有 vSAN 磁碟機 (僅限 ESXi 開機磁碟) 的磁碟上安裝 ESXi，然後從本機開機裝置移除/刪除 VMFS 資料存放區。"
+
+vsan.health.test.hcl.controllercacheconfig.label = "vSAN 硬體相容性警示「RAID 控制器組態」"
+vsan.health.test.hcl.controllercacheconfig.summary = "為了使傳遞或 RAID0 單一磁碟機 (SSD/HDD) 以最佳方式與 vSAN 軟體層級快取搭配使用，vSAN 需要一些特定控制器層級組態。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得正確設定控制器的詳細快取組態設定和步驟。"
+
+vsan.health.test.hcl.vsanhpefwtest.label = "vSAN 健全狀況警示「HPE NVMe 固態硬碟 - 需要重要韌體升級」"
+vsan.health.test.hcl.vsanhpefwtest.summary = "用於監控健全狀況測試「HPE NVMe 固態硬碟 - 需要重要韌體升級」變更的預設警示"
+
+#
+# vSAN iSCSI target service Group 3
+#
+vsan.health.test.iscsi.iscsihomeobjectstatustest.label = "vSAN iSCSI 目標服務警示「常用物件」"
+vsan.health.test.iscsi.iscsihomeobjectstatustest.summary = "常用物件可儲存 vSAN iSCSI 目標服務所使用的中繼資料。此警示會確認下列項目: 常用物件已建立並且可置於系統中。常用物件狀況良好且符合儲存區原則。常用物件是唯一的。如果存在多個常用物件，叢集中的某些主機可能會存取其他常用物件。常用物件的中繼資料檔案已存在且可剖析，並且所有中繼資料皆已正確儲存。"
+
+vsan.health.test.iscsi.iscsiservicenetworktest.label = "vSAN iSCSI 目標服務警示「網路組態」"
+vsan.health.test.iscsi.iscsiservicenetworktest.summary = "叢集中的所有主機上都必須設定 vSAN iSCSI 目標服務所使用的所有網路介面 (包括預設介面)。具有相同名稱的所有網路介面組成了分散式入口網站。如果一或多台主機沒有網路介面，則 vSAN iSCSI 目標服務無法正常運作。"
+
+vsan.health.test.iscsi.iscsiservicerunningtest.label = "vSAN iSCSI 目標服務警示「服務執行階段狀態」"
+vsan.health.test.iscsi.iscsiservicerunningtest.summary = "檢查是否已在叢集中的所有主機上啟用此服務。如果某台主機上未啟用此服務，請執行下列命令: esxcli vsan iscsi status set --enabled=true。您也可以使用 [編輯] 動作 ([管理] > [設定] > [一般] > [vSAN iSCSI 目標服務]) 啟用 iSCSI 目標服務。此警示也會確認下列程序的健全狀況: vitd 用於提供服務；vitsafehd 用於對 VMDK 保持開啟狀態。如果 vitd 程序未執行，請使用下列命令啟動該程序: /etc/init.d/vitd start。如果 vitsafehd 程序未執行，請使用下列命令啟動該程序: /etc/init.d/vitd io_restart。"
+
+#
+# Network Group 16
+#
+vsan.health.test.network.multicastsuspected.label = "vSAN 網路警示「依據其他檢查進行的多點傳送評估」"
+vsan.health.test.network.multicastsuspected.summary = "此警示會指出如果通過 vSAN 組態檢查、通過單點傳播連線檢查，但仍有 vSAN 叢集磁碟分割，可能是發生多點傳送問題。如果觸發此警示，則會執行額外的「作用中的多點傳送連線檢查」。"
+
+vsan.health.test.network.multicastdeepdive.label = "vSAN 網路警示「作用中的多點傳送連線檢查」"
+vsan.health.test.network.multicastdeepdive.summary = "此警示會在叢集中所有主機上擷取多點傳送封包一段時間。這會檢查「CMMDS 主要活動訊號」。被選為「vSAN/CMMDS 主要」(每個磁碟分割一個) 的所有主機將會每秒傳送一次此活動訊號。此活動訊號會透過多點傳送進行傳送，而叢集中的所有主機都必須收到活動訊號，叢集才能正常運作。因此，如果某個主機傳送活動訊號，但另一個主機未接聽到該活動訊號，表示多點傳送組態錯誤，而這通常發生在實體網路中。"
+
+vsan.health.test.network.largeping.label = "vSAN 網路警示「vSAN: MTU 檢查 (以大封包大小進行 Ping)」"
+vsan.health.test.network.largeping.summary = "以大封包大小從每台主機到所有其他主機執行 Ping 測試。如果觸發此警示但基本連線檢查警示未觸發，則表示在 vSAN 網路中的某個位置存在 MTU 組態錯誤。必須追蹤組態錯誤的來源。它可能是 VMkernel 介面卡、虛擬交換器或實體網路交換器。"
+
+vsan.health.test.network.smallping.label = "vSAN 網路警示「vSAN: 基本 (單點傳播) 連線檢查」"
+vsan.health.test.network.smallping.summary = "以小封包大小從每台主機到所有其他主機執行 Ping 測試。如果觸發此警示，表示網路連線存在基本問題。請檢查 vmknic、上行、VLAN、實體交換器與相關聯的設定。"
+
+vsan.health.test.network.hostconnectivity.label = "vSAN 網路警示「有連線問題的主機」"
+vsan.health.test.network.hostconnectivity.summary = "此警示會指出 vCenter Server 將主機列為己連線，但從 vCenter Server 對主機的 API 呼叫失敗的情況。此問題極為少見，但可能導致主機與 vCenter Server 中斷連線情況類似的問題。"
+
+vsan.health.test.network.multicastsettings.label = "vSAN 網路警示「所有主機都有相符的多點傳送設定」"
+vsan.health.test.network.multicastsettings.summary = "為了參與 vSAN 叢集並組成完全連線主機的單一群組，vSAN 叢集中的每台主機均必須使用相同的 IP 多點傳送位址。系統將根據叢集使用的是 IPv4 或 IPv6，來驗證對應的多點傳送組態。使用下列命令調整多點傳送 IP: \nesxcli vsan network list\nesxcli vsan network ip set"
+
+vsan.health.test.network.vsanvmknic.label = "vSAN 網路警示「所有主機都已設定 vSAN vmknic」"
+vsan.health.test.network.vsanvmknic.summary = "為了參與 vSAN 叢集並組成完全連線主機的單一群組，vSAN 叢集中的每台主機均必須具有針對 vSAN 流量設定的 vmknic (VMkernel 網路介面或 VMkernel 介面卡)。"
+
+vsan.health.test.network.clusterpartition.label = "vSAN 網路警示「vSAN 叢集磁碟分割」"
+vsan.health.test.network.clusterpartition.summary = "若要確保正常運作，所有 vSAN 主機都必須能夠透過多點傳送和單點傳播進行通訊。若無法通訊，vSAN 叢集便會分割為多個磁碟分割，其子群組將無法與其他子群組通訊。出現這種情況時，vSAN 物件可能無法使用，直到解決網路組態錯誤為止。"
+
+vsan.health.test.network.hostdisconnected.label = "vSAN 網路警示「主機與 VC 中斷連線」"
+vsan.health.test.network.hostdisconnected.summary = "此警示會指出 vCenter Server 與叢集中所有主機是否有作用中的連線。如果任何主機與 vCenter Server 中斷連線 (或沒有回應)，則可能會導致運作問題。如果 vCenter Server 未與主機連線，則其狀態對 vCenter 而言即為未知。主機可能在執行中且可能參與 vSAN 叢集、提供資料，以及在叢集的儲存功能中扮演重要角色。或者主機可能已關機且無法使用。在主機中斷連線的情況下，vCenter Server 以及 vSAN 健全狀況檢查就無法完整評估情況。如果主機參與 vSAN 叢集，它將會意外出現在「非預期的 vSAN 叢集成員」檢查中，原因是無法判斷其 UUID。健全狀況檢查無法判斷其在 vSAN 叢集中看到的主機是否為中斷連線的主機。其他健全狀況檢查 (如 vSAN 連線檢查或磁碟健全狀況檢查) 也無法將中斷連線的主機列入考量。"
+
+vsan.health.test.network.vmotionpingsmall.label = "vSAN 網路警示「vMotion: 基本 (單點傳播) 連線檢查」"
+vsan.health.test.network.vmotionpingsmall.summary = "在所有已啟用 vMotion 流量的 VMkernel 介面卡之間以小封包大小執行 Ping 測試。如果觸發此警示，則表示網路組態錯誤。測試將傳送三個 Ping。遺失一個 Ping 時會顯示警告，而兩個或以上 Ping 失敗時便會顯示錯誤。失敗可能是由許多因素所造成。其中可能包括虛擬網路中的問題，包括 VMkernel 介面卡或虛擬交換器。或者是實體網路中的問題，例如纜線、實體 NIC 或實體交換器。"
+
+vsan.health.test.network.vmotionpinglarge.label = "vSAN 網路警示「vMotion: MTU 檢查 (以大封包大小進行 Ping)」"
+vsan.health.test.network.vmotionpinglarge.summary = "在所有已啟用 vMotion 流量的 VMkernel 介面卡之間以大封包大小執行 Ping 測試。當小型 Ping 測試成功時，如果在所有 VMkernel 介面卡、虛擬交換器和任何實體交換器之間一致設定 MTU 大小，則大型 Ping 測試也會成功。如果觸發了警示，請在 vSAN 網路上找出組態錯誤的來源。請檢查 VMkernel 介面卡、虛擬交換器或實體網路交換器。"
+
+vsan.health.test.network.hostlatencycheck.label = "vSAN 網路警示「網路延遲檢查」"
+vsan.health.test.network.hostlatencycheck.summary = "執行 vSAN 主機的網路延遲檢查。一般叢集的網路組態指引要求 RTT 少於 1 毫秒。若要允許暫時波動，此健全狀況檢查會依據保守臨界值 5 毫秒報告警告。如果觸發此警示，請檢查 vmknic、上行、VLAN、實體交換器與相關聯的設定來找出網路問題。\n附註: 如果主機配對的連線檢查失敗，系統將略過此警示。"
+
+vsan.health.test.network.serverpartition.label = "vSAN 網路警示「伺服器叢集磁碟分割」"
+vsan.health.test.network.serverpartition.summary = "通常，用戶端叢集中所有掛接遠端 vSAN 資料存放區的主機，都必須能夠與伺服器叢集中的所有主機進行通訊。在網路磁碟分割的案例中，用戶端主機可能只會看到一部分伺服器主機。用戶端主機可能會看到不同的伺服器主機。只要磁碟分割持續存在，物件可用性將會受到影響。如果伺服器叢集具有磁碟分割，即會觸發此警示。請參閱健全狀況監控，以取得詳細資料。"
+
+vsan.health.test.network.rdmaconfig.label = "vSAN 網路警示「RDMA 組態健全狀況」"
+vsan.health.test.network.rdmaconfig.summary = "檢查是否已設定已啟用 vSAN RDMA 的實體 NIC 以獲得無失真流量。若要確保無失真第 2 層環境，必須將資料中心橋接 (DCB) 模式設定為 IEEE，且優先順序流量控制 (PFC) 值必須設定為 3。"
+
+vsan.health.test.network.multiplevsanvmknic.label = "vSAN 網路警示「遠端 vSAN 中沒有任何主機設定了多個 vSAN vmknic」"
+vsan.health.test.network.multiplevsanvmknic.summary = "檢查遠端 vSAN 用戶端或伺服器叢集中是否有任何主機設定了多個 vSAN vmknic。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.network.pnicconsistent.label = "vSAN 網路警示「實體網路介面卡連結速度一致性」"
+vsan.health.test.network.pnicconsistent.summary = "檢查每個主機上 vSAN 使用的實體網路介面卡的連結速度是否一致。實體網路介面卡的連結速度不一致可能導致 vSAN 效能問題。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得修復步驟。"
+
+vsan.health.test.network.duplicateip.label = "vSAN 網路警示「具有重複 IP 位址的主機」"
+vsan.health.test.network.duplicateip.summary = "檢查是否已針對 vmknic 介面設定重複的 IP 位址。"
+
+vsan.health.test.network.pnictso.label = "vSAN 網路警示「具有 pNIC TSO 問題的主機」"
+vsan.health.test.network.pnictso.summary = "檢查是否已針對 pNIC 啟用 TSO。"
+
+vsan.health.test.network.lacpstatus.label = "vSAN 網路警示「具有 LACP 問題的主機」"
+vsan.health.test.network.lacpstatus.summary = "檢查 LACP 是否正常運作。"
+
+#
+# vSAN Build Recommendation Group 4
+#
+vsan.health.test.vum.releasecataloguptodate.label = "vSAN 組建編號建議警示「vSAN 版本目錄處於最新狀態」"
+vsan.health.test.vum.releasecataloguptodate.summary = "檢查用於 vSAN 組建編號建議的 vSAN 版本目錄的存留期。超過 90 天或 180 天時，會觸發此警示。當有新版本或重大修補程式時，將更新 vSAN 版本目錄，因此請務必將本機複本保持在最新狀態。"
+
+vsan.health.test.vum.vumconfig.label = "vSAN 組建編號建議警示「vSAN 組建編號建議引擎」"
+vsan.health.test.vum.vumconfig.summary = "vSAN 組建編號建議引擎依賴於《VMware 相容性指南》和 VMware 版本中繼資料提供建議。它還需要 VMware Update Manager 服務可用、網際網路連線和設定有效的 my.vmware.com 認證。如果不符合這些相依性或建議引擎無法正常運行，將觸發此警示。"
+
+vsan.health.test.vum.vumrecommendation.label = "vSAN 組建編號建議警示「vSAN 組建編號建議」"
+vsan.health.test.vum.vumrecommendation.summary = "這是 vSAN 所建議最適合的 ESXi 建置，指定了硬體、依照《VMware 相容性指南》的相容性以及 VMware 的可用版本。"
+
+vsan.health.test.vum.patchalert.label = "vSAN 組建編號建議警示「具有新可用修補程式的 vSAN 主機」"
+vsan.health.test.vum.patchalert.summary = "檢查新的重大 vSAN 修補程式是否可用。如果觸發此警示，請立即升級為此修補程式版本。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得如何更新 vSAN 軟體的相關指示。"
+
+#
+# Physical Disk Group 9
+#
+vsan.health.test.physicaldisks.physdiskcomplimithealth.label = "vSAN 實體磁碟警示「元件限制」"
+vsan.health.test.physicaldisks.physdiskcomplimithealth.summary = "檢查實體磁碟上的元件數目是否達到上限。由於每個 vSAN 物件由一組元件組成 (取決於虛擬機器儲存區原則中所使用的功能)，如果達到元件限制，部署新虛擬機器可能會失敗，也無法執行重建作業。您必須新增更多主機或刪除部分 vSAN 物件。但是，如果見證節點中的元件已滿，則必須提供更多容量。"
+
+vsan.health.test.physicaldisks.componentmetadata.label = "vSAN 實體磁碟警示「元件中繼資料」"
+vsan.health.test.physicaldisks.componentmetadata.summary = "如果 vSAN 遇到此磁碟中元件中繼資料完整性的問題，即會觸發此警示。這可能是因為磁碟機故障、控制器故障或裝置驅動程式發生異常行為。也可能是 vSAN 軟體中發生問題所致。請連絡 VMware 支援。"
+
+vsan.health.test.physicaldisks.physdiskcongestion.label = "vSAN 實體磁碟警示「壅塞」"
+vsan.health.test.physicaldisks.physdiskcongestion.summary = "如果觸發此警示，表示 vSAN 仍在使用磁碟，但其處於效能降低的狀態，導致使用此磁碟的 vSAN 物件出現低輸送量/IOPS 與高延遲。"
+
+vsan.health.test.physicaldisks.physdiskcapacity.label = "vSAN 實體磁碟警示「磁碟容量」"
+vsan.health.test.physicaldisks.physdiskcapacity.summary = "如果特定磁碟觸發此警示，表示此磁碟的可用磁碟空間不足。此警示僅適用於容量層磁碟機，不適用於快取裝置。"
+
+vsan.health.test.physicaldisks.physdiskoverall.label = "vSAN 實體磁碟警示「作業」"
+vsan.health.test.physicaldisks.physdiskoverall.summary = "檢查 vSAN 叢集中所有主機的 vSAN 磁碟和 vSAN Direct 磁碟的實體磁碟運作健全狀況。如果此警示是在 vSAN 磁碟上觸發，則 vSAN 無法使用該磁碟。可能的原因為讀取磁碟中繼資料時發生問題或 vSAN 軟體問題導致它無法使用此磁碟。若為 vSAN Direct 磁碟，則無法使用此磁碟，可能的原因為讀取磁碟運作狀態說明時發生問題，導致無法使用此磁碟。"
+
+vsan.health.test.physicaldisks.lsomheap.label = "vSAN 實體磁碟警示「記憶體集區 (堆積)」"
+vsan.health.test.physicaldisks.lsomheap.summary = "如果 vSAN 針對實體磁碟正確運作所需的重要記憶體集區不足，則會觸發此警示。磁碟可能也會報告不佳的壅塞健全狀況，這會導致效能問題。請連絡 VMware 支援。"
+
+vsan.health.test.physicaldisks.lsomslab.label = "vSAN 實體磁碟警示「記憶體集區 (碎片)」"
+vsan.health.test.physicaldisks.lsomslab.summary = "如果 vSAN 針對實體磁碟運作所需的重要記憶體集區不足，則會觸發此警示。磁碟可能也會報告不佳的壅塞健全狀況，這會導致效能問題。請連絡 VMware 支援。"
+
+vsan.health.test.physicaldisks.smalldiskstest.label = "vSAN 實體磁碟警示「vSAN 最大元件大小」"
+vsan.health.test.physicaldisks.smalldiskstest.summary = "當用於 vSAN 的容量磁碟小於 255 GB (預設最大元件大小) 時，在 vSAN 資料存放區上執行的虛擬機器可能會出現磁碟空間問題。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得如何變更最大元件大小的指示。"
+
+vsan.health.test.physicaldisks.physdiskhostissues.label = "vSAN 實體磁碟警示「實體磁碟健全狀況擷取問題」"
+vsan.health.test.physicaldisks.physdiskhostissues.summary = "如果觸發此警示，則表示從 vSAN 叢集中的至少一台主機上擷取實體磁碟資訊時出現問題。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得此特定原因的詳細資料。"
+
+#
+# Cluster Group 12
+#
+vsan.health.test.cluster.clomdliveness.label = "vSAN 叢集警示「vSAN 精靈運作情況」"
+vsan.health.test.cluster.clomdliveness.summary = "檢查所有 vSAN 主機上重大主機精靈的運作情況。附註: 系統不會檢查見證節點上的 CLOMD 狀態。系統不會檢查見證節點和中繼資料節點上的 EPD 狀態。"
+
+vsan.health.test.cluster.advcfgsync.label = "vSAN 叢集警示「進階 vSAN 組態處於同步狀態」"
+vsan.health.test.cluster.advcfgsync.summary = "vSAN 具有多項進階組態選項，可用於調整或解決特定部署的特殊需求。這些設定通常會在 VMware 支援的指導之下，使用 VMware 知識庫文章程序進行變更。這些進階組態選項是在各主機上設定，這可能導致在整個叢集中產生不一致的組態。此檢查可確保指定叢集中所有主機的重要 vSAN 進階組態選項均具有相同的值或預設值。"
+
+vsan.health.test.cluster.upgradesoftware.label = "vSAN 叢集警示「軟體版本相容性」"
+vsan.health.test.cluster.upgradesoftware.summary = "vSAN 叢集開始使用新的磁碟上格式版本 (軟體升級後) 後，使用較舊軟體版本 (不支援新磁碟上格式) 的主機會變得不相容。如果叢集中採用此類較舊主機版本，此主機會位於網路磁碟分割中或僅可存取非常有限的資料集。此類組態不受支援，建議立即進行軟體升級或移除較舊的主機版本。"
+
+vsan.health.test.cluster.upgradelowerhosts.label = "vSAN 叢集警示「磁碟格式版本」"
+vsan.health.test.cluster.upgradelowerhosts.summary = "vSAN 叢集的預期格式版本為 13，這是叢集中任何主機支援的最高格式版本。針對格式版本低於預期版本的磁碟，建議執行 vSAN 磁碟上格式升級，以支援最新的 vSAN 功能。"
+
+vsan.health.test.cluster.diskbalance.label = "vSAN 叢集警示「vSAN 磁碟平衡」"
+vsan.health.test.cluster.diskbalance.summary = "此警示可協助使用者監控磁碟之間的平衡狀態。「自動重新平衡」的預設設定已停用，如果失衡程度超過系統判斷的臨界值，則會觸發此警示。當「自動重新平衡」啟用時，vSAN 會自動重新平衡以確保狀態為綠色。最多會等待 30 分鐘來啟動重新平衡，以便在重新平衡之前，為 EMM、修復等高優先順序工作提供使用資源的時間。"
+
+vsan.health.test.cluster.clustermembership.label = "vSAN 叢集警示「vSphere 叢集成員符合 vSAN 叢集成員」"
+vsan.health.test.cluster.clustermembership.summary = "檢查 vSphere 叢集成員是否符合 vSAN 叢集成員。如果觸發此警示，則表示 vSphere 叢集成員與 vSAN 叢集成員不相同。在特定 vSphere 叢集成員上未啟用 vSAN，或特定 vSAN 叢集成員不受 vSphere 叢集管理時，可能會發生此問題。具有不相符叢集成員資格的主機會出現在叢集成員資格表中。您可以修改不正確的成員資格，以讓主機重新加入適當的叢集。vSAN 組態會自動執行。"
+
+vsan.health.test.cluster.consistentconfig.label = "vSAN 叢集警示「vSAN 叢集組態一致性」"
+vsan.health.test.cluster.consistentconfig.summary = "當叢集中的主機或磁碟上有不一致的組態 (如重複資料刪除/壓縮、加密) 設定，即會觸發此警示。如果觸發此警示，則表示主機或磁碟上的組態設定 (例如: 重複資料刪除/壓縮、加密) 與叢集不一致。您可以移至對應的健全狀況檢查頁面，以取得更詳細的資訊和修復步驟。"
+
+vsan.health.test.cluster.vsandconfigconsistency.label = "vSAN 叢集警示「vSAN Direct 同質磁碟宣告」"
+vsan.health.test.cluster.vsandconfigconsistency.summary = "檢查叢集中主機上的 vSAN Direct 磁碟是否已同質宣告。如果觸發此警示，則表示叢集中的主機上存在不一致的組態配置設定值 (例如磁碟容量、模式和數量) 設定。您可以移至對應的健全狀況檢查頁面，以取得更多詳細資訊，並據以重新設定。"
+
+vsan.health.test.cluster.timedrift.label = "vSAN 叢集警示「主機和 VC 之間的時間已同步」"
+vsan.health.test.cluster.timedrift.summary = "檢查 vCenter Server 與主機之間的時間差異。任何大於 60 秒的差異都將觸發此警示。如果觸發此警示，請檢查 NTP 伺服器組態。"
+
+vsan.health.test.cluster.resynclimit.label = "vSAN 叢集警示「重新同步作業節流」"
+vsan.health.test.cluster.resynclimit.summary = "檢查任何主機上是否已針對重新同步作業進行節流。設定了重新同步頻寬限制時會顯示警告，值小於 20 MBps 時會顯示錯誤。除非有特殊情況 (如大量重新同步流量導致虛擬機器高延遲) 需要該限制，否則請清除該限制。設定此限制可能會使以重新同步為基礎的作業 (如原則變更或維護模式) 變慢。"
+
+vsan.health.test.cluster.vcauthoritative.label = "vSAN 叢集警示「vCenter 狀態是權威的」"
+vsan.health.test.cluster.vcauthoritative.summary = "一般作業期間，vCenter Server 狀態被認為是實際情況來源，且會以最新主機成員資格清單更新 ESXi 主機。從備份取代或復原 vCenter Server 時，vCenter Server 主機成員資格清單可能不同步。此健全狀況檢查會偵測此類情況，並在由於 vCenter Server 不同步導致 vCenter Server 狀態未推送至 ESXi 的情況下發出警示。在此類情況下，請先完全還原 vCenter Server 中的成員資格清單，然後執行「更新 ESXi 組態」動作 (如果需要)。"
+
+vsan.health.test.cluster.extendedconfig.label = "vSAN 叢集警示「vSAN 已延伸組態處於同步狀態」"
+vsan.health.test.cluster.extendedconfig.summary = "vSAN 叢集延伸組態預設值為: 物件修復計時器為 60 分鐘，站台讀取位置為已啟用，自訂分頁物件為已啟用，大型叢集支援為已停用，自動重新平衡為關閉，自動重新平衡臨界值為 30。如果主機有不一致的延伸組態，則建議進行 vSAN 叢集修復。如果主機不支援任何延伸組態，則升級 ESXi 軟體。若要使叢集擴充性組態生效，必須將主機重新開機。"
+
+vsan.health.test.cluster.mmdecominsync.label = "vSAN 叢集警示「主機維護模式」"
+vsan.health.test.cluster.mmdecominsync.summary = "驗證主機維護模式與 vSAN 節點解除委任狀態同步。如果主機處於維護模式，則 vSAN 節點應處於解除委任狀態。如果節點已解除委任，但主機未處於維護模式，請使用任何 vSAN 選項將主機置於維護模式，然後將其從維護模式移除以重設 vSAN 解除委任狀態，並確保其與 vSphere 維護模式狀態一致。"
+
+vsan.health.test.cluster.rdmanodes.label = "vSAN 叢集警示「透過 RDMA 的 vSAN 中的主機數目上限」"
+vsan.health.test.cluster.rdmanodes.summary = "具有 RDMA 的 vSAN 可支援最多 32 台主機。"
+
+vsan.health.test.cluster.hostmemcheck.label = "vSAN 叢集警示「主機實體記憶體合規性檢查」"
+vsan.health.test.cluster.hostmemcheck.summary = "檢查主機實體記憶體是否大於最低 vSAN 記憶體需求。"
+
+#
+# Capacity utilization Group (AKA Limits Group) 4
+#
+vsan.health.test.limits.nodecomponentlimit.label = "vSAN 容量使用量警示「元件」"
+vsan.health.test.limits.nodecomponentlimit.summary = "檢查叢集和每台主機的元件使用率。如果任何主機的使用率超過 80% 或 90%，則此警示會觸發為警告或錯誤。達到這些限制時，新虛擬機器的部署可能會失敗，或可能不允許重建作業。新增更多主機或刪除部分 vSAN 物件。但是，如果見證節點中達到元件限制，您必須將其取代為更多容量。"
+
+# Deco in future as pr 2518894
+vsan.health.test.limits.rcreservation.label = "vSAN 容量使用量警示「讀取快取保留區」"
+vsan.health.test.limits.rcreservation.summary = "檢查叢集的讀取快取保留區。如果可用保留區低於讀取快取保留區總計的 30% 或 10%，則警示會觸發為警告或錯誤。這將會影響虛擬機器的效能。"
+
+vsan.health.test.limits.diskspace.label = "vSAN 容量使用量警示「儲存空間」"
+vsan.health.test.limits.diskspace.summary = "確認 vSAN 叢集容量階層磁碟的使用量和叢集下方 vSAN 管理的資料存放區是否超過臨界值。如果沒有足夠的可用容量層磁碟空間，則部署新虛擬機器可能會失敗，或者可能不允許執行任何元件重建作業。執行中的虛擬機器可能在每個受影響的虛擬機器中都有一個待解決的問題。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以復原虛擬機器和 vSAN 叢集。"
+
+vsan.health.test.limits.limit1hf.label = "vSAN 容量使用量警示「如果最常用的主機失敗該怎麼辦」"
+vsan.health.test.limits.limit1hf.summary = "此警示會模擬主機耗用多數資源的故障情況。該主機上的資源將無法再使用。vSAN 會嘗試重新保護目前執行的所有物件並減少備援。如果使用量超過 100% 而無法重新保護所有物件，即會觸發此警示。"
+
+#
+# Performance service Group 8
+#
+vsan.health.test.perfsvc.perfsvcstatus.label = "vSAN 效能服務警示「效能服務狀態」"
+vsan.health.test.perfsvc.perfsvcstatus.summary = "檢查 vSAN 效能服務的狀態。此警示的警告可透過啟用 vSAN 效能服務來進行修復。"
+
+vsan.health.test.perfsvc.statsdb.label = "vSAN 效能服務警示「統計資料資料庫物件」"
+vsan.health.test.perfsvc.statsdb.summary = "檢查 vSAN 效能服務統計資料資料庫物件的健全狀況。如果統計資料資料庫物件不存在、統計資料資料庫物件不是 100% 狀況良好、物件無法使用，或者 vSAN 統計資料資料庫物件的可用邏輯磁碟空間不足時，將觸發此警示。"
+
+vsan.health.test.perfsvc.masterexist.label = "vSAN 效能服務警示「主要統計資料選取」"
+vsan.health.test.perfsvc.masterexist.summary = "檢查 vSAN 效能服務的主要統計資料節點。如果沒有主要統計資料節點，將會觸發此警示。請檢查 vSAN 資料存放區和統計資料資料庫物件的健全狀況，尤其是網路健全狀況。如果所有這些檢查均已確認狀況良好，請連絡 VMware 支援並提出支援請求。"
+
+vsan.health.test.perfsvc.collection.label = "vSAN 效能服務警示「效能資料收集」"
+vsan.health.test.perfsvc.collection.summary = "檢查 vSAN 效能服務的統計資料收集。統計資料會定期收集，例如每 5 分鐘。如果統計資料收集或寫入儲存區連續三次間隔失敗，將會觸發此警示。請檢查 vSAN 資料存放區的健全狀況，尤其是所有實體磁碟的健全狀況、網路健全狀況和 vSAN 統計資料資料庫物件的健全狀況。如果所有這些項目均狀況良好，請連絡 VMware 支援並提出支援請求。"
+
+vsan.health.test.perfsvc.hostsmissing.label = "vSAN 效能服務警示「所有主機均提供統計資料」"
+vsan.health.test.perfsvc.hostsmissing.summary = "驗證所有主機均提供效能統計資料。如果觸發此警示，則表示部分主機未提供效能統計資料。此警示尚無已知原因。如果持續觸發此警示，請連絡 VMware 支援並提出支援請求。請提供整個叢集的支援服務包，包括 vCenter Server 和所有主機。"
+
+vsan.health.test.perfsvc.renameddirs.label = "vSAN 效能服務警示「統計資料資料庫物件衝突」"
+vsan.health.test.perfsvc.renameddirs.summary = "檢查統計資料資料庫物件衝突。如果其他統計資料資料庫物件有用，則可以透過資料存放區瀏覽器將其作為檔案進行備份，也可以將其重新命名並保留在資料存放區中。不支援合併多個統計資料資料庫物件。"
+
+vsan.health.test.perfsvc.verbosemode.label = "vSAN 效能服務警示「詳細資訊模式」"
+vsan.health.test.perfsvc.verbosemode.summary = "檢查 vSAN 效能服務詳細資訊模式是否已啟用。啟用詳細資訊模式超過 5 天時會觸發此警示。"
+
+vsan.health.test.perfsvc.diagmode.label = "vSAN 效能服務警示「網路診斷模式」"
+vsan.health.test.perfsvc.diagmode.summary = 「檢查 vSAN 效能服務網路診斷模式是否已啟用。網路診斷模式啟用超過 24 小時會觸發此警示」。
+
+#
+# Hyperconverged cluster configuration compliance 2
+#
+vsan.health.test.hcicluster.hosthciconfig.label = "vSAN 超聚合式叢集組態警示「超聚合式叢集組態的主機合規性檢查」"
+vsan.health.test.hcicluster.hosthciconfig.summary = "檢查每個主機的組態是否與超聚合式叢集組態相容。主機應全部連結到具有相同介面卡的 vSphere 分散式交換器。介面卡應存在於正確的分散式連接埠群組中，並且 NTP 伺服器和鎖定模式應根據規格進行設定。"
+
+vsan.health.test.hcicluster.dvshciconfig.label = "vSAN 超聚合式叢集組態警示「超聚合式叢集組態的 VDS 合規性檢查」"
+vsan.health.test.hcicluster.dvshciconfig.summary = "檢查 vSphere 分散式交換器是否在運作中，以及分散式連接埠群組組態是否與超聚合式叢集組態相容。"
+
+#
+# Stretched cluster Group 15
+#
+vsan.health.test.stretchedcluster.siteconnectivity.label = "「站台延遲」健全狀況的 vSAN 延伸叢集警示"
+vsan.health.test.stretchedcluster.siteconnectivity.summary = "如果資料站台和見證中任意兩台主機之間的最差延遲超過特定限制，即會觸發此警示。警告臨界值: 資料站台之間/資料站台內為 5 毫秒，非 ROBO 叢集中的資料站台和見證之間為 200 毫秒，ROBO 叢集中的資料站台和見證之間為 500 毫秒。檢查失敗的主機配對之間的網路以確保網路設定符合最低需求。附註: 將略過在 vSAN 基本連線 (小型 Ping) 測試中失敗的主機配對。"
+
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.label = "vSAN 延伸叢集警示「找不到見證主機」"
+vsan.health.test.stretchedcluster.clusterwithoutonewitnesshost.summary = "延伸叢集未包含有效的見證主機。如果觸發此警示，則 vSAN 延伸叢集具有會影響其作業的組態錯誤。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.label = "vSAN 延伸叢集警示「單點傳播代理程式無效」"
+vsan.health.test.stretchedcluster.hostwithinvalidunicastagent.summary = "如果叢集中包含的主機具有無效的單點傳播代理程式，則會觸發此警示。主機上無效的單點傳播代理程式，可能會導致與見證主機之間的通訊發生問題。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.label = "vSAN 延伸叢集警示「單點傳播代理程式組態不一致」"
+vsan.health.test.stretchedcluster.clusterwithmultipleunicastagents.summary = "延伸叢集包含多個單點傳播代理程式。這表示在非見證主機上設定了多個單點傳播代理程式。如果觸發此警示，則 vSAN 延伸叢集具有會影響其作業的組態錯誤。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.label = "vSAN 延伸叢集警示「未預期的容錯網域數目」"
+vsan.health.test.stretchedcluster.clusterwithouttwodatafaultdomains.summary = "延伸叢集未包含兩個有效的容錯網域。每個資料站台必須位於不同的容錯網域中。資料站台的容錯網域總數必須為兩個。如果觸發此警示，則 vSAN 延伸叢集具有會影響其作業的組態錯誤。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.label = "vSAN 延伸叢集警示「見證主機上的慣用容錯網域無效」"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomaininvalid.summary = "下列 (見證) 主機具有無效的慣用容錯網域。慣用容錯網域是由見證主機使用，且必須是 vSAN 延伸叢集中的任何資料站台的容錯網域。不能為空白。如果觸發此警示，則 vSAN 延伸叢集具有會影響其作業的組態錯誤。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.hostunicastagentunset.label = "vSAN 延伸叢集警示「未設定單點傳播代理程式」"
+vsan.health.test.stretchedcluster.hostunicastagentunset.summary = "主機必須設定單點傳播代理程式，以便它們能夠與見證節點通訊。如果觸發此警示，則 vSAN 延伸叢集具有會影響其作業的組態錯誤。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.label = "vSAN 延伸叢集警示「未設定慣用容錯網域」"
+vsan.health.test.stretchedcluster.witnesspreferredfaultdomainnotexist.summary = "未在叢集中設定見證主機的慣用容錯網域。慣用容錯網域是由見證主機使用，且必須是 vSAN 延伸叢集中的任何資料站台的容錯網域。不能為空白。如果觸發此警示，則 vSAN 延伸叢集具有會影響其作業的組態錯誤。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.label = "vSAN 延伸叢集警示「見證主機上未宣告磁碟」"
+vsan.health.test.stretchedcluster.witnesswithnodiskmapping.summary = "延伸叢集見證主機沒有有效的磁碟宣告。如果見證主機未宣告任何磁碟，則其容錯網域無法使用，且 vSAN 無法在將容許的故障次數設為一 (FTT = 1) 的情況下佈建任何物件。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.label = "vSAN 延伸叢集警示「見證主機容錯網域設定錯誤」"
+vsan.health.test.stretchedcluster.witnessfaultdomaininvalid.summary = "下列見證節點位於其中一個資料容錯網域中。如果觸發此警示，則 vSAN 延伸叢集具有會影響其作業的組態錯誤。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.witnessinsidevccluster.label = "vSAN 延伸叢集警示「vCenter 叢集中的見證主機」"
+vsan.health.test.stretchedcluster.witnessinsidevccluster.summary = "見證主機不應屬於形成延伸叢集的 vCenter 叢集。如果見證主機位於已啟用 vSAN 的叢集中，則會導致 vSphere DRS、HA 和 EVC 的問題。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.label = "vSAN 延伸叢集警示「不支援的主機版本」"
+vsan.health.test.stretchedcluster.hostwithnostretchedclustersupport.summary = "叢集包含 ESXi 版本不支援延伸叢集的主機。"
+
+vsan.health.test.stretchedcluster.witnessupgrade.label = "vSAN 延伸叢集警示「見證應用裝置升級至 vSphere 7.0 或更高版本時請小心」"
+vsan.health.test.stretchedcluster.witnessupgrade.summary = "目前的見證應用裝置版本比 vSphere 7.0 舊。如果直接將見證應用裝置升級至 vSphere 7.0 或更高版本，將出現問題。請參閱 AskVMware 知識庫文章以重新設定見證應用裝置並在進入升級工作流程之前重新開機。或您可以部署 vSphere 7.0 或更高版本的新見證應用裝置，並重新設定叢集。"
+
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.label = "vSAN 延伸叢集警示「共用見證叢集中出現非預期的資料節點數目」"
+vsan.health.test.stretchedcluster.sharedwitnessclusterdatahostnumexceed.summary = "檢查共用見證叢集中的資料節點數目是否超過 2 個。具有共用見證之任何延伸叢集的資料主機數目不能超過 2 個。"
+
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.label = "vSAN 延伸叢集警示「共用見證的每個叢集元件限制已縮減」"
+vsan.health.test.stretchedcluster.sharedwitnesscomponentlimitscaleddown.summary = "檢查是否因為缺少記憶體已縮減共用見證節點中的每個叢集元件限制。"
+
+vsan.health.test.stretchedcluster.witnessupgissue.label = "vSAN 延伸叢集警示「見證應用裝置的硬體相容性問題」"
+vsan.health.test.stretchedcluster.witnessupgissue.summary = "見證應用裝置升級將會出現問題。建議您在進入升級工作流程之前解決問題。查看 vSAN Skyline 健全狀況以取得更多詳細資料。"
+
+#
+# File Service Group 3
+#
+vsan.health.test.fileservice.host.label = "vSAN 檔案服務警示「基礎結構健全狀況」"
+vsan.health.test.fileservice.host.summary = "檢查每個 ESXi 主機的檔案服務基礎結構健全狀況狀態。問題通常可以在偵測到後自動修復。在 vSAN 健全狀況監控中按一下 [修復檔案服務] 或 [修復不平衡]，以強制執行自動修復。如果主機處於維護模式，則會略過警示。在 vSAN 健全狀況監控中查看更多詳細資料。"
+
+vsan.health.test.fileservice.fileserver.label = "vSAN 檔案服務警示「檔案伺服器」"
+vsan.health.test.fileservice.fileserver.summary = "檢查檔案伺服器是否處於健全狀態。如果偵測到問題，在大多數情況下，檔案伺服器會自動容錯移轉至另一個代理程式虛擬機器。在 vSAN 健全狀況監控中查看更多詳細資料。"
+
+vsan.health.test.fileservice.sharehealth.label = "vSAN 檔案服務警示「共用健全狀況」"
+vsan.health.test.fileservice.sharehealth.summary = "檢查檔案服務共用是否處於健全狀態。在 vSAN 健全狀況監控中查看更多詳細資料。"
+
+#
+# Data Group 2
+#
+vsan.health.test.data.objecthealth.label = "vSAN 資料警示「vSAN 物件」"
+vsan.health.test.data.objecthealth.summary = "如果叢集中的某些物件未處於健全狀態，則會觸發此警示。請檢查健全狀況監控，以取得詳細資料。"
+
+vsan.health.test.data.objectformat.label = "vSAN 資料警示「vSAN 物件格式」"
+vsan.health.test.data.objectformat.summary = "如果有某些物件需要變更物件格式，則會觸發此警示。物件格式變更可能涉及物件的實體磁碟上重新配置，這可能會導致叢集中的資料移動。具有舊格式的物件可能無法使用某些新功能。請檢查健全狀況監控，以取得詳細資料。"
+
+#
+# Data-at-rest encryption Group (Encryption) 3
+#
+vsan.health.test.encryption.kmsconnection.label = "vSAN 靜態資料加密警示「vCenter 和所有主機皆已連線至金鑰管理伺服器」"
+vsan.health.test.encryption.kmsconnection.summary = "如果觸發此警示，則表示 vCenter Server 或主機存在與金鑰管理伺服器的連線問題。如果 vCenter Server 遇到 KMS 連線的問題，請在 vCenter Server 組態頁面中檢查 KMS 設定和狀態。如果叢集中的任何主機發生連線問題，請檢查健全狀況結果以瞭解特定原因。如果主機的 KMS 組態與叢集的其餘部分不一致，請執行叢集組態修復以更新主機上的 KMS 組態。"
+
+vsan.health.test.encryption.hostcpuaesni.label = "vSAN 靜態資料加密警示「主機上已啟用 CPU AES-NI」"
+vsan.health.test.encryption.hostcpuaesni.summary = "如果觸發此警示，則表示主機具有的 CPU AES-NI 不受支援或已停用。系統將使用軟體加密，其速度明顯低於 AES-NI。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得詳細資料。"
+
+vsan.health.test.encryption.dualencryption.label = "vSAN 靜態資料加密警示「雙重加密已套用至 vSAN 上的虛擬機器」"
+vsan.health.test.encryption.dualencryption.summary = "當 vSAN 偵測到虛擬機器加密和 vSAN 資料存放區加密均已開啟，便會觸發此警示。如果是有意開啟的，請忽略此警示，否則請關閉其中一個加密類型。請參閱 vSAN 健全狀況監控中的 AskVMware 知識庫，以取得加密最佳做法。"
+
+#
+# Data-in-transient encryption 1
+#
+vsan.health.test.ditencryption.ditconfig.label = "vSAN 資料傳輸加密警示「組態檢查」"
+vsan.health.test.ditencryption.ditconfig.summary = "檢查叢集的資料傳輸加密是否已正確設定。只有在叢集上已啟用資料傳輸加密時才會觸發此警示。所有主機都必須啟用資料傳輸加密並處於預期狀態，否則網路流量可能無法正確加密。"
+
+#
+# Remain unchanged
+#
+vsan.health.test.hciskip.label = "vSAN 健全狀況警示已隱藏"
+vsan.health.test.hciskip.summary = "vSAN 健全狀況警示已隱藏，直到叢集經過完整設定或略過此快速入門工作流程為止。"
+
+vsan.health.test.vsanhardwarecert.label = "vSAN 硬體相容性問題"
+vsan.health.test.vsanhardwarecert.summary = "如果在叢集中發現某些硬體相容性問題，將觸發此警示。請參閱 vSAN 健全狀況監控 UI，以取得更詳細的問題。"
+
+vsan.health.test.cloudhealth.vsanenablesupportinsight.label = "vSAN Support Insight"
+vsan.health.test.cloudhealth.vsanenablesupportinsight.summary = "用於監控 vSAN Support Insight 的狀態的預設警示"
+vsan.health.test.cloudhealth.advisor.label = "vSAN 健全狀況警示「Advisor」"
+vsan.health.test.cloudhealth.advisor.summary = "用於監控健全狀況測試「Advisor」變更的預設警示"
+
+vsan.health.test.diagnostics.pnic.label = "偵測到高 pNic 錯誤率。查看主機的 vSAN 效能視圖以取得詳細資料"
+vsan.health.test.diagnostics.pnic.summary = "用於監控「pNic 錯誤率」的預設警示"
+
+vsan.health.test.diagnostics.rdt.label = "偵測到高 RDT 網路錯誤。查看主機的 vSAN 效能視圖以取得詳細資料"
+vsan.health.test.diagnostics.rdt.summary = "監控「RDT 網路錯誤」的預設警示"
+
+#
+# Overall summary alarm is reactivate from VSANCORE-6413
+#
+vsan.health.test.overallsummary.label = "用於整體健全狀況摘要的 vSAN Health Service 警示"
+vsan.health.test.overallsummary.summary = "用於監控整體健全狀況摘要變更的預設警示"
